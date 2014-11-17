@@ -22,11 +22,13 @@ class Main extends CI_Controller {
 		{
 			$this->session->set_userdata('user', $results);	
 			redirect('/user/dashboard');
+			exit();
 		}
 		else
 		{
 			$this->session->set_flashdata('login_msg', "Invalid Credentials.");
 			redirect('/');
+			exit();
 		}
 	}
 
