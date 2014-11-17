@@ -68,14 +68,6 @@
 						<input type="email" name="email" value='<?= $email ?>' class="form-control">
 					</div>
 					<div class="form-group">
-						<label class="inline">Password:</label>
-						<input type="password" name="password" value='' class="form-control">
-					</div>
-					<div class="form-group">
-						<label class="inline">Confirm Password:</label>
-						<input type="password" name="confirm_password" value='' class="form-control">
-					</div>
-					<div class="form-group">
 						<!-- <label class="inline">Date of Birth:</label> -->
 						<!-- <input type="date" name="birthdate" value='<?= $birthdate ?>' class="form-control"> -->
 					</div>
