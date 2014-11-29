@@ -16,6 +16,13 @@ class User extends CI_Model {
 		return $this->db->query($query, $values);
 	}
 
+	public function retrieveUser($id)
+	{
+		$query = "SELECT * FROM users WHERE id = ?";
+		$value = array($id);
+		return $this->db->query($query, $value)->row_array();
+	}
+
 	public function login($user)
 	{
 		return $results = $this->validate_user($user);
@@ -45,4 +52,30 @@ class User extends CI_Model {
 			return false;
 		}
 	}
+
+	public function updateProfile($user)
+	{ // UPDATING USER INFO - ADD BIRTHDATE? SHOW BIRTHDATE FIRST?
+		$query = "UPDATE users SET first_name = ?,  last_name = ? , email = ? , created_at = ?, updated_at = ? WHERE users.id = ?";
+		$values = array($user['first_name'], $user['last_name'], $user['email'],	 date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"),$this->session->userdata('user')['id']);
+		return $this->db->query($query, $values);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,7 @@ class Users extends CI_Controller {
 
 	public function profile()
 	{
-		$user = $this->session->userdata('user');
+		$user = $this->user->retrieveUser($this->session->userdata('user')['id']);
 		$this->load->view('userProfile', $user);
 	}
 
@@ -36,9 +36,33 @@ class Users extends CI_Controller {
 // User 
 
 
-	public function userUpdate()
+	public function updateProfile()
 	{
-		redirect('/user/profile');
+		$config = array(
+			array(
+				'field' => 'first_name',
+				'label' => 'First name',
+				'rules' => 'trim|required'
+			),
+			array(
+				'field' => 'last_name',
+				'label' => 'Last name',
+				'rules' => 'trim|required'
+			)
+		);
+		$this->form_validation->set_rules($config);
+
+		// VALIDATE
+		if ($this->form_validation->run() == FALSE )
+		{
+			$this->session->set_flashdata('update_msg', validation_errors());
+		}
+		else
+		{
+			$this->user->updateProfile($this->input->post());
+			$this->session->set_flashdata('update_msg', "Profile Update was successful.");
+		}
+		redirect('/profile');
 	}
 
 	public function userDestroy()

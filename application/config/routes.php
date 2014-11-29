@@ -44,6 +44,7 @@ $route['default_controller'] = "mains";
 $route['login'] = "mains/login";
 $route['registration'] = "mains/registration";
 $route['profile'] = "users/profile";
+$route['users/updateProfile'] = "users/updateProfile";
 $route['logout'] = "mains/logout";
 // $route['user/updateProfile'] = 'users/update';
 $route['404_override'] = '';

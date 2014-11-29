@@ -51,29 +51,22 @@
 	<div class='row'>
 		<div class='col-xs-12'>
 			<h2>Content</h2>
-				<form method="post" action="/user/updateProfile">
-					<center><h3>Edit Profile</h3></center>
-					<h3><?= $this->session->flashdata('registration_msg'); ?></h3>
-					<div class="form-group">
-						<label class="inline">First Name:</label>
-						<input type="text" name="first_name" value='<?= $first_name ?>' class="form-control">
-					</div>
-					<div class="form-group">
-						<label class="inline">Last Name:</label>
-						<input type="text" name="last_name" value='<?= $last_name ?>' class="form-control">
-					</div>
-					<div class="form-group">
-						<label class="inline">Email:</label>
-						<input type="email" name="email" value='<?= $email ?>' class="form-control">
-					</div>
-					<div class="form-group">
-						<!-- <label class="inline">Date of Birth:</label> -->
-						<!-- <input type="date" name="birthdate" value='<?= $birthdate ?>' class="form-control"> -->
-					</div>
-					<div class="form-group right">
-						<input type="submit" value="Update" class="btn btn-success">
-					</div>
-				</form>
+			<form method="post" action="/users/updateProfile">
+				<center><h3>Edit Profile</h3></center>
+				<?= $this->session->flashdata('update_msg'); ?>
+				<h3><?= $this->session->flashdata('registration_msg'); ?></h3>
+				<div class="form-group">
+					<label class="inline">First Name:</label>
+					<input type="text" name="first_name" value='<?= $first_name ?>' class="form-control">
+				</div>
+				<div class="form-group">
+					<label class="inline">Last Name:</label>
+					<input type="text" name="last_name" value='<?= $last_name ?>' class="form-control">
+				</div>
+				<div class="form-group right">
+					<input type="submit" value="Update" class="btn btn-success">
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
