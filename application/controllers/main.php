@@ -2,12 +2,10 @@
 
 class Main extends CI_Controller {
 
-	public function __construct()
+	public function __construct($id = null)
 	{
-		parent::__construct();
+		parent::__construct($id);
 		$this->output->enable_profiler(TRUE);
-		$this->load->model('user');
-		$this->load->library('form_validation');
 	}
 
 	public function index()
@@ -17,18 +15,17 @@ class Main extends CI_Controller {
 
 	public function login()
 	{
-		$results = $this->user->login($this->input->post());
+		// die('here');
+		// $results = $this->user->login($this->input->post());
 		if($results)
 		{
 			$this->session->set_userdata('user', $results);	
 			redirect('/user/dashboard');
-			exit();
 		}
 		else
 		{
 			$this->session->set_flashdata('login_msg', "Invalid Credentials.");
 			redirect('/');
-			exit();
 		}
 	}
 

@@ -39,16 +39,16 @@
 				<h1 class=''>User - Dashboard *For Development Use ONLY*</h1> 
 			</div>
 			<h3><strong>Currently Logged In</strong></h3>
-			<h4>First Name: <?= $first_name ?></h4>
-			<h4>Last Name: <?= $first_name ?></h4>
-			<h4>Email: <?= $first_name ?></h4>
-			<h4>Birthdate: <?= $first_name ?></h4>		
+			<h4>First Name: <?= $user['first_name'] ?></h4>
+			<h4>Last Name: <?= $user['last_name'] ?></h4>
+			<h4>Email: <?= $user['email'] ?></h4>
+			<h4>Birthdate: <?= $user['birthdate'] ?></h4>		
 		</div>
 	</div>
 	<div class='row nav'>
 		<div class='col-xs-12'>
 			<a href="/user/dashboard"><button class='btn btn-primary'>Home</button></a>
-			<a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a>
+			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 			<a href="/user/profile"><button class='btn btn-warning'>Profile</button></a>
 			<a href="/logout"><button class='btn btn-danger'>Logout</button></a>
 		</div>
