@@ -12,7 +12,7 @@
 	<div class="row header">
 		<div class="col-md-6">
 			<div class='center'>
-				<h1 class=''>User - Dashboard *For Development Use ONLY*</h1> 
+				<h1 class=''>User - Dashboard </h1> 
 			</div>
 			<h3><strong>Currently Logged In</strong></h3>
 			<h4>First Name: <?= $user['first_name'] ?></h4>
