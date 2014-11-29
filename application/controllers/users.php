@@ -15,7 +15,8 @@ class Users extends CI_Controller {
 	public function index()
 	{
 		$user = $this->session->userdata('user');
-		// $orders = $this->order->retrieveAll();
+		$orders = $this->order->retrieveAll();
+		var_dump($orders);
 		$alldata = array(
 			'user' => $this->session->userdata('user')
 			// 'order' =>$this->Stuff->retrieveAll();

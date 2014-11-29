@@ -6,7 +6,7 @@ class Mains extends CI_Controller {
 	{
 		parent::__construct($id);
 		$this->output->enable_profiler(TRUE);
-		$this->load->model('user');
+		// $this->load->model(array('user', 'order'));
 	}
 
 	public function index()

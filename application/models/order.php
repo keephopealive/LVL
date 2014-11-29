@@ -8,11 +8,5 @@ class Order extends CI_Model {
 		return $this->db->query($query);
 	}
 
-	public function create($order_content)
-	{
-		$query = "INSERT ";
-		$values = array($order_content)
-		return $this->db->query($query, $values)
-	}
-	
+
 }
