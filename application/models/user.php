@@ -56,7 +56,7 @@ class User extends CI_Model {
 	public function updateProfile($user)
 	{ // UPDATING USER INFO - ADD BIRTHDATE? SHOW BIRTHDATE FIRST?
 		$query = "UPDATE users SET first_name = ?,  last_name = ? , email = ? , created_at = ?, updated_at = ? WHERE users.id = ?";
-		$values = array($user['first_name'], $user['last_name'], $user['email'],	 date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"),$this->session->userdata('user')['id']);
+		$values = array($user['first_name'], $user['last_name'], $user['email'],	 date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"),$this->session->userdata['user']['id']);
 		return $this->db->query($query, $values);
 	}
 }
