@@ -44,3 +44,14 @@ table{
 .productGrid	{
 	margin: 20px 0;
 }
+
+.tool	{
+
+}
+
+.tool h4{
+	margin-top: 25px;
+}
+.selectwidthauto	{
+	width: auto !important;
+}

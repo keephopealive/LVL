@@ -39,7 +39,7 @@
 */
 
 $route['dashboard'] = "/users";
-
+$route['custom'] = "/orders";
 $route['default_controller'] = "mains";
 $route['login'] = "mains/login";
 $route['registration'] = "mains/registration";
