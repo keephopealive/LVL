@@ -9,79 +9,108 @@
 </head>
 <body>
 <div class="container-fluid">
-	<div class="row header">
+	<div class="row top50">
 
-		<div class="col-md-6">
-			<a href="/dashboard"><button class='btn btn-primary'>Home</button></a>
+		<div class="col-sm-3 col-sm-offset-1">
+			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
+		</div>
 			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
-			<a href="/profile"><button class='btn btn-warning'>Profile</button></a>
-			<a href="/logout"><button class='btn btn-danger'>Logout</button></a>	
+		<div class="col-sm-4">
+			<a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a>
+		</div>
+		<div class="col-sm-3" >
+			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
 		</div>
 	</div>
 
-	<div class="row top50 tool">
-			<div class="col-sm-10 col-sm-offset-1">
+	<div class="row top50">
+			<div class="col-sm-10 col-sm-offset-1 tool">
 				<form method='post' action='/orders/createOrder' role="form" class="form-inline">
 					<input type="hidden" name="price" value="F">
-					
-					<div class="col-sm-4" id="orientation">
+				<div class="row">	
+					<div class="col-xs-4 col-sm-3 col-sm-offset-1" id="orientation">
 						<h4>Orientation</h4>
-						<label>
-							<input type="radio" name="plate_orientation" value=""> Horizontal
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="plate_orientation" value=""> Horizontal
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="plate_orientation" value=""> Vertical
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="plate_orientation" value=""> Vertical
+							</label>
+						</div>
 					</div>
 
-					<div class="col-sm-4">
+					<div class="col-xs-4 col-sm-3 col-sm-offset-1">
 						<h4>Plate Size</h4>
-						<label>
-							<input type="radio" name="plate_size" value="3008"> 82x82
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="plate_size" value="3008"> 82x82
+							</label>
+						</div>
 						<br>
+						<div class="radio">
 						<label>
 							<input type="radio" name="plate_size" value="3001" orientation="horizontal"> 117x82
 						</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="plate_size" value="3002" orientation="horizontal"> 144x82
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="plate_size" value="3002" orientation="horizontal"> 144x82
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="plate_size" value="3000" orientation="vertical"> 82x117 
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="plate_size" value="3000" orientation="vertical"> 82x117 
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="plate_size" value="3003" orientation="vertical"> 82x144
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="plate_size" value="3003" orientation="vertical"> 82x144
+							</label>
+						</div>
 					</div>
 		
-					<div class="col-sm-4" id="collection">
+					<div class="col-xs-4 col-sm-3 col-sm-offset-1" id="collection">
 						<h4>Collection</h4>
-						<label>
-							<input type="radio" name="collection" value="C"> Classique
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="collection" value="C"> Classique
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="collection" value="E"> Elipse
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="collection" value="E"> Elipse
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="collection" value="P"> Pierrot
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="collection" value="P"> Pierrot
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="collection" value="L"> Limoges
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="collection" value="L"> Limoges
+							</label>
+						</div>
 						<br>
-						<label>
-							<input type="radio" name="collection" value="K"> Damier
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="collection" value="K"> Damier
+							</label>
+						</div>
 					</div>
-					
-					<div class="col-sm-4">
+				</div>	
+				<div class="row top50">
+					<div class="col-sm-3 col-sm-offset-1">
 						<h4>Finish</h4>
 
 							<select name="finish" class="form-control selectwidthauto">
@@ -117,20 +146,28 @@
 							</select>
 						</label>					
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-3 col-sm-offset-1">
 						<h4>Mechanisms</h4>
-						<label>
-							<input type="radio" name="mechanism" value="A1100010"> default
-						</label>
+						<div class="radio">
+							<label>
+								<input type="radio" name="mechanism" value="A1100010"> default
+							</label>
+						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-3 col-sm-offset-1">
 						<h4>Edge/Screw</h4>
-						<label>
-							<input type="radio" name="edge_screw" value="X"> default
-						</label>
-						
+						<div class="radio">
+							<label>
+								<input type="radio" name="edge_screw" value="X"> default
+							</label>
+						</div>
 						<button type="submit" class="btn btn-default pull-right top50">Submit</button>
+						
 					</div>
+				</div>
+					<!-- <div class="row">
+						
+					</div> -->
 				</form>
 			</div>
 		</div>
