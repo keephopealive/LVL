@@ -12,4 +12,13 @@ class Orders extends CI_Controller {
 	{
 		$this->load->view('orderNew');
 	}
+
+	public function createOrder()
+	{
+		// Call Method to Generate New PDF 
+		// Call Model to Input New Generated Order w/PDF
+		var_dump($this->input->post());
+		die('in orders / create order');
+		// Redirect to Dashboard
+	}
 }

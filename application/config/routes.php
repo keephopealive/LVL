@@ -50,6 +50,8 @@ $route['404_override'] = '';
 
 // Order Related
 $route['orders/new'] = "orders/newOrder";
+$route['orders/createOrder'] = 'orders/createOrder';
+
 // $route['orders/edit/(:num)'] = "orders/edit/$1";
 
 // die('here');

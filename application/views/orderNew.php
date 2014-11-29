@@ -21,7 +21,7 @@
 
 	<div class="row top50 tool">
 			<div class="col-sm-10 col-sm-offset-1">
-				<form method='post' action='custom' role="form" class="form-inline">
+				<form method='post' action='/orders/createOrder' role="form" class="form-inline">
 					<input type="hidden" name="price" value="F">
 					
 					<div class="col-sm-4" id="orientation">

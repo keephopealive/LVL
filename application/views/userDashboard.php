@@ -45,7 +45,6 @@
 					<th>Status</th>
 					<th>Note</th>
 					<th>PDF</th>
-					<th></th>
 				</thead>
 <?php 			foreach($orders as $order)
 				{
@@ -55,10 +54,6 @@
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
-						<td>
-							<a href="order/edit/<?= $order['id'] ?>" class='btn btn-primary'>Edit</a>
-							<a href="order/destroy/<?= $order['id'] ?>" class='btn btn-danger'>Destroy</a>
-						</td>
 					</tr>				
 <?php 			}
 ?>			</table>
