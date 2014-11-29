@@ -44,3 +44,12 @@ table{
 .productGrid	{
 	margin: 20px 0;
 }
+.tool 	{
+	padding: 5%;
+	background-color: rgba(175,198,237,0.2)
+}
+
+.selectwidthauto
+{
+     width:95% !important;
+}
