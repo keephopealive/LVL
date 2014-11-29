@@ -24,7 +24,7 @@ class Users extends CI_Controller {
 
 	public function profile()
 	{
-		$user = $this->user->retrieveUser($this->session->userdata('user')['id']);
+		$user = $this->user->retrieveUser($this->session->userdata['user']['id']);
 		$this->load->view('userProfile', $user);
 	}
 
