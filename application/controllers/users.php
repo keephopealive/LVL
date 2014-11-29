@@ -1,11 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User extends CI_Controller {
+class Users extends CI_Controller {
 
-	public function __construct()
+	public function __construct($id = null)
 	{
-		parent::__construct();
-		// $this->output->enable_profiler(TRUE);
+		parent::__construct($id);
+		$this->output->enable_profiler(TRUE);
 		// $this->load->model('User');
 	}
 
@@ -14,19 +14,20 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('orders');
-		$results = $this->Stuff->retrieveAll();
-		var_dump($results);
-		die('here');
+		// $this->load->model('orders');
+		// $results = $this->Stuff->retrieveAll();
+		// var_dump($results);
+		die('in index here');
 	}
 
 	public function dashboard()
 	{
+		die('in users dashboard');
 		$user = $this->session->userdata('user');
-		$this->load->model('stuff');
+		// $this->load->model('user');
 		$alldata = array(
-			'user' => $this->session->userdata('user'),
-			'order' =>$this->Stuff->retrieveAll();
+			'user' => $this->session->userdata('user')
+			// 'order' =>$this->Stuff->retrieveAll();
 		);
 		$this->load->view('userDashboard', $alldata);
 	}

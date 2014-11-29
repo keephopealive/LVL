@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Mains extends CI_Controller {
 
 	public function __construct($id = null)
 	{
@@ -16,14 +16,18 @@ class Main extends CI_Controller {
 	public function login()
 	{
 		// die('here');
-		// $results = $this->user->login($this->input->post());
+		$this->load->database();
+		$this->load->model('user');
+		$results = $this->user->login($this->input->post());
 		if($results)
 		{
+			// die('true');
 			$this->session->set_userdata('user', $results);	
-			redirect('/user/dashboard');
+			redirect('./dashboard');
 		}
 		else
 		{
+			// die('false');
 			$this->session->set_flashdata('login_msg', "Invalid Credentials.");
 			redirect('/');
 		}

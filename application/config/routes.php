@@ -38,14 +38,14 @@
 |e
 */
 
-$route['/user/dashboard'] = "user/index";
+$route['dashboard'] = "/users";
 
-$route['default_controller'] = "main";
-$route['/login'] = "main/login";
-$route['/registration'] = "main/registration";
-$route['user/profile'] = "user/profile";
-$route['logout'] = "main/logout";
-$route['user/updateProfile'] = 'user/update';
+$route['default_controller'] = "mains";
+$route['login'] = "mains/login";
+$route['registration'] = "mains/registration";
+// $route['user/profile'] = "users/profile";
+$route['logout'] = "mains/logout";
+// $route['user/updateProfile'] = 'users/update';
 $route['404_override'] = '';
 
 // die('here');
