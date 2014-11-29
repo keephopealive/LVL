@@ -6,7 +6,6 @@ class Mains extends CI_Controller {
 	{
 		parent::__construct($id);
 		$this->output->enable_profiler(TRUE);
-		// $this->load->model(array('user', 'order'));
 	}
 
 	public function index()
@@ -16,13 +15,7 @@ class Mains extends CI_Controller {
 
 	public function login()
 	{
-		// die('here');
-		// $this->load->database();
-
 		$results = $this->user->login($this->input->post());
-		// $orders = $this->order_model->retrieveAll();
-		// var_dump($orders);
-		// die();
 		if($results)
 		{
 			$this->session->set_userdata('user', $results);	
@@ -34,7 +27,6 @@ class Mains extends CI_Controller {
 			redirect('/');
 		}
 	}
-
 
 	public function logout()
 	{

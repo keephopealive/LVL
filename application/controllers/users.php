@@ -6,7 +6,6 @@ class Users extends CI_Controller {
 	{
 		parent::__construct($id);
 		$this->output->enable_profiler(TRUE);
-		// $this->load->model('User');
 	}
 
 
@@ -15,19 +14,12 @@ class Users extends CI_Controller {
 	public function index()
 	{
 		$user = $this->session->userdata('user');
-		$orders = $this->order->retrieveAll();
-		var_dump($orders);
+		$orders = $this->order->retrieveAll($user['id']);
 		$alldata = array(
-			'user' => $this->session->userdata('user')
-			// 'order' =>$this->Stuff->retrieveAll();
+			'user' => $user,
+			'orders' =>$orders
 		);
 		$this->load->view('userDashboard', $alldata);
-	}
-
-	public function dashboard()
-	{
-		die('in users dashboard');
-		
 	}
 
 	public function profile()

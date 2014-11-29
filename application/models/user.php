@@ -18,7 +18,6 @@ class User extends CI_Model {
 
 	public function login($user)
 	{
-		// die('in user login model');
 		return $results = $this->validate_user($user);
 	}	
 
@@ -26,8 +25,6 @@ class User extends CI_Model {
 	{
 
 	}
-
-	// Priate Functions
 
 	private function validate_user($user)
 	{

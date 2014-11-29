@@ -15,6 +15,7 @@
 				<h1 class=''>User - Dashboard </h1> 
 			</div>
 			<h3><strong>Currently Logged In</strong></h3>
+			<h4>User ID: <?= $user['id'] ?></h4>
 			<h4>First Name: <?= $user['first_name'] ?></h4>
 			<h4>Last Name: <?= $user['last_name'] ?></h4>
 			<h4>Email: <?= $user['email'] ?></h4>
@@ -28,6 +29,36 @@
 		</div>
 	</div>
 
+<!-- BEGINS - ORDERS LIST  -->
+	<div class="row">
+		<div class='col-xs-12'>
+			<table class='table table-bordered'>
+				<thead>
+					<th>Order # (Order ID)</th>
+					<th>Reference #</th>
+					<th>Status</th>
+					<th>Note</th>
+					<th>PDF</th>
+					<th></th>
+				</thead>
+<?php 			foreach($orders as $order)
+				{
+?>					<tr>
+						<td><?= $order['id']; ?></td>
+						<td><?= $order['reference_no']; ?></td>
+						<td><?= $order['status']; ?></td>
+						<td><?= $order['note']; ?></td>
+						<td><a href="">PDF FILE</a></td>
+						<td>
+							<a href="order/edit/<?= $order['id'] ?>" class='btn btn-primary'>Edit</a>
+							<a href="order/destroy/<?= $order['id'] ?>" class='btn btn-danger'>Destroy</a>
+						</td>
+					</tr>				
+<?php 			}
+?>			</table>
+		</div>
+	</div>
+<!-- ENDS - ORDER LIST -->
 
 <!-- PRODUCT VIEW TO CUSTOM TOOL BEGIN -->
 	<div class="row top50">

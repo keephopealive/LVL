@@ -48,7 +48,56 @@ $route['logout'] = "mains/logout";
 // $route['user/updateProfile'] = 'users/update';
 $route['404_override'] = '';
 
+// Order Related
+$route['order/edit/(:num)'] = "order/edit/$1";
+
 // die('here');
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

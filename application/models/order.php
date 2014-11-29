@@ -2,11 +2,9 @@
 
 class Order extends CI_Model {
 
-	public function retrieveAll()
+	public function retrieveAll($id)
 	{
-		$query = "SELECT * FROM orders";
-		return $this->db->query($query);
+		$query = "SELECT * FROM orders WHERE user_id = {$id}";
+		return $this->db->query($query)->result_array();
 	}
-
-
 }
