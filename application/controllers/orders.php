@@ -8,18 +8,8 @@ class Orders extends CI_Controller {
 		$this->output->enable_profiler(TRUE);
 	}
 
-	public function new()
+	public function newOrder()
 	{
-
-	}
-
-	public function edit()
-	{
-
-	}
-
-	public function destroy()
-	{
-
+		$this->load->view('orderNew');
 	}
 }

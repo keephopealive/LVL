@@ -49,7 +49,8 @@ $route['logout'] = "mains/logout";
 $route['404_override'] = '';
 
 // Order Related
-$route['order/edit/(:num)'] = "order/edit/$1";
+$route['orders/new'] = "orders/newOrder";
+// $route['orders/edit/(:num)'] = "orders/edit/$1";
 
 // die('here');
 

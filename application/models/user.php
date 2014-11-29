@@ -21,11 +21,6 @@ class User extends CI_Model {
 		return $results = $this->validate_user($user);
 	}	
 
-	public function update($user)
-	{
-
-	}
-
 	private function validate_user($user)
 	{
 		$this->load->helper('security');

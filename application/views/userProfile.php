@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>User - Profile</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<style type="text/css">
 	.right{
 		text-align: right;
@@ -23,9 +24,7 @@
 	}
 	.center-this{
 	}
-
-	</style>	
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</style>
 </head>
 <body>
 <div class="container">

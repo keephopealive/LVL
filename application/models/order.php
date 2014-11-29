@@ -7,4 +7,5 @@ class Order extends CI_Model {
 		$query = "SELECT * FROM orders WHERE user_id = {$id}";
 		return $this->db->query($query)->result_array();
 	}
+
 }

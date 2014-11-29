@@ -5,10 +5,9 @@
 	<title>User Dashboard</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
 	<div class="row header">
 		<div class="col-md-6">
 			<div class='center'>
@@ -28,6 +27,13 @@
 			<a href="/logout"><button class='btn btn-danger'>Logout</button></a>	
 		</div>
 	</div>
+
+	<div class="row">
+		<div class='col-xs-12'>
+			<a href="/orders/new" class='btn btn-primary'>Create New Order</a>
+		</div>
+	</div>
+
 
 <!-- BEGINS - ORDERS LIST  -->
 	<div class="row">
@@ -271,7 +277,7 @@
 			<h3 style="margin-top:0px;">ORDERS</h3>
 		</div>
 		<div class="col-sm-5">
-			<a href="" class='btn btn-primary pull-right'>Create a New Order</a>
+			<a href="/orders/new" class='btn btn-primary pull-right'>Create a New Order</a>
 		</div>
 	</div>
 
