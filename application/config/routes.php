@@ -35,18 +35,20 @@
 |
 | This route will tell the Router what URI segments to use if those provided
 | in the URL cannot be matched to a valid route.
-|
+|e
 */
 
+$route['/user/dashboard'] = "user/index";
+
 $route['default_controller'] = "main";
-$route['login'] = "main/login";
-$route['registration'] = "main/registration";
-$route['user/dashboard'] = "user/dashboard";
+$route['/login'] = "main/login";
+$route['/registration'] = "main/registration";
 $route['user/profile'] = "user/profile";
 $route['logout'] = "main/logout";
 $route['user/updateProfile'] = 'user/update';
 $route['404_override'] = '';
 
+// die('here');
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

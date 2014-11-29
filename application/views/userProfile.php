@@ -44,7 +44,7 @@
 	<div class='row nav'>
 		<div class='col-xs-12'>
 			<a href="/user/dashboard"><button class='btn btn-primary'>Home</button></a>
-			<a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a>
+			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 			<a href="/user/profile"><button class='btn btn-warning'>Profile</button></a>
 			<a href="/logout"><button class='btn btn-danger'>Logout</button></a>
 		</div>
@@ -66,14 +66,6 @@
 					<div class="form-group">
 						<label class="inline">Email:</label>
 						<input type="email" name="email" value='<?= $email ?>' class="form-control">
-					</div>
-					<div class="form-group">
-						<label class="inline">Password:</label>
-						<input type="password" name="password" value='' class="form-control">
-					</div>
-					<div class="form-group">
-						<label class="inline">Confirm Password:</label>
-						<input type="password" name="confirm_password" value='' class="form-control">
 					</div>
 					<div class="form-group">
 						<!-- <label class="inline">Date of Birth:</label> -->
