@@ -5,6 +5,7 @@
 	<title>User Dashboard</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
 </head>
 <body>
 <div class="container-fluid">
@@ -139,7 +140,7 @@
 		<div class="col-sm-10 col-sm-offset-1">
 			<form method='post' action='/process' role="form" class="form-inline">
 				<input type="hidden" name="price" value="F">
-				<div class="col-sm-2">
+				<div class="col-sm-2" id="orientation">
 					<h4>Orientation</h4>
 					<label>
 						<input type="radio" name="plate_orientation" value=""> Horizontal
@@ -150,7 +151,7 @@
 					</label>
 				</div>
 	
-				<div class="col-sm-2">
+				<div class="col-sm-2" id="collection">
 					<h4>Collection</h4>
 					<label>
 						<input type="radio" name="collection" value="C"> Classique
@@ -196,21 +197,9 @@
 					</label>
 				</div>
 				<div class="col-sm-2">
-					<h4>Edge/Screw</h4>
-					<label>
-						<input type="radio" name="edge_screw" value="X"> default
-					</label>
-				</div>
-				<div class="col-sm-2">
-					<h4>Mechanisms</h4>
-					<label>
-						<input type="radio" name="mechanism" value="A1100010"> default
-					</label>
-				</div>
-				<div class="col-sm-2">
 					<h4>Finish</h4>
 					<label>
-						<select name="finish">
+						<select name="finish" multiple class="form-control">
 							<option value="FA">NICKEL BROSSE</option>
 							<option value="FB">NICKEL BRILLANT </option>
 							<option value="FC">MICROBILLE NICKEL </option>
@@ -241,6 +230,19 @@
 							<option value="SM">Microbillé CF anthracite</option>
 							<option value="SN">POLI VERNI OR MAT</option>
 						</select>
+					</label>
+					
+				</div>
+				<div class="col-sm-2">
+					<h4>Mechanisms</h4>
+					<label>
+						<input type="radio" name="mechanism" value="A1100010"> default
+					</label>
+				</div>
+				<div class="col-sm-2">
+					<h4>Edge/Screw</h4>
+					<label>
+						<input type="radio" name="edge_screw" value="X"> default
 					</label>
 					
 					<button type="submit" class="btn btn-default pull-right top50">Submit</button>
