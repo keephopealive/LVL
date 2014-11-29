@@ -14,22 +14,13 @@
 			<div class='center'>
 				<h1 class=''>User - Dashboard *For Development Use ONLY*</h1> 
 			</div>
-<<<<<<< HEAD
-=======
 			<h3><strong>Currently Logged In</strong></h3>
 			<h4>First Name: <?= $user['first_name'] ?></h4>
 			<h4>Last Name: <?= $user['last_name'] ?></h4>
 			<h4>Email: <?= $user['email'] ?></h4>
 			<h4>Birthdate: <?= $user['birthdate'] ?></h4>		
->>>>>>> FETCH_HEAD
 		</div>
 		<div class="col-md-6">
-			<h3><strong>Currently Logged In</strong></h3><br>
-			<h5>First Name: <?= $first_name ?></h5>
-			<h5>Last Name: <?= $first_name ?></h5>
-			<h5>Email: <?= $first_name ?></h5>
-			<h5>Birthdate: <?= $first_name ?></h5>	
-			<br>
 			<a href="/user/dashboard"><button class='btn btn-primary'>Home</button></a>
 			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 			<a href="/user/profile"><button class='btn btn-warning'>Profile</button></a>
