@@ -44,7 +44,7 @@
 	<div class='row nav'>
 		<div class='col-xs-12'>
 			<a href="/user/dashboard"><button class='btn btn-primary'>Home</button></a>
-			<a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a>
+			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 			<a href="/user/profile"><button class='btn btn-warning'>Profile</button></a>
 			<a href="/logout"><button class='btn btn-danger'>Logout</button></a>
 		</div>

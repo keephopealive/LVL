@@ -23,7 +23,7 @@ class User extends CI_Model {
 
 	public function update($user)
 	{
-		die('over here');
+
 	}
 
 	// Priate Functions
