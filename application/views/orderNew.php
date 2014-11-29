@@ -5,7 +5,31 @@
 	<title>User Dashboard</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
 
+
+	$(document).on('submit', 'form#createOrderForm', function(){
+		$.post(
+			$(this).attr('action'),
+			$(this).serialize(),
+			function(data){
+				if(data.status == 'failed')
+				{
+					console.log('failed');
+					$('div.errors').html(data.errors);
+				}
+				else	
+				{
+					$('div.errors').html('');
+					console.log("succeeded");
+				}
+			},
+			'json'
+		);
+		return false;
+	});
+	</script>
 </head>
 <body>
 <div class="container-fluid">
@@ -19,42 +43,43 @@
 		</div>
 	</div>
 
+	<div class='errors'>
+	</div>
+
 	<div class="row top50 tool">
 			<div class="col-sm-10 col-sm-offset-1">
-				<form method='post' action='/orders/createOrder' role="form" class="form-inline">
-					<input type="hidden" name="price" value="F">
-					
+				<form method='post' action='/orders/createOrder' role="form" class="form-inline" id="createOrderForm">
 					<div class="col-sm-4" id="orientation">
 						<h4>Orientation</h4>
 						<label>
-							<input type="radio" name="plate_orientation" value=""> Horizontal
+							<input type="radio" name="orientation" value="horizontal"> Horizontal
 						</label>
 						<br>
 						<label>
-							<input type="radio" name="plate_orientation" value=""> Vertical
+							<input type="radio" name="orientation" value="vertical"> Vertical
 						</label>
 					</div>
 
 					<div class="col-sm-4">
 						<h4>Plate Size</h4>
 						<label>
-							<input type="radio" name="plate_size" value="3008"> 82x82
+							<input type="radio" name="size" value="3008"> 82x82
 						</label>
 						<br>
 						<label>
-							<input type="radio" name="plate_size" value="3001" orientation="horizontal"> 117x82
+							<input type="radio" name="size" value="3001" orientation="horizontal"> 117x82
 						</label>
 						<br>
 						<label>
-							<input type="radio" name="plate_size" value="3002" orientation="horizontal"> 144x82
+							<input type="radio" name="size" value="3002" orientation="horizontal"> 144x82
 						</label>
 						<br>
 						<label>
-							<input type="radio" name="plate_size" value="3000" orientation="vertical"> 82x117 
+							<input type="radio" name="size" value="3000" orientation="vertical"> 82x117 
 						</label>
 						<br>
 						<label>
-							<input type="radio" name="plate_size" value="3003" orientation="vertical"> 82x144
+							<input type="radio" name="size" value="3003" orientation="vertical"> 82x144
 						</label>
 					</div>
 		
@@ -129,7 +154,7 @@
 							<input type="radio" name="edge_screw" value="X"> default
 						</label>
 						
-						<button type="submit" class="btn btn-default pull-right top50">Submit</button>
+						<button type="submit" class="btn btn-default pull-right top50" >Submit</button>
 					</div>
 				</form>
 			</div>

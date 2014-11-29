@@ -65,26 +65,4 @@ class Users extends CI_Controller {
 		redirect('/profile');
 	}
 
-	public function userDestroy()
-	{
-
-	}
-
-
-// Order 
-
-	public function newOrder()
-	{
-
-	}
-
-	public function editOrder()
-	{
-
-	}
-
-	public function destroyOrder()
-	{
-
-	}
 }
