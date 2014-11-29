@@ -6,6 +6,7 @@ class Mains extends CI_Controller {
 	{
 		parent::__construct($id);
 		$this->output->enable_profiler(TRUE);
+		$this->load->model('user');
 	}
 
 	public function index()
@@ -16,18 +17,19 @@ class Mains extends CI_Controller {
 	public function login()
 	{
 		// die('here');
-		$this->load->database();
-		$this->load->model('user');
+		// $this->load->database();
+
 		$results = $this->user->login($this->input->post());
+		// $orders = $this->order_model->retrieveAll();
+		// var_dump($orders);
+		// die();
 		if($results)
 		{
-			// die('true');
 			$this->session->set_userdata('user', $results);	
-			redirect('./dashboard');
+			redirect('/dashboard');
 		}
 		else
 		{
-			// die('false');
 			$this->session->set_flashdata('login_msg', "Invalid Credentials.");
 			redirect('/');
 		}

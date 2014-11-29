@@ -2,11 +2,10 @@
 
 class Order extends CI_Model {
 
-	public function retrieveAll($user)
+	public function retrieveAll()
 	{
-		$this->load->helper('security');
 		$query = "SELECT * FROM orders";
-		return $this->db->query($query)->row_array();
+		return $this->db->query($query);
 	}
 
 	public function create($order_content)

@@ -14,22 +14,19 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-		// $this->load->model('orders');
-		// $results = $this->Stuff->retrieveAll();
-		// var_dump($results);
-		die('in index here');
-	}
-
-	public function dashboard()
-	{
-		die('in users dashboard');
 		$user = $this->session->userdata('user');
-		// $this->load->model('user');
+		// $orders = $this->order->retrieveAll();
 		$alldata = array(
 			'user' => $this->session->userdata('user')
 			// 'order' =>$this->Stuff->retrieveAll();
 		);
 		$this->load->view('userDashboard', $alldata);
+	}
+
+	public function dashboard()
+	{
+		die('in users dashboard');
+		
 	}
 
 	public function profile()
