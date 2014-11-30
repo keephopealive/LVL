@@ -24,4 +24,10 @@ class Admins extends CI_Controller {
 		$order = $this->order->adminRetrieveOrder($id);
 		$this->load->view('adminOrderEdit', array('order' => $order));
 	}
+
+	public function update()
+	{
+		$result = $this->order->adminUpdateOrder($this->input->post());
+		echo json_encode($result);
+	}
 }

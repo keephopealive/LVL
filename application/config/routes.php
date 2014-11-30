@@ -50,6 +50,7 @@ $route['logout'] = "mains/logout";
 
 $route['admin/dashboard'] = "/admins";
 $route['admin/edit/(:num)'] = "admins/edit/$1";
+$route['order/update'] = "admins/update";
 
 
 

@@ -5,6 +5,20 @@
 	<title>Admin Order EDIT</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).on('submit', 'form#orderUpdate', function(){
+			$.post(
+				$(this).attr('action'),
+				$(this).serialize(),
+				function(data){
+					console.log(data);
+				},
+				'json'
+			);
+			return false;
+		});
+	</script>
 </head>
 <body>
 <div class="container-fluid">
@@ -32,10 +46,7 @@
 					<th>Date Created</th>
 					<th>Reference #</th>
 					<th>Client Name</th>
-					<th>Status</th>
-					<th>Note</th>
 					<th>PDF</th>
-					<th>Actions</th>
 				</thead>
 				<form>
 					<tr>  <!-- CHANGE ALL ORDER FIELDS INTO EDITABLE INPUTS -->
@@ -43,14 +54,56 @@
 						<td><?= $order['created_at']; ?></td>
 						<td><?= $order['reference_no']; ?></td>
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
-						<td><?= $order['status']; ?></td>
-						<td><?= $order['note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
-						<td>
-							<input type='submit' value='Save' class='btn btn-success'>
-						</td>			
 					</tr>	
 				</form>
+			</table>
+
+
+			<table class="table top50">
+				<thead>
+					<th>Status</th>
+					<th>Note</th>
+					<th>Admin Note</th>
+					<th>Actions</th>
+				</thead>
+				<tr>
+					<form id="orderUpdate" method="post" action="/order/update">
+						<input type="hidden" name="order_id" value="<?= $order['id']; ?>">
+						<td>
+							<select name="status">
+								<?php
+								if($order['status'] == 'Pending')
+								{
+?>									<option value="Pending" selected>Pending</option>
+									<option value="Processing" >Processing</option>
+									<option value="Complete" >Complete</option>
+<?php							}
+								else if($order['status'] == 'Processing')
+								{
+?>									<option value="Pending">Pending</option>
+									<option value="Processing" selected>Processing</option>
+									<option value="Complete" >Complete</option>
+<?php
+								}
+								else if($order['status'] == 'Complete')
+								{
+?>									<option value="Pending">Pending</option>
+									<option value="Processing" >Processing</option>
+									<option value="Complete" selected>Complete</option>
+<?php
+								}
+?>							</select>
+						</td>
+						<td>
+							<?= $order['note']; ?>	
+						</td>
+						<td>
+							<textarea name="admin_note" value="<?= $order['admin_note']; ?>"><?= $order['admin_note']; ?></textarea>
+						</td>
+						<td><input type='submit' value='Save' class='btn btn-success'></td>
+					</form>
+				</tr>
 			</table>
 		</div>
 	</div>

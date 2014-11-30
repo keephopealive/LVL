@@ -14,6 +14,14 @@ class Order extends CI_Model {
 		return $this->db->query($query)->row_array();
 	}
 
+	public function adminUpdateOrder($order)
+	{
+		$query = "UPDATE orders SET status = ?, admin_note = ?,  created_at = ?, updated_at = ? WHERE orders.id = ?";
+		$values = array($order['status'], $order['admin_note'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"), $order['order_id']);
+		return $this->db->query($query, $values);
+	}
+
+
 	public function retrieveAll($id)
 	{
 		$query = "SELECT * FROM orders WHERE user_id = {$id}";
