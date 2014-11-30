@@ -27,7 +27,22 @@
 	</style>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
+
+	<div class="row top50">
+
+		<div class="col-sm-3 col-sm-offset-1">
+			<a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a>
+		</div>
+			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
+		<div class="col-sm-4">
+			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
+		</div>
+		<div class="col-sm-3" >
+			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
+		</div>
+	</div>
+
 	<div class="row header">
 		<div class="col-md-12">
 			<div class='center'>
@@ -40,14 +55,7 @@
 			<h4>Birthdate: <?= $birthdate ?></h4>		
 		</div>
 	</div>
-	<div class='row nav'>
-		<div class='col-xs-12'>
-			<a href="/dashboard"><button class='btn btn-primary'>Home</button></a>
-			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
-			<a href="/profile"><button class='btn btn-warning'>Profile</button></a>
-			<a href="/logout"><button class='btn btn-danger'>Logout</button></a>
-		</div>
-	</div>
+
 	<div class='row'>
 		<div class='col-xs-12'>
 			<h2>Content</h2>
