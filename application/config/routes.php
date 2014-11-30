@@ -52,7 +52,7 @@ $route['404_override'] = '';
 // Order Related
 $route['orders/new'] = "orders/newOrder";
 $route['orders/createOrder'] = 'orders/createOrder';
-$route['products'] = "/products";
+$route['products'] = "products";
 // $route['orders/edit/(:num)'] = "orders/edit/$1";
 
 $route['retrieveMechanisms'] = 'orders/retrieveMechanisms';

@@ -10,7 +10,6 @@
 <div class="container-fluid">
 
 	<div class="row top50">
-
 		<div class="col-sm-3 col-sm-offset-1">
 			<a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a>
 		</div>

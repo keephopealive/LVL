@@ -8,6 +8,22 @@
 </head>
 <body>
 <div class="container-fluid">
+
+
+	<div class="row top50">
+
+		<div class="col-sm-3 col-sm-offset-1">
+			<!-- <a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a> -->
+		</div>
+			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
+		<div class="col-sm-4">
+			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
+		</div>
+		<div class="col-sm-3" >
+			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
+		</div>
+	</div>
+
 	<!-- PRODUCT VIEW TO CUSTOM TOOL BEGIN -->
 	<div class="row top50">
 		<div class="col-sm-3 col-sm-offset-1">

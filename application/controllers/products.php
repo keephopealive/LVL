@@ -10,7 +10,8 @@ class Products extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('productGrid');
+		$results = $this->product->retrieveAll();
+		$this->load->view('productDashboard', array('products' => $results));
 	}
 
 }
