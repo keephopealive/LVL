@@ -27,8 +27,8 @@ class Mains extends CI_Controller {
 			else if ($results['admin'] == "1")
 			{
 				$this->session->set_userdata('user', $results);	
-				die('head to admin dashboard');
-				// redirect('/admin/dashboard');
+				// die('head to admin dashboard');
+				redirect('/admin/dashboard');
 			}			
 		}
 		else

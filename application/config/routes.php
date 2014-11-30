@@ -47,6 +47,9 @@ $route['profile'] = "users/profile";
 $route['users/updateProfile'] = "users/updateProfile";
 $route['logout'] = "mains/logout";
 // $route['user/updateProfile'] = 'users/update';
+
+$route['admin/dashboard'] = "/admins";
+
 $route['404_override'] = '';
 
 // Order Related
