@@ -42,17 +42,18 @@
 			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
 		</div>
 	</div>
-
-	<div class="row header">
-		<div class="col-md-12">
-			<div class='center'>
-				<h1 class=''>User - Profile *For Development Use ONLY*</h1> 
-			</div>
-			<h3><strong>Currently Logged In</strong></h3>
+	
+	<div class="row top50">
+		<div class="col-md-3 col-md-offset-1 center">
+			<h4><strong>Currently Logged In</strong></h3>
+		</div>
+		<div class="col-md-3 col-md-offset-1">
 			<h4>First Name: <?= $first_name ?></h4>
 			<h4>Last Name: <?= $last_name ?></h4>
+		</div>
+		<div class="col-md-3">
 			<h4>Email: <?= $email ?></h4>
-			<h4>Birthdate: <?= $birthdate ?></h4>		
+			<h4>Birthdate: <?= $birthdate ?></h4>	
 		</div>
 	</div>
 
