@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Admin Dashboard</title>
+	<title>Admin Order EDIT</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
@@ -25,7 +25,7 @@
 <!-- BEGINS - ORDERS LIST  -->
 	<div class="row top50">
 		<div class='col-sm-10 col-sm-offset-1'>
-			<h2 class="center">Admin Dashboard</h2>
+			<h2 class="center">Admin Order Edit</h2>
 			<table class='table table-bordered top50'>
 				<thead>
 					<th>Order # (Order ID)</th>
@@ -37,9 +37,8 @@
 					<th>PDF</th>
 					<th>Actions</th>
 				</thead>
-<?php 			foreach($orders as $order)
-				{
-?>					<tr>
+				<form>
+					<tr>  <!-- CHANGE ALL ORDER FIELDS INTO EDITABLE INPUTS -->
 						<td><?= $order['id']; ?></td>
 						<td><?= $order['created_at']; ?></td>
 						<td><?= $order['reference_no']; ?></td>
@@ -47,10 +46,12 @@
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
-						<td><a href="/admin/edit/<?= $order['id']; ?>" class='btn btn-warning'>Edit</a></td>			
+						<td>
+							<input type='submit' value='Save' class='btn btn-success'>
+						</td>			
 					</tr>	
-<?php 			}
-?>			</table>
+				</form>
+			</table>
 		</div>
 	</div>
 <!-- ENDS - ORDER LIST -->
@@ -64,20 +65,19 @@
 		</div>
 	</div>
 <!-- ENDS - CREATE NEW ORDER -->
-
 <!-- BEGINS - USER INFO -->
 	<div class="row top50">
 		<div class="col-md-3 col-md-offset-1 center">
-			<h4><strong>Currently Logged In</strong></h3>
+			<h4><strong>Client Info</strong></h3>
 		</div>
 		<div class="col-md-3 col-md-offset-1">
-			<h4>User ID: <?= $user['id'] ?></h4>
-			<h4>First Name: <?= $user['first_name'] ?></h4>
-			<h4>Last Name: <?= $user['last_name'] ?></h4>
+			<h4>User ID: <?= $order['id'] ?></h4>
+			<h4>First Name: <?= $order['first_name'] ?></h4>
+			<h4>Last Name: <?= $order['last_name'] ?></h4>
 		</div>
 		<div class="col-md-3">
-			<h4>Email: <?= $user['email'] ?></h4>
-			<h4>Birthdate: <?= $user['birthdate'] ?></h4>		
+			<h4>Email: <?= $order['email'] ?></h4>
+			<h4>Birthdate: <?= $order['birthdate'] ?></h4>		
 		</div>
 	</div>
 <!-- ENDS - USER INFO -->

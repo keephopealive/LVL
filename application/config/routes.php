@@ -49,6 +49,9 @@ $route['logout'] = "mains/logout";
 // $route['user/updateProfile'] = 'users/update';
 
 $route['admin/dashboard'] = "/admins";
+$route['admin/edit/(:num)'] = "admins/edit/$1";
+
+
 
 $route['404_override'] = '';
 

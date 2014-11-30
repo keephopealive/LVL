@@ -11,7 +11,7 @@ class User extends CI_Model {
 
 		$encrypted_password = crypt($this->db->escape($user['password']), $salt);
 
-		$query = "INSERT INTO users (first_name, last_name, email, encrypted_password,  birthdate, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO users (first_name, last_name, email, encrypted_password, birthdate, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)";
 		$values = array($user['first_name'], $user['last_name'], $user['email'], $encrypted_password, $user['birthdate'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
 	}

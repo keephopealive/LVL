@@ -11,11 +11,17 @@ class Admins extends CI_Controller {
 	public function index()
 	{
 		$user = $this->session->userdata['user'];
-		$orders = $this->order->retrieveAll($user['id']);
+		$orders = $this->order->adminRetrieveAll();
 		$alldata = array(
 			'user' => $user,
 			'orders' =>$orders
 		);
 		$this->load->view('adminDashboard', $alldata);
+	}
+
+	public function edit($id)
+	{
+		$order = $this->order->adminRetrieveOrder($id);
+		$this->load->view('adminOrderEdit', array('order' => $order));
 	}
 }
