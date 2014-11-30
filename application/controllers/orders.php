@@ -26,6 +26,8 @@ class Orders extends CI_Controller {
 
 	public function createOrder()
 	{
+		// echo '<pre>'; print_r($this->input->post());
+		// die('here');
 		$config = array(
 			array(
 				'field' => 'orientation',
@@ -84,6 +86,7 @@ class Orders extends CI_Controller {
 		}
 		// Call Method to Generate New PDF 
 		// Call Model to Input New Generated Order w/PDF
+		// TDD on Form Submission - generating accurate reference_no
 		
 	}
 }

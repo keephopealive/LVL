@@ -138,8 +138,9 @@
 
 	// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
 
-	// Classique
 	$(document).on('click', 'input.collection', function(){
+		sessionStorage.runnerA == null;
+		// Piero
 		if ( $(this).val() == 'P' )
 		{
 			$('div.edge').html("");
@@ -149,6 +150,7 @@
 			);
 			console.log("P");
 		}
+		// Limoges OR Damier
 		else if ( $(this).val() == 'L' || $(this).val() == 'K' )
 		{
 			$('div.edge').html("");
@@ -156,9 +158,10 @@
 			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
 			console.log("L OR K");
 		}
+		// Classique
 		else if ( $(this).val() == 'C'  )
 		{
-			
+			sessionStorage.runnerA = 'C';
 			$('div.edge').html("");
 			$('div.screw').html(""+
 			"<h4>Screw</h4>"+
@@ -171,10 +174,11 @@
 		}
 		else if ( $(this).val() == 'E' )
 		{
+			sessionStorage.runnerA = 'E';
 			$('div.edge').html("");
 			$('div.screw').html("");
 			$('div.edge').html(""+
-			"<h4>Edge</h4>"+
+			"<h4>Screw</h4>"+
 			"<div class='radio'>"+
 				"<label>"+
 					"<input type='radio' class='screw' name='edge_screw' value='B'> Yes"+
@@ -183,13 +187,11 @@
 			"</div>");
 		}
 
-		if ( $(this).val() == 'C' )
-			sessionStorage.temp = "C";
-
 	});
 
 	$(document).on('click', 'input.screw', function(){
-		if ( sessionStorage.temp == 'C' )
+		// From Collection: Classique > Screws: No
+		if ( sessionStorage.runnerA == 'C' )
 		{
 			$('div.edge').html("");
 			$('div.edge').html(""+
@@ -202,65 +204,29 @@
 			"</div>");
 			sessionStorage.temp = null;
 		}
+
+		if( sessionStorage.runnerA == 'C' && $(this).attr('value') == 'no' ) 
+		{			
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='D' />");
+		}
+		if( sessionStorage.runnerA == 'E' && $(this).attr('value') == 'D' ) 
+		{			
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='F' />");
+		}
+		
+		
+
 	});
 
-	$(document).on('click', 'input.edge', function(){
-		if ( $(this).attr('value') == 'A' )
-		{
 
+	$(document).on('click', 'input.screw', function(){
+		// From Collection: Elipse > Edge: Yes
+		if( sessionStorage.runnerA == 'E' && $(this).attr('value') == 'yes' ) 
+		{			
+			sessionStorage.runnerA == null;
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='D' />");
 		}
 	});
-
-
-		// // Classique Duo
-		// else if ( $(this).val() == 'D' )
-		// {
-
-		// 	var cid = "E"; 
-		// 	console.log(" | Edge Options C beveled edge / D straight edge (no screws)");
-		// }
-		// // Elipse  
-		// else if ( $(this).val() == 'E' )
-		// {
-		// 	var cid = "E";
-		// 	console.log(" | Edge Options none | Screw Options withscrews B / noscrews D ");  
-		// }
-		// // Pierrot  
-		// else if ( $(this).val() == 'P' )
-		// {
-
-		// 	var cid = "P";  
-		// 	console.log(" | edge_screw = C");
-		// }
-		// // Limoges  
-		// else if ( $(this).val() == 'L' )
-		// {
-
-		// 	var cid = "L";  
-		// }
-		// // Damier
-		// else if ( $(this).val() == 'K' )
-		// {
-		// 	var cid = "K";  
-			
-		// }
-
-		// $.post(
-		// 	'/retrieveEdgeScrew',
-		// 	'id=' + cid,
-		// 	function(rows)
-		// 	{
-		// 		console.log(rows);
-		// 		// Sets['finish'] Sets['EdgeScrew']
-		// 	},
-		// 	'json'
-		// );
-
-	// });
-
-
-
-
 
 	</script>
 </head>
@@ -423,6 +389,12 @@
 	</div>
 </div>
 <!-- END EDGE / SCREW -->
+
+<div class='note'>
+	<input type='text' name='note' value='note test here'>
+</div>
+
+<div class='hiddenfield'></div>
 		<button type="submit" class="btn btn-default pull-right top50">Submit</button>
 				
 					</div>

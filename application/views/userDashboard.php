@@ -30,6 +30,7 @@
 			<table class='table table-bordered top50'>
 				<thead>
 					<th>Order # (Order ID)</th>
+					<th>Date Created</th>
 					<th>Reference #</th>
 					<th>Status</th>
 					<th>Note</th>
@@ -39,6 +40,7 @@
 				{
 ?>					<tr>
 						<td><?= $order['id']; ?></td>
+						<td><?= $order['created_at']; ?></td>
 						<td><?= $order['reference_no']; ?></td>
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['note']; ?></td>
