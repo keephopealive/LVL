@@ -16,6 +16,6 @@ class Admins extends CI_Controller {
 			'user' => $user,
 			'orders' =>$orders
 		);
-		$this->load->view('userDashboard', $alldata);
+		$this->load->view('adminDashboard', $alldata);
 	}
 }
