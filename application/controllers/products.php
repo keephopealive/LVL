@@ -10,8 +10,11 @@ class Products extends CI_Controller {
 
 	public function index()
 	{
+		$count = $this->product->retrieveAllCount();
 		$results = $this->product->retrieveAll();
-		$this->load->view('productDashboard', array('products' => $results));
+		$this->load->view('productDashboard', array(
+								'products' => $results,
+								'count' => $count
+		));
 	}
-
 }

@@ -8,6 +8,12 @@ class Product extends CI_Model {
 		return $this->db->query($query)->result_array();
 	}
 
+	public function retrieveAllCount()
+	{
+		$query ="SELECT COUNT(products.id) AS 'products_count' FROM products";
+		return $this->db->query($query)->result_array();
+	}
+
 	public function createProduct($product)
 	{
 		// echo '<pre>'; print_r($this->input->post());

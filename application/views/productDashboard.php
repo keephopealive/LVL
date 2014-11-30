@@ -5,8 +5,19 @@
 	<title>User Dashboard</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 <body>
+	<style type="text/css">
+	.tester123{
+		height: 600px;
+		outline: 1px solid black;
+	}
+	.pages{
+
+	}
+	</style>
 <div class="container-fluid">
 
 
@@ -38,20 +49,69 @@
 	</div>
 
 
-	<div class="row top50">
-<?php 		foreach($products as $product)
+	<script type="text/javascript">
+		$(document).on('submit', 'form.pages', function(){
+			$.post(
+				$(this).attr('action'),
+				$(this).serialize(),
+				function(data){
+					console.log(data);
+				},
+				"json"
+			);
+			return false;
+		});
+
+	</script>
+<?php 		
+
+	
+		if($count[0]['products_count'] > 8)
+		{
+?>			<div class="row top50">		
+				<div class='col-xs-12'>
+					<center>
+<?php		$runningTotalProducts = $count[0]['products_count'];
+			$counter = 0;
+			while($runningTotalProducts > 0)
 			{
-?>				<div class="col-sm-3">
-					<?= $product['name']; ?>
-					<?= $product['description']; ?>
-					<?= $product['collection']; ?>
-					<?= $product['type']; ?>
-					<img src="<?= $product['file_path'];?>" height="50" width="50">
-					<?= $product['finish']; ?>
+				$counter++;
+?>				<h3>
+					<form class='pages'>
+						<input type='submit' name='page' value='<?= $counter; ?>'>
+					</form>
+<a href="/products/page/<?= $counter; ?>"><?= $counter; ?></a>
+				</h3>
+<?php			$runningTotalProducts -= 8;
+			}
+?>					</center>
+				</div>
+			</div>
+<?php 	}
+?>			<div class="row">
+<?php
+			$counter = 0;
+			foreach($products as $product)
+			{	
+				$counter++;
+				if($counter % 5 == 0)
+				{
+?>					<div class='clearfix visible-sm-block'></div>
+<?php			}
+?>				<div class="col-sm-3 tester123">
+					<div class=''>
+						<p><?= $product['name']; ?></p>
+						<img src="<?= $product['file_path'];?>" class="img-responsive">
+						<p><?= $product['description']; ?></p>
+						<p><?= $product['collection']; ?></p>
+						<p><?= $product['type']; ?></p>
+						<p><?= $product['finish']; ?></p>
+					</div>
 				</div>
 <?php		}
+			$counter = null;
 ?>
-	</div>
+			</div>
 
 
 	<!-- div class="row top50">
