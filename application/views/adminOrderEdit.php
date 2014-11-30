@@ -12,12 +12,13 @@
 				$(this).attr('action'),
 				$(this).serialize(),
 				function(data){
-					console.log(data);
+					console.log(data.status);
 				},
 				'json'
 			);
 			return false;
 		});
+
 	</script>
 </head>
 <body>

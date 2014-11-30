@@ -5,6 +5,23 @@
 	<title>Admin Dashboard</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	// $(document).on('submit', '#createProduct', function(){
+	// 	$.post(
+	// 		$(this).attr('action'),
+	// 		$(this).serialize(),
+	// 		function(data){
+	// 			console.log('data', data);
+	// 		},
+	// 		'json'
+	// 	);
+	// 	return false;
+	// });
+
+
+
+	</script>
 </head>
 <body>
 <div class="container-fluid">
@@ -54,6 +71,22 @@
 		</div>
 	</div>
 <!-- ENDS - ORDER LIST -->
+
+<div class="row top50">
+	<div class='col-sm-12'>
+		<h3>Add a product:</h3>
+		<?= $this->session->flashdata('errors'); ?>
+		<form method='post' action='/admin/createProduct' id='createProduct'><br>
+			Name: <input type='text' name='name' ><br>
+			Description: <input type='text' name='description'><br>
+			Collection: <input type='text' name='collection'><br>
+			Type: <input type='text' name='type'><br>
+			File Path:<input type='text' name='file_path'><br>
+			Finish: <input type='text' name='finish'><br>
+			<input type='submit' value="Add Product" class='btn btn-success'>
+		</form>
+	</div>
+</div>
 
 <!-- BEGINS - CREATE NEW ORDER -->
 	<div class="row top50">

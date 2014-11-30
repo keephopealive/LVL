@@ -37,7 +37,24 @@
 		</div>
 	</div>
 
+
 	<div class="row top50">
+<?php 		foreach($products as $product)
+			{
+?>				<div class="col-sm-3">
+					<?= $product['name']; ?>
+					<?= $product['description']; ?>
+					<?= $product['collection']; ?>
+					<?= $product['type']; ?>
+					<img src="<?= $product['file_path'];?>" height="50" width="50">
+					<?= $product['finish']; ?>
+				</div>
+<?php		}
+?>
+	</div>
+
+
+	<!-- div class="row top50">
 		<div class="col-sm-10 col-sm-offset-1">
 			<div class="row productGrid">
 				<div class="col-sm-3 center">
@@ -116,7 +133,7 @@
 			</div>
 		</div>
 	</div>
-
+ -->
 <!-- END PRODUCT VIEW TO CUSTOM TOOL -->
 </div>
 </body>
