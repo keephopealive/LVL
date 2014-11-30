@@ -8,6 +8,12 @@ class Orders extends CI_Controller {
 		// $this->output->enable_profiler(TRUE);
 	}
 
+	public function retrieveMechanisms()
+	{
+		$results = $this->order->retrieveMechanisms($this->input->post());
+		echo json_encode($results);
+	}
+
 	public function newOrder()
 	{
 		$this->load->view('orderNew');

@@ -28,4 +28,11 @@ class Order extends CI_Model {
 		return $this->db->query($query, $values);
 	}
 
+	public function retrieveMechanisms($id)
+	{
+		$query = "SELECT * FROM mechanisms WHERE size_id = ?";
+		$values = $id;
+		return $this->db->query($query, $values)->result_array();
+	}
+
 }

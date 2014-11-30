@@ -55,6 +55,8 @@ $route['orders/createOrder'] = 'orders/createOrder';
 $route['products'] = "/products";
 // $route['orders/edit/(:num)'] = "orders/edit/$1";
 
+$route['retrieveMechanisms'] = 'orders/retrieveMechanisms';
+
 // die('here');
 
 /* End of file routes.php */

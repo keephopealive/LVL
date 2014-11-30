@@ -31,52 +31,143 @@
 		return false;
 	});
 
-	// SIZE
+	// POPULATING SIZE FROM ORIENTATION
 
 	// Horizontal
 	$(document).on('click', 'input.horizontal', function(){
 		$('div.size').html(""+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='size' name='size' value='3008'> 82x82"+
-				"</label>"+
-			"</div>"+
-			"<br>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='size' name='size' value='3001' orientation='horizontal'> 117x82"+
-				"</label>"+
-			"</div>"+
-			"<br>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='size' name='size' value='3002' orientation='horizontal'> 144x82"+
-				"</label>"+
-			"</div>"+
-			"<br>");
+		"<div class='radio'>"+
+			"<label>"+
+				"<input type='radio' class='size' name='size' value='3008'> 82x82"+
+			"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+			"<label>"+
+				"<input type='radio' class='size' name='size' value='3001' orientation='horizontal'> 117x82"+
+			"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+			"<label>"+
+				"<input type='radio' class='size' name='size' value='3002' orientation='horizontal'> 144x82"+
+			"</label>"+
+		"</div>"+
+		"<br>");
 	});
+
 	// Vertical
 	$(document).on('click', 'input.vertical', function(){
 		$('div.size').html(""+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='size' name='size' value='3008'> 82x82"+
-				"</label>"+
-			"</div>"+
-			"<br>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='size' name='size' value='3000' orientation='vertical'> 82x117 "+
-				"</label>"+
-			"</div>"+
-			"<br>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='size' name='size' value='3003' orientation='vertical'> 82x144"+
-				"</label>"+
-			"</div>"+
-			"<br>");
+		"<div class='radio'>"+
+			"<label>"+
+				"<input type='radio' class='size' name='size' value='3008'> 82x82"+
+			"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+			"<label>"+
+				"<input type='radio' class='size' name='size' value='3000' orientation='vertical'> 82x117 "+
+			"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+			"<label>"+
+				"<input type='radio' class='size' name='size' value='3003' orientation='vertical'> 82x144"+
+			"</label>"+
+		"</div>"+
+		"<br>");
 	});
+
+	// POPULATING MECHANISMS FROM SIZE
+	$(document).on('click', 'input.size', function(){
+		// 82x82
+		if( $(this).val() == '3008' )
+		{
+			var sid = 0;
+			console.log('3008 - 82x82 - 0');
+		}
+		// 82x117
+		else if ( $(this).val() == '3000' )
+		{
+			var sid = 1;
+			console.log('3000 - 82x117 - 1');
+		}
+		// 82x144
+		else if ( $(this).val() == '3003' )
+		{
+			var sid = 3;
+			console.log('3003 - 82x144 - 3');
+		}
+		// 117x82
+		else if ( $(this).val() == '3001' )
+		{
+			var sid = 2;
+			console.log('3001 - 117x82 - 2');
+		}
+		// 144x82
+		else if ( $(this).val() == '3002' )
+		{
+			var sid = 4;
+			console.log('3002 - 144x82 - 4');
+		}
+
+		$.post(
+			'/retrieveMechanisms',
+			'id=' + sid,
+			function(rows)
+			{
+				$('div.mechanism').html('');
+				$.each(rows, function(i, row)
+				{
+					$('div.mechanism').append(""+
+					"<div class='radio'>"+
+						"<label>"+
+						"<input type='radio' name='mechanism' value='"+row.reference_code+"'>"+row.configuration+
+						"</label>"+
+					"</div>"+
+					"<br>");
+					console.log(row);
+				});
+				
+			},
+			'json'
+		);
+	});
+
+	$(document).on('click', 'input.collection', function(){
+		// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
+		// Classique
+		if ( $(this).val() == 'C' )
+			var cid = "C";  
+		// Elipse  
+		else if ( $(this).val() == 'E' )
+			var cid = "E";  
+		// Pierrot  
+		else if ( $(this).val() == 'P' )
+			var cid = "P";  
+		// Limoges  
+		else if ( $(this).val() == 'L' )
+			var cid = "L";  
+		// Damier
+		else if ( $(this).val() == 'K' )
+			var cid = "K";  
+
+		$.post(
+			'/retrieveFinishandEdgeScrew',
+			'id=' + cid,
+			function(sets)
+			{
+				console.log(sets);
+				// Sets['finish'] Sets['EdgeScrew']
+			},
+			'json'
+		);
+
+	});
+
+
+
 
 
 	</script>
@@ -109,7 +200,7 @@
 <!-- ORIENTATION -->
 <div class="col-xs-4 col-sm-3 col-sm-offset-1">
 	<h4>Orientation</h4>
-	<div class="orientation"> <!-- ORIENTATION OPTIONS DIVs -->
+	<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
 		<div class="radio">
 			<label>
 				<input type="radio" class="horizontal" name="orientation" value="horizontal"> Horizontal
@@ -126,47 +217,49 @@
 <!-- END ORIENTATION -->
 
 
-<!-- PLATE -->
+<!-- SIZE -->
 <div class="col-xs-4 col-sm-3 col-sm-offset-1">
 	<h4>Plate Size</h4>
-	<div class="size">	<!-- APPENDING PLATE OPTIONS -->
+	<div class="size">	<!-- APPENDING SIZE OPTIONS -->
 		<p>Select orientation first.</p>
 	</div>
 </div>
-<!-- END PLATE -->
+<!-- END SIZE -->
 
 
 <!-- COLLECTION -->
 <div class="col-xs-4 col-sm-3 col-sm-offset-1" id="collection">
 	<h4>Collection</h4>
-	<div class="radio">
-		<label>
-			<input type="radio" name="collection" value="C"> Classique
-		</label>
-	</div>
-	<br>
-	<div class="radio">
-		<label>
-			<input type="radio" name="collection" value="E"> Elipse
-		</label>
-	</div>
-	<br>
-	<div class="radio">
-		<label>
-			<input type="radio" name="collection" value="P"> Pierrot
-		</label>
-	</div>
-	<br>
-	<div class="radio">
-		<label>
-			<input type="radio" name="collection" value="L"> Limoges
-		</label>
-	</div>
-	<br>
-	<div class="radio">
-		<label>
-			<input type="radio" name="collection" value="K"> Damier
-		</label>
+	<div class="collection"> <!-- COLLECTION OPTIONS DIV -->
+		<div class="radio">
+			<label>
+				<input type="radio" class="collection" name="collection" value="C"> Classique
+			</label>
+		</div>
+		<br>
+		<div class="radio">
+			<label>
+				<input type="radio" class="collection" name="collection" value="E"> Elipse
+			</label>
+		</div>
+		<br>
+		<div class="radio">
+			<label>
+				<input type="radio" class="collection" name="collection" value="P"> Pierrot
+			</label>
+		</div>
+		<br>
+		<div class="radio">
+			<label>
+				<input type="radio" class="collection" name="collection" value="L"> Limoges
+			</label>
+		</div>
+		<br>
+		<div class="radio">
+			<label>
+				<input type="radio" class="collection" name="collection" value="K"> Damier
+			</label>
+		</div>
 	</div>
 </div>
 <!-- END COLLECTION -->
@@ -179,7 +272,7 @@
 <!-- FINISH -->
 <div class="col-sm-3 col-sm-offset-1">
 	<h4>Finish</h4>
-
+	<div class="orientation"> <!-- FINISH OPTIONS DIV -->
 		<select name="finish" class="form-control selectwidthauto">
 			<option value="FA">NICKEL BROSSE</option>
 			<option value="FB">NICKEL BRILLANT </option>
@@ -211,7 +304,7 @@
 			<option value="SM">Microbillé CF anthracite</option>
 			<option value="SN">POLI VERNI OR MAT</option>
 		</select>
-	</label>					
+	</div>
 </div>
 <!-- END FINISH -->
 
@@ -220,10 +313,8 @@
 <!-- MECHANISM -->
 <div class="col-sm-3 col-sm-offset-1">
 	<h4>Mechanisms</h4>
-	<div class="radio">
-		<label>
-			<input type="radio" name="mechanism" value="A1100010"> default
-		</label>
+	<div class="mechanism"> <!-- MECHANISM OPTIONS DIV -->
+		
 	</div>
 </div>
 <!-- END MECHANISM  -->
@@ -233,14 +324,15 @@
 <!-- EDGE / SCREW -->
 <div class="col-sm-3 col-sm-offset-1">
 	<h4>Edge/Screw</h4>
-
-	<div class="radio">
-		<label>
-			<input type="radio" name="edge_screw" value="X"> default
-		</label>
+	<div class="edge_screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+		<div class="radio">
+			<label>
+				<input type="radio" name="edge_screw" value="X"> default
+			</label>
+		</div>
+		<input type="text" name='note'>
+		<button type="submit" class="btn btn-default pull-right top50">Submit</button>
 	</div>
-	<input type="text" name='note'>
-	<button type="submit" class="btn btn-default pull-right top50">Submit</button>
 </div>
 <!-- END EDGE / SCREW -->
 				
