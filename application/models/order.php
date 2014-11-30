@@ -10,7 +10,7 @@ class Order extends CI_Model {
 	
 	public function adminRetrieveOrder($id)
 	{
-		$query = "SELECT * FROM orders LEFT JOIN users ON orders.user_id = users.id WHERE orders.id = {$id}";
+		$query = "SELECT *, orders.id AS 'id', users.id AS 'user_id' FROM orders LEFT JOIN users ON orders.user_id = users.id WHERE orders.id = {$id}";
 		return $this->db->query($query)->row_array();
 	}
 
