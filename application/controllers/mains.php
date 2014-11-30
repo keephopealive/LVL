@@ -17,15 +17,26 @@ class Mains extends CI_Controller {
 	{
 		$results = $this->user->login($this->input->post());
 		if($results)
-		{
-			$this->session->set_userdata('user', $results);	
-			redirect('/dashboard');
+		{			
+			if($results['admin'] == "0")
+			{
+				unset($results['admin']);
+				$this->session->set_userdata('user', $results);	
+				redirect('/dashboard');
+			}
+			else if ($results['admin'] == "1")
+			{
+				$this->session->set_userdata('user', $results);	
+				die('head to admin dashboard');
+				// redirect('/admin/dashboard');
+			}			
 		}
 		else
 		{
 			$this->session->set_flashdata('login_msg', "Invalid Credentials.");
 			redirect('/');
 		}
+
 	}
 
 	public function logout()

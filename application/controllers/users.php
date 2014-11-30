@@ -28,10 +28,7 @@ class Users extends CI_Controller {
 		$this->load->view('userProfile', $user);
 	}
 
-
-
 // Action Controllers
-
 
 // User 
 
