@@ -140,9 +140,28 @@
 
 	// Classique
 	$(document).on('click', 'input.collection', function(){
-		if ( $(this).val() == 'C' )
+		if ( $(this).val() == 'P' )
 		{
+			$('div.edge').html("");
+			$('div.screw').html("");
 			$('div.screw').html(""+
+			"<input type='hidden' name='edge_screw' value='C'>"
+			);
+			console.log("P");
+		}
+		else if ( $(this).val() == 'L' || $(this).val() == 'K' )
+		{
+			$('div.edge').html("");
+			$('div.screw').html("");
+			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
+			console.log("L OR K");
+		}
+		else if ( $(this).val() == 'C'  )
+		{
+			
+			$('div.edge').html("");
+			$('div.screw').html(""+
+			"<h4>Screw</h4>"+
 			"<div class='radio'>"+
 				"<label>"+
 					"<input type='radio' class='screw' name='screw' value='yes'> Yes"+
@@ -150,21 +169,48 @@
 				"</label>"+
 			"</div>");
 		}
-	});
-
-	$(document).on('click', 'input.screw', function(){
-		if ( $(this).attr('value') == 'yes' )
+		else if ( $(this).val() == 'E' )
 		{
+			$('div.edge').html("");
+			$('div.screw').html("");
 			$('div.edge').html(""+
 			"<h4>Edge</h4>"+
 			"<div class='radio'>"+
 				"<label>"+
-					"<input type='radio' class='edge' name='edge' value='yes'> Beveled"+
-					"<input type='radio' class='edge' name='edge' value='no'> Straight"+
+					"<input type='radio' class='screw' name='edge_screw' value='B'> Yes"+
+					"<input type='radio' class='screw' name='edge_screw' value='D'> No"+
 				"</label>"+
 			"</div>");
 		}
+
+		if ( $(this).val() == 'C' )
+			sessionStorage.temp = "C";
+
 	});
+
+	$(document).on('click', 'input.screw', function(){
+		if ( sessionStorage.temp == 'C' )
+		{
+			$('div.edge').html("");
+			$('div.edge').html(""+
+			"<h4>Edge</h4>"+
+			"<div class='radio'>"+
+				"<label>"+
+					"<input type='radio' class='edge' name='edge_screw' value='A'> Beveled"+
+					"<input type='radio' class='edge' name='edge_screw' value='B'> Straight"+
+				"</label>"+
+			"</div>");
+			sessionStorage.temp = null;
+		}
+	});
+
+	$(document).on('click', 'input.edge', function(){
+		if ( $(this).attr('value') == 'A' )
+		{
+
+		}
+	});
+
 
 		// // Classique Duo
 		// else if ( $(this).val() == 'D' )
@@ -369,21 +415,15 @@
 
 <!-- EDGE / SCREW -->
 <div class="col-sm-3 col-sm-offset-1">
-	<h4>Screw</h4>
-	<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
-	</div>
-	<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
-		<div class="radio">
-			<label>
-				<input type="radio" name="edge_screw" value="X"> default
-			</label>
+	<div class="ES">
+		<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
 		</div>
-		<input type="text" name='note'>
-		<button type="submit" class="btn btn-default pull-right top50">Submit</button>
+		<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
+		</div>
 	</div>
-
 </div>
 <!-- END EDGE / SCREW -->
+		<button type="submit" class="btn btn-default pull-right top50">Submit</button>
 				
 					</div>
 				</form>
