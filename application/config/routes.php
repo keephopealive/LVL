@@ -56,6 +56,8 @@ $route['products'] = "/products";
 // $route['orders/edit/(:num)'] = "orders/edit/$1";
 
 $route['retrieveMechanisms'] = 'orders/retrieveMechanisms';
+$route['retrieveEdgeScrew'] = 'orders/retrieveEdgeScrew';
+
 
 // die('here');
 

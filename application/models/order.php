@@ -35,4 +35,11 @@ class Order extends CI_Model {
 		return $this->db->query($query, $values)->result_array();
 	}
 
+	public function retrieveEdgeScrew($id)
+	{
+		// $query = "SELECT * FROM edge_screw WHERE size_id = ?";
+		// $values = $id;
+		// return $this->db->query($query, $values)->result_array();
+		return true;
+	}
 }

@@ -135,36 +135,82 @@
 		);
 	});
 
+
+	// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
+
+	// Classique
 	$(document).on('click', 'input.collection', function(){
-		// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
-		// Classique
 		if ( $(this).val() == 'C' )
-			var cid = "C";  
-		// Elipse  
-		else if ( $(this).val() == 'E' )
-			var cid = "E";  
-		// Pierrot  
-		else if ( $(this).val() == 'P' )
-			var cid = "P";  
-		// Limoges  
-		else if ( $(this).val() == 'L' )
-			var cid = "L";  
-		// Damier
-		else if ( $(this).val() == 'K' )
-			var cid = "K";  
-
-		$.post(
-			'/retrieveFinishandEdgeScrew',
-			'id=' + cid,
-			function(sets)
-			{
-				console.log(sets);
-				// Sets['finish'] Sets['EdgeScrew']
-			},
-			'json'
-		);
-
+		{
+			$('div.screw').html(""+
+			"<div class='radio'>"+
+				"<label>"+
+					"<input type='radio' class='screw' name='screw' value='yes'> Yes"+
+					"<input type='radio' class='screw' name='screw' value='no'> No"+
+				"</label>"+
+			"</div>");
+		}
 	});
+
+	$(document).on('click', 'input.screw', function(){
+		if ( $(this).attr('value') == 'yes' )
+		{
+			$('div.edge').html(""+
+			"<h4>Edge</h4>"+
+			"<div class='radio'>"+
+				"<label>"+
+					"<input type='radio' class='edge' name='edge' value='yes'> Beveled"+
+					"<input type='radio' class='edge' name='edge' value='no'> Straight"+
+				"</label>"+
+			"</div>");
+		}
+	});
+
+		// // Classique Duo
+		// else if ( $(this).val() == 'D' )
+		// {
+
+		// 	var cid = "E"; 
+		// 	console.log(" | Edge Options C beveled edge / D straight edge (no screws)");
+		// }
+		// // Elipse  
+		// else if ( $(this).val() == 'E' )
+		// {
+		// 	var cid = "E";
+		// 	console.log(" | Edge Options none | Screw Options withscrews B / noscrews D ");  
+		// }
+		// // Pierrot  
+		// else if ( $(this).val() == 'P' )
+		// {
+
+		// 	var cid = "P";  
+		// 	console.log(" | edge_screw = C");
+		// }
+		// // Limoges  
+		// else if ( $(this).val() == 'L' )
+		// {
+
+		// 	var cid = "L";  
+		// }
+		// // Damier
+		// else if ( $(this).val() == 'K' )
+		// {
+		// 	var cid = "K";  
+			
+		// }
+
+		// $.post(
+		// 	'/retrieveEdgeScrew',
+		// 	'id=' + cid,
+		// 	function(rows)
+		// 	{
+		// 		console.log(rows);
+		// 		// Sets['finish'] Sets['EdgeScrew']
+		// 	},
+		// 	'json'
+		// );
+
+	// });
 
 
 
@@ -314,7 +360,7 @@
 <div class="col-sm-3 col-sm-offset-1">
 	<h4>Mechanisms</h4>
 	<div class="mechanism"> <!-- MECHANISM OPTIONS DIV -->
-		
+		Do you want to match Finish to your Mech/finish?
 	</div>
 </div>
 <!-- END MECHANISM  -->
@@ -323,8 +369,10 @@
 
 <!-- EDGE / SCREW -->
 <div class="col-sm-3 col-sm-offset-1">
-	<h4>Edge/Screw</h4>
-	<div class="edge_screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+	<h4>Screw</h4>
+	<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+	</div>
+	<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
 		<div class="radio">
 			<label>
 				<input type="radio" name="edge_screw" value="X"> default
@@ -333,6 +381,7 @@
 		<input type="text" name='note'>
 		<button type="submit" class="btn btn-default pull-right top50">Submit</button>
 	</div>
+
 </div>
 <!-- END EDGE / SCREW -->
 				

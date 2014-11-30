@@ -13,6 +13,11 @@ class Orders extends CI_Controller {
 		$results = $this->order->retrieveMechanisms($this->input->post());
 		echo json_encode($results);
 	}
+	public function retrieveEdgeScrew()
+	{
+		$results = $this->order->retrieveEdgeScrew($this->input->post());
+		echo json_encode($results);
+	}
 
 	public function newOrder()
 	{
