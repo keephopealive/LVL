@@ -35,7 +35,6 @@ class Users extends CI_Controller {
 
 // User 
 
-
 	public function updateProfile()
 	{
 		$config = array(
