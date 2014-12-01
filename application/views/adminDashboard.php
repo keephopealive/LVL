@@ -7,17 +7,17 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
-	// $(document).on('submit', '#createProduct', function(){
-	// 	$.post(
-	// 		$(this).attr('action'),
-	// 		$(this).serialize(),
-	// 		function(data){
-	// 			console.log('data', data);
-	// 		},
-	// 		'json'
-	// 	);
-	// 	return false;
-	// });
+	$(document).on('submit', '#createProduct', function(){
+		$.post(
+			$(this).attr('action'),
+			$(this).serialize(),
+			function(data){
+				console.log('data', data);
+			},
+			'json'
+		);
+		return false;
+	});
 
 
 

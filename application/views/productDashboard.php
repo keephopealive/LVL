@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>User Dashboard</title>
+	<title>Products</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -44,51 +44,13 @@
 			<h5>PRODUCT Category</h5>
 		</div>
 		<div class="col-sm-3">
-			<h5 class="pull-right">Sort By: <a href="#">Name</a> | <a href="#">Collection</a>  | <a href="#">Finish</a> </h5>
+			<h5 class="pull-right">Sort By:  <a href="#" id="order_by_collection" >Collection</a>  | <a href="#">Finish</a> </h5>
 		</div>
 	</div>
 
 
-	<script type="text/javascript">
-		$(document).on('submit', 'form.pages', function(){
-			$.post(
-				$(this).attr('action'),
-				$(this).serialize(),
-				function(data){
-					console.log(data);
-				},
-				"json"
-			);
-			return false;
-		});
-
-	</script>
-<?php 		
-
-	
-		if($count[0]['products_count'] > 8)
-		{
-?>			<div class="row top50">		
-				<div class='col-xs-12'>
-					<center>
-<?php		$runningTotalProducts = $count[0]['products_count'];
-			$counter = 0;
-			while($runningTotalProducts > 0)
-			{
-				$counter++;
-?>				<h3>
-					<form class='pages'>
-						<input type='submit' name='page' value='<?= $counter; ?>'>
-					</form>
-<a href="/products/page/<?= $counter; ?>"><?= $counter; ?></a>
-				</h3>
-<?php			$runningTotalProducts -= 8;
-			}
-?>					</center>
-				</div>
-			</div>
-<?php 	}
-?>			<div class="row">
+			<div class="row products_list">
+				<div>
 <?php
 			$counter = 0;
 			foreach($products as $product)
@@ -110,8 +72,9 @@
 				</div>
 <?php		}
 			$counter = null;
-?>
+?>				</div>
 			</div>
+
 
 
 	<!-- div class="row top50">
@@ -196,5 +159,23 @@
  -->
 <!-- END PRODUCT VIEW TO CUSTOM TOOL -->
 </div>
+<script type="text/javascript">
+
+	$(document).on('click', '#order_by_collection', function(){
+		$.post(
+			"/products/retrieveAllCollections",
+			function(rows){
+				$('products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('products_list').append("<p>" + row.name + "</p>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+
+</script>
 </body>
 </html>

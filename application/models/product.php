@@ -8,11 +8,19 @@ class Product extends CI_Model {
 		return $this->db->query($query)->result_array();
 	}
 
-	public function retrieveAllCount()
+	public function retrieveAllCollections()
 	{
-		$query ="SELECT COUNT(products.id) AS 'products_count' FROM products";
-		return $this->db->query($query)->result_array();
+		$query = "SELECT * FROM products WHERE products.collection IS NOT NULL";
+		return $collections = $this->db->query($query)->result_array();
 	}
+
+	// public function retrieveAllCollections()
+	// {
+	// 	$query ="SELECT * FROM products WHERE collections = true";
+	// 	$num_rows = $this->db->count_all('products');
+	// 	echo '<pre>'; echo $num_rows;
+
+	// }
 
 	public function createProduct($product)
 	{

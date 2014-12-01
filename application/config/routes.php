@@ -61,6 +61,7 @@ $route['404_override'] = '';
 $route['orders/new'] = "orders/newOrder";
 $route['orders/createOrder'] = 'orders/createOrder';
 $route['products'] = "products";
+$route['products/retrieveAllCollections'] = "products/retrieveAllCollections";
 // $route['orders/edit/(:num)'] = "orders/edit/$1";
 
 $route['retrieveMechanisms'] = 'orders/retrieveMechanisms';
