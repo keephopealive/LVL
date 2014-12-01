@@ -66,7 +66,7 @@ $route['products'] = "products";
 $route['products/retrieveAllCollections'] = "products/retrieveAllCollections";
 $route['products/retrieveAllFinish'] = "products/retrieveAllFinish";
 $route['products/retrieveAllType'] = "products/retrieveAllType";
-
+$route['mpdftester'] = "orders/mpdftester";
 
 // $route['orders/edit/(:num)'] = "orders/edit/$1";
 
