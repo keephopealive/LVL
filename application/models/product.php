@@ -10,7 +10,19 @@ class Product extends CI_Model {
 
 	public function retrieveAllCollections()
 	{
-		$query = "SELECT * FROM products WHERE products.collection IS NOT NULL";
+		$query = "SELECT * FROM products WHERE products.collection IS NOT NULL ORDER BY collection ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+
+	public function retrieveAllFinish()
+	{
+		$query = "SELECT * FROM products WHERE products.finish IS NOT NULL ORDER BY finish ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+
+	public function retrieveAllType()
+	{
+		$query = "SELECT * FROM products WHERE products.type IS NOT NULL ORDER BY type ASC";
 		return $collections = $this->db->query($query)->result_array();
 	}
 

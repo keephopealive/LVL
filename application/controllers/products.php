@@ -19,8 +19,18 @@ class Products extends CI_Controller {
 	public function retrieveAllCollections()
 	{
 		$results = $this->product->retrieveAllCollections();
-		// echo "<pre>"; var_dump($results);
-		// die('$results');
+		echo json_encode($results);
+	}
+
+	public function retrieveAllFinish()
+	{
+		$results = $this->product->retrieveAllFinish();
+		echo json_encode($results);
+	}
+
+	public function retrieveAllType()
+	{
+		$results = $this->product->retrieveAllType();
 		echo json_encode($results);
 	}
 }

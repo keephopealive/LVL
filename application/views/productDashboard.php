@@ -37,14 +37,20 @@
 
 	<!-- PRODUCT VIEW TO CUSTOM TOOL BEGIN -->
 	<div class="row top50">
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-1 col-sm-offset-1">
 			<h5>PRODUCTS</h5>
 		</div>
-		<div class="col-sm-4 center">
+		<div class="col-sm-2 center">
 			<h5>PRODUCT Category</h5>
 		</div>
-		<div class="col-sm-3">
-			<h5 class="pull-right">Sort By:  <a href="#" id="order_by_collection" >Collection</a>  | <a href="#">Finish</a> </h5>
+		<div class="col-sm-8">
+			<h3 class="">
+				Categories:
+				<a href="/products">All</a> | 
+				<a href="" id="order_by_collection">Collections </a> |
+				<a href="" id="order_by_finish">Finish </a> | 
+				<a href="" id="order_by_type">Type </a> | 
+			</h3>
 		</div>
 	</div>
 
@@ -52,14 +58,8 @@
 			<div class="row products_list">
 				<div>
 <?php
-			$counter = 0;
 			foreach($products as $product)
 			{	
-				$counter++;
-				if($counter % 5 == 0)
-				{
-?>					<div class='clearfix visible-sm-block'></div>
-<?php			}
 ?>				<div class="col-sm-3 tester123">
 					<div class=''>
 						<p><?= $product['name']; ?></p>
@@ -71,7 +71,6 @@
 					</div>
 				</div>
 <?php		}
-			$counter = null;
 ?>				</div>
 			</div>
 
@@ -165,10 +164,68 @@
 		$.post(
 			"/products/retrieveAllCollections",
 			function(rows){
-				$('products_list').html("");
+				$('.products_list').html("");
 				$.each(rows, function(index, row) {
 					console.log(row);
-					$('products_list').append("<p>" + row.name + "</p>");
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+	$(document).on('click', '#order_by_finish', function(){
+		$.post(
+			"/products/retrieveAllFinish",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+	$(document).on('click', '#order_by_type', function(){
+		$.post(
+			"/products/retrieveAllType",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
 				});
 			},	
 			'json'
