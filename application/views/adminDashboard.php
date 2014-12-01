@@ -12,6 +12,10 @@
 			$(this).attr('action'),
 			$(this).serialize(),
 			function(data){
+				if(data.status == 'success')
+				{
+					$('div.createProductDiv').html("Successful Product Creation.");
+				}
 				console.log('data', data);
 			},
 			'json'
@@ -74,6 +78,7 @@
 
 <div class="row top50">
 	<div class='col-sm-12'>
+		<div class="createProductDiv"></div>
 		<h3>Add a product:</h3>
 		<?= $this->session->flashdata('errors'); ?>
 		<form method='post' action='/admin/createProduct' id='createProduct'><br>

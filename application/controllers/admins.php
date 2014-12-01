@@ -5,7 +5,7 @@ class Admins extends CI_Controller {
 	public function __construct($id = null)
 	{
 		parent::__construct($id);
-		$this->output->enable_profiler(TRUE);
+		// $this->output->enable_profiler(TRUE);
 	}
 
 // Admin Dashboard
@@ -56,8 +56,7 @@ class Admins extends CI_Controller {
 				'status' => 'failed',
 				'errors' => validation_errors()
 			);
-			// echo json_encode($test);
-			$this->session->set_flashdata('errors', validation_errors());
+			echo json_encode($test);
 		}
 		else
 		{
@@ -68,10 +67,8 @@ class Admins extends CI_Controller {
 					'type' => 'createOrder',
 					'status' => 'success'
 				);
-				// echo json_encode($arr);
-				$this->session->set_flashdata('errors', "Successful Product Creation");
+				echo json_encode($arr);
 			}
 		}
-		redirect('/admin/dashboard');
 	}
 }

@@ -26,14 +26,6 @@ class Product extends CI_Model {
 		return $collections = $this->db->query($query)->result_array();
 	}
 
-	// public function retrieveAllCollections()
-	// {
-	// 	$query ="SELECT * FROM products WHERE collections = true";
-	// 	$num_rows = $this->db->count_all('products');
-	// 	echo '<pre>'; echo $num_rows;
-
-	// }
-
 	public function createProduct($product)
 	{
 		// echo '<pre>'; print_r($this->input->post());
