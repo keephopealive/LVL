@@ -26,8 +26,7 @@ class Orders extends CI_Controller {
 
 	public function mpdftester()
 	{
-		// As PDF creation takes a bit of memory, we're saving the created file in /downloads/reports/
-		$filename = "Win9001";
+		$filename = "Win9002";
 		$pdfFilePath = FCPATH."/pdf/$filename.pdf";
 		$data['the_content'] = '|||||INSERTED CONTENT|||||'; // pass data to the view
 		 
@@ -48,7 +47,7 @@ class Orders extends CI_Controller {
 	}
 
 	public function createOrder()
-	{	// echo '<pre>'; print_r($this->input->post());
+	{	
 		$config = array(
 			array(
 				'field' => 'orientation',
@@ -78,7 +77,7 @@ class Orders extends CI_Controller {
 			array(
 				'field' => 'edge_screw',
 				'label' => 'edge / screw',
-				'rules' => 'trim|required'
+				'rules' => 'required'
 			)
 		);
 		$this->form_validation->set_rules($config);
@@ -95,15 +94,31 @@ class Orders extends CI_Controller {
 		else
 		{
 			$result = $this->order->orderCreate($this->input->post());
-			if($result)
+			// ========= PDF Generation ==========
+
+			$filename = $this->session->userdata('reference_no');
+			$this->session->set_userdata('reference_no', null);
+			$pdfFilePath = FCPATH."/pdf/$filename.pdf";
+			$data['the_content'] = '|||||INSERTED CONTENT|||||'; // pass data to the view
+			 
+			if (file_exists($pdfFilePath) == FALSE)
 			{
+			    ini_set('memory_limit','32M');
+			    $html = $this->load->view('pdf_output', $data, true); // render the view into HTML
+			     
+			    $this->load->library('m_pdf');
+			    $pdf = $this->m_pdf->load();
+			    $pdf->SetFooter($_SERVER['HTTP_HOST'].'|{PAGENO}|'.date(DATE_RFC822)); // Add a footer for good measure <img src="https://davidsimpson.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" scale="0">
+			    $pdf->WriteHTML($html); // write the HTML into the PDF
+			    $pdf->Output($pdfFilePath, 'F'); // save to file because we can
+			}
+
+			// ========= end of PDF gen ==========
 				$arr = array(
 					'type' => 'createOrder',
 					'status' => 'success'
 				);
 				echo json_encode($arr);	
-			}
-				
 		}
 		// Call Method to Generate New PDF 
 		// Call Model to Input New Generated Order w/PDF

@@ -123,13 +123,12 @@
 					$('div.mechanism').append(""+
 					"<div class='radio'>"+
 						"<label>"+
-						"<input type='radio' name='mechanism' value='"+row.reference_code+"'>"+row.configuration+
+						"<input type='radio' name='mechanism' value='"+row.reference_code+"'/>"+row.configuration+
 						"</label>"+
 					"</div>"+
 					"<br>");
 					console.log(row);
 				});
-				
 			},
 			'json'
 		);

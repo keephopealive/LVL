@@ -63,6 +63,8 @@ $route['orders/createOrder'] = 'orders/createOrder';
 
 // Products
 $route['products'] = "products";
+
+// AJAX POSTS
 $route['products/retrieveAllCollections'] = "products/retrieveAllCollections";
 $route['products/retrieveAllFinish'] = "products/retrieveAllFinish";
 $route['products/retrieveAllType'] = "products/retrieveAllType";
