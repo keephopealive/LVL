@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>User - Profile</title>
+	<title>Client Profile / EDIT</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<style type="text/css">

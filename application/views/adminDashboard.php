@@ -49,7 +49,7 @@
 			<h2 class="center">Admin Dashboard</h2>
 			<table class='table table-bordered top50'>
 				<thead>
-					<th>Order # (Order ID)</th>
+					<th>Order #</th>
 					<th>Date Created</th>
 					<th>Reference #</th>
 					<th>Client Name</th>
@@ -77,21 +77,76 @@
 <!-- ENDS - ORDER LIST -->
 
 <div class="row top50">
-	<div class='col-sm-12'>
+	<div class='col-sm-7 col-sm-offset-5'>
 		<div class="createProductDiv"></div>
 		<h3>Add a product:</h3>
 		<?= $this->session->flashdata('errors'); ?>
-		<form method='post' action='/admin/createProduct' id='createProduct'><br>
-			Name: <input type='text' name='name' ><br>
+		<form class="form-horizontal" role="form" method='post' action='/admin/createProduct' id='createProduct'><br>
+			<!-- Name: <input type='text' name='name' ><br>
 			Description: <input type='text' name='description'><br>
 			Collection: <input type='text' name='collection'><br>
 			Type: <input type='text' name='type'><br>
 			File Path:<input type='text' name='file_path'><br>
-			Finish: <input type='text' name='finish'><br>
-			<input type='submit' value="Add Product" class='btn btn-success'>
+			Finish: <input type='text' name='finish'><br> -->
+
+			<div class="form-group">
+				<label for="name" class="col-sm-2 control-label">Name</label>
+				
+				<div class="col-sm-6">
+					<input class="form-control" type='text' name='name'  id="name" placeholder="Name">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="description" class="col-sm-2 control-label">Description</label>
+			
+				<div class="col-sm-6">
+					<input class="form-control" type='text' name='description'  id="description" placeholder="Description">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="collection" class="col-sm-2 control-label">Collection</label>
+				
+				<div class="col-sm-6">
+					<input class="form-control" type='text' name='collection'  id="collection" placeholder="Collection">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="type" class="col-sm-2 control-label">Type</label>
+				
+				<div class="col-sm-6">
+					<input class="form-control" type='text' name='type'  id="type" placeholder="Type">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="file_path" class="col-sm-2 control-label">File Path</label>
+				
+				<div class="col-sm-6">
+					<input class="form-control" type='text' name='file_path'  id="file_path" placeholder="File Path">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="finish" class="col-sm-2 control-label">Finish</label>
+				
+				<div class="col-sm-6">
+					<input class="form-control" type='text' name='finish'  id="finish" placeholder="Finish">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-6 col-sm-offset-2">
+					<input type='submit' value="Add Product" class='btn btn-success pull-right'>
+				</div>
+			</div>
 		</form>
 	</div>
 </div>
+
+
 
 <!-- BEGINS - CREATE NEW ORDER -->
 	<div class="row top50">

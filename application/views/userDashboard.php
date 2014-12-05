@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>User Dashboard</title>
+	<title>Client Dashboard</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
@@ -11,7 +11,7 @@
 
 	<div class="row top50">
 		<div class="col-sm-3 col-sm-offset-1">
-			<a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a>
+			<a href="/products" class='btn btn-lg btn-warning btn-block'>Browse Products</a>
 		</div>
 			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 		<div class="col-sm-4">
@@ -28,7 +28,7 @@
 			<h2 class="center">My Orders</h2>
 			<table class='table table-bordered top50'>
 				<thead>
-					<th>Order # (Order ID)</th>
+					<th>Order #</th>
 					<th>Date Created</th>
 					<th>Reference #</th>
 					<th>Status</th>
@@ -54,7 +54,7 @@
 <!-- BEGINS - CREATE NEW ORDER -->
 	<div class="row top50">
 		<div class='col-sm-3 col-sm-offset-5'>
-			<a href="/products" class='btn btn-default btn-block'>Browse Products</a>
+			<a href="/profile"><button class='btn btn-default btn-block'>Edit Profile</button></a>
 		</div>
 		<div class='col-sm-3'>
 			<a href="/orders/new" class='btn btn-primary btn-block'>Create New Order</a>
