@@ -6,8 +6,6 @@ class Admins extends CI_Controller {
 	{
 		parent::__construct($id);
 		// $this->output->enable_profiler(TRUE);
-		// ADDED A LINE HERE
-		// AND HERE
 	}
 
 // Admin Dashboard
