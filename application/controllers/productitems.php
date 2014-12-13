@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Orders extends CI_Controller {
+class Productitems extends CI_Controller {
 
 	public function __construct($id = null)
 	{
@@ -10,18 +10,18 @@ class Orders extends CI_Controller {
 
 	public function retrieveMechanisms()
 	{
-		$results = $this->order->retrieveMechanisms($this->input->post());
+		$results = $this->productitem->retrieveMechanisms($this->input->post());
 		echo json_encode($results);
 	}
 	public function retrieveEdgeScrew()
 	{
-		$results = $this->order->retrieveEdgeScrew($this->input->post());
+		$results = $this->productitem->retrieveEdgeScrew($this->input->post());
 		echo json_encode($results);
 	}
 
-	public function newOrder()
+	public function newProductitem()
 	{
-		$this->load->view('orderNew');
+		$this->load->view('productitemNew');
 	}
 
 	public function mpdftester()
@@ -46,7 +46,7 @@ class Orders extends CI_Controller {
 		// var_dump($mpdf);
 	}
 
-	public function createOrder()
+	public function createProductitem()
 	{	
 		$config = array(
 			array(
@@ -85,7 +85,7 @@ class Orders extends CI_Controller {
 		if ($this->form_validation->run() == FALSE )
 		{
 			$arr = array(
-				'type' => 'createOrder',
+				'type' => 'createproductitem',
 				'status' => 'failed',
 				'errors' => validation_errors()
 			);
@@ -93,7 +93,7 @@ class Orders extends CI_Controller {
 		}
 		else
 		{
-			$result = $this->order->orderCreate($this->input->post());
+			$result = $this->productitem->productitemCreate($this->input->post());
 			// ========= PDF Generation ==========
 
 			$filename = $this->session->userdata('reference_no');
@@ -115,13 +115,13 @@ class Orders extends CI_Controller {
 
 			// ========= end of PDF gen ==========
 				$arr = array(
-					'type' => 'createOrder',
+					'type' => 'createproductitem',
 					'status' => 'success'
 				);
 				echo json_encode($arr);	
 		}
 		// Call Method to Generate New PDF 
-		// Call Model to Input New Generated Order w/PDF
+		// Call Model to Input New Generated productitem w/PDF
 		// TDD on Form Submission - generating accurate reference_no
 		
 	}

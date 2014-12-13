@@ -12,27 +12,27 @@ class Admins extends CI_Controller {
 	public function index()
 	{
 		$user = $this->session->userdata['user'];
-		$orders = $this->order->adminRetrieveAll();
+		$productitems = $this->productitem->adminRetrieveAll();
 		$alldata = array(
 			'user' => $user,
-			'orders' =>$orders
+			'productitems' =>$productitems
 		);
 		$this->load->view('adminDashboard', $alldata);
 	}
 
-// ORDERS - ADMIN
+// ProductitemS - ADMIN
 
-// Edit Order (ViewPage)
+// Edit productitem (ViewPage)
 	public function edit($id)
 	{
-		$order = $this->order->adminRetrieveOrder($id);
-		$this->load->view('adminOrderEdit', array('order' => $order));
+		$productitem = $this->productitem->adminRetrieveproductitem($id);
+		$this->load->view('adminproductitemEdit', array('productitem' => $productitem));
 	}
 
-// Update Order (Action)
-	public function update()
+// Update productitem (Action)
+	public function updateProductItem()
 	{
-		$result = $this->order->adminUpdateOrder($this->input->post());
+		$result = $this->productitem->adminUpdateproductitem($this->input->post());
 		echo json_encode($result);
 	}
 
@@ -52,7 +52,7 @@ class Admins extends CI_Controller {
 		if ($this->form_validation->run() == FALSE )
 		{
 			$test = array(
-				'type' => 'createOrder',
+				'type' => 'createProduct',
 				'status' => 'failed',
 				'errors' => validation_errors()
 			);
@@ -64,7 +64,7 @@ class Admins extends CI_Controller {
 			if($result)
 			{
 				$arr = array(
-					'type' => 'createOrder',
+					'type' => 'createProduct',
 					'status' => 'success'
 				);
 				echo json_encode($arr);

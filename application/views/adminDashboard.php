@@ -58,23 +58,23 @@
 					<th>PDF</th>
 					<th>Actions</th>
 				</thead>
-<?php 			foreach($orders as $order)
+<?php 			foreach($productitems as $productitem)
 				{
 ?>					<tr>
-						<td><?= $order['id']; ?></td>
-						<td><?= $order['created_at']; ?></td>
-						<td><?= $order['reference_no']; ?></td>
-						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
-						<td><?= $order['status']; ?></td>
-						<td><?= $order['note']; ?></td>
+						<td><?= $productitem['id']; ?></td>
+						<td><?= $productitem['created_at']; ?></td>
+						<td><?= $productitem['reference_no']; ?></td>
+						<td><?= $productitem['first_name']; ?> <?= $productitem['last_name']; ?></td>
+						<td><?= $productitem['status']; ?></td>
+						<td><?= $productitem['note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
-						<td><a href="/admin/edit/<?= $order['id']; ?>" class='btn btn-warning'>Edit</a></td>			
+						<td><a href="/admin/edit/<?= $productitem['id']; ?>" class='btn btn-warning'>Edit</a></td>			
 					</tr>	
 <?php 			}
 ?>			</table>
 		</div>
 	</div>
-<!-- ENDS - ORDER LIST -->
+<!-- ENDS - productitem LIST -->
 
 <div class="row top50">
 	<div class='col-sm-7 col-sm-offset-5'>

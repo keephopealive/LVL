@@ -23,11 +23,11 @@
 				</thead>
 				<tr>
 					<form>
-					<td><?= $order[0]['id']; ?></td>
-					<td><?= $order[0]['reference_no']; ?></td>
-					<td><?= $order[0]['status']; ?></td>
-					<td><?= $order[0]['note']; ?></td>
-					<td><?= $order[0]['pdf']; ?></td>
+					<td><?= $productitem[0]['id']; ?></td>
+					<td><?= $productitem[0]['reference_no']; ?></td>
+					<td><?= $productitem[0]['status']; ?></td>
+					<td><?= $productitem[0]['note']; ?></td>
+					<td><?= $productitem[0]['pdf']; ?></td>
 					</form>
 				</tr>
 			</table>

@@ -38,44 +38,48 @@
 |e
 */
 
-$route['dashboard'] = "/users";
+$route['404_override'] = '';
 
+// Guest 
 $route['default_controller'] = "mains";
 $route['login'] = "mains/login";
 $route['registration'] = "mains/registration";
+
+// User
 $route['profile'] = "users/profile";
+$route['dashboard'] = "/users";
 $route['users/updateProfile'] = "users/updateProfile";
 $route['logout'] = "mains/logout";
-// $route['user/updateProfile'] = 'users/update';
 
-$route['admin/dashboard'] = "/admins";
-$route['admin/edit/(:num)'] = "admins/edit/$1";
-$route['order/update'] = "admins/update";
-$route['admin/createProduct'] = "admins/createProduct";
+// Admin 
+$route['admin/dashboard'] = "/admins"; // Show
+$route['admin/edit/(:num)'] = "admins/edit/$1"; // Edit
 
+// Product_Items (Custom Products)
+$route['productitem/new'] = "productitems/newProductitem"; // New
+$route['productitem/createProductitem'] = 'productitems/createProductitem'; // Create
+// $route['productitem/update'] = "admins/update"; // Update
+$route['productitem/update'] = "admins/updateProductitem"; // Update
 
+// Product_Items * Retrieve *
+$route['retrieveMechanisms'] = 'productitems/retrieveMechanisms'; 
+$route['retrieveEdgeScrew'] = 'productitems/retrieveEdgeScrew';
 
-$route['404_override'] = '';
-
-// Order Related
-$route['orders/new'] = "orders/newOrder";
-$route['orders/createOrder'] = 'orders/createOrder';
-
-// Products
+// Products 
 $route['products'] = "products";
-
-// AJAX POSTS
+$route['admin/createProduct'] = "admins/createProduct";
+// Products * Retrieve *
 $route['products/retrieveAllCollections'] = "products/retrieveAllCollections";
 $route['products/retrieveAllFinish'] = "products/retrieveAllFinish";
 $route['products/retrieveAllType'] = "products/retrieveAllType";
-$route['mpdftester'] = "orders/mpdftester";
 
-// $route['orders/edit/(:num)'] = "orders/edit/$1";
-
-$route['retrieveMechanisms'] = 'orders/retrieveMechanisms';
-$route['retrieveEdgeScrew'] = 'orders/retrieveEdgeScrew';
+// PDF
+$route['mpdftester'] = "product_items/mpdftester";
 
 
+
+
+// $route['product_items/edit/(:num)'] = "product_items/edit/$1";
 // die('here');
 
 /* End of file routes.php */
