@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>User Dashboard</title>
+	<title>Custom Order</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -233,17 +233,18 @@
 <body>
 <div class="container-fluid">
 	<div class="row top50">
-
 		<div class="col-sm-3 col-sm-offset-1">
-			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
+			<a href="/products" class='btn btn-lg btn-warning btn-block'>Browse Products</a>
 		</div>
+			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 		<div class="col-sm-4">
-			<a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a>
+			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
 		</div>
 		<div class="col-sm-3" >
 			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
 		</div>
 	</div>
+
 
 	<div class='errors'>
 	</div>
@@ -251,8 +252,7 @@
 	<div class="row top50">
 		<div class="col-sm-10 col-sm-offset-1 tool">
 			<form method='post' action='/orders/createOrder' role="form" class="form-inline" id="createOrderForm">
-				<input type="hidden" name="price" value="F">
-					<div class="row">	
+				<input type="hidden" name="price" value="F">	
 
 
 <!-- ORIENTATION -->
@@ -322,9 +322,9 @@
 </div>
 <!-- END COLLECTION -->
 
-
-					</div>	
-					<div class="row top50">
+<div class="clearfix visible-sm-block">
+</div>
+<!-- 					<div class="row top50"> -->
 
 
 <!-- FINISH -->
@@ -390,14 +390,24 @@
 </div>
 <!-- END EDGE / SCREW -->
 
-<div class='note'>
-	<input type='text' name='note' value='note test here'>
+<div class="clearfix visible-sm-block">
 </div>
 
-<div class='hiddenfield'></div>
-		<button type="submit" class="btn btn-default pull-right top50">Submit</button>
-				
-					</div>
+<div class='note col-sm-8 col-sm-offset-1 top50'>
+	<h4>Notes</h4>
+	<textarea class="form-control" type='text' name='note' value='note test here' rows="4" style="width:100%;"></textarea>
+	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
+</div>
+
+<div class='hiddenfield '></div>
+
+<div class="col-sm-2" style="vertical-align:bottom;">
+	<button type="submit" class="btn btn-default btn-block">Submit</button>
+</div>
+
+<div class="clearfix visible-sm-block">
+</div>
+<!-- 					</div> -->
 				</form>
 			</div>
 		</div>

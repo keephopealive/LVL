@@ -43,10 +43,11 @@
 			<h2 class="center">Admin Order Edit</h2>
 			<table class='table table-bordered top50'>
 				<thead>
-					<th>Order # (Order ID)</th>
+					<th>Order # </th>
 					<th>Date Created</th>
 					<th>Reference #</th>
 					<th>Client Name</th>
+					<th>Client Note</th>
 					<th>PDF</th>
 				</thead>
 				<form>
@@ -55,6 +56,7 @@
 						<td><?= $order['created_at']; ?></td>
 						<td><?= $order['reference_no']; ?></td>
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
+						<td><?= $order['note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
 					</tr>	
 				</form>
@@ -64,7 +66,7 @@
 			<table class="table top50">
 				<thead>
 					<th>Status</th>
-					<th>Note</th>
+					
 					<th>Admin Note</th>
 					<th>Actions</th>
 				</thead>
@@ -96,9 +98,7 @@
 								}
 ?>							</select>
 						</td>
-						<td>
-							<?= $order['note']; ?>	
-						</td>
+
 						<td>
 							<textarea name="admin_note" value="<?= $order['admin_note']; ?>"><?= $order['admin_note']; ?></textarea>
 						</td>
