@@ -21,7 +21,9 @@
 			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
 		</div>
 	</div>
-
+<form method='post' action='/mpdftester'>
+	<input type='submit' value="MPDF TESTER">
+</form>
 <!-- BEGINS - ORDERS LIST  -->
 	<div class="row top50">
 		<div class='col-sm-10 col-sm-offset-1'>
