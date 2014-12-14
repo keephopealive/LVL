@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Show Order</title>
+</head>
+<body>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<h3>Here we will show the client's order - but he wont be able to edit content as of now. This order is pending status from LVL</h3>
+	<a href="/dashboard"><button class='btn btn-primary'>Dashboard</button></a>
+	<table class='table table-bordered'>
+		<thead>
+			<th>Reference No</th>
+			<th>Status</th>
+			<th>Note</th>
+		</thead>
+<?php	foreach($productitems as $productitem)
+		{
+?>			<tr>
+				<td><?= $productitem['reference_no']?></td> 
+				<td><?= $productitem['status']?></td> 
+				<td><?= $productitem['note']?></td> 
+			</tr>
+<?php	}
+?>	</table>	
+</body>
+</html>

@@ -19,9 +19,10 @@ class Productitems extends CI_Controller {
 		echo json_encode($results);
 	}
 
-	public function newProductitem()
+	public function newProductitemKeypad()
 	{
-		$this->load->view('productitemNew');
+
+		$this->load->view('productitemNewKeypad', array('order_id' => $this->session->userdata['order_id']));
 	}
 
 	public function mpdftester()
@@ -44,6 +45,12 @@ class Productitems extends CI_Controller {
 		 exit;
 		// $mpdf->
 		// var_dump($mpdf);
+	}
+
+	public function destroyProductitem()
+	{
+		$this->productitem->destroyProductitem($this->input->post('productitem_id'));
+		redirect('/order/newOrder');
 	}
 
 	public function createProductitem()
@@ -114,6 +121,7 @@ class Productitems extends CI_Controller {
 			}
 
 			// ========= end of PDF gen ==========
+
 				$arr = array(
 					'type' => 'createproductitem',
 					'status' => 'success'

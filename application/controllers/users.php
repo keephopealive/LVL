@@ -13,13 +13,11 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-		$user = $this->session->userdata['user'];
-		$productitems = $this->productitem->retrieveAll($user['id']);
-		$alldata = array(
-			'user' => $user,
-			'productitems' =>$productitems
+		$orders = $this->order->retrieveAll($this->session->userdata['user']['id']);
+		$this->load->view('userDashboard', array( 
+			'user' => $this->session->userdata['user'],
+			'orders' => $orders)
 		);
-		$this->load->view('userDashboard', $alldata);
 	}
 
 	public function profile()

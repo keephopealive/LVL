@@ -23,7 +23,7 @@
 				{
 					$('div.errors').html('');
 					console.log("succeeded");
-					window.location.replace("/dashboard");
+					window.location.replace("/order/newOrder");
 				}
 			},
 			'json'
@@ -251,6 +251,7 @@
 	<div class="row top50">
 		<div class="col-sm-10 col-sm-offset-1 tool">
 			<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
+				<input type='hidden' name='order_id' value='<?= $order_id; ?>'>
 				<input type="hidden" name="price" value="F">	
 
 

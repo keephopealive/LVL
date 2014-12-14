@@ -27,26 +27,25 @@
 <!-- BEGINS - ORDERS LIST  -->
 	<div class="row top50">
 		<div class='col-sm-10 col-sm-offset-1'>
-			<h2 class="center">My Orders</h2>
+			<h2 class="center">My ProductItems</h2>
 			<table class='table table-bordered top50'>
 				<thead>
 					<th>Order #</th>
 					<th>Date Created</th>
+					<th>Reference #</th>
 					<th>Status</th>ProductItems
 					<th>Note</th>
-					<th>Action</th>
+					<th>PDF</th>
 				</thead>
-<?php 			foreach($orders as $order)
+<?php 			foreach($productitems as $productitem)
 				{
 ?>					<tr>
-						<td><?= $order['id']; ?></td>
-						<td><?= $order['created_at']; ?></td>
-						<td><?= $order['status']; ?></td>
-						<td><?= $order['client_note']; ?></td>
-						<td>
-							<a href="/order/showOrder/<?= $order['id']; ?>"><button class='btn btn-primary'>View Order</button></a>
-							<button class='btn btn-warning'>EDIT (undecided)</button>
-						</td>
+						<td><?= $productitem['id']; ?></td>
+						<td><?= $productitem['created_at']; ?></td>
+						<td><?= $productitem['reference_no']; ?></td>
+						<td><?= $productitem['status']; ?></td>
+						<td><?= $productitem['note']; ?></td>
+						<td><a href="">PDF FILE</a></td>
 					</tr>				
 <?php 			}
 ?>			</table>
@@ -60,7 +59,7 @@
 			<a href="/profile"><button class='btn btn-default btn-block'>Edit Profile</button></a>
 		</div>
 		<div class='col-sm-3'>
-			<a href="/order/createOrder" class='btn btn-primary btn-block'>Create New Order</a>
+			<a href="/productitem/new" class='btn btn-primary btn-block'>Create New Productitem</a>
 		</div>
 	</div>
 <!-- ENDS - CREATE NEW ORDER -->

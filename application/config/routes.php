@@ -56,8 +56,11 @@ $route['admin/dashboard'] = "/admins"; // Show
 $route['admin/edit/(:num)'] = "admins/edit/$1"; // Edit
 
 // Product_Items (Custom Products)
-$route['productitem/new'] = "productitems/newProductitem"; // New
+$route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad
+$route['productitem/newProductitem'] = "productitems/newProductitem"; // New
 $route['productitem/createProductitem'] = 'productitems/createProductitem'; // Create
+$route['productitem/destroyProductitem'] = '/productitems/destroyProductitem'; // Create
+
 // $route['productitem/update'] = "admins/update"; // Update
 $route['productitem/update'] = "admins/updateProductitem"; // Update
 
@@ -72,6 +75,12 @@ $route['admin/createProduct'] = "admins/createProduct";
 $route['products/retrieveAllCollections'] = "products/retrieveAllCollections";
 $route['products/retrieveAllFinish'] = "products/retrieveAllFinish";
 $route['products/retrieveAllType'] = "products/retrieveAllType";
+
+// Orders
+$route['order/createOrder'] = "orders/createOrder";
+$route['order/newOrder'] = "orders/newOrder";
+$route['order/deleteOrder/(:num)'] = "orders/deleteOrder/$1";
+$route['order/showOrder/(:num)'] = "orders/showOrder/$1";
 
 // PDF
 $route['mpdftester'] = "product_items/mpdftester";

@@ -28,6 +28,18 @@ class Productitem extends CI_Model {
 		return $this->db->query($query)->result_array();
 	}
 
+	public function retrieveAllOrderProducts($id)
+	{
+		$query = "SELECT * FROM productitems WHERE order_id = {$id}";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function destroyProductitem($productitem_id)
+	{
+		$query = "DELETE FROM productitems WHERE id = {$productitem_id}";
+		return $this->db->query($query);	
+	}
+
 	public function productitemCreate($productitem)
 	{
 		
@@ -40,8 +52,8 @@ class Productitem extends CI_Model {
 			$productitem['mechanism'] .
 			$productitem['finish'];
 		$this->session->set_userdata('reference_no', $reference_no);
-		$query = "INSERT INTO productitems (user_id, reference_no, pdf, status,  note, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)";
-		$values = array($this->session->userdata['user']['id'], $reference_no, "myPDFfile", "Pending", $productitem['note'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
+		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status,  note, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, "myPDFfile", "Pending", $productitem['note'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
 	}
 
