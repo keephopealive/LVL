@@ -15,9 +15,9 @@ class Order extends CI_Model {
 	
 	public function createOrder($user_id)
 	{
-		$query ="INSERT INTO orders (user_id, created_at ,updated_at) VALUES (?, NOW(), NOW())";
-		$value = $user_id;
-		$this->db->query($query, $value);
+		$query ="INSERT INTO orders (user_id, status, created_at ,updated_at) VALUES (?, ?, NOW(), NOW())";
+		$values = array($user_id, 'Pending');
+		$this->db->query($query, $values);
 		return $this->db->insert_id();
 	}
 	public function deleteOrder($order_id)

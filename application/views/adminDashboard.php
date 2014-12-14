@@ -63,7 +63,12 @@
 <?php 			foreach($orders as $order)
 				{
 ?>					<tr>
-						<td><?= $order['order_no']; ?></td>
+						<td>
+							<form action='/order/adminUpdateOrder' method='post'>
+								<input type='hidden' name=''>
+								<input type='text' name='order_no' value='<?= $order['order_no']; ?>' placeholder='LVL Order ID'>
+							</form>
+						</td>
 						<td><?= $order['created_at']; ?></td>
 						<td><?= $order['updated_at']; ?></td>
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
