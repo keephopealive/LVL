@@ -12,10 +12,10 @@ class Admins extends CI_Controller {
 	public function index()
 	{
 		$user = $this->session->userdata['user'];
-		$productitems = $this->productitem->adminRetrieveAll();
+		$orders = $this->order->adminRetrieveAllOrders();
 		$alldata = array(
 			'user' => $user,
-			'productitems' =>$productitems
+			'orders' =>$orders
 		);
 		$this->load->view('adminDashboard', $alldata);
 	}
@@ -27,6 +27,12 @@ class Admins extends CI_Controller {
 	{
 		$productitem = $this->productitem->adminRetrieveproductitem($id);
 		$this->load->view('adminproductitemEdit', array('productitem' => $productitem));
+	}
+
+	public function orderEdit($order_id)
+	{
+		$productitems = $this->order->retrieveOrderItems($order_id);
+		$this->load->view('adminOrderEdit', array('productitems' => $productitems ));
 	}
 
 // Update productitem (Action)

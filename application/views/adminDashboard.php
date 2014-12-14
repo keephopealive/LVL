@@ -49,26 +49,29 @@
 			<h2 class="center">Admin Dashboard</h2>
 			<table class='table table-bordered top50'>
 				<thead>
-					<th>Order #</th>
-					<th>Date Created</th>
-					<th>Reference #</th>
+					<th>Order ID</th>
+					<th>Created At</th>
+					<th>Updated At</th>
 					<th>Client Name</th>
 					<th>Status</th>
-					<th>Note</th>
+					<th>Admin</th>
+					<th>Client</th>
 					<th>PDF</th>
 					<th>Actions</th>
 				</thead>
-<?php 			foreach($productitems as $productitem)
+
+<?php 			foreach($orders as $order)
 				{
 ?>					<tr>
-						<td><?= $productitem['id']; ?></td>
-						<td><?= $productitem['created_at']; ?></td>
-						<td><?= $productitem['reference_no']; ?></td>
-						<td><?= $productitem['first_name']; ?> <?= $productitem['last_name']; ?></td>
-						<td><?= $productitem['status']; ?></td>
-						<td><?= $productitem['note']; ?></td>
+						<td><?= $order['order_no']; ?></td>
+						<td><?= $order['created_at']; ?></td>
+						<td><?= $order['updated_at']; ?></td>
+						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
+						<td><?= $order['status']; ?></td>
+						<td><?= $order['client_note']; ?></td>
+						<td><?= $order['admin_note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
-						<td><a href="/admin/edit/<?= $productitem['id']; ?>" class='btn btn-warning'>Edit</a></td>			
+						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>			
 					</tr>	
 <?php 			}
 ?>			</table>

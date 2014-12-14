@@ -54,6 +54,7 @@ $route['logout'] = "mains/logout";
 // Admin 
 $route['admin/dashboard'] = "/admins"; // Show
 $route['admin/edit/(:num)'] = "admins/edit/$1"; // Edit
+$route['admin/orderEdit/(:num)'] = "admins/orderEdit/$1";
 
 // Product_Items (Custom Products)
 $route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad
