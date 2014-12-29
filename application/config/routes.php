@@ -82,6 +82,7 @@ $route['order/createOrder'] = "orders/createOrder";
 $route['order/newOrder'] = "orders/newOrder";
 $route['order/deleteOrder/(:num)'] = "orders/deleteOrder/$1";
 $route['order/showOrder/(:num)'] = "orders/showOrder/$1";
+$route['order/saveNote'] = "orders/saveNote";
 
 // PDF
 $route['mpdftester'] = "product_items/mpdftester";

@@ -21,6 +21,7 @@
 			<th>Reference No</th>
 			<th>Status</th>
 			<th>Note</th>
+			<th>Qunatity</th>
 			<th>Actions</th>
 		</thead>
 <?php	foreach($productitems as $productitem)
@@ -29,6 +30,7 @@
 				<td><?= $productitem['reference_no']?></td> 
 				<td><?= $productitem['status']?></td> 
 				<td><?= $productitem['note']?></td> 
+				<th><?= $productitem['quantity']?></th>
 				<td>
 					<form method='post' action='/productitem/destroyProductitem'>
 						<input type='hidden' name='productitem_id' value="<?= $productitem['id']; ?>">
@@ -38,5 +40,11 @@
 			</tr>
 <?php	}
 ?>	</table>	
+	<h4>Set Order Note:</h4>
+	<form method='post' action='/order/saveNote'>
+		<input type='hidden' name='order_id' value="<?= $order['id'] ?>">
+		<input type='text' name='client_note' value="<?= $order['client_note'] ?>">
+		<input type='submit' value='Save Note'>
+	</form>
 </body>
 </html>

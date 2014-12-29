@@ -34,4 +34,15 @@ class Order extends CI_Model {
 		$query ="SELECT * FROM productitems WHERE order_id = ?";
 		return $this->db->query($query, $order_id)->result_array();
 	}
+	public function saveNote($values)
+	{
+		$query ="UPDATE orders SET client_note = ? WHERE id = ?";
+		$values = array($values['client_note'], $values['order_id']);
+		return $this->db->query($query, $values);
+	}
+	public function retrieveOrder($order_id)
+	{
+		$query ="SELECT * FROM orders WHERE id = ?";
+		return $this->db->query($query, $order_id)->row_array();
+	}
 }

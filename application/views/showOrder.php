@@ -12,6 +12,7 @@
 			<th>Reference No</th>
 			<th>Status</th>
 			<th>Note</th>
+			<th>Qunatity</th>
 		</thead>
 <?php	foreach($productitems as $productitem)
 		{
@@ -19,6 +20,7 @@
 				<td><?= $productitem['reference_no']?></td> 
 				<td><?= $productitem['status']?></td> 
 				<td><?= $productitem['note']?></td> 
+				<td><?= $productitem['quantity']?></td> 
 			</tr>
 <?php	}
 ?>	</table>	

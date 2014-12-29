@@ -398,6 +398,11 @@
 	<textarea class="form-control" type='text' name='note' value='note test here' rows="4" style="width:100%;"></textarea>
 	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
 </div>
+<div class='note col-sm-8 col-sm-offset-1 top50'>
+	<h4>Quantity</h4>
+	<input type="number" name='quantity' value="1">
+	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
+</div>
 
 <div class='hiddenfield '></div>
 

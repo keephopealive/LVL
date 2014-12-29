@@ -17,14 +17,13 @@ class Orders extends CI_Controller {
 
 	public function newOrder() // Show Order
 	{
-		// $productitems = $this->productitem->retrieveAllOrders();
-		// var_dump($productitems);
-		// die('here');
 		$productitems = $this->productitem->retrieveAllOrderProducts($this->session->userdata('order_id'));
+		$order = $this->order->retrieveOrder($this->session->userdata('order_id'));
 		$user = $this->session->userdata['user'];
 		$this->load->view('newOrder', array(
 			'user' => $user, 
 			'order_id' => $this->session->userdata('order_id'),
+			'order' => $order, 
 			'productitems' => $productitems)
 		);
 	}
@@ -38,6 +37,12 @@ class Orders extends CI_Controller {
 	{
 		$productitems = $this->productitem->retrieveAllOrderProducts($order_id);
 		$this->load->view('showOrder', array('productitems' => $productitems));
+	}
+
+	public function saveNote()
+	{
+		$this->order->saveNote($this->input->post());
+		redirect('/order/newOrder');
 	}
 
 }

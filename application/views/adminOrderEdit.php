@@ -13,13 +13,15 @@
 			<th>Reference No</th>
 			<th>Status</th>
 			<th>Note</th>
+			<th>Quantity</th>
 		</thead>
 <?php	foreach($productitems as $productitem)
 		{
 ?>			<tr>
-				<td><?= $productitem['id']?></td> 
+				<td><?= $productitem['reference_no']?></td> 
 				<td><?= $productitem['status']?></td> 
 				<td><?= $productitem['note']?></td> 
+				<td><?= $productitem['quantity']?></td>
 			</tr>
 <?php	}
 ?>	</table>
