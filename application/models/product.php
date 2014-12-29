@@ -26,6 +26,33 @@ class Product extends CI_Model {
 		return $collections = $this->db->query($query)->result_array();
 	}
 
+	public function retrieveKeypads()
+	{
+		$query = "SELECT * FROM products WHERE products.type = 'keypad' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveSwitches()
+	{
+		$query = "SELECT * FROM products WHERE products.type = 'switch' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveDoorbells()
+	{
+		$query = "SELECT * FROM products WHERE products.type = 'doorbell' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveOutlets()
+	{
+		$query = "SELECT * FROM products WHERE products.type = 'outlet' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveLamps()
+	{
+		$query = "SELECT * FROM products WHERE products.type = 'lamp' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+
+
 	public function createProduct($product)
 	{
 		// echo '<pre>'; print_r($this->input->post());

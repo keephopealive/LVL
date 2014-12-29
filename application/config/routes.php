@@ -55,6 +55,9 @@ $route['logout'] = "mains/logout";
 $route['admin/dashboard'] = "/admins"; // Show
 $route['admin/edit/(:num)'] = "admins/edit/$1"; // Edit
 $route['admin/orderEdit/(:num)'] = "admins/orderEdit/$1";
+// Admin - Order Related
+$route['order/saveAdminNote'] = "orders/saveAdminNote";
+
 
 // Product_Items (Custom Products)
 $route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad
@@ -83,6 +86,7 @@ $route['order/newOrder'] = "orders/newOrder";
 $route['order/deleteOrder/(:num)'] = "orders/deleteOrder/$1";
 $route['order/showOrder/(:num)'] = "orders/showOrder/$1";
 $route['order/saveNote'] = "orders/saveNote";
+$route['order/updateStatus'] = "orders/updateStatus";
 
 // PDF
 $route['mpdftester'] = "product_items/mpdftester";

@@ -44,5 +44,15 @@ class Orders extends CI_Controller {
 		$this->order->saveNote($this->input->post());
 		redirect('/order/newOrder');
 	}
+	public function saveAdminNote()
+	{
+		$this->order->saveAdminNote($this->input->post());
+		redirect('/admin/orderEdit/'.$this->input->post('order_id'));
+	}
+	public function updateStatus()
+	{
+		$this->order->updateStatus($this->input->post());
+		redirect('/admin/orderEdit/'.$this->input->post('order_id'));
+	}
 
 }

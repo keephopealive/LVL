@@ -46,10 +46,21 @@
 		<div class="col-sm-8">
 			<h3 class="">
 				Categories:
-				<a href="/products">All</a> | 
-				<a href="" id="order_by_collection">Collections </a> |
-				<a href="" id="order_by_finish">Finish </a> | 
-				<a href="" id="order_by_type">Type </a> | 
+				<!-- <a href="/products">All</a> |  -->
+				<!-- <a href="" id="order_by_collection">Collections </a> | -->
+				<!-- <a href="" id="order_by_finish">Finish </a> |  -->
+				<!-- <a href="" id="order_by_type">Type </a> |  -->
+				<a href="" id="retrieve_keypads">Keypads</a> |
+				<a href="" id="retrieve_outlets">Outlets</a> |
+				<a href="" id="retrieve_switches">Switches</a> |
+				<a href="" id="retrieve_lamps">Reading Lamps</a> |
+				<a href="" id="retrieve_doorbells">Door Bells</a>
+				<!-- <select>
+					<option value='keypads'>Keypads</option>
+					<option value='outlets'>Outlets</option>
+					<option value='readinglamps'>Reading Lamps</option>
+					<option value='doorbells'>Doorbells</option>
+				</select> -->
 			</h3>
 		</div>
 	</div>
@@ -232,6 +243,128 @@
 		);	
 		return false;
 	});
+	$(document).on('click', '#retrieve_keypads', function(){
+		$.post(
+			"/products/retrievekeypads",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+	$(document).on('click', '#retrieve_outlets', function(){
+		$.post(
+			"/products/retrieveOutlets",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+	$(document).on('click', '#retrieve_switches', function(){
+		$.post(
+			"/products/retrieveSwitches",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+	$(document).on('click', '#retrieve_doorbells', function(){
+		$.post(
+			"/products/retrieveDoorbells",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+	$(document).on('click', '#retrieve_lamps', function(){
+		$.post(
+			"/products/retrieveLamps",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+						"<p>"+row.name+"</p>"+
+						"<img src="+row.file_path+" class='img-responsive'>"+
+						"<p>"+row.description+"</p>"+
+						"<p>"+row.collection+"</p>"+
+						"<p>"+row.type+"</p>"+
+						"<p>"+row.finish+"</p>"+
+					"</div>"+
+				"</div>");
+				});
+			},	
+			'json'
+		);	
+		return false;
+	});
+
+
 
 </script>
 </body>

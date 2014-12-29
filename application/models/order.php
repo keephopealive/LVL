@@ -40,6 +40,18 @@ class Order extends CI_Model {
 		$values = array($values['client_note'], $values['order_id']);
 		return $this->db->query($query, $values);
 	}
+	public function saveAdminNote($values)
+	{
+		$query ="UPDATE orders SET admin_note = ? WHERE id = ?";
+		$values = array($values['admin_note'], $values['order_id']);
+		return $this->db->query($query, $values);
+	}
+	public function updateStatus($values)
+	{
+		$query ="UPDATE orders SET status = ? WHERE id = ?";
+		$values = array($values['status'], $values['order_id']);
+		return $this->db->query($query, $values);
+	}
 	public function retrieveOrder($order_id)
 	{
 		$query ="SELECT * FROM orders WHERE id = ?";

@@ -31,8 +31,14 @@ class Admins extends CI_Controller {
 
 	public function orderEdit($order_id)
 	{
+		$this->session->set_userdata('order_id', $order_id);
 		$productitems = $this->order->retrieveOrderItems($order_id);
-		$this->load->view('adminOrderEdit', array('productitems' => $productitems ));
+		$order = $this->order->retrieveOrder($order_id);
+		$user = $this->user->retrieveUser($order['user_id']);
+		$this->load->view('adminOrderEdit', array(
+			'productitems' => $productitems,
+			'order' => $order,
+			'user' => $user ));
 	}
 
 // Update productitem (Action)

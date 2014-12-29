@@ -73,8 +73,8 @@
 						<td><?= $order['updated_at']; ?></td>
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
 						<td><?= $order['status']; ?></td>
-						<td><?= $order['client_note']; ?></td>
 						<td><?= $order['admin_note']; ?></td>
+						<td><?= $order['client_note']; ?></td>
 						<td><a href="">PDF FILE</a></td>
 						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>			
 					</tr>	

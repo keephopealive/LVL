@@ -254,37 +254,6 @@
 				<input type='hidden' name='order_id' value='<?= $order_id; ?>'>
 				<input type="hidden" name="price" value="F">	
 
-
-<!-- ORIENTATION -->
-<div class="col-xs-4 col-sm-3 col-sm-offset-1">
-	<h4>Orientation</h4>
-	<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
-		<div class="radio">
-			<label>
-				<input type="radio" class="horizontal" name="orientation" value="horizontal"> Horizontal
-			</label>
-		</div>
-		<br>
-		<div class="radio">
-			<label>
-				<input type="radio" class="vertical" name="orientation" value="vertical"> Vertical
-			</label>
-		</div>
-	</div>
-</div>
-<!-- END ORIENTATION -->
-
-
-<!-- SIZE -->
-<div class="col-xs-4 col-sm-3 col-sm-offset-1">
-	<h4>Plate Size</h4>
-	<div class="size">	<!-- APPENDING SIZE OPTIONS -->
-		<p>Select orientation first.</p>
-	</div>
-</div>
-<!-- END SIZE -->
-
-
 <!-- COLLECTION -->
 <div class="col-xs-4 col-sm-3 col-sm-offset-1" id="collection">
 	<h4>Collection</h4>
@@ -322,9 +291,54 @@
 </div>
 <!-- END COLLECTION -->
 
+<!-- ORIENTATION -->
+<div class="col-xs-4 col-sm-3 col-sm-offset-1">
+	<h4>Orientation</h4>
+	<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
+		<div class="radio">
+			<label>
+				<input type="radio" class="horizontal" name="orientation" value="horizontal"> Horizontal
+			</label>
+		</div>
+		<br>
+		<div class="radio">
+			<label>
+				<input type="radio" class="vertical" name="orientation" value="vertical"> Vertical
+			</label>
+		</div>
+	</div>
+</div>
+<!-- END ORIENTATION -->
+
+
+<!-- SIZE -->
+<div class="col-xs-4 col-sm-3 col-sm-offset-1">
+	<h4>Plate Size</h4>
+	<div class="size">	<!-- APPENDING SIZE OPTIONS -->
+		<p>Select orientation first.</p>
+	</div>
+</div>
+<!-- END SIZE -->
+
+
+
+
 <div class="clearfix visible-sm-block">
 </div>
 <!-- 					<div class="row top50"> -->
+
+
+
+<!-- EDGE / SCREW -->
+<div class="col-sm-3 col-sm-offset-1">
+	<div class="ES">
+		<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+		</div>
+		<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
+		</div>
+	</div>
+</div>
+<!-- END EDGE / SCREW -->
 
 
 <!-- FINISH -->
@@ -378,17 +392,6 @@
 <!-- END MECHANISM  -->
 
 
-
-<!-- EDGE / SCREW -->
-<div class="col-sm-3 col-sm-offset-1">
-	<div class="ES">
-		<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
-		</div>
-		<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
-		</div>
-	</div>
-</div>
-<!-- END EDGE / SCREW -->
 
 <div class="clearfix visible-sm-block">
 </div>

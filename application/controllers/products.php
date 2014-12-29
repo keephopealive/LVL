@@ -33,4 +33,29 @@ class Products extends CI_Controller {
 		$results = $this->product->retrieveAllType();
 		echo json_encode($results);
 	}
+	public function retrieveKeypads()
+	{
+		$results = $this->product->retrieveKeypads();
+		echo json_encode($results);
+	}
+	public function retrieveOutlets()
+	{
+		$results = $this->product->retrieveOutlets();
+		echo json_encode($results);
+	}
+	public function retrieveSwitches()
+	{
+		$results = $this->product->retrieveSwitches();
+		echo json_encode($results);
+	}
+	public function retrieveDoorbells()
+	{
+		$results = $this->product->retrieveDoorbells();
+		echo json_encode($results);
+	}
+	public function retrieveLamps()
+	{
+		$results = $this->product->retrieveLamps();
+		echo json_encode($results);
+	}
 }
