@@ -68,6 +68,9 @@ if ( ! function_exists('is_php'))
  * @return	void
  */
 if ( ! function_exists('is_really_writable'))
+
+// ------------------------------------------------------------------------
+
 {
 	function is_really_writable($file)
 	{
@@ -102,9 +105,6 @@ if ( ! function_exists('is_really_writable'))
 		return TRUE;
 	}
 }
-
-// ------------------------------------------------------------------------
-
 /**
 * Class registry
 *

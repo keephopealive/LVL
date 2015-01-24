@@ -16,8 +16,9 @@
 			<input type='text' name='admin_note' value="<?= $order['admin_note'] ?>">
 			<input type='submit' value='Save Admin Note'>
 		</form></label> <br>
-		<label>Order Project Name: </label> <?= $order['project_name']?><br>
+		<label>Order LVL Order No: </label> <?= $order['project_name']?><br>
 		<form action='/order/updateStatus' method='post'>
+			<input type="text" name="order_no" value="<?= $order['order_no']; ?>" placeholder="Input LVL Order No"/>
 			<select name='status'>
 <?php			if($order['status'] == 'Completed'){ ?>
 					<option value='Completed' selected>Completed</option>
@@ -33,14 +34,17 @@
 			<input type='submit' value='Save Order Status'>
 		</form>
 		<label>Order Status: </label> <?= $order['status']?><br>
-		<label>Order Created Date: </label> <?= $order['created_at']?><br>
+		<?php
+			$phpdate = strtotime( $order['created_at']);
+			$mysqldate = date( 'M d, Y g:i A', $phpdate );
+		?>
+		<label>Order Created Date: </label> <?= $mysqldate ?><br>
 		<label>Client ID: </label> <?= $user['id']?> <br>
 		<label>Client Name: </label> <?= $user['first_name']?> <?= $user['last_name'] ?><br>
 	</div>
 	<table class='table table-bordered'>
 		<thead>
 			<th>Reference No</th>
-			<th>Status</th>
 			<th>Note</th>
 			<th>Quantity</th>
 		</thead>
@@ -48,8 +52,7 @@
 		{
 ?>			<tr>
 				<td><?= $productitem['reference_no']?></td> 
-				<td><?= $productitem['status']?></td> 
-				<td><?= $productitem['note']?></td> 
+				<td><?= $productitem['note']?></td>
 				<td><?= $productitem['quantity']?></td>
 			</tr>
 <?php	}

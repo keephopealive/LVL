@@ -30,7 +30,7 @@
 			<h2 class="center">My Orders</h2>
 			<table class='table table-bordered top50'>
 				<thead>
-					<th>Order #</th>
+					<th>LVL Order #</th>
 					<th>Date Created</th>
 					<th>Status</th>ProductItems
 					<th>Note</th>
@@ -39,8 +39,12 @@
 <?php 			foreach($orders as $order)
 				{
 ?>					<tr>
-						<td><?= $order['id']; ?></td>
-						<td><?= $order['created_at']; ?></td>
+						<td><?= $order['order_no']; ?></td>
+					<?php
+						$phpdate = strtotime( $order['created_at']);
+						$mysqldate = date( 'F d, Y', $phpdate );
+					?>
+						<td><?= $mysqldate ?></td>
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['client_note']; ?></td>
 						<td>

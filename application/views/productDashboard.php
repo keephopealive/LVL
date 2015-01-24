@@ -14,8 +14,8 @@
 		height: 600px;
 		outline: 1px solid black;
 	}
-	.pages{
-
+	.hidden{
+		display: hidden;
 	}
 	</style>
 <div class="container-fluid">
@@ -37,32 +37,43 @@
 
 	<!-- PRODUCT VIEW TO CUSTOM TOOL BEGIN -->
 	<div class="row top50">
-		<div class="col-sm-1 col-sm-offset-1">
-			<h5>PRODUCTS</h5>
+		<div class="col-sm-12">
+			<h3>Sort by:</h3>
+			<button class="btn btn-default collection_btn">Collection</button>
+			<button class="btn btn-default type_btn">Type</button>
+			<button class="btn btn-default finish_btn">Finish</button>
 		</div>
-		<div class="col-sm-2 center">
-			<h5>PRODUCT Category</h5>
+		<div class="sorting_types">
+			<!--		Collection Sorting-->
+			<div class="col-sm-12 collection_group">
+				<h3 class="select_search_by_collection">
+					<a href="" id="retrieve_classique">Classique</a> |
+					<a href="" id="retrieve_ellipse">Ellipse</a> |
+					<a href="" id="retrieve_pierrot">Pierrot</a> |
+					<a href="" id="retrieve_limoges">Limoges</a>
+					<a href="" id="retrieve_damier">Damier</a>
+				</h3>
+			</div>
+			<!--		Type Sorting-->
+			<div class="col-sm-12 type_group">
+				<h3 class="select_search_by_type">
+					<a href="" id="retrieve_outlets">Outlets</a> |
+					<a href="" id="retrieve_keypads">Keypads</a> |
+					<a href="" id="retrieve_lamps">Reading Lamps</a> |
+					<a href="" id="retrieve_doorbells">Door Bells</a>
+				</h3>
+			</div>
+			<!--		Finish Sorting-->
+			<div class="col-sm-12 finish_group">
+				<h3 class="select_search_by_finish">
+					<a href="" id="retrieve_outlets">Finish A</a> |
+					<a href="" id="retrieve_keypads">Finish B</a> |
+				 	<a href="" id="retrieve_lamps">Finish C</a> |
+					<a href="" id="retrieve_doorbells">Finish D</a>
+				</h3>
+			</div>
 		</div>
-		<div class="col-sm-8">
-			<h3 class="">
-				Categories:
-				<!-- <a href="/products">All</a> |  -->
-				<!-- <a href="" id="order_by_collection">Collections </a> | -->
-				<!-- <a href="" id="order_by_finish">Finish </a> |  -->
-				<!-- <a href="" id="order_by_type">Type </a> |  -->
-				<a href="" id="retrieve_keypads">Keypads</a> |
-				<a href="" id="retrieve_outlets">Outlets</a> |
-				<a href="" id="retrieve_switches">Switches</a> |
-				<a href="" id="retrieve_lamps">Reading Lamps</a> |
-				<a href="" id="retrieve_doorbells">Door Bells</a>
-				<!-- <select>
-					<option value='keypads'>Keypads</option>
-					<option value='outlets'>Outlets</option>
-					<option value='readinglamps'>Reading Lamps</option>
-					<option value='doorbells'>Doorbells</option>
-				</select> -->
-			</h3>
-		</div>
+
 	</div>
 
 
@@ -85,89 +96,6 @@
 ?>				</div>
 			</div>
 
-
-
-	<!-- div class="row top50">
-		<div class="col-sm-10 col-sm-offset-1">
-			<div class="row productGrid">
-				<div class="col-sm-3 center">
-					<a href=""><img src="/assets/img/Classic_80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3 center">
-					<a href=""><img src="/assets/img/Classic_80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3 center">
-					<a href=""><img src="/assets/img/Classic_80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3 center">
-					<a href=""><img src="/assets/img/Classic_80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-			</div>
-
-			<div class="row productGrid">
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive"src="/assets/img/Collection_Damier_2_BP_80x80x3mm.jpg"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive"src="/assets/img/Collection_Damier_2_BP_80x80x3mm.jpg"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive"src="/assets/img/Collection_Damier_2_BP_80x80x3mm.jpg"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive"src="/assets/img/Collection_Damier_2_BP_80x80x3mm.jpg"></a>
-					<p>Product Title</p>
-				</div>
-			</div>
-
-			<div class="row productGrid">
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Pierrot_Collection_White_Glass80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Pierrot_Collection_White_Glass80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Pierrot_Collection_White_Glass80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Pierrot_Collection_White_Glass80X80.png"></a>
-					<p>Product Title</p>
-				</div>
-			</div>
-
-			<div class="row productGrid">
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Limoges_Collection80X115.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Limoges_Collection80X115.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Limoges_Collection80X115.png"></a>
-					<p>Product Title</p>
-				</div>
-				<div class="col-sm-3">
-					<a href=""><img class="img-responsive" src="/assets/img/Limoges_Collection80X115.png"></a>
-					<p>Product Title</p>
-				</div>
-			</div>
-		</div>
-	</div>
- -->
-<!-- END PRODUCT VIEW TO CUSTOM TOOL -->
 </div>
 <script type="text/javascript">
 
@@ -243,9 +171,13 @@
 		);	
 		return false;
 	});
-	$(document).on('click', '#retrieve_keypads', function(){
+
+
+	// RETRIEVE COLLECTIONS SECTION ---------------------------------
+	// CLASSIQUE
+	$(document).on('click', '#retrieve_classique', function(){
 		$.post(
-			"/products/retrievekeypads",
+			"/products/retrieveClassique",
 			function(rows){
 				$('.products_list').html("");
 				$.each(rows, function(index, row) {
@@ -253,20 +185,124 @@
 					$('.products_list').append(""+
 					"<div class='col-sm-3 tester123'>"+
 					"<div class=''>"+
-						"<p>"+row.name+"</p>"+
-						"<img src="+row.file_path+" class='img-responsive'>"+
-						"<p>"+row.description+"</p>"+
-						"<p>"+row.collection+"</p>"+
-						"<p>"+row.type+"</p>"+
-						"<p>"+row.finish+"</p>"+
+					"<p>"+row.name+"</p>"+
+					"<img src="+row.file_path+" class='img-responsive'>"+
+					"<p>"+row.description+"</p>"+
+					"<p>"+row.collection+"</p>"+
+					"<p>"+row.type+"</p>"+
+					"<p>"+row.finish+"</p>"+
 					"</div>"+
-				"</div>");
+					"</div>");
 				});
-			},	
+			},
 			'json'
-		);	
+		);
 		return false;
 	});
+	// ELLIPSE
+	$(document).on('click', '#retrieve_ellipse', function(){
+		$.post(
+			"/products/retrieveEllipse",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+					"<p>"+row.name+"</p>"+
+					"<img src="+row.file_path+" class='img-responsive'>"+
+					"<p>"+row.description+"</p>"+
+					"<p>"+row.collection+"</p>"+
+					"<p>"+row.type+"</p>"+
+					"<p>"+row.finish+"</p>"+
+					"</div>"+
+					"</div>");
+				});
+			},
+			'json'
+		);
+		return false;
+	});
+	// Pierrot
+	$(document).on('click', '#retrieve_pierrot', function(){
+		$.post(
+			"/products/retrievePierrot",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+					"<p>"+row.name+"</p>"+
+					"<img src="+row.file_path+" class='img-responsive'>"+
+					"<p>"+row.description+"</p>"+
+					"<p>"+row.collection+"</p>"+
+					"<p>"+row.type+"</p>"+
+					"<p>"+row.finish+"</p>"+
+					"</div>"+
+					"</div>");
+				});
+			},
+			'json'
+		);
+		return false;
+	});
+	// LIMOGES
+	$(document).on('click', '#retrieve_limoges', function(){
+		$.post(
+			"/products/retrieveLimoges",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+					"<p>"+row.name+"</p>"+
+					"<img src="+row.file_path+" class='img-responsive'>"+
+					"<p>"+row.description+"</p>"+
+					"<p>"+row.collection+"</p>"+
+					"<p>"+row.type+"</p>"+
+					"<p>"+row.finish+"</p>"+
+					"</div>"+
+					"</div>");
+				});
+			},
+			'json'
+		);
+		return false;
+	});
+	// DAMIER
+	$(document).on('click', '#retrieve_damier', function(){
+		$.post(
+			"/products/retrieveDamier",
+			function(rows){
+				$('.products_list').html("");
+				$.each(rows, function(index, row) {
+					console.log(row);
+					$('.products_list').append(""+
+					"<div class='col-sm-3 tester123'>"+
+					"<div class=''>"+
+					"<p>"+row.name+"</p>"+
+					"<img src="+row.file_path+" class='img-responsive'>"+
+					"<p>"+row.description+"</p>"+
+					"<p>"+row.collection+"</p>"+
+					"<p>"+row.type+"</p>"+
+					"<p>"+row.finish+"</p>"+
+					"</div>"+
+					"</div>");
+				});
+			},
+			'json'
+		);
+		return false;
+	});
+	// END COLLECTIONS SECTION --------------------------------------
+
+
+	//	RETRIEVE TYPES SECTION --------------------------------------
 	$(document).on('click', '#retrieve_outlets', function(){
 		$.post(
 			"/products/retrieveOutlets",
@@ -291,9 +327,9 @@
 		);	
 		return false;
 	});
-	$(document).on('click', '#retrieve_switches', function(){
+	$(document).on('click', '#retrieve_keypads', function(){
 		$.post(
-			"/products/retrieveSwitches",
+			"/products/retrieveKeypads",
 			function(rows){
 				$('.products_list').html("");
 				$.each(rows, function(index, row) {
@@ -363,8 +399,32 @@
 		);	
 		return false;
 	});
+	//	END TYPES SECTION --------------------------------------
 
 
+	$(document).on('click', 'button.collection_btn', function(){
+		$('.finish_group').hide();
+		$('.type_group').hide();
+		$('.collection_group').show();
+//		$('select_search_by_collection').show();
+	});
+	$(document).on('click', 'button.finish_btn', function(){
+		$('.finish_group').show();
+		$('.type_group').hide();
+		$('.collection_group').hide();
+//		$('select_search_by_collection').show();
+	});
+	$(document).on('click', 'button.type_btn', function(){
+		$('.finish_group').hide();
+		$('.type_group').show();
+		$('.collection_group').hide();
+//		$('select_search_by_collection').show();
+	});
+	$(document).ready(function(){
+		$('.finish_group').hide();
+		$('.type_group').hide();
+		$('.collection_group').hide();
+	});
 
 </script>
 </body>

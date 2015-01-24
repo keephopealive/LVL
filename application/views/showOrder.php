@@ -10,17 +10,17 @@
 	<table class='table table-bordered'>
 		<thead>
 			<th>Reference No</th>
-			<th>Status</th>
 			<th>Note</th>
 			<th>Qunatity</th>
+			<th>PDF</th>
 		</thead>
 <?php	foreach($productitems as $productitem)
 		{
 ?>			<tr>
 				<td><?= $productitem['reference_no']?></td> 
-				<td><?= $productitem['status']?></td> 
-				<td><?= $productitem['note']?></td> 
-				<td><?= $productitem['quantity']?></td> 
+				<td><?= $productitem['note']?></td>
+				<td><?= $productitem['quantity']?></td>
+				<td>PDF LINK HERE</td>
 			</tr>
 <?php	}
 ?>	</table>	

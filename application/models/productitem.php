@@ -52,8 +52,8 @@ class Productitem extends CI_Model {
 			$productitem['mechanism'] .
 			$productitem['finish'];
 		$this->session->set_userdata('reference_no', $reference_no);
-		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, "myPDFfile", "Pending", $productitem['quantity'], $productitem['note'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
+		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, engraving, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, "myPDFfile", "Pending", $productitem['quantity'], $productitem['note'], $productitem['engraving'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
 	}
 

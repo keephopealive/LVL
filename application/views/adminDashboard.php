@@ -56,27 +56,30 @@
 					<th>Status</th>
 					<th>Admin</th>
 					<th>Client</th>
-					<th>PDF</th>
+					<th>Excel File</th>
 					<th>Actions</th>
 				</thead>
 
 <?php 			foreach($orders as $order)
 				{
 ?>					<tr>
-						<td>
-							<form action='/order/adminUpdateOrder' method='post'>
-								<input type='hidden' name=''>
-								<input type='text' name='order_no' value='<?= $order['order_no']; ?>' placeholder='LVL Order ID'>
-							</form>
-						</td>
-						<td><?= $order['created_at']; ?></td>
-						<td><?= $order['updated_at']; ?></td>
+						<td><?= $order['order_no']; ?></td>
+						<?php
+							$phpdate = strtotime( $order['created_at']);
+							$mysqldate = date( 'F d, Y', $phpdate );
+						?>
+						<td><?= $mysqldate; ?></td>
+						<?php
+							$phpdate = strtotime( $order['updated_at']);
+							$mysqldate = date( 'M d, Y g:i A', $phpdate );
+						?>
+						<td><?= $mysqldate; ?></td>
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['admin_note']; ?></td>
 						<td><?= $order['client_note']; ?></td>
-						<td><a href="">PDF FILE</a></td>
-						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>			
+						<td><a href="">EXCEL FILE HERE</a></td>
+						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>
 					</tr>	
 <?php 			}
 ?>			</table>
@@ -114,7 +117,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="collection" class="col-sm-2 control-label">Collection</label>
+				<label for="collection" class="col-sm-2 control-label">Collection change to dropdown</label>
 				
 				<div class="col-sm-6">
 					<input class="form-control" type='text' name='collection'  id="collection" placeholder="Collection">
@@ -122,12 +125,13 @@
 			</div>
 
 			<div class="form-group">
-				<label for="type" class="col-sm-2 control-label">Type</label>
+				<label for="type" class="col-sm-2 control-label">Type change to drop down</label>
 				
 				<div class="col-sm-6">
 					<input class="form-control" type='text' name='type'  id="type" placeholder="Type">
 				</div>
 			</div>
+			?? Product Size ??
 
 			<div class="form-group">
 				<label for="file_path" class="col-sm-2 control-label">File Path</label>
@@ -138,7 +142,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="finish" class="col-sm-2 control-label">Finish</label>
+				<label for="finish" class="col-sm-2 control-label">Finish change to dorpdown</label>
 				
 				<div class="col-sm-6">
 					<input class="form-control" type='text' name='finish'  id="finish" placeholder="Finish">

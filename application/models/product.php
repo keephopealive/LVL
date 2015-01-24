@@ -26,14 +26,38 @@ class Product extends CI_Model {
 		return $collections = $this->db->query($query)->result_array();
 	}
 
+	// COLLECTIONS
+
+	public function retrieveClassique()
+	{
+		$query = "SELECT * FROM products WHERE products.collection LIKE 'Classique%' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveEllipse()
+	{
+		$query = "SELECT * FROM products WHERE products.collection LIKE 'Ellipse%' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrievePierrot()
+	{
+		$query = "SELECT * FROM products WHERE products.collection = 'Pierrot' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveLimoges()
+	{
+		$query = "SELECT * FROM products WHERE products.collection = 'Limoges' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+	public function retrieveDamier()
+	{
+		$query = "SELECT * FROM products WHERE products.collection = 'Damier' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
+
+	// TYPES
 	public function retrieveKeypads()
 	{
 		$query = "SELECT * FROM products WHERE products.type = 'keypad' ORDER BY type ASC";
-		return $collections = $this->db->query($query)->result_array();
-	}
-	public function retrieveSwitches()
-	{
-		$query = "SELECT * FROM products WHERE products.type = 'switch' ORDER BY type ASC";
 		return $collections = $this->db->query($query)->result_array();
 	}
 	public function retrieveDoorbells()

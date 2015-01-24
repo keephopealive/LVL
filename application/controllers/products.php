@@ -33,6 +33,35 @@ class Products extends CI_Controller {
 		$results = $this->product->retrieveAllType();
 		echo json_encode($results);
 	}
+
+	// COLLECTIONS
+	public function retrieveClassique()
+	{
+		$results = $this->product->retrieveClassique();
+		echo json_encode($results);
+	}
+	public function retrieveEllipse()
+	{
+		$results = $this->product->retrieveEllipse();
+		echo json_encode($results);
+	}
+	public function retrievePierrot()
+	{
+		$results = $this->product->retrievePierrot();
+		echo json_encode($results);
+	}
+	public function retrieveLimoges()
+	{
+		$results = $this->product->retrieveLimoges();
+		echo json_encode($results);
+	}
+	public function retrieveDamier()
+	{
+		$results = $this->product->retrieveDamier();
+		echo json_encode($results);
+	}
+
+	// TYPES
 	public function retrieveKeypads()
 	{
 		$results = $this->product->retrieveKeypads();
@@ -41,11 +70,6 @@ class Products extends CI_Controller {
 	public function retrieveOutlets()
 	{
 		$results = $this->product->retrieveOutlets();
-		echo json_encode($results);
-	}
-	public function retrieveSwitches()
-	{
-		$results = $this->product->retrieveSwitches();
 		echo json_encode($results);
 	}
 	public function retrieveDoorbells()
@@ -58,4 +82,7 @@ class Products extends CI_Controller {
 		$results = $this->product->retrieveLamps();
 		echo json_encode($results);
 	}
+
+	// FINISH
+
 }

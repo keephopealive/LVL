@@ -406,7 +406,11 @@
 	<input type="number" name='quantity' value="1">
 	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
 </div>
-
+<div class='note col-sm-8 col-sm-offset-1 top50'>
+	<h4>Envgraving</h4>
+	<input type="text" name='engraving'>
+	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
+</div>
 <div class='hiddenfield '></div>
 
 <div class="col-sm-2" style="vertical-align:bottom;">

@@ -4,6 +4,7 @@ class Mains extends CI_Controller {
 
 	public function __construct($id = null)
 	{
+
 		parent::__construct($id);
 		$this->output->enable_profiler(TRUE);
 	}
@@ -17,19 +18,19 @@ class Mains extends CI_Controller {
 	{
 		$results = $this->user->login($this->input->post());
 		if($results)
-		{			
+		{
 			if($results['admin'] == "0")
 			{
 				unset($results['admin']);
-				$this->session->set_userdata('user', $results);	
+				$this->session->set_userdata('user', $results);
 				redirect('/dashboard');
 			}
 			else if ($results['admin'] == "1")
 			{
-				$this->session->set_userdata('user', $results);	
+				$this->session->set_userdata('user', $results);
 				// die('head to admin dashboard');
 				redirect('/admin/dashboard');
-			}			
+			}
 		}
 		else
 		{
@@ -46,10 +47,8 @@ class Mains extends CI_Controller {
 		redirect('/');
 	}
 
-
 	public function registration()
 	{
-
 		$config = array(
 			array(
 				'field' => 'first_name',

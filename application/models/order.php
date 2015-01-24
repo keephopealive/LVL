@@ -48,8 +48,8 @@ class Order extends CI_Model {
 	}
 	public function updateStatus($values)
 	{
-		$query ="UPDATE orders SET status = ? WHERE id = ?";
-		$values = array($values['status'], $values['order_id']);
+		$query ="UPDATE orders SET order_no = ?, status = ? WHERE id = ?";
+		$values = array($values['order_no'], $values['status'], $values['order_id']);
 		return $this->db->query($query, $values);
 	}
 	public function retrieveOrder($order_id)
