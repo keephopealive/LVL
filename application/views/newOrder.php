@@ -14,7 +14,7 @@
 	<button class='btn btn-primary'>Add Item (Modal)</button>
 	<a href="/productitem/newProductitem/keypad"><button class='btn btn-primary'>Add Keypad</button></a>
 	<a href="/productitem/newProductitem/outlet"><button class='btn btn-primary'>Add Outlet</button></a>
-	<a href="/dashboard"><button class='btn btn-primary'>Save Order</button></a>
+	<a href="/order/updateOrder/<?= $order_id; ?>"><button class='btn btn-primary'>Save Order</button></a>
 	<a href="/order/deleteOrder/<?= $order_id; ?>"><button class='btn btn-danger'>Delete/Cancel Order</button></a>
 	<table class='table table-bordered'>
 		<thead>

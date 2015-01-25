@@ -42,7 +42,7 @@
 			<button class="btn btn-default collection_btn">Collection</button>
 			<button class="btn btn-default type_btn">Type </button>
 			<button class="btn btn-default finish_btn">Finish</button>
-			<button class="btn btn-default finish_btn">Custom (wider)</button> <!-- Add -->
+			<button class="btn btn-default custom_btn">Custom (wider)</button> <!-- Add -->
 
 		</div>
 		<div class="sorting_types">
@@ -65,15 +65,7 @@
 					<a href="" id="retrieve_doorbells">Door Bells</a>
 				</h3>
 			</div>
-			<!--		Finish Sorting-->
-			<div class="col-sm-12 finish_group">
-				<h3 class="select_search_by_finish">
-					<a href="" id="retrieve_outlets">Finish A</a> |
-					<a href="" id="retrieve_keypads">Finish B</a> |
-				 	<a href="" id="retrieve_lamps">Finish C</a> |
-					<a href="" id="retrieve_doorbells">Finish D</a>
-				</h3>
-			</div>
+
 		</div>
 
 	</div>
@@ -403,27 +395,33 @@
 	});
 	//	END TYPES SECTION --------------------------------------
 
+	// RETRIEVE FINISH -----------------------------------------
+	$(document).on('click', 'button.finish_btn', function(){
+		$('.products_list').html("finish here");
+	});
+	// END FINISH
+
+	// RETRIEVE CUSTOM -----------------------------------------
+	$(document).on('click', 'button.custom_btn', function(){
+		$('.products_list').html("custom here");
+	});
+	// END CUSTOM
+
+
 
 	$(document).on('click', 'button.collection_btn', function(){
-		$('.finish_group').hide();
 		$('.type_group').hide();
 		$('.collection_group').show();
-//		$('select_search_by_collection').show();
 	});
 	$(document).on('click', 'button.finish_btn', function(){
-		$('.finish_group').show();
 		$('.type_group').hide();
 		$('.collection_group').hide();
-//		$('select_search_by_collection').show();
 	});
 	$(document).on('click', 'button.type_btn', function(){
-		$('.finish_group').hide();
 		$('.type_group').show();
 		$('.collection_group').hide();
-//		$('select_search_by_collection').show();
 	});
 	$(document).ready(function(){
-		$('.finish_group').hide();
 		$('.type_group').hide();
 		$('.collection_group').hide();
 	});

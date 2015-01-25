@@ -33,6 +33,11 @@ class Orders extends CI_Controller {
 		$this->order->deleteOrder($id);
 		redirect('/dashboard');
 	}
+	public function updateOrder($id)
+	{
+		$this->order->updateOrder($id);
+		redirect('/dashboard');
+	}
 	public function showOrder($order_id)
 	{
 		$productitems = $this->productitem->retrieveAllOrderProducts($order_id);
