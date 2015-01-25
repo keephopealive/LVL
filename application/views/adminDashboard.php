@@ -59,21 +59,12 @@
 					<th>Excel File</th>
 					<th>Actions</th>
 				</thead>
-
 <?php 			foreach($orders as $order)
 				{
 ?>					<tr>
 						<td><?= $order['order_no']; ?></td>
-						<?php
-							$phpdate = strtotime( $order['created_at']);
-							$mysqldate = date( 'F d, Y', $phpdate );
-						?>
-						<td><?= $mysqldate; ?></td>
-						<?php
-							$phpdate = strtotime( $order['updated_at']);
-							$mysqldate = date( 'M d, Y g:i A', $phpdate );
-						?>
-						<td><?= $mysqldate; ?></td>
+						<td><?= date( 'F d, Y', strtotime( $order['orders_created_at']) ); ?></td>
+						<td><?= date( 'M d, Y g:i A', strtotime( $order['orders_updated_at'])); ?></td>
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['admin_note']; ?></td>

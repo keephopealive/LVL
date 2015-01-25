@@ -45,15 +45,23 @@
 	<table class='table table-bordered'>
 		<thead>
 			<th>Reference No</th>
-			<th>Note</th>
+			<th>Room Name</th>
 			<th>Quantity</th>
+			<th>Engraving</th>
+			<th>Collection</th>
+			<th>Size</th>
+		<th>Plate</th>
+		<th></th>
 		</thead>
 <?php	foreach($productitems as $productitem)
 		{
 ?>			<tr>
-				<td><?= $productitem['reference_no']?></td> 
+				<td><?= $productitem['reference_no']?></td>
 				<td><?= $productitem['note']?></td>
 				<td><?= $productitem['quantity']?></td>
+				<td><?= $productitem['engraving']?></td>
+				<td>Classique</td>
+				<td>82x82</td>
 			</tr>
 <?php	}
 ?>	</table>

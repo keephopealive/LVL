@@ -40,8 +40,10 @@
 		<div class="col-sm-12">
 			<h3>Sort by:</h3>
 			<button class="btn btn-default collection_btn">Collection</button>
-			<button class="btn btn-default type_btn">Type</button>
+			<button class="btn btn-default type_btn">Type </button>
 			<button class="btn btn-default finish_btn">Finish</button>
+			<button class="btn btn-default finish_btn">Custom (wider)</button> <!-- Add -->
+
 		</div>
 		<div class="sorting_types">
 			<!--		Collection Sorting-->

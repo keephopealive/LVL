@@ -15,7 +15,7 @@ class Admins extends CI_Controller {
 		$orders = $this->order->adminRetrieveAllOrders();
 		$alldata = array(
 			'user' => $user,
-			'orders' =>$orders
+			'orders' => $orders
 		);
 		$this->load->view('adminDashboard', $alldata);
 	}

@@ -21,7 +21,7 @@
 			<th>Reference No</th>
 			<th>Note</th>
 			<th>Qunatity</th>
-			<th>PDF</th>
+			<th>Download Cutsheets</th>
 			<th>Actions</th>
 		</thead>
 <?php	foreach($productitems as $productitem)

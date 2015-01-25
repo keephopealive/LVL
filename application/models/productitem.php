@@ -52,8 +52,13 @@ class Productitem extends CI_Model {
 			$productitem['mechanism'] .
 			$productitem['finish'];
 		$this->session->set_userdata('reference_no', $reference_no);
-		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, engraving, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, "myPDFfile", "Pending", $productitem['quantity'], $productitem['note'], $productitem['engraving'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
+		$collection_value = substr($reference_no, 1,1); // Collection => C, E
+		$size_value = substr($reference_no, 2,4); // Size => 3008
+		$edgescrew_value = substr($reference_no, 6,1); // Edge / Screw => A,B,C,D
+		$mechanism_value = substr($reference_no, 8,8); // Mechanism => A1100010
+		$finish_value = substr($reference_no, 16,2); // Finish => FA
+		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, engraving, created_at, updated_at, collection, size, edge_screw, mechanism, finish ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, "myPDFfile", "Pending", $productitem['quantity'], $productitem['note'], $productitem['engraving'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"), $collection_value, $size_value, $edgescrew_value, $mechanism_value, $finish_value);
 		return $this->db->query($query, $values);
 	}
 

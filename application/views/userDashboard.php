@@ -49,7 +49,7 @@
 						<td><?= $order['client_note']; ?></td>
 						<td>
 							<a href="/order/showOrder/<?= $order['id']; ?>"><button class='btn btn-primary'>View Order</button></a>
-							<button class='btn btn-warning'>EDIT (undecided)</button>
+<!--							<button class='btn btn-warning'>EDIT (undecided)</button>-->
 						</td>
 					</tr>				
 <?php 			}
