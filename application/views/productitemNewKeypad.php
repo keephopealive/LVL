@@ -38,28 +38,19 @@
 		$('div.size').html(""+				
 		"<div class='radio'>"+
 		"<label>"+
-			"<div>"+
-			  "<input id='option' type='radio' name='orientation' orientation='horizontal' class='size' value='3008'>"+
-			  "<label for='option'><span><span></span></span>82x82</label>"+
-			"</div>"+
+			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3008'>82x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<div>"+
-			  "<input id='option' type='radio' name='orientation' orientation='horizontal' class='size' value='3001'>"+
-			  "<label for='option'><span><span></span></span>117x82</label>"+
-			"</div>"+
+			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3001'>117x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<div>"+
-			  "<input id='option' type='radio' name='orientation' orientation='horizontal' class='size' value='3002'>"+
-			  "<label for='option'><span><span></span></span>144x82</label>"+
-			"</div>"+
+			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3002'>144x82"+
 		"</label>"+
 		"</div>"+
 		"<br>");
@@ -71,28 +62,19 @@
 
 		"<div class='radio'>"+
 		"<label>"+
-			"<div>"+
-			  "<input id='option' type='radio' name='size' class='size' value='3008'>"+
-			  "<label for='option'><span><span></span></span>82x82</label>"+
-			"</div>"+
+			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3008'>82x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<div>"+
-			  "<input id='option' type='radio' name='size' class='size' value='3000'>"+
-			  "<label for='option'><span><span></span></span>82x117</label>"+
-			"</div>"+
+			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3000'>82x117"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<div>"+
-			  "<input id='option' type='radio' name='size' orientation='vertical' class='size' value='3003'>"+
-			  "<label for='option'><span><span></span></span>82x144</label>"+
-			"</div>"+
+			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3003'>82x144"+
 		"</label>"+
 		"</div>"+
 		"<br>");
@@ -288,51 +270,14 @@
 <!-- COLLECTION -->
 		<div class="col-xs-4 col-sm-2 col-sm-offset-2" id="collection">
 			<h4>Collection</h4>
-			<div class="collection"> <!-- COLLECTION OPTIONS DIV -->
-				<div class="radio">
-					<label>
-						<div>
-						  <input id="option" type="radio" name="collection" class="collection" value="C">
-						  <label for="option"><span><span></span></span>Classique</label>
-						</div>
-					</label>
-				</div>
-				<br>
-				<div class="radio">
-					<label>
-						<div>
-						  <input id="option" type="radio" name="collection" class="collection" value="E">
-						  <label for="option"><span><span></span></span>Ellipse</label>
-						</div>
-					</label>
-				</div>
-				<br>
-				<div class="radio">
-					<label>
-						<div>
-						  <input id="option" type="radio" name="collection" class="collection" value="P">
-						  <label for="option"><span><span></span></span>Pierrot</label>
-						</div>
-					</label>
-				</div>
-				<br>
-				<div class="radio">
-					<label>
-						<div>
-						  <input id="option" type="radio" name="collection" class="collection" value="L">
-						  <label for="option"><span><span></span></span>Limoges</label>
-						</div>
-					</label>
-				</div>
-				<br>
-				<div class="radio">
-					<label>
-						<div>
-						  <input id="option" type="radio" name="collection" class="collection" value="K">
-						  <label for="option"><span><span></span></span>Damier</label>
-						</div>
-					</label>
-				</div>
+			<div class="collection"> <!-- FINISH OPTIONS DIV -->
+				<select name="collection" class="form-control selectwidthauto">
+					<option class="collection" value="C">CLASSIQUE</option>
+					<option class="collection" value="E">ELLIPSE</option>
+					<option class="collection" value="P">PIERROT</option>
+					<option class="collection" value="L">LIMOGES</option>
+					<option class="collection" value="K">DAMIER</option>
+				</select>
 			</div>
 		</div>
 <!-- END COLLECTION -->
@@ -344,20 +289,26 @@
 			<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
 				<div class="radio">
 					<label>
+						<input type='radio' name='orientation' class='horizontal' value="horizontal">  Horizontal
+					</label>
+					<!-- <label>
 						<div>
 						  <input id="option" type="radio" name="orientation" class="horizontal" value="horizontal">
 						  <label for="option"><span><span></span></span>Horizontal</label>
 						</div>
-					</label>
+					</label> -->
 				</div>
 				<br>
 				<div class="radio">
 					<label>
+						<input type='radio' name='orientation' class='vertical' value="vertical">  Vertical
+					</label>
+					<!-- <label>
 						<div>
 						  <input id="option" type="radio" name="orientation" class="vertical" value="vertical">
 						  <label for="option"><span><span></span></span>Vertical</label>
 						</div>
-					</label>
+					</label> -->
 				</div>
 			</div>
 		</div>
@@ -367,7 +318,6 @@
 		<div class="col-xs-4 col-sm-2 col-sm-offset-1">
 			<h4>Plate Size</h4>
 			<div class="size">	<!-- APPENDING SIZE OPTIONS -->
-
 				<p>Select orientation first.</p>
 			</div>
 		</div>
