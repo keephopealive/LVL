@@ -60,26 +60,26 @@
 					<th>Actions</th>
 				</thead>
 
-<?php
-include("config.inc.php");
-$item_per_page = 5;
-$get_total_rows = mysqli_fetch_array($orders); //total records
-//break total records into pages
-$pages = ceil($get_total_rows[0]/$item_per_page);
-
-//create pagination
-$pagination = '';
-if($pages > 1)
-{
-	$pagination .= '<ul class="paginate">';
-	for($i = 1; $i<$pages; $i++)
-	{
-		$pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';
-	}
-	$pagination .= '</ul>';
-}
-
-?>
+<!--?php-->
+<!--include("config.inc.php");-->
+<!--$item_per_page = 5;-->
+<!--$get_total_rows = mysqli_fetch_array($orders); //total records-->
+<!--//break total records into pages-->
+<!--$pages = ceil($get_total_rows[0]/$item_per_page);-->
+<!---->
+<!--//create pagination-->
+<!--$pagination = '';-->
+<!--if($pages > 1)-->
+<!--{-->
+<!--	$pagination .= '<ul class="paginate">';-->
+<!--	for($i = 1; $i<$pages; $i++)-->
+<!--	{-->
+<!--		$pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';-->
+<!--	}-->
+<!--	$pagination .= '</ul>';-->
+<!--}-->
+<!---->
+<!--?-->
 
 
 
@@ -94,7 +94,7 @@ if($pages > 1)
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['admin_note']; ?></td>
 						<td><?= $order['client_note']; ?></td>
-						<td><a href="">EXCEL FILE HERE</a></td>
+						<td><a href="../excel/<?= $order['excelsheet']; ?>.xlsx">a<?= $order['project_name']; ?></a></td>
 						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>
 					</tr>	
 <?php 			}

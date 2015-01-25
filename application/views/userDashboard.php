@@ -40,11 +40,7 @@
 				{
 ?>					<tr>
 						<td><?= $order['order_no']; ?></td>
-					<?php
-						$phpdate = strtotime( $order['created_at']);
-						$mysqldate = date( 'F d, Y', $phpdate );
-					?>
-						<td><?= $mysqldate ?></td>
+						<td><?= date( 'F d, Y', strtotime( $order['created_at']) ) ?></td>
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['client_note']; ?></td>
 						<td>

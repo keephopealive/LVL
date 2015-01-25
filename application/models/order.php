@@ -5,7 +5,7 @@ class Order extends CI_Model {
 	public function retrieveAll($id)
 	{
 		$query ="SELECT * FROM orders WHERE user_id = ?";
-		return $this->db->query($query, $id)->result_array();
+		return $this->db->query($query, intval($id))->result_array();
 	}
 	public function adminRetrieveAllOrders()
 	{
@@ -18,6 +18,7 @@ class Order extends CI_Model {
 		$query ="INSERT INTO orders (user_id, status, created_at ,updated_at) VALUES (?, ?, NOW(), NOW())";
 		$values = array($user_id, 'Pending');
 		$this->db->query($query, $values);
+//		die('here @@@@@@@@@@');
 		return $this->db->insert_id();
 	}
 	public function deleteOrder($order_id)
@@ -34,53 +35,34 @@ class Order extends CI_Model {
 	public function updateOrder($order_id)
 	{
 		$this->load->library('PHPExcel.php');
-		$objPHPExcel = new PHPExcel(); // Create a new PHPExcel Object
+
+// Create new PHPExcel object
+		$objPHPExcel = new PHPExcel();
 		$objPHPExcel->createSheet(); // Create a new Sheet
-		$myWorkSheet = new PHPExcel_Worksheet($objPHPExcel, "My Data");
-		$objPHPExcel->addSheet($myWorkSheet, 0);
-		$objPHPExcel->getActiveSheet()->setCellValue('A1', 'PHPExcel');
-		$objPHPExcel->getActiveSheet()->setCellValue('A2', 12345.6789);
-		$objPHPExcel->getActiveSheet()->setCellValue('A3', TRUE);
+
+// Set properties
+		$objPHPExcel->getProperties()->setCreator("ggggg");
+		$objPHPExcel->getProperties()->setLastModifiedBy("SM DK");
+		$objPHPExcel->getProperties()->setTitle("Title Test Document");
+		$objPHPExcel->getProperties()->setSubject("Subject Test");
+		$objPHPExcel->getProperties()->setDescription("Test Document Description.");
+
+// Add some data
+		$objPHPExcel->setActiveSheetIndex(0);
+		$objPHPExcel->getActiveSheet()->SetCellValue('A1', 'OVER');
+		$objPHPExcel->getActiveSheet()->SetCellValue('A2', '9');
+		$objPHPExcel->getActiveSheet()->SetCellValue('A3', '99990');
+		$objPHPExcel->getActiveSheet()->SetCellValue('A4', '0');
+		$objPHPExcel->getActiveSheet()->SetCellValue('A5', '0');
+		$objPHPExcel->getActiveSheet()->SetCellValue('A6', '!');
+
+
+// Save Excel 2007 file
 		$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel);
-		$objWriter->setOffice2003Compatibility(true);
-//		$objWriter->save("05featuredemo.xlsx");
-//
-//$objWriter->save("05featuredemo.xlsx");
-//		$objPHPExcel = PHPExcel_IOFactory::load("05featuredemo.xlsx");
-		$objWriter->save('php://output');
-
-//		$filename = "test.xlsx";
-//		$objReader = PHPExcel_IOFactory::createReader('Excel2007');
-//		$objReader->setReadDataOnly(true); // previously setreaddataonly(true)
-//		$objPHPExcel = $objReader->load($filename);
-//		$objWorksheet = $objPHPExcel->getActiveSheet();
-//		$objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
-
-
-
-//		$objPHPExcel = new PHPExcel();
-		// retrieve order info
-		$query ="SELECT * FROM productitems WHERE productitems.order_id = ?";
-		$value = $order_id;
-		$order_productitems = $this->db->query($query, $value)->result_array();
-		$query ="SELECT * FROM orders WHERE orders.id = ?";
-		$order = $this->db->query($query, $value)->row_array();
-
-//		echo "<table colspan='2'>";
-//		echo "<tr><td>Test</td></tr>";
-//		echo "</table>";
-
-		echo "<pre>";
-		var_dump($order_productitems);
-		var_dump($order);
-		die('here');
-		// retrieve productitem info
-		// collaborate and save
-		$query ="UPDATE order SET excelsheet = 'excelURL' WHERE productitems.order_id = ?";
-		$value = $order_id;
-		$this->db->query($query, $value);
-		$query ="DELETE FROM orders WHERE orders.id = ?";
-		return $this->db->query($query, $value);
+		$objWriter->save("excel/excelOrder".$order_id.".xlsx");
+// Save Excel Path to DB
+		$query ="UPDATE orders SET excelsheet = './excelOrder".$order_id."' WHERE id = ?";
+		return $this->db->query($query, $order_id);
 	}
 
 
