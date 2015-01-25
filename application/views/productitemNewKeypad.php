@@ -35,23 +35,32 @@
 
 	// Horizontal
 	$(document).on('click', 'input.horizontal', function(){
-		$('div.size').html(""+
+		$('div.size').html(""+				
 		"<div class='radio'>"+
-			"<label>"+
-				"<input type='radio' class='size' name='size' value='3008'> 82x82"+
-			"</label>"+
+		"<label>"+
+			"<div>"+
+			  "<input id='option' type='radio' name='orientation' orientation='horizontal' class='size' value='3008'>"+
+			  "<label for='option'><span><span></span></span>82x82</label>"+
+			"</div>"+
+		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
-			"<label>"+
-				"<input type='radio' class='size' name='size' value='3001' orientation='horizontal'> 117x82"+
-			"</label>"+
+		"<label>"+
+			"<div>"+
+			  "<input id='option' type='radio' name='orientation' orientation='horizontal' class='size' value='3001'>"+
+			  "<label for='option'><span><span></span></span>117x82</label>"+
+			"</div>"+
+		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
-			"<label>"+
-				"<input type='radio' class='size' name='size' value='3002' orientation='horizontal'> 144x82"+
-			"</label>"+
+		"<label>"+
+			"<div>"+
+			  "<input id='option' type='radio' name='orientation' orientation='horizontal' class='size' value='3002'>"+
+			  "<label for='option'><span><span></span></span>144x82</label>"+
+			"</div>"+
+		"</label>"+
 		"</div>"+
 		"<br>");
 	});
@@ -59,22 +68,32 @@
 	// Vertical
 	$(document).on('click', 'input.vertical', function(){
 		$('div.size').html(""+
+
 		"<div class='radio'>"+
-			"<label>"+
-				"<input type='radio' class='size' name='size' value='3008'> 82x82"+
-			"</label>"+
+		"<label>"+
+			"<div>"+
+			  "<input id='option' type='radio' name='size' class='size' value='3008'>"+
+			  "<label for='option'><span><span></span></span>82x82</label>"+
+			"</div>"+
+		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
-			"<label>"+
-				"<input type='radio' class='size' name='size' value='3000' orientation='vertical'> 82x117 "+
-			"</label>"+
+		"<label>"+
+			"<div>"+
+			  "<input id='option' type='radio' name='size' class='size' value='3000'>"+
+			  "<label for='option'><span><span></span></span>82x117</label>"+
+			"</div>"+
+		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
-			"<label>"+
-				"<input type='radio' class='size' name='size' value='3003' orientation='vertical'> 82x144"+
-			"</label>"+
+		"<label>"+
+			"<div>"+
+			  "<input id='option' type='radio' name='size' orientation='vertical' class='size' value='3003'>"+
+			  "<label for='option'><span><span></span></span>82x144</label>"+
+			"</div>"+
+		"</label>"+
 		"</div>"+
 		"<br>");
 	});
@@ -117,22 +136,20 @@
 			'id=' + sid,
 			function(rows)
 			{
-				$('div.mechanism').html('');
+				$('select.mechanism').html('');
 				$.each(rows, function(i, row)
 				{
-					$('div.mechanism').append(""+
-					"<div class='radio'>"+
-						"<label>"+
-						"<input type='radio' name='mechanism' value='"+row.reference_code+"'/>"+row.configuration+
-						"</label>"+
-					"</div>"+
-					"<br>");
+					$('select.mechanism').append(""+
+					"<option value="+row.reference_code+">"+row.configuration+"</option>"
+					);
 					console.log(row);
 				});
 			},
 			'json'
 		);
 	});
+
+
 
 
 	// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
@@ -162,6 +179,14 @@
 		{
 			sessionStorage.runnerA = 'C';
 			$('div.edge').html("");
+			
+			// $('div.screw').html(""+
+			// "<h4>Screw</h4>"+
+			// "<select name='edge_screw' class='screw form-control selectwidthauto'>
+			// 		<option value='yes'>YES</option>
+			// 		<option value='no'>NO </option>
+			// </select>");
+
 			$('div.screw').html(""+
 			"<h4>Screw</h4>"+
 			"<div class='radio'>"+
@@ -171,6 +196,7 @@
 				"</label>"+
 			"</div>");
 		}
+		// Ellipse
 		else if ( $(this).val() == 'E' )
 		{
 			sessionStorage.runnerA = 'E';
@@ -228,18 +254,22 @@
 	});
 
 	</script>
+
+	<style>
+		
+	</style>
 </head>
 <body>
 <div class="container-fluid">
 	<div class="row top50">
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-2">
 			<a href="/products" class='btn btn-lg btn-warning btn-block'>Browse Products</a>
 		</div>
 			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
 		<div class="col-sm-4">
 			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
 		</div>
-		<div class="col-sm-3" >
+		<div class="col-sm-2" >
 			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
 		</div>
 	</div>
@@ -248,7 +278,7 @@
 	<div class='errors'>
 	</div>
 
-	<div class="row top50">
+<div class="row top50 field">
 		<!-- <div class="col-sm-10 col-sm-offset-1 tool">
 		</div> -->
 			<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
@@ -256,36 +286,51 @@
 				<input type="hidden" name="price" value="F">	
 
 <!-- COLLECTION -->
-		<div class="col-xs-4 col-sm-3 col-sm-offset-1" id="collection">
+		<div class="col-xs-4 col-sm-2 col-sm-offset-2" id="collection">
 			<h4>Collection</h4>
 			<div class="collection"> <!-- COLLECTION OPTIONS DIV -->
 				<div class="radio">
 					<label>
-						<input type="radio" class="collection" name="collection" value="C"> Classique
+						<div>
+						  <input id="option" type="radio" name="collection" class="collection" value="C">
+						  <label for="option"><span><span></span></span>Classique</label>
+						</div>
 					</label>
 				</div>
 				<br>
 				<div class="radio">
 					<label>
-						<input type="radio" class="collection" name="collection" value="E"> Elipse
+						<div>
+						  <input id="option" type="radio" name="collection" class="collection" value="E">
+						  <label for="option"><span><span></span></span>Ellipse</label>
+						</div>
 					</label>
 				</div>
 				<br>
 				<div class="radio">
 					<label>
-						<input type="radio" class="collection" name="collection" value="P"> Pierrot
+						<div>
+						  <input id="option" type="radio" name="collection" class="collection" value="P">
+						  <label for="option"><span><span></span></span>Pierrot</label>
+						</div>
 					</label>
 				</div>
 				<br>
 				<div class="radio">
 					<label>
-						<input type="radio" class="collection" name="collection" value="L"> Limoges
+						<div>
+						  <input id="option" type="radio" name="collection" class="collection" value="L">
+						  <label for="option"><span><span></span></span>Limoges</label>
+						</div>
 					</label>
 				</div>
 				<br>
 				<div class="radio">
 					<label>
-						<input type="radio" class="collection" name="collection" value="K"> Damier
+						<div>
+						  <input id="option" type="radio" name="collection" class="collection" value="K">
+						  <label for="option"><span><span></span></span>Damier</label>
+						</div>
 					</label>
 				</div>
 			</div>
@@ -293,57 +338,46 @@
 <!-- END COLLECTION -->
 
 <!-- ORIENTATION -->
-		<div class="col-xs-4 col-sm-3 col-sm-offset-1">
+
+		<div class="col-xs-4 col-sm-2 col-sm-offset-1">
 			<h4>Orientation</h4>
 			<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
 				<div class="radio">
 					<label>
-						<input type="radio" class="horizontal" name="orientation" value="horizontal"> Horizontal
+						<div>
+						  <input id="option" type="radio" name="orientation" class="horizontal" value="horizontal">
+						  <label for="option"><span><span></span></span>Horizontal</label>
+						</div>
 					</label>
 				</div>
 				<br>
 				<div class="radio">
 					<label>
-						<input type="radio" class="vertical" name="orientation" value="vertical"> Vertical
+						<div>
+						  <input id="option" type="radio" name="orientation" class="vertical" value="vertical">
+						  <label for="option"><span><span></span></span>Vertical</label>
+						</div>
 					</label>
 				</div>
 			</div>
 		</div>
 <!-- END ORIENTATION -->
 
-
 <!-- SIZE -->
-		<div class="col-xs-4 col-sm-3 col-sm-offset-1">
+		<div class="col-xs-4 col-sm-2 col-sm-offset-1">
 			<h4>Plate Size</h4>
 			<div class="size">	<!-- APPENDING SIZE OPTIONS -->
+
 				<p>Select orientation first.</p>
 			</div>
 		</div>
 <!-- END SIZE -->
-
-
-
-
+</div>
 	<div class="clearfix visible-sm-block">
 	</div>
-<!-- 					<div class="row top50"> -->
-
-
-
-<!-- EDGE / SCREW -->
-		<div class="col-sm-3 col-sm-offset-1">
-			<div class="ES">
-				<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
-				</div>
-				<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
-				</div>
-			</div>
-		</div>
-<!-- END EDGE / SCREW -->
-
-
+<div class="row field">
 <!-- FINISH -->
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-2">
 			<h4>Finish</h4>
 			<div class="orientation"> <!-- FINISH OPTIONS DIV -->
 				<select name="finish" class="form-control selectwidthauto">
@@ -381,25 +415,37 @@
 		</div>
 <!-- END FINISH -->
 
-
-
 <!-- MECHANISM -->
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-1 mech">
 			<h4>Mechanisms</h4>
-			<div class="mechanism"> <!-- MECHANISM OPTIONS DIV -->
-				Do you want to match Finish to your Mech/finish?
+			<div class="radio">
+					<label>
+						<input type="radio" class="matchFinish" name="matchFinish" value="YES"> Match with Finish?
+					</label>
 			</div>
+			<br>
+			
+			<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
+				<option>PLEASE CHOOSE SIZE FIRST</OPTION>
+			</select>
 		</div>
 <!-- END MECHANISM  -->
-
-
-
+<!-- EDGE / SCREW -->
+		<div class="col-sm-2 col-sm-offset-1">
+			<div class="ES">
+				<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+				</div>
+				<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
+				</div>
+			</div>
+		</div>
+<!-- END EDGE / SCREW -->
+</div>
 	<div class="clearfix visible-sm-block">
 	</div>
-
-
+<div class="row">
 <!-- BEGIN NOTES -->
-		<div class='note col-sm-8 col-sm-offset-1 top50'>
+		<div class='note col-sm-2 col-sm-offset-2 top50'>
 			<h4>Description</h4>
 			<input type="text" name="note" placeholder="i.e. Kitchen">
 			<!-- <text class="form-control" type='text' name='note' ></textarea> -->
@@ -408,7 +454,7 @@
 <!-- END NOTES -->
 
 <!-- BEGIN QUANTITY -->
-		<div class='note col-sm-8 col-sm-offset-1 top50'>
+		<div class='note col-sm-2 col-sm-offset-1 top50'>
 			<h4>Quantity</h4>
 			<input type="number" name='quantity' value="1">
 			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
@@ -416,20 +462,25 @@
 <!-- END QUANTITY -->
 
 <!-- BEGIN ENGRAVING -->
-		<div class='note col-sm-8 col-sm-offset-1 top50'>
+		<div class='note col-sm-2 col-sm-offset-1 top50'>
 			<h4>Envgraving</h4>
 			<input type="text" name='engraving'>
 			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
 		</div>
 		<div class='hiddenfield '></div>
 <!-- END ENGRAVING  -->
+</div>
+	<div class="clearfix visible-sm-block">
+	</div>
 
-
+<div class="row top50">
 <!-- BEGIN SUBMIT -->
-		<div class="col-sm-2" style="vertical-align:bottom;">
+		<div class="col-sm-3 col-sm-offset-8" style="vertical-align:bottom;">
 			<button type="submit" class="btn btn-default btn-block">Submit</button>
 		</div>
 <!-- END SUBMIT -->
+
+</div>
 	<div class="clearfix visible-sm-block">
 	</div>
 <!-- 					</div> -->
@@ -437,4 +488,4 @@
 			
 		</div>
 
-	</div>
+</div>
