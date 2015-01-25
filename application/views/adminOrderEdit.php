@@ -33,6 +33,15 @@
 			<input type='hidden' name='order_id' value='<?= $order['id']?>'>
 			<input type='submit' value='Save Order Status'>
 		</form>
+		<label for="">File:</label>
+		<a href="../../excel/<?= $order['excelsheet']; ?>.xlsx">
+			<?php
+				if(strlen($order['project_name'])>0)
+					echo $order['project_name'];
+				else
+					echo "Proj Anon";
+			?>
+		</a>
 		<label>Order Status: </label> <?= $order['status']?><br>
 		<?php
 			$phpdate = strtotime( $order['created_at']);
@@ -50,18 +59,16 @@
 			<th>Engraving</th>
 			<th>Collection</th>
 			<th>Size</th>
-		<th>Plate</th>
-		<th></th>
 		</thead>
 <?php	foreach($productitems as $productitem)
 		{
 ?>			<tr>
-				<td><?= $productitem['reference_no']?></td>
-				<td><?= $productitem['note']?></td>
-				<td><?= $productitem['quantity']?></td>
-				<td><?= $productitem['engraving']?></td>
-				<td>Classique</td>
-				<td>82x82</td>
+				<td><?php if(count($productitem['reference_no'])>0){ echo $productitem['reference_no']; }else{ echo "N/A"; } ?></td>
+				<td><?php if(count($productitem['note'])>0){ echo $productitem['note']; }else{ echo "N/A"; } ?></td>
+				<td><?php if(count($productitem['quantity'])>0){ echo $productitem['quantity']; }else{ echo "N/A"; } ?></td>
+				<td><?php if(count($productitem['engraving'])>0){ echo $productitem['engraving']; }else{ echo "N/A"; } ?></td>
+				<td><?php if(count($productitem['collection'])>0){ echo $productitem['collection']; }else{ echo "N/A"; } ?></td>
+				<td><?php if(count($productitem['size'])>0){ echo $productitem['size']; }else{ echo "N/A"; } ?></td>
 			</tr>
 <?php	}
 ?>	</table>

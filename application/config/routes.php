@@ -86,7 +86,7 @@ $route['order/newOrder'] = "orders/newOrder";
 $route['order/deleteOrder/(:num)'] = "orders/deleteOrder/$1";
 $route['order/updateOrder/(:num)'] = "orders/updateOrder/$1";
 $route['order/showOrder/(:num)'] = "orders/showOrder/$1";
-$route['order/saveNote'] = "orders/saveNote";
+$route['order/updateOrderInfo'] = "orders/updateOrderInfo";
 $route['order/updateStatus'] = "orders/updateStatus";
 
 // PDF

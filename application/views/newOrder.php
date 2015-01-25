@@ -40,11 +40,12 @@
 			</tr>
 <?php	}
 ?>	</table>	
-	<h4>Set Order Note:</h4>
-	<form method='post' action='/order/saveNote'>
+	<form method='post' action='/order/updateOrderInfo'>
 		<input type='hidden' name='order_id' value="<?= $order['id'] ?>">
-		<input type='text' name='client_note' value="<?= $order['client_note'] ?>">
-		<input type='submit' value='Save Note'>
+		<label for="">Client Note: <input type='text' name='client_note' value="<?= $order['client_note'] ?>"></label><br/>
+		<label for="">Project Name <input type='text' name='project_name' value="<?= $order['project_name'] ?>"></label><br/>
+		<label for="">Project Address: <input type='text' name='project_address' value="<?= $order['project_address'] ?>"></label><br/>
+		<input type='submit' value='Update Order'>
 	</form>
 </body>
 </html>

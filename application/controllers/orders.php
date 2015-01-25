@@ -44,9 +44,9 @@ class Orders extends CI_Controller {
 		$this->load->view('showOrder', array('productitems' => $productitems));
 	}
 
-	public function saveNote()
+	public function updateOrderInfo()
 	{
-		$this->order->saveNote($this->input->post());
+		$this->order->updateOrderInfo($this->input->post());
 		redirect('/order/newOrder');
 	}
 	public function saveAdminNote()

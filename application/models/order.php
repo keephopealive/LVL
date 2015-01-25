@@ -73,10 +73,10 @@ class Order extends CI_Model {
 		$query ="SELECT * FROM productitems WHERE order_id = ?";
 		return $this->db->query($query, $order_id)->result_array();
 	}
-	public function saveNote($values)
+	public function updateOrderInfo($values)
 	{
-		$query ="UPDATE orders SET client_note = ? WHERE id = ?";
-		$values = array($values['client_note'], $values['order_id']);
+		$query ="UPDATE orders SET client_note = ?, project_name = ?, project_address = ? WHERE id = ?";
+		$values = array($values['client_note'], $values['project_name'], $values['project_address'], $values['order_id']);
 		return $this->db->query($query, $values);
 	}
 	public function saveAdminNote($values)

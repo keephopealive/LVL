@@ -94,7 +94,13 @@
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['admin_note']; ?></td>
 						<td><?= $order['client_note']; ?></td>
-						<td><a href="../excel/<?= $order['excelsheet']; ?>.xlsx">a<?= $order['project_name']; ?></a></td>
+						<td><a href="../../excel/<?= $order['excelsheet']; ?>.xlsx">
+<?php						if(strlen($order['project_name'])>0){
+?>								<?= $order['project_name']; ?>
+<?php						}else{
+?>									<span>n/a</span>
+<?php						}
+?>						</a></td>
 						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>
 					</tr>	
 <?php 			}
