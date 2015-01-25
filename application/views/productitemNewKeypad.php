@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Custom Order</title>
+	<title>Custom Keypad</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -249,179 +249,192 @@
 	</div>
 
 	<div class="row top50">
-		<div class="col-sm-10 col-sm-offset-1 tool">
+		<!-- <div class="col-sm-10 col-sm-offset-1 tool">
+		</div> -->
 			<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
 				<input type='hidden' name='order_id' value='<?= $order_id; ?>'>
 				<input type="hidden" name="price" value="F">	
 
 <!-- COLLECTION -->
-<div class="col-xs-4 col-sm-3 col-sm-offset-1" id="collection">
-	<h4>Collection</h4>
-	<div class="collection"> <!-- COLLECTION OPTIONS DIV -->
-		<div class="radio">
-			<label>
-				<input type="radio" class="collection" name="collection" value="C"> Classique
-			</label>
+		<div class="col-xs-4 col-sm-3 col-sm-offset-1" id="collection">
+			<h4>Collection</h4>
+			<div class="collection"> <!-- COLLECTION OPTIONS DIV -->
+				<div class="radio">
+					<label>
+						<input type="radio" class="collection" name="collection" value="C"> Classique
+					</label>
+				</div>
+				<br>
+				<div class="radio">
+					<label>
+						<input type="radio" class="collection" name="collection" value="E"> Elipse
+					</label>
+				</div>
+				<br>
+				<div class="radio">
+					<label>
+						<input type="radio" class="collection" name="collection" value="P"> Pierrot
+					</label>
+				</div>
+				<br>
+				<div class="radio">
+					<label>
+						<input type="radio" class="collection" name="collection" value="L"> Limoges
+					</label>
+				</div>
+				<br>
+				<div class="radio">
+					<label>
+						<input type="radio" class="collection" name="collection" value="K"> Damier
+					</label>
+				</div>
+			</div>
 		</div>
-		<br>
-		<div class="radio">
-			<label>
-				<input type="radio" class="collection" name="collection" value="E"> Elipse
-			</label>
-		</div>
-		<br>
-		<div class="radio">
-			<label>
-				<input type="radio" class="collection" name="collection" value="P"> Pierrot
-			</label>
-		</div>
-		<br>
-		<div class="radio">
-			<label>
-				<input type="radio" class="collection" name="collection" value="L"> Limoges
-			</label>
-		</div>
-		<br>
-		<div class="radio">
-			<label>
-				<input type="radio" class="collection" name="collection" value="K"> Damier
-			</label>
-		</div>
-	</div>
-</div>
 <!-- END COLLECTION -->
 
 <!-- ORIENTATION -->
-<div class="col-xs-4 col-sm-3 col-sm-offset-1">
-	<h4>Orientation</h4>
-	<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
-		<div class="radio">
-			<label>
-				<input type="radio" class="horizontal" name="orientation" value="horizontal"> Horizontal
-			</label>
+		<div class="col-xs-4 col-sm-3 col-sm-offset-1">
+			<h4>Orientation</h4>
+			<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
+				<div class="radio">
+					<label>
+						<input type="radio" class="horizontal" name="orientation" value="horizontal"> Horizontal
+					</label>
+				</div>
+				<br>
+				<div class="radio">
+					<label>
+						<input type="radio" class="vertical" name="orientation" value="vertical"> Vertical
+					</label>
+				</div>
+			</div>
 		</div>
-		<br>
-		<div class="radio">
-			<label>
-				<input type="radio" class="vertical" name="orientation" value="vertical"> Vertical
-			</label>
-		</div>
-	</div>
-</div>
 <!-- END ORIENTATION -->
 
 
 <!-- SIZE -->
-<div class="col-xs-4 col-sm-3 col-sm-offset-1">
-	<h4>Plate Size</h4>
-	<div class="size">	<!-- APPENDING SIZE OPTIONS -->
-		<p>Select orientation first.</p>
-	</div>
-</div>
+		<div class="col-xs-4 col-sm-3 col-sm-offset-1">
+			<h4>Plate Size</h4>
+			<div class="size">	<!-- APPENDING SIZE OPTIONS -->
+				<p>Select orientation first.</p>
+			</div>
+		</div>
 <!-- END SIZE -->
 
 
 
 
-<div class="clearfix visible-sm-block">
-</div>
+	<div class="clearfix visible-sm-block">
+	</div>
 <!-- 					<div class="row top50"> -->
 
 
 
 <!-- EDGE / SCREW -->
-<div class="col-sm-3 col-sm-offset-1">
-	<div class="ES">
-		<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+		<div class="col-sm-3 col-sm-offset-1">
+			<div class="ES">
+				<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+				</div>
+				<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
+				</div>
+			</div>
 		</div>
-		<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
-		</div>
-	</div>
-</div>
 <!-- END EDGE / SCREW -->
 
 
 <!-- FINISH -->
-<div class="col-sm-3 col-sm-offset-1">
-	<h4>Finish</h4>
-	<div class="orientation"> <!-- FINISH OPTIONS DIV -->
-		<select name="finish" class="form-control selectwidthauto">
-			<option value="FA">NICKEL BROSSE</option>
-			<option value="FB">NICKEL BRILLANT </option>
-			<option value="FC">MICROBILLE NICKEL </option>
-			<option value="FD">CHROME MAT</option>
-			<option value="FE">CHROME VIF </option>
-			<option value="FF">CANON DE FUSIL ANTHRACITE</option>
-			<option value="FG">CANON DE FUSIL BLEU NUIT</option>
-			<option value="CA">BM CLAIR</option>
-			<option value="CB">BM CLAIR VERNI MAT</option>
-			<option value="CC">BM ALLEMAND</option>
-			<option value="CD">BM FONCE</option>
-			<option value="CE">CHAMPAGNE</option>
-			<option value="CF">DORE PATINE</option>
-			<option value="CG">LAITON POLI VERNI </option>
-			<option value="CH">LAITON POLI SATINE</option>
-			<option value="SA">NICKEL NOIR BRILLANT</option>
-			<option value="SB">NICKEL NOIR MATTE</option>
-			<option value="SC">CHROME MARTELE</option>
-			<option value="SD">CHROME VIBRE </option>
-			<option value="SE">ARGENT PATINE</option>
-			<option value="SF">MICROBILLE CHROME </option>
-			<option value="SG">CUIVRE PATINE</option>
-			<option value="SH">CUIVRE VIEILLI BOUCHONNE </option>
-			<option value="SI">CUIVRE SATINE</option>
-			<option value="SJ">BM FONCE BAREGE BRILLANT</option>
-			<option value="SK">Dorure 24 carats</option>
-			<option value="SL">Microbillé dorure 24 carats</option>
-			<option value="SM">Microbillé CF anthracite</option>
-			<option value="SN">POLI VERNI OR MAT</option>
-		</select>
-	</div>
-</div>
+		<div class="col-sm-3 col-sm-offset-1">
+			<h4>Finish</h4>
+			<div class="orientation"> <!-- FINISH OPTIONS DIV -->
+				<select name="finish" class="form-control selectwidthauto">
+					<option value="FA">NICKEL BROSSE</option>
+					<option value="FB">NICKEL BRILLANT </option>
+					<option value="FC">MICROBILLE NICKEL </option>
+					<option value="FD">CHROME MAT</option>
+					<option value="FE">CHROME VIF </option>
+					<option value="FF">CANON DE FUSIL ANTHRACITE</option>
+					<option value="FG">CANON DE FUSIL BLEU NUIT</option>
+					<option value="CA">BM CLAIR</option>
+					<option value="CB">BM CLAIR VERNI MAT</option>
+					<option value="CC">BM ALLEMAND</option>
+					<option value="CD">BM FONCE</option>
+					<option value="CE">CHAMPAGNE</option>
+					<option value="CF">DORE PATINE</option>
+					<option value="CG">LAITON POLI VERNI </option>
+					<option value="CH">LAITON POLI SATINE</option>
+					<option value="SA">NICKEL NOIR BRILLANT</option>
+					<option value="SB">NICKEL NOIR MATTE</option>
+					<option value="SC">CHROME MARTELE</option>
+					<option value="SD">CHROME VIBRE </option>
+					<option value="SE">ARGENT PATINE</option>
+					<option value="SF">MICROBILLE CHROME </option>
+					<option value="SG">CUIVRE PATINE</option>
+					<option value="SH">CUIVRE VIEILLI BOUCHONNE </option>
+					<option value="SI">CUIVRE SATINE</option>
+					<option value="SJ">BM FONCE BAREGE BRILLANT</option>
+					<option value="SK">Dorure 24 carats</option>
+					<option value="SL">Microbillé dorure 24 carats</option>
+					<option value="SM">Microbillé CF anthracite</option>
+					<option value="SN">POLI VERNI OR MAT</option>
+				</select>
+			</div>
+		</div>
 <!-- END FINISH -->
 
 
 
 <!-- MECHANISM -->
-<div class="col-sm-3 col-sm-offset-1">
-	<h4>Mechanisms</h4>
-	<div class="mechanism"> <!-- MECHANISM OPTIONS DIV -->
-		Do you want to match Finish to your Mech/finish?
-	</div>
-</div>
+		<div class="col-sm-3 col-sm-offset-1">
+			<h4>Mechanisms</h4>
+			<div class="mechanism"> <!-- MECHANISM OPTIONS DIV -->
+				Do you want to match Finish to your Mech/finish?
+			</div>
+		</div>
 <!-- END MECHANISM  -->
 
 
 
-<div class="clearfix visible-sm-block">
-</div>
+	<div class="clearfix visible-sm-block">
+	</div>
 
-<div class='note col-sm-8 col-sm-offset-1 top50'>
-	<h4>Notes</h4>
-	<textarea class="form-control" type='text' name='note' value='note test here' rows="4" style="width:100%;"></textarea>
-	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
-</div>
-<div class='note col-sm-8 col-sm-offset-1 top50'>
-	<h4>Quantity</h4>
-	<input type="number" name='quantity' value="1">
-	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
-</div>
-<div class='note col-sm-8 col-sm-offset-1 top50'>
-	<h4>Envgraving</h4>
-	<input type="text" name='engraving'>
-	<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
-</div>
-<div class='hiddenfield '></div>
 
-<div class="col-sm-2" style="vertical-align:bottom;">
-	<button type="submit" class="btn btn-default btn-block">Submit</button>
-</div>
+<!-- BEGIN NOTES -->
+		<div class='note col-sm-8 col-sm-offset-1 top50'>
+			<h4>Description</h4>
+			<input type="text" name="note" placeholder="i.e. Kitchen">
+			<!-- <text class="form-control" type='text' name='note' ></textarea> -->
+			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
+		</div>
+<!-- END NOTES -->
 
-<div class="clearfix visible-sm-block">
-</div>
+<!-- BEGIN QUANTITY -->
+		<div class='note col-sm-8 col-sm-offset-1 top50'>
+			<h4>Quantity</h4>
+			<input type="number" name='quantity' value="1">
+			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
+		</div>
+<!-- END QUANTITY -->
+
+<!-- BEGIN ENGRAVING -->
+		<div class='note col-sm-8 col-sm-offset-1 top50'>
+			<h4>Envgraving</h4>
+			<input type="text" name='engraving'>
+			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
+		</div>
+		<div class='hiddenfield '></div>
+<!-- END ENGRAVING  -->
+
+
+<!-- BEGIN SUBMIT -->
+		<div class="col-sm-2" style="vertical-align:bottom;">
+			<button type="submit" class="btn btn-default btn-block">Submit</button>
+		</div>
+<!-- END SUBMIT -->
+	<div class="clearfix visible-sm-block">
+	</div>
 <!-- 					</div> -->
 				</form>
-			</div>
+			
 		</div>
 
 	</div>
