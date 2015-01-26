@@ -6,239 +6,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript">
-
-
-	$(document).on('submit', 'form#createOrderForm', function(){
-		$.post(
-			$(this).attr('action'),
-			$(this).serialize(),
-			function(data){
-				if(data.status == 'failed')
-				{
-					console.log('failed');
-					$('div.errors').html(data.errors);
-				}
-				else	
-				{
-					$('div.errors').html('');
-					console.log("succeeded");
-					window.location.replace("/order/newOrder");
-				}
-			},
-			'json'
-		);
-		return false;
-	});
-
-	// POPULATING SIZE FROM ORIENTATION
-
-	// Horizontal
-	$(document).on('click', 'input.horizontal', function(){
-		$('div.size').html(""+				
-		"<div class='radio'>"+
-		"<label>"+
-			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3008'>82x82"+
-		"</label>"+
-		"</div>"+
-		"<br>"+
-		"<div class='radio'>"+
-		"<label>"+
-			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3001'>117x82"+
-		"</label>"+
-		"</div>"+
-		"<br>"+
-		"<div class='radio'>"+
-		"<label>"+
-			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3002'>144x82"+
-		"</label>"+
-		"</div>"+
-		"<br>");
-	});
-
-	// Vertical
-	$(document).on('click', 'input.vertical', function(){
-		$('div.size').html(""+
-
-		"<div class='radio'>"+
-		"<label>"+
-			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3008'>82x82"+
-		"</label>"+
-		"</div>"+
-		"<br>"+
-		"<div class='radio'>"+
-		"<label>"+
-			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3000'>82x117"+
-		"</label>"+
-		"</div>"+
-		"<br>"+
-		"<div class='radio'>"+
-		"<label>"+
-			"<input type='radio' name='orientation' orientation='horizontal' class='size' val='3003'>82x144"+
-		"</label>"+
-		"</div>"+
-		"<br>");
-	});
-
-	// POPULATING MECHANISMS FROM SIZE
-	$(document).on('click', 'input.size', function(){
-		// 82x82
-		if( $(this).val() == '3008' )
-		{
-			var sid = 0;
-			console.log('3008 - 82x82 - 0');
-		}
-		// 82x117
-		else if ( $(this).val() == '3000' )
-		{
-			var sid = 1;
-			console.log('3000 - 82x117 - 1');
-		}
-		// 82x144
-		else if ( $(this).val() == '3003' )
-		{
-			var sid = 3;
-			console.log('3003 - 82x144 - 3');
-		}
-		// 117x82
-		else if ( $(this).val() == '3001' )
-		{
-			var sid = 2;
-			console.log('3001 - 117x82 - 2');
-		}
-		// 144x82
-		else if ( $(this).val() == '3002' )
-		{
-			var sid = 4;
-			console.log('3002 - 144x82 - 4');
-		}
-
-		$.post(
-			'/retrieveMechanisms',
-			'id=' + sid,
-			function(rows)
-			{
-				$('select.mechanism').html('');
-				$.each(rows, function(i, row)
-				{
-					$('select.mechanism').append(""+
-					"<option value="+row.reference_code+">"+row.configuration+"</option>"
-					);
-					console.log(row);
-				});
-			},
-			'json'
-		);
-	});
-
-
-
-
-	// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
-
-	$(document).on('click', 'input.collection', function(){
-		sessionStorage.runnerA == null;
-		// Piero
-		if ( $(this).val() == 'P' )
-		{
-			$('div.edge').html("");
-			$('div.screw').html("");
-			$('div.screw').html(""+
-			"<input type='hidden' name='edge_screw' value='C'>"
-			);
-			console.log("P");
-		}
-		// Limoges OR Damier
-		else if ( $(this).val() == 'L' || $(this).val() == 'K' )
-		{
-			$('div.edge').html("");
-			$('div.screw').html("");
-			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
-			console.log("L OR K");
-		}
-		// Classique
-		else if ( $(this).val() == 'C'  )
-		{
-			sessionStorage.runnerA = 'C';
-			$('div.edge').html("");
-			
-			// $('div.screw').html(""+
-			// "<h4>Screw</h4>"+
-			// "<select name='edge_screw' class='screw form-control selectwidthauto'>
-			// 		<option value='yes'>YES</option>
-			// 		<option value='no'>NO </option>
-			// </select>");
-
-			$('div.screw').html(""+
-			"<h4>Screw</h4>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='screw' name='screw' value='yes'> Yes"+
-					"<input type='radio' class='screw' name='screw' value='no'> No"+
-				"</label>"+
-			"</div>");
-		}
-		// Ellipse
-		else if ( $(this).val() == 'E' )
-		{
-			sessionStorage.runnerA = 'E';
-			$('div.edge').html("");
-			$('div.screw').html("");
-			$('div.edge').html(""+
-			"<h4>Screw</h4>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='screw' name='edge_screw' value='B'> Yes"+
-					"<input type='radio' class='screw' name='edge_screw' value='D'> No"+
-				"</label>"+
-			"</div>");
-		}
-
-	});
-
-	$(document).on('click', 'input.screw', function(){
-		// From Collection: Classique > Screws: No
-		if ( sessionStorage.runnerA == 'C' )
-		{
-			$('div.edge').html("");
-			$('div.edge').html(""+
-			"<h4>Edge</h4>"+
-			"<div class='radio'>"+
-				"<label>"+
-					"<input type='radio' class='edge' name='edge_screw' value='A'> Beveled"+
-					"<input type='radio' class='edge' name='edge_screw' value='B'> Straight"+
-				"</label>"+
-			"</div>");
-			sessionStorage.temp = null;
-		}
-
-		if( sessionStorage.runnerA == 'C' && $(this).attr('value') == 'no' ) 
-		{			
-			$('div.hiddenfield').html("<input type='hidden' name='collection' value='D' />");
-		}
-		if( sessionStorage.runnerA == 'E' && $(this).attr('value') == 'D' ) 
-		{			
-			$('div.hiddenfield').html("<input type='hidden' name='collection' value='F' />");
-		}
-		
-		
-
-	});
-
-
-	$(document).on('click', 'input.screw', function(){
-		// From Collection: Elipse > Edge: Yes
-		if( sessionStorage.runnerA == 'E' && $(this).attr('value') == 'yes' ) 
-		{			
-			sessionStorage.runnerA == null;
-			$('div.hiddenfield').html("<input type='hidden' name='collection' value='D' />");
-		}
-	});
-
-	</script>
 
 	<style>
-		
+
 	</style>
 </head>
 <body>
@@ -252,7 +22,7 @@
 			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
 		</div>
 		<div class="col-sm-2" >
-			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
+			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>
 		</div>
 	</div>
 
@@ -265,13 +35,13 @@
 		</div> -->
 			<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
 				<input type='hidden' name='order_id' value='<?= $order_id; ?>'>
-				<input type="hidden" name="price" value="F">	
+				<input type="hidden" name="price" value="F">
 
 <!-- COLLECTION -->
 		<div class="col-xs-4 col-sm-2 col-sm-offset-2" id="collection">
 			<h4>Collection</h4>
 			<div class="collection"> <!-- FINISH OPTIONS DIV -->
-				<select name="collection" class="form-control selectwidthauto">
+				<select name="collection" class="form-control selectwidthauto collection">
 					<option class="collection" value="C">CLASSIQUE</option>
 					<option class="collection" value="E">ELLIPSE</option>
 					<option class="collection" value="P">PIERROT</option>
@@ -291,24 +61,12 @@
 					<label>
 						<input type='radio' name='orientation' class='horizontal' value="horizontal">  Horizontal
 					</label>
-					<!-- <label>
-						<div>
-						  <input id="option" type="radio" name="orientation" class="horizontal" value="horizontal">
-						  <label for="option"><span><span></span></span>Horizontal</label>
-						</div>
-					</label> -->
 				</div>
 				<br>
 				<div class="radio">
 					<label>
 						<input type='radio' name='orientation' class='vertical' value="vertical">  Vertical
 					</label>
-					<!-- <label>
-						<div>
-						  <input id="option" type="radio" name="orientation" class="vertical" value="vertical">
-						  <label for="option"><span><span></span></span>Vertical</label>
-						</div>
-					</label> -->
 				</div>
 			</div>
 		</div>
@@ -323,8 +81,8 @@
 		</div>
 <!-- END SIZE -->
 </div>
-	<div class="clearfix visible-sm-block">
-	</div>
+<div class="clearfix visible-sm-block">
+</div>
 <div class="row field">
 <!-- FINISH -->
 		<div class="col-sm-2 col-sm-offset-2">
@@ -374,7 +132,7 @@
 					</label>
 			</div>
 			<br>
-			
+
 			<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
 				<option>PLEASE CHOOSE SIZE FIRST</OPTION>
 			</select>
@@ -384,6 +142,15 @@
 		<div class="col-sm-2 col-sm-offset-1">
 			<div class="ES">
 				<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
+<!--					<h4>Screw</h4>-->
+<!--					<div class='radio'>-->
+<!--						<label>-->
+<!--							<input type='radio' class='screw' name='screw' value='yes'> Yes-->
+<!--							</label>-->
+<!--						<label>-->
+<!--							<input type='radio' class='screw' name='screw' value='no'> No-->
+<!--						</label>-->
+<!--					</div>-->
 				</div>
 				<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
 				</div>
@@ -398,8 +165,6 @@
 		<div class='note col-sm-2 col-sm-offset-2 top50'>
 			<h4>Description</h4>
 			<input type="text" name="note" placeholder="i.e. Kitchen">
-			<!-- <text class="form-control" type='text' name='note' ></textarea> -->
-			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
 		</div>
 <!-- END NOTES -->
 
@@ -407,7 +172,6 @@
 		<div class='note col-sm-2 col-sm-offset-1 top50'>
 			<h4>Quantity</h4>
 			<input type="number" name='quantity' value="1">
-			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
 		</div>
 <!-- END QUANTITY -->
 
@@ -415,27 +179,245 @@
 		<div class='note col-sm-2 col-sm-offset-1 top50'>
 			<h4>Envgraving</h4>
 			<input type="text" name='engraving'>
-			<!-- <input class="form-control" type='text' name='note' value='note test here'> -->
 		</div>
-		<div class='hiddenfield '></div>
+<!-- END ENGRAVING-->
+		<div class='hiddenfield'>
+		</div>
+
+<!--	***********************************************************		-->
+
+
 <!-- END ENGRAVING  -->
 </div>
-	<div class="clearfix visible-sm-block">
-	</div>
+<div class="clearfix visible-sm-block">
+</div>
 
 <div class="row top50">
-<!-- BEGIN SUBMIT -->
-		<div class="col-sm-3 col-sm-offset-8" style="vertical-align:bottom;">
-			<button type="submit" class="btn btn-default btn-block">Submit</button>
-		</div>
-<!-- END SUBMIT -->
-
-</div>
-	<div class="clearfix visible-sm-block">
+	<div class="col-sm-3 col-sm-offset-8" style="vertical-align:bottom;">
+		<button type="submit" class="btn btn-default btn-block">Submit</button>
 	</div>
-<!-- 					</div> -->
+</div>
+<div class="clearfix visible-sm-block">
+	</div>
 				</form>
-			
-		</div>
+			</div>
 
+	<script type="text/javascript">
+
+	$(document).on('submit', 'form#createOrderForm', function(){
+		$.post(
+			$(this).attr('action'),
+			$(this).serialize(),
+			function(data){
+				if(data.status == 'failed')
+				{
+					console.log('failed');
+					$('div.errors').html(data.errors);
+				}
+				else
+				{
+					$('div.errors').html('');
+					console.log("succeeded");
+					window.location.replace("/order/newOrder");
+				}
+			},
+			'json'
+		);
+		return false;
+	});
+
+
+// POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
+	$(document).on('change', 'select.collection', function (e) {
+		sessionStorage.runnerA == null;
+// Piero
+		if ( $(this).val() == 'P' )
+		{
+			$('div.edge').html("");
+			$('div.screw').html("");
+			$('div.screw').html(""+
+				"<input type='hidden' name='edge_screw' value='C'>"
+			);
+			console.log("P");
+		}
+// Limoges OR Damier
+		else if ( $(this).val() == 'L' || $(this).val() == 'K' )
+		{
+			$('div.edge').html("");
+			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
+			console.log("L OR K");
+		}
+// Classique
+		else if ( $(this).val() == 'C'  )
+		{
+			sessionStorage.runnerA = 'C';
+			$('div.edge').html("");
+			$('div.screw').html(""+
+			"<h4>Screw</h4>"+
+			"<div class='radio'>"+
+			"<label>"+
+			"<input type='radio' class='screw' name='screw' value='yes'> Yes"+
+			"</label>"+
+			"<label>"+
+			"<input type='radio' class='screw' name='screw' value='no'> No"+
+			"</label>"+
+			"</div>");
+		}
+// Ellipse
+		else if ( $(this).val() == 'E' )
+		{
+			sessionStorage.runnerA = 'E';
+			$('div.edge').html("");
+			$('div.screw').html(""+
+			"<h4>Screw</h4>"+
+			"<div class='radio'>"+
+			"<label>"+
+			"<input type='radio' class='screw' name='edge_screw' value='B'> Yes"+
+			"</label>"+
+			"<label>"+
+			"<input type='radio' class='screw' name='edge_screw' value='D'> No"+
+			"</label>"+
+			"</div>");
+		}
+	});
+
+// POPULATING SIZE FROM ORIENTATION
+// Horizontal
+	$(document).on('click', 'input.horizontal', function(){
+		$('div.size').html(""+
+		"<div class='radio'>"+
+		"<label>"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' val='3008'>82x82"+
+		"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+		"<label>"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' val='3001'>117x82"+
+		"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+		"<label>"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' val='3002'>144x82"+
+		"</label>"+
+		"</div>"+
+		"<br>");
+	});
+// Vertical
+	$(document).on('click', 'input.vertical', function(){
+		$('div.size').html(""+
+
+		"<div class='radio'>"+
+		"<label>"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' val='3008'>82x82"+
+		"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+		"<label>"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' val='3000'>82x117"+
+		"</label>"+
+		"</div>"+
+		"<br>"+
+		"<div class='radio'>"+
+		"<label>"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' val='3003'>82x144"+
+		"</label>"+
+		"</div>"+
+		"<br>");
+	});
+
+	// POPULATING MECHANISMS FROM SIZE
+	$(document).on('click', 'input.size', function(){
+		// 82x82
+		if( $(this).val() == '3008' )
+		{
+			var sid = 0;
+			console.log('3008 - 82x82 - 0');
+		}
+		// 82x117
+		else if ( $(this).val() == '3000' )
+		{
+			var sid = 1;
+			console.log('3000 - 82x117 - 1');
+		}
+		// 82x144
+		else if ( $(this).val() == '3003' )
+		{
+			var sid = 3;
+			console.log('3003 - 82x144 - 3');
+		}
+		// 117x82
+		else if ( $(this).val() == '3001' )
+		{
+			var sid = 2;
+			console.log('3001 - 117x82 - 2');
+		}
+		// 144x82
+		else if ( $(this).val() == '3002' )
+		{
+			var sid = 4;
+			console.log('3002 - 144x82 - 4');
+		}
+
+		$.post(
+			'/retrieveMechanisms',
+
+			'id=' + sid,
+			function(rows)
+			{
+				$('select.mechanism').html('');
+				$.each(rows, function(i, row)
+				{
+					$('select.mechanism').append(""+
+					"<option value="+row.reference_code+">"+row.configuration+"</option>"
+					);
+					console.log(row);
+				});
+			},
+			'json'
+		);
+	});
+
+
+
+// CLICK: input SCREW
+	$(document).on('click', 'input.screw', function(){
+// From Collection: Classique > Screws: No
+		if ( sessionStorage.runnerA == 'C' )
+		{
+			alert("MOFO");
+			$('div.edge').html(""+
+			"<h4>Edge</h4>"+
+			"<div class='radio'>"+
+				"<input type='radio' class='edge' name='edge_screw' value='A'> Beveled"+
+				"<input type='radio' class='edge' name='edge_screw' value='B'> Straight"+
+			"</div>");
+			sessionStorage.temp = null;
+		}
+
+		if( sessionStorage.runnerA == 'C' && $(this).attr('value') == 'no' )
+		{
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='D' />");
+		}
+		if( sessionStorage.runnerA == 'E' && $(this).attr('value') == 'D' )
+		{
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='F' />");
+		}
+
+// From Collection: Elipse > Edge: Yes
+		if( sessionStorage.runnerA == 'E' && $(this).attr('value') == 'yes' )
+		{
+			sessionStorage.runnerA == null;
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='D' />");
+		}
+	});
+
+	$(document).on('click', 'input.edge', function(a){
+		console.log(a);
+
+	});
+
+	</script>
 </div>

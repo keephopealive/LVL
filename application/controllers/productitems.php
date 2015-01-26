@@ -91,6 +91,8 @@ class Productitems extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE )
 		{
+			var_dump($this->input->post());
+			die('here');
 			$arr = array(
 				'type' => 'createproductitem',
 				'status' => 'failed',
