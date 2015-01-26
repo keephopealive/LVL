@@ -20,7 +20,7 @@
 				<td><?= $productitem['reference_no']?></td> 
 				<td><?= $productitem['note']?></td>
 				<td><?= $productitem['quantity']?></td>
-				<td>PDF LINK HERE</td>
+				<td><a href="././../../../pdf/<?= $productitem['pdf'];?>.pdf"><?= $productitem['pdf'];?></a></td>
 			</tr>
 <?php	}
 ?>	</table>	

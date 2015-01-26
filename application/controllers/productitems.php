@@ -91,8 +91,6 @@ class Productitems extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE )
 		{
-			var_dump($this->input->post());
-			die('here');
 			$arr = array(
 				'type' => 'createproductitem',
 				'status' => 'failed',
@@ -102,26 +100,9 @@ class Productitems extends CI_Controller {
 		}
 		else
 		{
+
+// PDF
 			$result = $this->productitem->productitemCreate($this->input->post());
-
-// PDF Generation ===================================================================
-			$filename = $this->session->userdata('reference_no'); // Setting File Name
-			$this->session->set_userdata('reference_no', null); // Variables passed to the partial view
-			$pdfFilePath = FCPATH."/pdf/$filename.pdf"; // Where to save PDF
-			// $data = The array with all variables for the PDF
-			$data['the_content'] = '|||||INSERTED CONTENT|||||'; // Adding the_content as a key and ' ' as value
-
-			// If file does not excit (avoid duplicate names & avoid overriding files
-			if (file_exists($pdfFilePath) == FALSE)
-			{
-			    ini_set('memory_limit','32M'); // PDF Size Limit
-			    $html = $this->load->view('pdf_output', $data, true); // render the view into HTML
-			    $this->load->library('m_pdf');
-			    $pdf = $this->m_pdf->load();
-			    $pdf->SetFooter($_SERVER['HTTP_HOST'].'|{PAGENO}|'.date(DATE_RFC822)); // Add a footer for good measure <img src="https://davidsimpson.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" scale="0">
-			    $pdf->WriteHTML($html); // write the HTML into the PDF
-			    $pdf->Output($pdfFilePath, 'F'); // save to file because we can
-			}
 
 			// ========= end of PDF gen ==========
 

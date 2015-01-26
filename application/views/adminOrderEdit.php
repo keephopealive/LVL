@@ -55,6 +55,7 @@
 		<thead>
 			<th>Reference No</th>
 			<th>Room Name</th>
+			<th>PDF Cutsheet</th>
 			<th>Quantity</th>
 			<th>Engraving</th>
 			<th>Collection</th>
@@ -65,6 +66,7 @@
 ?>			<tr>
 				<td><?php if(count($productitem['reference_no'])>0){ echo $productitem['reference_no']; }else{ echo "N/A"; } ?></td>
 				<td><?php if(count($productitem['note'])>0){ echo $productitem['note']; }else{ echo "N/A"; } ?></td>
+				<td><a href="././../../../pdf/<?= $productitem['pdf'];?>.pdf"><?= $productitem['pdf'];?></a></td>
 				<td><?php if(count($productitem['quantity'])>0){ echo $productitem['quantity']; }else{ echo "N/A"; } ?></td>
 				<td><?php if(count($productitem['engraving'])>0){ echo $productitem['engraving']; }else{ echo "N/A"; } ?></td>
 				<td><?php if(count($productitem['collection'])>0){ echo $productitem['collection']; }else{ echo "N/A"; } ?></td>
