@@ -30,10 +30,10 @@
 	<div class='errors'>
 	</div>
 
+<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
 <div class="row top50 field">
 		<!-- <div class="col-sm-10 col-sm-offset-1 tool">
 		</div> -->
-			<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
 				<input type='hidden' name='order_id' value='<?= $order_id; ?>'>
 				<input type="hidden" name="price" value="F">
 
@@ -197,10 +197,10 @@
 		<button type="submit" class="btn btn-default btn-block">Submit</button>
 	</div>
 </div>
-<div class="clearfix visible-sm-block">
+	<div class="clearfix visible-sm-block">
 	</div>
-				</form>
-			</div>
+</form>
+</div>
 
 	<script type="text/javascript">
 
@@ -287,19 +287,19 @@
 		$('div.size').html(""+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' val='3008'>82x82"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3008'>82x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' val='3001'>117x82"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3001'>117x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' val='3002'>144x82"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3002'>144x82"+
 		"</label>"+
 		"</div>"+
 		"<br>");
@@ -310,19 +310,19 @@
 
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' val='3008'>82x82"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3008'>82x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' val='3000'>82x117"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3000'>82x117"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' val='3003'>82x144"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3003'>82x144"+
 		"</label>"+
 		"</div>"+
 		"<br>");
