@@ -142,17 +142,18 @@
 		<div class="col-sm-2 col-sm-offset-1">
 			<div class="ES">
 				<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
-<!--					<h4>Screw</h4>-->
-<!--					<div class='radio'>-->
-<!--						<label>-->
-<!--							<input type='radio' class='screw' name='screw' value='yes'> Yes-->
-<!--							</label>-->
-<!--						<label>-->
-<!--							<input type='radio' class='screw' name='screw' value='no'> No-->
-<!--						</label>-->
-<!--					</div>-->
+					<h4>Screw</h4>
+					<div class='radio'>
+						<label>
+							<input type='radio' class='screw' name='screw' value='yes'> Yes
+						</label>
+						<label>
+							<input type='radio' class='screw' name='screw' value='no'> No
+						</label>
+					</div>
 				</div>
 				<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
+
 				</div>
 			</div>
 		</div>
