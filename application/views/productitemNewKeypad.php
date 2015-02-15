@@ -293,7 +293,7 @@
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' value='3001'>117x82"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3000'>117x82"+
 		"</label>"+
 		"</div>"+
 		"<br>"+
@@ -316,7 +316,7 @@
 		"<br>"+
 		"<div class='radio'>"+
 		"<label>"+
-			"<input type='radio' name='size' orientation='horizontal' class='size' value='3000'>82x117"+
+			"<input type='radio' name='size' orientation='horizontal' class='size' value='3001'>82x117"+
 		"</label>"+
 		"</div>"+
 		"<br>"+

@@ -27,6 +27,8 @@ class Productitems extends CI_Controller {
 
 	public function mpdftester()
 	{
+		
+
 		$filename = "Win9002";
 		$pdfFilePath = FCPATH."/pdf/$filename.pdf";
 		$data['the_content'] = '|||||INSERTED CONTENT|||||'; // pass data to the view
@@ -115,6 +117,7 @@ class Productitems extends CI_Controller {
 		// Call Method to Generate New PDF 
 		// Call Model to Input New Generated productitem w/PDF
 		// TDD on Form Submission - generating accurate reference_no
+
 		
 	}
 }
