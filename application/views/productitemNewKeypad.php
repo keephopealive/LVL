@@ -204,6 +204,9 @@
 </div>
 
 	<script type="text/javascript">
+	$(document).ready(function(){
+		sessionStorage.runnerA = 'C';
+	});
 
 	$(document).on('submit', 'form#createOrderForm', function(){
 		$.post(
