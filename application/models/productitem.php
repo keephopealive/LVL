@@ -53,12 +53,99 @@ class Productitem extends CI_Model {
 			$productitem['finish'];
 
 
+
 // PDF Generation ===================================================================
 			$filename = $reference_no; // Setting File Name
 			$this->session->set_userdata('reference_no', null); // Variables passed to the partial view
 			$pdfFilePath = FCPATH."/pdf/$filename.pdf"; // Where to save PDF
 			// $data = The array with all variables for the PDF
 			$data['the_content'] = '|||||INSERTED CONTENT|||||'; // Adding the_content as a key and ' ' as value
+
+// Generate Variables for PDF Cutsheet from Reference No 
+
+	// Reference No
+		$data['reference_no'] = $reference_no;
+
+	// Cutsheet "Material"
+		if ( $productitem['collection'] == "P")
+		{
+			$data['material'] = 'BACK-PAINTED GLASS';
+		}
+		elseif ( $productitem['collection'] == "L") 
+		{
+			$data['material'] = 'PORCELAIN';
+		}
+		else
+		{
+			$data['material'] = 'BRASS';
+		}
+	// Cutsheet "Plate Dimensions" "Plate Screw Axis" "Backbox Dimensions" "Backbox Screw Axis" "Backbox Reference"
+		if ( $productitem['size'] == "3008") 
+		{
+			$data['size'] = '82 x 82';
+
+			$data['p_dimensions'] = '3.2" x 3.2" x .1" (82 x 82 x 3 mm)';
+			$data['p_axis'] = '2.36" (60 mm)';
+
+			$data['b_dimensions'] = '2.6" x 2.8" x 2.4" (67 x 71 x 60 mm)';
+			$data['b_axis'] = '2.36" (60 mm)';
+			$data['b_reference'] = 'USUL 8060';
+		}
+		if ( $productitem['size'] == "3001") 
+		{
+			$data['size'] = '82 x 117';
+
+			$data['p_dimensions'] = '3.2" x 4.6" x .1" (82 x 117 x 3 mm)';
+			$data['p_axis'] = '3.27" (83 mm)';
+
+			$data['b_dimensions'] = '2.6" x 3.8" x 2.4" (67 x 97 x 60 mm)';
+			$data['b_axis'] = '3.27" (83 mm)';
+			$data['b_reference'] = 'USUL 11560';
+		}
+		if ( $productitem['size'] == "3000") 
+		{
+			$data['size'] = '117 x 82';
+
+			$data['p_dimensions'] = '4.6" x 3.2" x .1" (117 x 82 x 3 mm)';
+			$data['p_axis'] = '3.27" (83 mm)';
+
+			$data['b_dimensions'] = '3.8" x 2.6" x 2.4" (67 x 97 x 60 mm)';
+			$data['b_axis'] = '3.27" (83 mm)';
+			$data['b_reference'] = 'USUL 11560';
+		}
+		if ( $productitem['size'] == "3003") 
+		{
+			$data['size'] = '82 x 144';
+
+			$data['p_dimensions'] = '3.2" x 5.7" x .1" (82 x 144 x 3 mm)';
+			$data['p_axis'] = '4.6" (117 mm)';
+
+			$data['b_dimensions'] = '2.6" x 5" x 2.4" (67 x 127 x 60 mm)';
+			$data['b_axis'] = '4.6" (117 mm)';
+			$data['b_reference'] = 'USUL 14260';
+		}
+		if ( $productitem['size'] == "3002") 
+		{
+			$data['size'] = '144 x 82';
+
+			$data['p_dimensions'] = '5.7" x 3.2" x .1" (144 x 82 x 3 mm)';
+			$data['p_axis'] = '4.6" (117 mm)';
+
+			$data['b_dimensions'] = '5" x 2.6" x 2.4" (67 x 127 x 60 mm)';
+			$data['b_axis'] = '4.6" (117 mm)';
+			$data['b_reference'] = 'USUL 14260';
+		}
+	// Cutsheet "Edge"
+		if ( $productitem['edge_screw'] == 'A' || $productitem['edge_screw'] == 'C' )
+		{
+			$data['edge'] = 'CHAMFER';
+		}
+		else
+		{
+			$data['edge'] = 'STRAIGHT';
+		}
+	// Cutsheet "Type of Mechanism" and "power of supply" NEED TO BE DONE... QUERY TO JOIN WITH MECHANISMS TABLE AND FIND MECHANISM TYPES FROM THERE
+
 
 			// If file does not excit (avoid duplicate names & avoid overriding files
 			if (file_exists($pdfFilePath) == FALSE)
@@ -67,11 +154,10 @@ class Productitem extends CI_Model {
 				$html = $this->load->view('pdf_output', $data, true); // render the view into HTML
 				$this->load->library('m_pdf');
 				$pdf = $this->m_pdf->load();
-				$pdf->SetFooter($_SERVER['HTTP_HOST'].'|{PAGENO}|'.date(DATE_RFC822)); // Add a footer for good measure <img src="https://davidsimpson.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" scale="0">
+				$pdf->SetFooter('www.lvl-usa.com'.'|'.date(DATE_RFC822).'|'.'info@lvl-usa.com'); // Add a footer for good measure <img src="https://davidsimpson.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" scale="0">
 				$pdf->WriteHTML($html); // write the HTML into the PDF
 				$pdf->Output($pdfFilePath, 'F'); // save to file because we can
 			}
-
 // END PDF Generation ===================================================================
 
 		$this->session->set_userdata('reference_no', $reference_no);
