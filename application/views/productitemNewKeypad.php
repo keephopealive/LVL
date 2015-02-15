@@ -239,13 +239,22 @@
 				"<input type='hidden' name='edge_screw' value='C'>"
 			);
 			console.log("P");
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='P' />"); // ADDED LINE
 		}
 // Limoges OR Damier
-		else if ( $(this).val() == 'L' || $(this).val() == 'K' )
+		else if ( $(this).val() == 'L' )
 		{
 			$('div.edge').html("");
 			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
 			console.log("L OR K");
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='L' />"); // ADDED LINE
+		}
+		else if ( $(this).val() == 'K' )
+		{
+			$('div.edge').html("");
+			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
+			console.log("L OR K");
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='K' />"); // ADDED LINE
 		}
 // Classique
 		else if ( $(this).val() == 'C'  )
@@ -262,6 +271,7 @@
 			"<input type='radio' class='screw' name='screw' value='no'> No"+
 			"</label>"+
 			"</div>");
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='C' />"); // ADDED LINE
 		}
 // Ellipse
 		else if ( $(this).val() == 'E' )
@@ -278,6 +288,7 @@
 			"<input type='radio' class='screw' name='edge_screw' value='D'> No"+
 			"</label>"+
 			"</div>");
+			$('div.hiddenfield').html("<input type='hidden' name='collection' value='E' />"); // ADDED LINE
 		}
 	});
 
@@ -327,6 +338,9 @@
 		"</div>"+
 		"<br>");
 	});
+
+
+
 
 	// POPULATING MECHANISMS FROM SIZE
 	$(document).on('click', 'input.size', function(){
@@ -378,6 +392,14 @@
 			},
 			'json'
 		);
+	});
+
+	// REPOPULATING MECHANISM
+
+	$(document).on('click', 'input.size', function() {
+		console.log($(this).attr("value"));
+		if($(this).attr("value")==3001)
+		console.log("THIS");
 	});
 
 
