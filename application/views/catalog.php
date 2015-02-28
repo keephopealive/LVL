@@ -68,7 +68,7 @@
                 </div>
                 <div class='radio'>
                     <label>
-                        <input type='radio' name='delivery_method' class='mailed' id='optionsRadios2' value='mailed'>
+                        <input type='radio' name='delivery_method' class='mailed' id='optionsRadios2' value='mail'>
                         Please send me a catalog via FedEx
                     </label>
                 </div>
