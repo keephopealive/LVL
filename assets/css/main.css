@@ -1,0 +1,251 @@
+.viewport	{
+	padding: 50px 50px;
+}
+a:link {
+	color: rgb(238, 34, 43);
+}
+a:visited {
+	color: rgb(238, 34, 43);
+}
+a:hover {
+	color: rgb(238, 34, 43);
+}
+a:active {
+	color: rgb(238, 34, 43);
+}
+a{
+	color: rgb(238, 34, 43);
+}
+.navbar	{
+	margin-top: 50px;
+}
+.header	{
+	padding-bottom: 50px;
+	/*border-bottom: 1px dashed black;*/
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: bottom;
+/*    float: none;*/
+}
+.topBorder	{
+	border-top: 0px solid rgba(84,72,74,0.10);
+	padding-right: 0px;
+}
+.headTag	{
+	margin-top: 10px;
+	/*display: inline-block;*/
+	font-family: 'Cinzel', serif;
+	color: rgb(84,72,74);
+	font-size: 14px;
+	letter-spacing: 0.15em;
+	text-align: center;
+	/*border-bottom: 1px solid rgb(84,72,74);*/
+}
+
+/*.parent {
+   display:table;
+   table-layout: fixed;
+}
+
+.child {
+   display:table-cell;
+   vertical-align:bottom;
+}*/
+
+/*.lvl-nav	{
+	background-color: red;
+}*/
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn-primary {
+
+  /*background-color: rgba(239, 35, 35, 0.35);*/
+  /*border: none;*/
+  border-radius: 0 !important;
+  color:rgba(238, 34, 43, 0.95);
+  /*font-weight: bold;*/
+ }
+
+.btn
+{
+  background-color: white;
+  /*border: none;*/
+  
+  /*border-color: #ABA7A7;*/
+
+  border-radius: 0 !important;
+}
+
+.navbar .btn
+{
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 20px;
+	margin: 0;
+	padding-left: 4%;
+	padding-right: 4%;
+	border-bottom: 1px solid rgba(238, 34, 43, 0.45);
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
+.navbar .btn:hover
+{
+	border-bottom: 1px solid black;
+	color:rgba(238, 34, 43, 0.85);
+	text-decoration: none;
+}
+.navbar a {
+	/*font-family: serif;*/
+	color: black;
+}
+.navbar a:hover{
+	color:rgba(238, 34, 43, 0.85);
+	text-decoration: none;
+}
+.lvl-nav {
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 20px;
+	margin: 0;
+	padding-left: 4%;
+	padding-right: 4%;
+	border: 1px solid rgba(238, 34, 43, 0.45);
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
+.contactFaq	{
+	margin-top: 50px;
+}
+.contactFaq a{
+	color: black;
+}
+.lvl-nav:hover{
+	border: 1px solid rgba(0, 0, 0, 0.45);
+}
+.contactFaq a:hover{
+	text-decoration: none;
+}
+.about
+{
+	margin-top: 50px;
+}
+.about p{
+	font-family: 'Gilda Display', serif;
+	text-align: justify;
+}
+.regLogin	{
+	margin-top: 25px;
+	font-family: 'Gilda Display', serif;
+}
+.regLogin	ul{
+	margin-left: 5%;
+	line-height: 2em;
+}
+.regLogin	li{
+	font-size: 16px;
+}
+.regLogin	h4 {
+	font-family: 'Cinzel', serif;
+}
+.regInfo	{
+	padding-bottom: 25px;
+	border-bottom: 1px solid rgba(84,72,74,0.5);
+}
+.regInfo	p{
+	font-size: 16px;
+}
+.top50	{
+	margin-top: 50px;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+    color: rgba(238, 34, 43, 0.45);
+}
+.faqs	{
+	margin-top: 50px;
+}
+h3{
+	font-family: 'Cinzel', serif;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.question	{
+	font-family: 'Gilda Display', serif;
+	font-size: 16px;
+	letter-spacing: 0.07em;
+	font-weight: bold;
+	color: rgb(238, 34, 43);
+	border-bottom: 1px solid rgba(238, 34, 43, 0.45);
+}
+.answer	{
+	font-family: 'Gilda Display', serif;
+	font-size: 16px;
+	padding-left: 15px;
+	text-align: justify;
+	margin-bottom: 35px;
+	line-height: 1.8em;
+}
+.answerUl	{
+	font-family: 'Gilda Display', serif;
+	font-size: 16px;
+	padding-left: 40px;
+	line-height: 1.8em;
+	margin-bottom: 35px;
+}
+.contact p{
+	font-family: 'Gilda Display', serif;
+	font-size: 16px;
+	padding-left: 15px;
+	text-align: justify;
+	margin-bottom: 35px;
+	line-height: 1.8em;
+}
+.office	{
+	font-family: 'Cinzel', serif;
+	font-size: 16px;
+	text-align: right;
+	line-height: 1.8em;
+}
+.catalogRadio	{
+	margin-bottom: 20px;
+}
+.catalog	{
+	font-family: 'Gilda Display', serif;
+	font-size: 16px;
+}
+.btnSmall{
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 14px;
+	margin: 0;
+	margin-top: 50px;
+	padding-left: 4%;
+	padding-right: 4%;
+	border: 1px solid rgba(238, 34, 43, 0.45);
+}
+.caution	{
+	font-family: 'Cinzel', serif;
+	font-size: 18px;
+	/*text-align: justify;*/
+	/*letter-spacing: 0.07em;*/
+	/*font-weight: bold;*/
+	/*color: rgb(238, 34, 43);*/
+	margin-bottom: 25px;
+	padding-left: 15px;
+
+}
+
+.form-inline > * {
+   margin:5px 10px;
+}
+

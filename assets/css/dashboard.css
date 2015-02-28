@@ -1,0 +1,203 @@
+.viewport	{
+	padding: 50px 50px;
+	font-family: 'Gilda Display', serif;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn-primary {
+
+  /*background-color: rgba(239, 35, 35, 0.35);*/
+  /*border: none;*/
+  border-radius: 0 !important;
+  color:rgba(238, 34, 43, 0.95);
+  /*font-weight: bold;*/
+ }
+
+.btn
+{
+  background-color: white;
+  /*border: none;*/
+  
+  /*border-color: #ABA7A7;*/
+
+  border-radius: 0 !important;
+}
+.headTag	{
+	margin-top: 10px;
+	/*display: inline-block;*/
+	font-family: 'Cinzel', serif;
+	color: rgb(84,72,74);
+	font-size: 14px;
+	letter-spacing: 0.15em;
+	text-align: center;
+	/*border-bottom: 1px solid rgb(84,72,74);*/
+}
+.navbar	{
+	margin-top: 50px;
+}
+.navbar .btn
+{
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	/*font-size: 20px;*/
+	margin: 0;
+	padding-left: 4%;
+	padding-right: 4%;
+	border-bottom: 1px solid rgba(238, 34, 43, 0.45);
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
+.navbar .btn:hover
+{
+	border-bottom: 1px solid rgb(84,72,74);
+	color:rgba(238, 34, 43, 0.85);
+	text-decoration: none;
+}
+.navbar	h4{
+	/*border-bottom: 1px solid rgb(84,72,74);*/
+
+}
+.newOrder .btn:hover
+{
+	border: 1px solid rgb(84,72,74);
+	color:rgba(238, 34, 43, 0.85);
+	text-decoration: none;
+}
+.newOrder	{
+	margin-top: 100px;
+}
+
+a {
+	/*font-family: serif;*/
+	color: black;
+}
+a:hover{
+	color:rgba(239, 35, 35, 0.85);
+	text-decoration: none;
+}
+.lvl-nav {
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 20px;
+	margin: 0;
+	padding-left: 4%;
+	padding-right: 4%;
+	border: 1px solid rgba(238, 34, 43, 0.45);
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
+.myOrders	{
+	margin-top: 100px;
+}
+.top50	{
+	margin-top: 50px;
+}
+.viewOrder{
+	/*letter-spacing: 0.15em;*/
+	font-family: 'Cinzel', serif;
+	font-size: 14px;
+	/*background-color: rgba(238, 34, 43, 0.15);*/
+	border: 1px solid rgba(238, 34, 43, 0.45);
+}
+.orderAction1	{
+	margin-top: 50px;
+}
+.orderTable	{
+	margin-top: 50px;
+}
+.orderAction2	{
+	margin-top: 50px;
+}
+.orderAction1btn	{
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 18px;
+	margin-bottom: 5px;
+
+	padding-left: 4%;
+	padding-right: 4%;
+	/*border: 1px solid rgba(238, 34, 43, 0.45);*/
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
+.gallerySort	{
+	margin-top: 35px;
+}
+.gallerySort	h3{
+	font-family: 'Cinzel', serif;
+	/*font-size: 16px;*/
+	display: inline-block;
+	font-size: 18px;
+	margin-left: 10%;
+	margin-top: 0px;
+	/*margin-right: 15px;*/
+}
+.collectionSortBtn	{
+	letter-spacing: 0.1em;
+	font-family: 'Cinzel', serif;
+	font-size: 16px;
+	/*margin-left: 30px;*/
+}
+.productTitle	{
+	font-family: 'Cinzel', serif;
+	text-align: center;
+	font-size: 14px;
+}
+.productInfo	{
+	padding-left: 15%;
+}
+.productIntro	{
+	font-size: 16px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+.productIntro	ul{
+	line-height: 1.5em;
+}
+.listTitle	{
+	list-style: none;
+	/*text-decoration: underline;*/
+	font-weight: bolder;
+}
+.custom_btn	{
+	margin-left: 25px;
+}
+.finish_btn{
+	margin-left: 25px;	
+}
+@media(max-width:1000px){
+
+	.orderAction1btn	{
+	letter-spacing: 0.1em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 14px;
+/*	margin-bottom: 5px;
+
+	padding-left: 4%;
+	padding-right: 4%;*/
+	/*border: 1px solid rgba(238, 34, 43, 0.45);*/
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+	}
+	.custom_btn	{
+		margin-left: 0;
+	}
+	.finish_btn{
+		margin-left: 0;	
+	}
+}

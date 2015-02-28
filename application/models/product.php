@@ -72,17 +72,21 @@ class Product extends CI_Model {
 	}
 	public function retrieveLamps()
 	{
-		$query = "SELECT * FROM products WHERE products.type = 'lamp' ORDER BY type ASC";
+		$query = "SELECT * FROM products WHERE products.type = 'Reading Lamp' ORDER BY type ASC";
 		return $collections = $this->db->query($query)->result_array();
 	}
-
+	public function retrieveCustoms()
+	{
+		$query = "SELECT * FROM products WHERE products.type = 'Custom' ORDER BY type ASC";
+		return $collections = $this->db->query($query)->result_array();
+	}
 
 	public function createProduct($product)
 	{
 		// echo '<pre>'; print_r($this->input->post());
 		// die();
-		$query ="INSERT INTO products (name, description, collection, type, file_path, finish, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-		$values = array($product['name'], $product['description'], $product['collection'], $product['type'], $product['file_path'], $product['finish'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
+		$query ="INSERT INTO products (name, description, collection, type, size, file_path, finish, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$values = array($product['name'], $product['description'], $product['collection'], $product['type'], $product['size'], $product['file_path'], $product['finish'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
 	}
 

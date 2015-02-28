@@ -58,6 +58,14 @@ $route['admin/orderEdit/(:num)'] = "admins/orderEdit/$1";
 // Admin - Order Related
 $route['order/saveAdminNote'] = "orders/saveAdminNote";
 
+// Main Site Nav
+$route['about'] = "mains/about";
+$route['catalog'] = "mains/catalog";
+$route['trade'] = "mains/trade";
+$route['faq'] = "mains/faq";
+$route['contact'] = "mains/contact";
+$route['requestCatalog'] = "catalogs/requestCatalog";
+
 
 // Product_Items (Custom Products)
 $route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad

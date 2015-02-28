@@ -3,39 +3,56 @@
 <head>
 	<meta charset="utf-8">
 	<title>Client Dashboard</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
 </head>
 <body>
-<div class="container-fluid">
 
-	<div class="row top50">
-		<div class="col-sm-3 col-sm-offset-1">
-			<a href="/products" class='btn btn-lg btn-warning btn-block'>Browse Products</a>
+	<div class="container-fluid viewport">
+		
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<img src="assets/img/lvl_logo_6.png" class="img-responsive center-block">
+			</div>
+			<div class="col-sm-8 col-sm-offset-2" style="margin-top:25px;">
+				<p class="headTag">Exclusive Distributor of <span style="color:rgb(238,34,43);">Meljac</span> in North America</p>
+			</div>
 		</div>
-			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
-		<div class="col-sm-4">
-			<a href="/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
+
+		<div class="row navbar">
+			<div class="col-sm-4 col-sm-offset-1">
+				<h4> Hello <?= $user['first_name'] ?> !</h4>
+			</div>
+			<div class="col-sm-2 col-sm-offset-2">
+				<a href="/dashboard"><button class='btn btn-md btn-block'>Home</button></a>
+			</div>
+			<div class="col-sm-2">
+				<a href="/logout"><button class='btn btn-md btn-block'>Logout</button></a>
+			</div>
 		</div>
-		<div class="col-sm-3" >
-			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
+
+		<div class="row newOrder">
+			<div class="col-sm-4 col-sm-offset-4">
+				<a href="/order/createOrder" class='btn btn-block lvl-nav'>Create New Order</a>
+			</div>
 		</div>
-	</div>
-<form method='post' action='/mpdftester'>
-	<input type='submit' value="MPDF TESTER">
-</form>
-<!-- BEGINS - ORDERS LIST  -->
-	<div class="row top50">
-		<div class='col-sm-10 col-sm-offset-1'>
-			<h2 class="center">My Orders</h2>
-			<table class='table table-bordered top50'>
-				<thead>
-					<th>LVL Order #</th>
-					<th>Date Created</th>
-					<th>Status</th>ProductItems
-					<th>Note</th>
-					<th>Action</th>
-				</thead>
+
+		<div class="row myOrders">
+			<div class='col-sm-10 col-sm-offset-1'>
+				<h2 style="text-align:center;">My Orders</h2>
+				<table class='table table-bordered table-hover top50'>
+					<thead>
+						<th class="col-sm-2">LVL Order #</th>
+						<th class="col-sm-2">Date Created</th>
+						<th class="col-sm-2">Status</th>
+						<th class="col-sm-4">Note</th>
+						<th class="col-sm-2">Action</th>
+					</thead>
 <?php 			foreach($orders as $order)
 				{
 ?>					<tr>
@@ -44,44 +61,14 @@
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['client_note']; ?></td>
 						<td>
-							<a href="/order/showOrder/<?= $order['id']; ?>"><button class='btn btn-primary'>View Order</button></a>
-<!--							<button class='btn btn-warning'>EDIT (undecided)</button>-->
+							<a href="/order/showOrder/<?= $order['id']; ?>"><button class='btn viewOrder'>View Order</button></a>
 						</td>
 					</tr>				
 <?php 			}
-?>			</table>
+?>				</table>
+			</div>
 		</div>
-	</div>
-<!-- ENDS - product_item LIST -->
 
-<!-- BEGINS - CREATE NEW product_item -->
-	<div class="row top50">
-		<div class='col-sm-3 col-sm-offset-5'>
-			<a href="/profile"><button class='btn btn-default btn-block'>Edit Profile</button></a>
-		</div>
-		<div class='col-sm-3'>
-			<a href="/order/createOrder" class='btn btn-primary btn-block'>Create New Order</a>
-		</div>
 	</div>
-<!-- ENDS - CREATE NEW ORDER -->
-
-<!-- BEGINS - USER INFO -->
-	<div class="row top50">
-		<div class="col-md-3 col-md-offset-1 center">
-			<h4><strong>Currently Logged In</strong></h3>
-		</div>
-		<div class="col-md-3 col-md-offset-1">
-			<h4>User ID: <?= $user['id'] ?></h4>
-			<h4>First Name: <?= $user['first_name'] ?></h4>
-			<h4>Last Name: <?= $user['last_name'] ?></h4>
-		</div>
-		<div class="col-md-3">
-			<h4>Email: <?= $user['email'] ?></h4>
-			<h4>Birthdate: <?= $user['birthdate'] ?></h4>		
-		</div>
-	</div>
-<!-- ENDS - USER INFO -->
-
-</div>
 </body>
 </html>

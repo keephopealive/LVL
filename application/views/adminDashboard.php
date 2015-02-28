@@ -3,8 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(document).on('submit', '#createProduct', function(){
@@ -28,37 +33,45 @@
 	</script>
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid viewport">
 
-	<div class="row top50">
-		<div class="col-sm-3 col-sm-offset-1">
-			<!-- <a href="/profile"><button class='btn btn-lg btn-warning btn-block'>Profile</button></a> -->
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<img src="/assets/img/lvl_logo_6.png" class="img-responsive center-block">
 		</div>
-			<!-- <a href="#"><button class='btn btn-primary'>Promotions (inactive)</button></a> -->
-		<div class="col-sm-4">
-			<a href="/admin/dashboard"><button class='btn btn-lg btn-primary btn-block'>Home</button></a>
+		<div class="col-sm-8 col-sm-offset-2" style="margin-top:25px;">
+			<p class="headTag">Exclusive Distributor of <span style="color:rgb(238,34,43);">Meljac</span> in North America</p>
 		</div>
-		<div class="col-sm-3" >
-			<a href="/logout"><button class='btn btn-lg btn-danger btn-block'>Logout</button></a>	
+	</div>
+
+	<div class="row navbar">
+		<div class="col-sm-4 col-sm-offset-1">
+			<h4> Hello <?= $user['first_name'] ?> !</h4>
+		</div>
+		<div class="col-sm-2 col-sm-offset-2">
+			<a href="/admin/dashboard"><button class='btn btn-md btn-block'>Home</button></a>
+		</div>
+		<div class="col-sm-2">
+			<a href="/logout"><button class='btn btn-md btn-block'>Logout</button></a>
 		</div>
 	</div>
 
 <!-- BEGINS - ORDERS LIST  -->
-	<div class="row top50">
+	<div class="row myOrders">
 		<div class='col-sm-10 col-sm-offset-1'>
-			<h2 class="center">Admin Dashboard</h2>
-			<table class='table table-bordered top50'>
-				<thead>
-					<th>Order ID</th>
-					<th>Created At</th>
-					<th>Updated At</th>
-					<th>Client Name</th>
-					<th>Status</th>
-					<th>Admin</th>
-					<th>Client</th>
-					<th>Excel File</th>
-					<th>Actions</th>
-				</thead>
+			<h2 style="text-align:center;">Orders</h2>
+			<table class='table table-bordered table-hover top50'>
+			<thead>
+				<th>Order ID</th>
+				<th>Created At</th>
+				<th>Updated At</th>
+				<th>Client Name</th>
+				<th>Status</th>
+				<th>Admin</th>
+				<th>Client</th>
+				<th>Excel File</th>
+				<th>Actions</th>
+			</thead>
 
 <!--?php-->
 <!--include("config.inc.php");-->
@@ -101,7 +114,7 @@
 ?>									<span>n/a</span>
 <?php						}
 ?>						</a></td>
-						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn btn-warning'>Edit</a></td>
+						<td><a href="/admin/orderEdit/<?= $order['order_id']; ?>" class='btn viewOrder'>Edit</a></td>
 					</tr>	
 <?php 			}
 ?>			</table>
@@ -153,7 +166,13 @@
 					<input class="form-control" type='text' name='type'  id="type" placeholder="Type">
 				</div>
 			</div>
-			?? Product Size ??
+			<div class="form-group">
+				<label for="size" class="col-sm-2 control-label">size change to drop down</label>
+				
+				<div class="col-sm-6">
+					<input class="form-control" size='text' name='size'  id="size" placeholder="size">
+				</div>
+			</div>
 
 			<div class="form-group">
 				<label for="file_path" class="col-sm-2 control-label">File Path</label>

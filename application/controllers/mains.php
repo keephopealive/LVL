@@ -6,7 +6,7 @@ class Mains extends CI_Controller {
 	{
 
 		parent::__construct($id);
-		$this->output->enable_profiler(TRUE);
+		// $this->output->enable_profiler(TRUE);
 	}
 
 	public function index()
@@ -14,8 +14,34 @@ class Mains extends CI_Controller {
 		$this->load->view('main');
 	}
 
+	public function about()
+	{
+		$this->load->view('about');
+	}
+
+	public function catalog()
+	{
+		$this->load->view('catalog');
+	}
+
+	public function faq()
+	{
+		$this->load->view('faq');
+	}
+
+	public function contact()
+	{
+		$this->load->view('contact');
+	}
+
+	public function trade()
+	{
+		$this->load->view('trade');
+	}
+
 	public function login()
 	{
+	
 		$results = $this->user->login($this->input->post());
 		if($results)
 		{
@@ -82,6 +108,7 @@ class Mains extends CI_Controller {
 			)
 		);
 		$this->form_validation->set_rules($config);
+		$this->form_validation->set_error_delimiters('"<p>','</p>"+');
 
 		// VALIDATE
 		if ($this->form_validation->run() == FALSE )

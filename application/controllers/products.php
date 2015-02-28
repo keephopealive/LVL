@@ -83,6 +83,13 @@ class Products extends CI_Controller {
 		echo json_encode($results);
 	}
 
-	// FINISH
+	// CUSTOM
+
+	public function retrieveCustoms()
+	{
+		$results = $this->product->retrieveCustoms();
+		echo json_encode($results);
+	}
+
 
 }
