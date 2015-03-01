@@ -129,6 +129,7 @@
 			<h2 style="text-align:center;">Catalogs</h2>
 			<table class='table table-bordered table-hover top50'>
 				<thead>
+					<th>Created At</th>
 					<th>Delivery Method</th>
 					<th>First Name</th>
 					<th>Last Name</th>
@@ -143,23 +144,27 @@
 					<th>Contact Number</th>
 				</thead>
 				<tbody>
-<?php 				foreach(catelogs as $catelog)
+<?php 			if(count($catalogs) > 0 )
+				{
+					foreach($catalogs as $catalog)
 					{
 ?>						<tr>
-							<td><?= $catelog['delivery_method']; ?></td>
-							<td><?= $catelog['first_name']; ?></td>
-							<td><?= $catelog['last_name']; ?></td>
-							<td><?= $catelog['company_name']; ?></td>
-							<td><?= $catelog['email']; ?></td>
-							<td><?= $catelog['profession']; ?></td>
-							<td><?= $catelog['address']; ?></td>
-							<td><?= $catelog['city']; ?></td>
-							<td><?= $catelog['state']; ?></td>
-							<td><?= $catelog['postal_code']; ?></td>
-							<td><?= $catelog['country']; ?></td>
-							<td><?= $catelog['contact_number']; ?></td>
+							<td><?= date('F d, Y', strtotime($catalog['created_at'])) ?></td>
+							<td><?= $catalog['delivery_method']; ?></td>
+							<td><?= $catalog['first_name']; ?></td>
+							<td><?= $catalog['last_name']; ?></td>
+							<td><?= $catalog['company_name']; ?></td>
+							<td><?= $catalog['email']; ?></td>
+							<td><?= $catalog['profession']; ?></td>
+							<td><?= $catalog['address']; ?></td>
+							<td><?= $catalog['city']; ?></td>
+							<td><?= $catalog['state']; ?></td>
+							<td><?= $catalog['postal_code']; ?></td>
+							<td><?= $catalog['country']; ?></td>
+							<td><?= $catalog['contact_number']; ?></td>
 						</tr>
 <?php 				}
+				}
 ?>				</tbody>
 			</table>
 		</div>
