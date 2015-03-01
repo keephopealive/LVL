@@ -68,8 +68,12 @@ class Productitem extends CI_Model {
 
 	// Retrieve Cutsheet Main image 
 		// Find the image with the name $reference_no.png
-		//  /assets/img/cutsheetMain/$reference_no.png
+		// From: (Filepath) /assets/img/cutsheetMain/$reference_no.png
+		// see if file_exists() if yes, then filepath = /assets/img/cutsheetMain/$reference_no.png
+							// if no, then filepath = /assets/img/cutsheetMain/default.png
+		// $data['frontView'] = filepath 
 
+		// same process for  backBoxImg , dwgFront , dwgSide
 
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")

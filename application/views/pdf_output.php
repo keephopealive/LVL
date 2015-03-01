@@ -98,7 +98,7 @@ th, td {
   <table class="plate">
     <tr>
       <td class="frontView" rowspan="2">
-        <img src="" alt="Plate - Front view">
+        <img src="<?php echo $frontView; ?>" alt="Plate - Front view">
       </td>
       <td>
         <table class="coveringPlate">
