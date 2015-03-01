@@ -149,7 +149,7 @@
 					foreach($catalogs as $catalog)
 					{
 ?>						<tr>
-							<td><?= date('F d, Y', strtotime($catalog['created_at'])) ?></td>
+							<td><?= date('F d, Y', strtotime($catalog['catalog_created_at'])) ?></td>
 							<td><?= $catalog['delivery_method']; ?></td>
 							<td><?= $catalog['first_name']; ?></td>
 							<td><?= $catalog['last_name']; ?></td>

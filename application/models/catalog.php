@@ -14,7 +14,7 @@ class Catalog extends CI_Model {
 	}
 	public function adminRetrieveAllCatalogs()
 	{
-		$query = "SELECT * FROM catalogs";
+		$query = "SELECT *, created_at AS catalog_created_at FROM catalogs";
 		return $this->db->query($query);
 	}
 }
