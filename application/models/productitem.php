@@ -66,6 +66,11 @@ class Productitem extends CI_Model {
 	// Reference No
 		$data['reference_no'] = $reference_no;
 
+	// Retrieve Cutsheet Main image 
+		// Find the image with the name $reference_no.png
+		//  /assets/img/cutsheetMain/$reference_no.png
+
+
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")
 		{
