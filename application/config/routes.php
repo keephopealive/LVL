@@ -52,7 +52,7 @@ $route['users/updateProfile'] = "users/updateProfile";
 $route['logout'] = "mains/logout";
 
 // Admin
-$route['admin'] = "mains/adminLogin";
+$route['adminlogin'] = "mains/adminLogin";
 $route['admin/dashboard'] = "/admins"; // Show
 $route['admin/edit/(:num)'] = "admins/edit/$1"; // Edit
 $route['admin/orderEdit/(:num)'] = "admins/orderEdit/$1";
