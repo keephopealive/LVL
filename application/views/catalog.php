@@ -108,13 +108,13 @@
         "<div class='form-group'>"+
             "<label for='first_name' class='col-sm-3 col-sm-offset-1 control-label'>First Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='first_name' name='first_name'>"+
+                "<input type='text' class='form-control' id='first_name' name='first_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='last_name' class='col-sm-3 col-sm-offset-1 control-label'>Last Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='last_name' name='last_name'>"+
+                "<input type='text' class='form-control' id='last_name' name='last_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
@@ -126,7 +126,7 @@
         "<div class='form-group'>"+
             "<label for='email' class='col-sm-3 col-sm-offset-1 control-label'>Email Address</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='email' class='form-control' id='email' name='email'>"+
+                "<input type='email' class='form-control' id='email' name='email' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
@@ -151,13 +151,13 @@
         "<div class='form-group'>"+
             "<label for='first_name' class='col-sm-3 col-sm-offset-1 control-label'>First Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='first_name' name='first_name'>"+
+                "<input type='text' class='form-control' id='first_name' name='first_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='last_name' class='col-sm-3 col-sm-offset-1 control-label'>Last Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='last_name' name='last_name'>"+
+                "<input type='text' class='form-control' id='last_name' name='last_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
@@ -169,7 +169,7 @@
         "<div class='form-group'>"+
             "<label for='email' class='col-sm-3 col-sm-offset-1 control-label'>Email Address</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='email' class='form-control' id='email' name='email'>"+
+                "<input type='email' class='form-control' id='email' name='email' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
@@ -189,37 +189,37 @@
         "<div class='form-group'>"+
             "<label for='address' class='col-sm-3 col-sm-offset-1 control-label'>Address</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='address' name='address' placeholder='Street Address'>"+
+                "<input type='text' class='form-control' id='address' name='address' placeholder='Street Address' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='city' class='col-sm-3 col-sm-offset-1 control-label'>City</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='city' name='city' >"+
+                "<input type='text' class='form-control' id='city' name='city' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='state' class='col-sm-3 col-sm-offset-1 control-label'>State</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='state' name='state' >"+
+                "<input type='text' class='form-control' id='state' name='state' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='postal_code' class='col-sm-3 col-sm-offset-1 control-label'>Postal Code</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='postal_code' name='postal_code'>"+
+                "<input type='text' class='form-control' id='postal_code' name='postal_code' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='country' class='col-sm-3 col-sm-offset-1 control-label'>Country</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='country' name='country'>"+
+                "<input type='text' class='form-control' id='country' name='country' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='contact_number' class='col-sm-3 col-sm-offset-1 control-label'>Contact Number</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='contact_number' name='contact_number' aria-describedby='helpBlock'>"+
+                "<input type='text' class='form-control' id='contact_number' name='contact_number' aria-describedby='helpBlock' required>"+
                 "<span id='helpBlock' class='help-block'>*Required for hard copy of catalog sent via FedEx</span>"+
             "</div>"+
         "</div>"+
