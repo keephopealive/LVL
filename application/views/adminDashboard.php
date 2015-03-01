@@ -144,12 +144,11 @@
 					<th>Contact Number</th>
 				</thead>
 				<tbody>
-<?php 			if(count($catalogs) > 0 )
-				{
+<?php
 					foreach($catalogs as $catalog)
 					{
 ?>						<tr>
-							<td><?= date('F d, Y', strtotime($catalog['catalog_created_at'])) ?></td>
+							<td><?= date('F d, Y', strtotime($catalog['created_at'])) ?></td>
 							<td><?= $catalog['delivery_method']; ?></td>
 							<td><?= $catalog['first_name']; ?></td>
 							<td><?= $catalog['last_name']; ?></td>
@@ -164,7 +163,7 @@
 							<td><?= $catalog['contact_number']; ?></td>
 						</tr>
 <?php 				}
-				}
+
 ?>				</tbody>
 			</table>
 		</div>
