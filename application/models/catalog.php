@@ -12,4 +12,9 @@ class Catalog extends CI_Model {
 		$values = array($request['delivery_method'], $request['first_name'], $request['last_name'], $request['company_name'], $request['email'], $request['profession'], $request['address'], $request['city'], $request['state'], $request['postal_code'], $request['country'], $request['contact_number'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
 	}
+	public function adminRetrieveAllCatalogs()
+	{
+		$query = "SELECT * FROM catalogs";
+		return $this->db->query($query);
+	}
 }

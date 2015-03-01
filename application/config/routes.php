@@ -51,7 +51,8 @@ $route['dashboard'] = "/users";
 $route['users/updateProfile'] = "users/updateProfile";
 $route['logout'] = "mains/logout";
 
-// Admin 
+// Admin
+$route['admin'] = "mains/adminLogin";
 $route['admin/dashboard'] = "/admins"; // Show
 $route['admin/edit/(:num)'] = "admins/edit/$1"; // Edit
 $route['admin/orderEdit/(:num)'] = "admins/orderEdit/$1";
@@ -99,9 +100,10 @@ $route['order/updateStatus'] = "orders/updateStatus";
 
 // PDF
 $route['mpdftester'] = "product_items/mpdftester";
+$route['tradeEmail'] = "mains/tradeEmail";
 
-
-
+$route['digitalCopy'] = "mains/catalogDigital";
+$route['catalogSuccess'] = "mains/catalogSuccess";
 
 // $route['product_items/edit/(:num)'] = "product_items/edit/$1";
 // die('here');

@@ -122,6 +122,51 @@
 	</div>
 <!-- ENDS - productitem LIST -->
 
+
+	<!-- BEGINS - Catalog LIST  -->
+	<div class="row myCatalogs">
+		<div class='col-sm-10 col-sm-offset-1'>
+			<h2 style="text-align:center;">Catalogs</h2>
+			<table class='table table-bordered table-hover top50'>
+				<thead>
+					<th>Delivery Method</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Company</th>
+					<th>Email</th>
+					<th>Profession</th>
+					<th>Address</th>
+					<th>City</th>
+					<th>State</th>
+					<th>Postal Code</th>
+					<th>Country</th>
+					<th>Contact Number</th>
+				</thead>
+				<tbody>
+<?php 				foreach(catelogs as $catelog)
+					{
+?>						<tr>
+							<td><?= $catelog['delivery_method']; ?></td>
+							<td><?= $catelog['first_name']; ?></td>
+							<td><?= $catelog['last_name']; ?></td>
+							<td><?= $catelog['company_name']; ?></td>
+							<td><?= $catelog['email']; ?></td>
+							<td><?= $catelog['profession']; ?></td>
+							<td><?= $catelog['address']; ?></td>
+							<td><?= $catelog['city']; ?></td>
+							<td><?= $catelog['state']; ?></td>
+							<td><?= $catelog['postal_code']; ?></td>
+							<td><?= $catelog['country']; ?></td>
+							<td><?= $catelog['contact_number']; ?></td>
+						</tr>
+<?php 				}
+?>				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- ENDS - productitem LIST -->
+
+
 <div class="row top50">
 	<div class='col-sm-7 col-sm-offset-5'>
 		<div class="createProductDiv"></div>

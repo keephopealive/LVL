@@ -58,6 +58,7 @@
 
     <div class='row catalog top50'>
         <h3 class='center-block'>Request a Catalog</h3>
+        <h2><?= $this->session->flashdata('update_msg');?></h2>
         <form class='form-horizontal' action="/requestCatalog" method="post">
             <div class='col-sm-7 col-sm-offset-4 catalogRadio'>
                 <div class='radio'>
@@ -73,86 +74,10 @@
                     </label>
                 </div>
             </div>
-
             <div class="requestForm">
 
             </div>
-            <!-- <div class='form-group'>
-                <label for='first_name' class='col-sm-3 col-sm-offset-1 control-label'>First Name</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='first_name' name='first_name'>
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='last_name' class='col-sm-3 col-sm-offset-1 control-label'>Last Name</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='last_name' name='last_name'>
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='company_name' class='col-sm-3 col-sm-offset-1 control-label'>Company Name</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='company_name' name='company_name'>
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='email' class='col-sm-3 col-sm-offset-1 control-label'>Email Address</label>
-                <div class='col-sm-6'>
-                    <input type='email' class='form-control' id='email' name='email'>
-                </div>
-            </div>
-            <div class='form-group'>
-                    <label for='profession' class='col-sm-3 col-sm-offset-1 control-label'>Profession</label>
-                    <div class='col-sm-6'>
-                        <select name='profession' class='form-control' id='profession' name='profession'>
-                            <option>Architect</option>
-                            <option>AV Provider</option>
-                            <option>Builder</option>
-                            <option>Electrician</option>
-                            <option>Interior Designer</option>
-                            <option>Lighting Designer </option>
-                            <option>Private Individual </option>
-                        </select>
-                    </div>
-            </div>
-            <div class='form-group'>
-                <label for='address' class='col-sm-3 col-sm-offset-1 control-label'>Address</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='address' name='address' placeholder='Street Address'>
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='city' class='col-sm-3 col-sm-offset-1 control-label'>City</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='city' name='city' >
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='state' class='col-sm-3 col-sm-offset-1 control-label'>State</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='state' name='state' >
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='postal_code' class='col-sm-3 col-sm-offset-1 control-label'>Postal Code</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='postal_code' name='postal_code'>
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='country' class='col-sm-3 col-sm-offset-1 control-label'>Country</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='country' name='country'>
-                </div>
-            </div>
-            <div class='form-group'>
-                <label for='contact_number' class='col-sm-3 col-sm-offset-1 control-label'>Contact Number</label>
-                <div class='col-sm-6'>
-                    <input type='text' class='form-control' id='contact_number' name='contact_number' aria-describedby='helpBlock'>
-                    <span id='helpBlock' class='help-block'>*Required for hard copy of catalog sent via FedEx</span>
-                </div>
-            </div> -->
-            
+
             <div class='form-group'>
                 <div class='col-sm-offset-4 col-sm-10'>
                     <button type='submit' class='btn btnSmall'>Request Catalog</button>

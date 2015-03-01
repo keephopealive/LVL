@@ -123,4 +123,36 @@ class Mains extends CI_Controller {
 		redirect('/');
 	}
 
+	public function tradeEmail()
+	{
+		$this->order->tradeEmail($this->input->post());
+		echo json_encode("success");
+	}
+
+	public function myRequestCatalog()
+	{
+		$result = $this->order->requestCatalog($this->input->post());
+		if($result == "digital")
+		{
+			redirect('/digitalCopy');
+		}
+		else
+		{
+			redirect("/showCatalog");
+		}
+	}
+	public function catalogDigital()
+	{
+		$this->load->view("digitalCatalog");
+	}
+	public function catalogSuccess()
+	{
+		$this->load->view("catalogSuccess");
+	}
+
+	public function adminLogin()
+	{
+		$this->load->view("adminLogin");
+	}
+
 }

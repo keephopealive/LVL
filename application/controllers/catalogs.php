@@ -14,41 +14,51 @@ class Catalogs extends CI_Controller {
 
 	public function requestCatalog()
 	{
-		$config = array(
-			array(
-				'field' => 'first_name',
-				'label' => 'First name',
-				'rules' => 'trim|required'
-			),
-			array(
-				'field' => 'last_name',
-				'label' => 'Last name',
-				'rules' => 'trim|required'
-			),
-			array(
-				'field' => 'email',
-				'label' => 'Email',
-				'rules' => 'trim|required'
-			),
-			array(
-				'field' => 'profession',
-				'label' => 'Profession',
-				'rules' => 'trim|required'
-			)
-		);
-		$this->form_validation->set_rules($config);
-
-		// VALIDATE
-		if ($this->form_validation->run() == FALSE )
+//		$config = array(
+//			array(
+//				'field' => 'first_name',
+//				'label' => 'First name',
+//				'rules' => 'trim|required'
+//			),
+//			array(
+//				'field' => 'last_name',
+//				'label' => 'Last name',
+//				'rules' => 'trim|required'
+//			),
+//			array(
+//				'field' => 'email',
+//				'label' => 'Email',
+//				'rules' => 'trim|required'
+//			),
+//			array(
+//				'field' => 'profession',
+//				'label' => 'Profession',
+//				'rules' => 'trim|required'
+//			)
+//		);
+//		$this->form_validation->set_rules($config);
+//
+//		// VALIDATE
+//		if ($this->form_validation->run() == FALSE )
+//		{
+//			$this->session->set_flashdata('update_msg', validation_errors());
+//			redirect("/catalog");
+//		}
+//		else
+//		{
+		$result = $this->order->requestCatalog($this->input->post());
+		if($result == "digital")
 		{
-			$this->session->set_flashdata('update_msg', validation_errors());
+			redirect('/digitalCopy');
 		}
 		else
 		{
-			$this->catalog->requestCatalog($this->input->post());
 			$this->session->set_flashdata('update_msg', "Catalog request was successful.");
+			redirect('/catalog');
 		}
-		redirect('/catalog');
+//			$this->catalog->requestCatalog($this->input->post());
+
+//		}
 	}
 
 }

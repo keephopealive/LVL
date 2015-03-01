@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'lvl_admin_master';
-$db['default']['password'] = 'lvlusaAdminMaster9';
-$db['default']['database'] = 'lvl_db';
+$db['default']['hostname'] = 'localhost'; // localhost
+$db['default']['username'] = 'root'; // lvl_admin_master
+$db['default']['password'] = 'root'; // lvlusaAdminMaster9
+$db['default']['database'] = 'lvl_schema';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

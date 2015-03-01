@@ -13,9 +13,11 @@ class Admins extends CI_Controller {
 	{
 		$user = $this->session->userdata['user'];
 		$orders = $this->order->adminRetrieveAllOrders();
+		$catalogs = $this->catalog->adminRetrieveAllCatalogs();
 		$alldata = array(
 			'user' => $user,
-			'orders' => $orders
+			'orders' => $orders,
+			'catalogs' => $catalogs
 		);
 		$this->load->view('adminDashboard', $alldata);
 	}

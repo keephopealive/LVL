@@ -4,7 +4,7 @@ class Product extends CI_Model {
 
 	public function retrieveAll()
 	{
-		$query ="SELECT * FROM products";
+		$query ="SELECT * FROM products ORDER BY sequence ASC";
 		return $this->db->query($query)->result_array();
 	}
 

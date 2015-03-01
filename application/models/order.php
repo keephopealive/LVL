@@ -96,4 +96,28 @@ class Order extends CI_Model {
 		$query ="SELECT * FROM orders WHERE id = ?";
 		return $this->db->query($query, $order_id)->row_array();
 	}
+
+
+	// TEMP - Catalog Emails
+
+	public function tradeEmail($values)
+	{
+		$query = "INSERT INTO tradeEmails (name, company, email, created_at, updated_at) VALUES (?, ?, ?, NOW(), NOW())";
+		return $this->db->query($query, $values);
+	}
+	public function requestCatalog($values)
+	{
+		if(isset($values['address'])) // FEDEX  + || isset($values['city']) || isset($values['state']) || isset($values['postal_code'])
+		{
+			$query = "INSERT INTO catalogs (delivery_method, first_name, last_name, company_name, email, profession, address, city, state, postal_code, country, contact_nubmer, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?, NOW(), NOW())";
+			$this->db->query($query, $values);
+			return "fedex";
+		}
+		else // DIGITAL
+		{
+			$query = "INSERT INTO catalogs (delivery_method, first_name, last_name, company_name, email, profession, created_at, updated_at) VALUES (?,?,?,?,?,?, NOW(), NOW())";
+			$this->db->query($query, $values);
+			return "digital";
+		}
+	}
 }

@@ -10,22 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <script>
-        $(document).on('submit', '#tradeEmailForm', function(){
-            $.post(
-                $(this).attr("action"),
-                $(this).serialize(),
-                function(return_data){
-                    if(return_data == "success")
-                    {
-                        $("#tradEmailResponse").html("<h3><center>Successful Submission, thank you for your interest</center></h3>");
-                    }
-                }, "json"
-            );
-            return false;
-        })
 
-    </script>
 </head>
 <body>
 
@@ -55,71 +40,24 @@
     <!-- NAVBAR ===================== -->
 
     <div class="row navbar">
-        <div class="col-sm-4">
-            <a href="/about" class='btn btn-lg btn-block'>ABOUT</a>
-        </div>
-        <div class="col-sm-4">
-            <a href="/products"><button class='btn btn-lg btn-block'>GALLERY</button></a>
-        </div>
-        <div class="col-sm-4">
-            <a href="/catalog" class='btn btn-lg btn-block'>CATALOG</a>
-        </div>
+<!--        <div class="col-sm-4">-->
+<!--            <a href="/about" class='btn btn-lg btn-block'>ABOUT</a>-->
+<!--        </div>-->
+<!--        <div class="col-sm-4">-->
+<!--            <a href="/products"><button class='btn btn-lg btn-block'>GALLERY</button></a>-->
+<!--        </div>-->
+<!--        <div class="col-sm-4">-->
+<!--            <a href="/catalog" class='btn btn-lg btn-block'>CATALOG</a>-->
+<!--        </div>-->
     </div>
 
     <!-- END NAVBAR ================= -->
-
-    <!-- BLOCK TOOL + EMAIL LEADS -->
-
-    <div class='row regLogin'>
-        <div class="col-sm-10 col-sm-offset-1">
-            <div class='regInfo'>
-                <p>The integrator order entry system and cut sheet generator is not yet available.<br>  To be notified when this tool launches, kindly enter your email below.</p>
-            </div>
-            <div id="tradEmailResponse"></div>
-            <div style="margin-top:50px;">
-                <form class="form-inline" action="/tradeEmail" id="tradeEmailForm" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company</label>
-                        <input type="text" class="form-control" name="company" id="company" placeholder="ABC Development" style="margin-left:10px;">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;">
-                    </div>
-                    
-                    <button type="submit" class="lvl-nav btn btn-sm">Submit Email</button>
-                </form>  
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-    <!-- END BLOCK TOOL + EMAIL LEADS     -->
 
 
     <!-- LOGIN REGISTRATOIN CONTENT START -->
 
     <div class='row regLogin'>
-        <div class='col-sm-8 col-sm-offset-2'>
-            <div class='regInfo'>
-                <p><strong>With our integrator order entry system and cut sheet generator, trade professionals can:</strong></p><br>
-                <ul>
-                    <li>Select and customize standard Meljac keypads and outlets up to 5.7” (144 mm) in length</li>'
-                    <li>Add selections to a project order</li>
-                    <li>Download accompanying product cut sheets</li>
-                    <li>Request a price quote for the order</li>
-                </ul><br>
-                <p>For any plates larger than 5.7” (144 mm) or customization options/products not currently available through the order entry system, please contact <a href=/contact>LVL-USA</a>.</p>'
-                <p>All Meljac electrical hardware is made-to-order with lead times of eight to ten weeks.  The proprietary back boxes included with any order ship when LVL-USA receives a deposit amount equal to half of the total order.</p>'
-            </div>
-        </div>
+        <h3>Admin Login/Registration - Under Dev</h3>
         <div class='col-sm-4 col-sm-offset-2 top50'>
             <form method='post' action='/registration'>
                 <h3>Register</h3>
@@ -182,20 +120,22 @@
         </div>
     </div>
 
+
+
     <!-- CONTENT END -->
 
 
     <!-- BOTTOM NAV ======================== -->
     <div class="row contactFaq">
-        <div class="col-sm-4">
-            <a href="/trade" class='lvl-nav btn btn-lg btn-block'>TRADE</a>
-        </div>
-        <div class="col-sm-4">
-            <a href="/faq" class='lvl-nav btn btn-lg btn-block'>FAQs</a>
-        </div>
-        <div class="col-sm-4">
-            <a href="/contact" class='lvl-nav btn btn-lg btn-block'>CONTACT</a>
-        </div>
+<!--        <div class="col-sm-4">-->
+<!--            <a href="/trade" class='lvl-nav btn btn-lg btn-block'>TRADE</a>-->
+<!--        </div>-->
+<!--        <div class="col-sm-4">-->
+<!--            <a href="/faq" class='lvl-nav btn btn-lg btn-block'>FAQs</a>-->
+<!--        </div>-->
+<!--        <div class="col-sm-4">-->
+<!--            <a href="/contact" class='lvl-nav btn btn-lg btn-block'>CONTACT</a>-->
+<!--        </div>-->
     </div>
 
     <!-- END BOTTOM NAV ==================== -->
