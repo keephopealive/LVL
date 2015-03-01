@@ -71,28 +71,30 @@
     <!-- BLOCK TOOL + EMAIL LEADS -->
 
     <div class='row regLogin'>
-        <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-sm-8 col-sm-offset-2">
             <div class='regInfo'>
                 <p>The integrator order entry system and cut sheet generator is not yet available.<br>  To be notified when this tool launches, kindly enter your email below.</p>
             </div>
             <div id="tradEmailResponse"></div>
-            <div style="margin-top:50px;">
+            <div style="margin-top:50px;" class="row">
+                <div class="col-sm-10 col-sm-offset-1">
                 <form class="form-inline" action="/tradeEmail" id="tradeEmailForm" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="company">Company</label>
                         <input type="text" class="form-control" name="company" id="company" placeholder="ABC Development" style="margin-left:10px;">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;">
                     </div>
                     
-                    <button type="submit" class="lvl-nav btn btn-sm">Submit Email</button>
-                </form>  
+                    <button type="submit" class="inlineBtn btn btn-sm">Submit Email</button>
+                </form> 
+                </div> 
             </div>
         </div>
 
@@ -106,7 +108,7 @@
 
     <!-- LOGIN REGISTRATOIN CONTENT START -->
 
-    <div class='row regLogin'>
+    <!-- <div class='row regLogin'>
         <div class='col-sm-8 col-sm-offset-2'>
             <div class='regInfo'>
                 <p><strong>With our integrator order entry system and cut sheet generator, trade professionals can:</strong></p><br>
@@ -180,7 +182,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <!-- CONTENT END -->
 

@@ -160,6 +160,7 @@ a{
 }
 .regInfo	p{
 	font-size: 16px;
+	text-align: center;
 }
 .top50	{
 	margin-top: 50px;
@@ -248,4 +249,21 @@ h3{
 .form-inline > * {
    margin:5px 10px;
 }
+
+.inlineBtn	{
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 16px;
+	/*margin: 0;*/
+	/*padding-left: 4%;
+	padding-right: 4%;*/
+	border: 1px solid rgba(238, 34, 43, 0.45);
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
+
 
