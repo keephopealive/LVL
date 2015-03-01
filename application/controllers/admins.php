@@ -6,6 +6,11 @@ class Admins extends CI_Controller {
 	{
 		parent::__construct($id);
 		// $this->output->enable_profiler(TRUE);
+		if(!$this->session->userdata('uw3hase6jshegh235h32qjhu5'))
+		{
+			redirect("/");
+		}
+
 	}
 
 // Admin Dashboard

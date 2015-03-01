@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00f386e-bfbe-40e6-9dc4-9b8606c8c532" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/adminLogin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/digitalCatalog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/adminDashboard.php" afterPath="$PROJECT_DIR$/application/views/adminDashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admins.php" afterPath="$PROJECT_DIR$/application/controllers/admins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/catalog.php" afterPath="$PROJECT_DIR$/application/models/catalog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/catalog.php" afterPath="$PROJECT_DIR$/application/views/catalog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/catalogs.php" afterPath="$PROJECT_DIR$/application/controllers/catalogs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/mains.php" afterPath="$PROJECT_DIR$/application/controllers/mains.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/order.php" afterPath="$PROJECT_DIR$/application/models/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/product.php" afterPath="$PROJECT_DIR$/application/models/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/trade.php" afterPath="$PROJECT_DIR$/application/views/trade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LVL.iws" />
@@ -45,8 +31,8 @@
             <file leaf-file-name="trade.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/views/trade.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-2.0833333" vertical-offset="1945" max-vertical-offset="3090">
-                    <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+                  <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="3090">
+                    <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
                     <folding />
                   </state>
                 </provider>
@@ -55,8 +41,8 @@
             <file leaf-file-name="catalog.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/views/catalog.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="5.5" vertical-offset="1617" max-vertical-offset="7821">
-                    <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+                  <state vertical-scroll-proportion="-4.6904764" vertical-offset="7096" max-vertical-offset="7821">
+                    <caret line="221" column="120" selection-start-line="221" selection-start-column="117" selection-end-line="221" selection-end-column="120" />
                     <folding />
                   </state>
                 </provider>
@@ -65,28 +51,28 @@
             <file leaf-file-name="catalogs.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/controllers/catalogs.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="1050">
-                    <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+                  <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1050">
+                    <caret line="7" column="11" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="11" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="mains.php" pinned="false" current-in-tab="false">
+            <file leaf-file-name="mains.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/application/controllers/mains.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-6.769231" vertical-offset="1760" max-vertical-offset="7172">
-                    <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+                  <state vertical-scroll-proportion="0.54121864" vertical-offset="482" max-vertical-offset="2310">
+                    <caret line="56" column="71" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="71" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
+            <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/models/user.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.24817519" vertical-offset="560" max-vertical-offset="2088">
-                    <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <state vertical-scroll-proportion="-6.060606" vertical-offset="568" max-vertical-offset="2088">
+                    <caret line="32" column="24" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="24" />
                     <folding>
                       <marker date="1425170189000" expanded="true" signature="346:478" placeholder="INSERT INTO ..." />
                       <marker date="1425170189000" expanded="true" signature="740:772" placeholder="SELECT * FRO..users..." />
@@ -105,12 +91,14 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="admins.php" pinned="false" current-in-tab="false">
+            <file leaf-file-name="admins.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/application/controllers/admins.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1395">
-                    <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-                    <folding />
+                  <state vertical-scroll-proportion="0.12771997" vertical-offset="15" max-vertical-offset="1470">
+                    <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                    <folding>
+                      <marker date="1425171508000" expanded="true" signature="290:315" placeholder="{...}" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -121,8 +109,8 @@
                   <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="390">
                     <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
                     <folding>
-                      <marker date="1425168675000" expanded="true" signature="250:478" placeholder="INSERT INTO ..." />
-                      <marker date="1425168675000" expanded="true" signature="927:949" placeholder="SELECT * FRO..catalogs..." />
+                      <marker date="1425170346000" expanded="true" signature="250:478" placeholder="INSERT INTO ..." />
+                      <marker date="1425170346000" expanded="true" signature="927:949" placeholder="SELECT * FRO..catalogs..." />
                     </folding>
                   </state>
                 </provider>
@@ -131,8 +119,8 @@
             <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/config/routes.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-11.367347" vertical-offset="1683" max-vertical-offset="6560">
-                    <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+                  <state vertical-scroll-proportion="-7.285714" vertical-offset="843" max-vertical-offset="6560">
+                    <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
                     <folding />
                   </state>
                 </provider>
@@ -141,18 +129,18 @@
             <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/config/config.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="143.75" vertical-offset="3510" max-vertical-offset="5520">
+                  <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="5520">
                     <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="autoload.php" pinned="false" current-in-tab="true">
+            <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.8580889" vertical-offset="758" max-vertical-offset="1815">
-                    <caret line="111" column="76" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
+                  <state vertical-scroll-proportion="-7.1666665" vertical-offset="758" max-vertical-offset="1815">
+                    <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
                     <folding />
                   </state>
                 </provider>
@@ -161,8 +149,8 @@
             <file leaf-file-name="adminDashboard.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/views/adminDashboard.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-57.166668" vertical-offset="1043" max-vertical-offset="4245">
-                    <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
+                  <state vertical-scroll-proportion="-0.84313726" vertical-offset="377" max-vertical-offset="4245">
+                    <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
                     <folding>
                       <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                       <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -271,14 +259,14 @@
         <option value="$PROJECT_DIR$/application/views/catalog.php" />
         <option value="$PROJECT_DIR$/application/models/product.php" />
         <option value="$PROJECT_DIR$/application/views/adminDashboard.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admins.php" />
         <option value="$PROJECT_DIR$/application/models/catalog.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/controllers/mains.php" />
         <option value="$PROJECT_DIR$/application/views/adminLogin.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/models/user.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="$PROJECT_DIR$/application/controllers/mains.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admins.php" />
       </list>
     </option>
   </component>
@@ -495,7 +483,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="admins&#9;RUN_CONFIGURATION&#9;admins.php&#10;auto&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/autoload.php&#10;config&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php&#10;database&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/database.php&#10;user&#9;null&#9;null&#10;trade&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/trade.php&#10;cata&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/catalog.php&#10;admin&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;produ&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/product.php&#10;confi&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php&#10;catalog&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/catalog.php&#10;order&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/order.php&#10;main&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/mains.php&#10;mysql/mysql_dr&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/database/drivers/mysql/mysql_driver.php&#10;route&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;css&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/assets/css/dashboard.css&#10;dashb&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;ordere&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminOrderEdit.php&#10;showor&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/showOrder.php&#10;productit&#9;null&#9;null&#10;prod&#9;null&#9;null&#10;product&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/product.php&#10;productitem&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;neworder&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;newor&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/third_party/mpdf/examples/example55_new_mPDF_v5-1_color_and_other_features.php&#10;PRODUCT&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;productitems&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;keypad&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;producti&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;productk&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;newprod&#9;null&#9;null&#10;orders&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/orders.php&#10;routes&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;neword&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;createnew&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/user_guide/tutorial/create_news_items.html&#10;admind&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;updateorder&#9;null&#9;null&#10;updateor&#9;null&#9;null&#10;orde&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;users&#9;null&#9;null&#10;Test document&#9;null&#9;null&#10;excel&#9;null&#9;null&#10;class&#9;null&#9;null&#10;deleteorder&#9;null&#9;null&#10;ordern&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/userOrderNew.php&#10;produc&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productDashboard.php&#10;dash&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/userDashboard.php&#10;config.&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/core/Config.php&#10;adminr&#9;null&#9;null&#10;admindas&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php" />
+    <property name="SearchEverywhereHistoryKey" value="mysq&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/database/drivers/mysql/mysql_driver.php&#10;admins&#9;RUN_CONFIGURATION&#9;admins.php&#10;auto&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/autoload.php&#10;config&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php&#10;database&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/database.php&#10;user&#9;null&#9;null&#10;trade&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/trade.php&#10;cata&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/catalog.php&#10;admin&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;produ&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/product.php&#10;confi&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php&#10;catalog&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/catalog.php&#10;order&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/order.php&#10;main&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/mains.php&#10;mysql/mysql_dr&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/database/drivers/mysql/mysql_driver.php&#10;route&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;css&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/assets/css/dashboard.css&#10;dashb&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;ordere&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminOrderEdit.php&#10;showor&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/showOrder.php&#10;productit&#9;null&#9;null&#10;prod&#9;null&#9;null&#10;product&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/product.php&#10;productitem&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;neworder&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;newor&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/third_party/mpdf/examples/example55_new_mPDF_v5-1_color_and_other_features.php&#10;PRODUCT&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;productitems&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;keypad&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;producti&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;productk&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;newprod&#9;null&#9;null&#10;orders&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/orders.php&#10;routes&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;neword&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;createnew&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/user_guide/tutorial/create_news_items.html&#10;admind&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;updateorder&#9;null&#9;null&#10;updateor&#9;null&#9;null&#10;orde&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;users&#9;null&#9;null&#10;Test document&#9;null&#9;null&#10;excel&#9;null&#9;null&#10;class&#9;null&#9;null&#10;deleteorder&#9;null&#9;null&#10;ordern&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/userOrderNew.php&#10;produc&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productDashboard.php&#10;dash&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/userDashboard.php&#10;config.&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/core/Config.php&#10;adminr&#9;null&#9;null" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -886,67 +874,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38315988" vertical-offset="4245" max-vertical-offset="11700">
-          <caret line="310" column="9" selection-start-line="310" selection-start-column="9" selection-end-line="310" selection-end-column="9" />
-          <folding>
-            <marker date="1425162660000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1425162660000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1425162660000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1425162660000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/catalogs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="1050">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/catalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.5" vertical-offset="1617" max-vertical-offset="7821">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/adminDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.166668" vertical-offset="1043" max-vertical-offset="4245">
-          <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32639545" vertical-offset="0" max-vertical-offset="1470">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
-            <marker date="1425168093000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..products..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -956,20 +903,20 @@
         <state vertical-scroll-proportion="0.73189825" vertical-offset="3507" max-vertical-offset="4736">
           <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
           <folding>
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..orders..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="SELECT *, or..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..productitems..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..orders..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1425164397000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..orders..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT *, or..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..productitems..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="UPDATE order..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..orders..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170346000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -979,8 +926,8 @@
         <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="390">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
-            <marker date="1425168675000" expanded="true" signature="250:478" placeholder="INSERT INTO ..." />
-            <marker date="1425168675000" expanded="true" signature="927:949" placeholder="SELECT * FRO..catalogs..." />
+            <marker date="1425170346000" expanded="true" signature="250:478" placeholder="INSERT INTO ..." />
+            <marker date="1425170346000" expanded="true" signature="927:949" placeholder="SELECT * FRO..catalogs..." />
           </folding>
         </state>
       </provider>
@@ -1004,14 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/trade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0833333" vertical-offset="1945" max-vertical-offset="3090">
-          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/adminLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47058824" vertical-offset="701" max-vertical-offset="2190">
@@ -1023,30 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/mains.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.769231" vertical-offset="1760" max-vertical-offset="7172">
-          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.367347" vertical-offset="1683" max-vertical-offset="6560">
-          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="143.75" vertical-offset="3510" max-vertical-offset="5520">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20306513" vertical-offset="2076" max-vertical-offset="3256">
@@ -1055,10 +970,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65789473" vertical-offset="4605" max-vertical-offset="11700">
+          <caret line="332" column="7" selection-start-line="332" selection-start-column="7" selection-end-line="332" selection-end-column="7" />
+          <folding>
+            <marker date="1425170347000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1425170347000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170347000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425170347000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24817519" vertical-offset="560" max-vertical-offset="2088">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.060606" vertical-offset="568" max-vertical-offset="2088">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="24" />
           <folding>
             <marker date="1425170189000" expanded="true" signature="346:478" placeholder="INSERT INTO ..." />
             <marker date="1425170189000" expanded="true" signature="740:772" placeholder="SELECT * FRO..users..." />
@@ -1068,19 +996,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admins.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/catalogs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1395">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6904764" vertical-offset="7096" max-vertical-offset="7821">
+          <caret line="221" column="120" selection-start-line="221" selection-start-column="117" selection-end-line="221" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.285714" vertical-offset="843" max-vertical-offset="6560">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="5520">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8580889" vertical-offset="758" max-vertical-offset="1815">
-          <caret line="111" column="76" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
+        <state vertical-scroll-proportion="-7.1666665" vertical-offset="758" max-vertical-offset="1815">
+          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/adminDashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.84313726" vertical-offset="377" max-vertical-offset="4245">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/trade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="3090">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/mains.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54121864" vertical-offset="482" max-vertical-offset="2310">
+          <caret line="56" column="71" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12771997" vertical-offset="15" max-vertical-offset="1470">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1425171508000" expanded="true" signature="290:315" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
