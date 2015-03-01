@@ -468,12 +468,16 @@
 	$(document).on('click', 'button.finish_btn', function(){
 		$('.products_list').html(""+
 			"<div class='row'>"+
-				"<h4 class='col-sm-8 col-sm-offset-2'> Meljac products come in the twenty-five standard finishes highlighted below. </h4>"+
+				"<div class='col-sm-8 col-sm-offset-2 bottomBorder'>"+
+				"</div>"+
 				"<div class='row productIntro'>"+
-					"<div class='col-sm-4'>"+
-						"<p class='listTitle pull-right'>Custom options include:</p>"+
+					"<div class='col-sm-8 col-sm-offset-2'>"+
+						"<h4 class=''> Meljac products come in the twenty-five standard finishes highlighted below. </h4>"+
 					"</div>"+
-					"<div class='col-sm-8'>"+
+					"<div class='col-sm-8 col-sm-offset-2'>"+
+						"<p class='listTitle'>Custom options include:</p>"+
+					"</div>"+
+					"<div class='col-sm-8 col-sm-offset-2'>"+
 						"<ul>"+
 							"<li>Finish Matching – match any metallic finish based on a user-supplied flat sample</li>"+
 							"<li>Powder Coating/Back-Painted Glass – match any RAL/Pantone color</li>"+
@@ -482,7 +486,7 @@
 				"</div>"+
 			"</div>"+
 			"<div class='row'>"+
-				"<div class='col-sm-8 col-sm-offset-2'>"+
+				"<div class='col-sm-10 col-sm-offset-1'>"+
 					"<img src='assets/img/FinishCatalog.png' class='img-responsive center-block'>"+
 				"</div>"+
 			"</div>");
@@ -496,17 +500,21 @@
 			function(rows){
 				$('.products_list').html(""+
 					"<div class='row'>"+
-						"<h4 class='col-sm-8 col-sm-offset-2'> Meljac specializes in making custom electrical plates for various applications.</h4>"+
+						"<div class='col-sm-8 col-sm-offset-2 bottomBorder'>"+
+						"</div>"+
 						"<div class='row productIntro'>"+
-							"<div class='col-sm-3 col-sm-offset-1'>"+
-								"<p class='listTitle pull-right'>These include:</p>"+
+							"<div class='col-sm-8 col-sm-offset-2'>"+
+								"<h4 class=''> Meljac specializes in making custom electrical plates for various applications.</h4>"+
 							"</div>"+
-							"<div class='col-sm-6'>"+
-								"<ul>"+
-									"<li>Keyless Entry/Security Systems</li>"+
-									"<li>Elevator Plates</li>"+
-									"<li>Thermostats</li>"+
-									"<li>Data Centers</li>"+
+							"<div class='col-sm-8 col-sm-offset-2'>"+
+								"<p class='listTitle'>These include:</p>"+
+							"</div>"+
+							"<div class='col-sm-10 col-sm-offset-1 customList'>"+
+								"<ul class='row'>"+
+									"<li class='col-sm-3'>Keyless Entry / <br> Security Systems</li>"+
+									"<li class='col-sm-3'>Elevator Plates</li>"+
+									"<li class='col-sm-3'>Thermostats</li>"+
+									"<li class='col-sm-3'>Data Centers</li>"+
 								"</ul>"+
 							"</div>"+
 						"</div>"+
@@ -544,10 +552,12 @@
 		$('.collection_group').hide();
 	});
 	$(document).on('click', 'button.type_btn', function(){
+		$('.products_list').addClass('top25');
 		$('.type_group').show();
 		$('.collection_group').hide();
 	});
 	$(document).on('click', 'button.custom_btn', function(){
+		$('.products_list').removeClass('top25');
 		$('.type_group').hide();
 		$('.collection_group').hide();
 	});

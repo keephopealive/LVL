@@ -99,6 +99,9 @@ a:hover{
 .top50	{
 	margin-top: 50px;
 }
+.top25	{
+	margin-top: 25px;
+}
 .viewOrder{
 	/*letter-spacing: 0.15em;*/
 	font-family: 'Cinzel', serif;
@@ -159,16 +162,32 @@ a:hover{
 }
 .productIntro	{
 	font-size: 16px;
-	margin-top: 50px;
-	margin-bottom: 80px;
+	/*margin-top: 50px;*/
+	margin-bottom: 60px;
 }
 .productIntro	ul{
+	margin-left: 2%;
 	line-height: 1.5em;
+	list-style-type: circle;
 }
+.productIntro li{
+	margin-bottom: 20px;
+}
+
+.productIntro	h4{
+	font-size: 18px;
+	margin-top: 35px;
+	margin-bottom: 55px;
+	text-align: center;
+	/*color: rgba(238, 34, 43, 1);*/
+}
+
 .listTitle	{
 	list-style: none;
+	text-align: center;
 	/*text-decoration: underline;*/
 	font-weight: bolder;
+	margin-bottom: 25px;
 }
 .custom_btn	{
 	margin-left: 25px;
@@ -200,4 +219,22 @@ a:hover{
 	.finish_btn{
 		margin-left: 0;	
 	}
+}
+.bottomBorder	{
+	border-bottom: 1px solid rgba(84,72,74,0.5);
+}
+.contactFaq	{
+	margin-top: 50px;
+}
+.contactFaq a{
+	color: black;
+}
+.lvl-nav:hover{
+	border: 1px solid rgba(0, 0, 0, 0.45);
+}
+.contactFaq a:hover{
+	text-decoration: none;
+}
+.customList	ul{
+	list-style-type: circle;
 }
