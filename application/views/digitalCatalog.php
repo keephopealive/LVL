@@ -57,7 +57,7 @@
     <!-- CONTENT START -->
 
     <div class='row catalog top50'>
-        <h3 class='center-block'><a href="../assets/MELJAC_Catalog_2013.pdf">Click here to download PDF Catalog</a></h3>
+        <h3 class='center-block'><a href="../assets/MELJAC_Catalog_2013.pdf" download>Click here to download PDF Catalog</a></h3>
     </div>
     <!-- CONTENT END -->
 
