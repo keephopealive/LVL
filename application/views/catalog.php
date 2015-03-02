@@ -108,25 +108,25 @@
         "<div class='form-group'>"+
             "<label for='first_name' class='col-sm-3 col-sm-offset-1 control-label'>First Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='first_name' name='first_name' required>"+
+                "<input type='text' class='form-control content' id='first_name' name='first_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='last_name' class='col-sm-3 col-sm-offset-1 control-label'>Last Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='last_name' name='last_name' required>"+
+                "<input type='text' class='form-control content' id='last_name' name='last_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='company_name' class='col-sm-3 col-sm-offset-1 control-label'>Company Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='company_name' name='company_name'>"+
+                "<input type='text' class='form-control content' id='company_name' name='company_name'>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='email' class='col-sm-3 col-sm-offset-1 control-label'>Email Address</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='email' class='form-control' id='email' name='email' required>"+
+                "<input type='email' class='form-control content' id='email' name='email' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
@@ -149,27 +149,31 @@
     $(document).on('click', 'input.mailed', function(){
         $('div.requestForm').html(""+
         "<div class='form-group'>"+
+            "<div class='col-sm-6 errors'>"+
+            "</div>"+
+        "</div>"+
+        "<div class='form-group'>"+
             "<label for='first_name' class='col-sm-3 col-sm-offset-1 control-label'>First Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='first_name' name='first_name' required>"+
+                "<input type='text' class='form-control content' id='first_name' name='first_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='last_name' class='col-sm-3 col-sm-offset-1 control-label'>Last Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='last_name' name='last_name' required>"+
+                "<input type='text' class='form-control content' id='last_name' name='last_name' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='company_name' class='col-sm-3 col-sm-offset-1 control-label'>Company Name</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='company_name' name='company_name'>"+
+                "<input type='text' class='form-control content' id='company_name' name='company_name'>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='email' class='col-sm-3 col-sm-offset-1 control-label'>Email Address</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='email' class='form-control' id='email' name='email' required>"+
+                "<input type='email' class='form-control content' id='email' name='email' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
@@ -189,43 +193,59 @@
         "<div class='form-group'>"+
             "<label for='address' class='col-sm-3 col-sm-offset-1 control-label'>Address</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='address' name='address' placeholder='Street Address' required>"+
+                "<input type='text' class='form-control content' id='address' name='address' placeholder='Street Address' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='city' class='col-sm-3 col-sm-offset-1 control-label'>City</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='city' name='city' required>"+
+                "<input type='text' class='form-control content' id='city' name='city' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='state' class='col-sm-3 col-sm-offset-1 control-label'>State</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='state' name='state' required>"+
+                "<input type='text' class='form-control content' id='state' name='state' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='postal_code' class='col-sm-3 col-sm-offset-1 control-label'>Postal Code</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='postal_code' name='postal_code' required>"+
+                "<input type='text' class='form-control content' id='postal_code' name='postal_code' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='country' class='col-sm-3 col-sm-offset-1 control-label'>Country</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='country' name='country' required>"+
+                "<input type='text' class='form-control content' id='country' name='country' required>"+
             "</div>"+
         "</div>"+
         "<div class='form-group'>"+
             "<label for='contact_number' class='col-sm-3 col-sm-offset-1 control-label'>Contact Number</label>"+
             "<div class='col-sm-6'>"+
-                "<input type='text' class='form-control' id='contact_number' name='contact_number' aria-describedby='helpBlock' required>"+
+                "<input type='text' class='form-control content' id='contact_number' name='contact_number' aria-describedby='helpBlock' required>"+
                 "<span id='helpBlock' class='help-block'>*Required for hard copy of catalog sent via FedEx</span>"+
             "</div>"+
         "</div>"+
         "<br>");
     });
 
+    $(document).on('change', 'input.content', function(){
+        if($(this).val().length > 0)
+        {
+            $(this).attr("aria-describedby", "inputSuccess2Status");
+            $(this).parent().removeClass("has-warning");
+            $(this).parent().addClass("has-success");
+            $(this).siblings("span").remove();
+            $(this).parent().append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
+
+        }else{
+            $(this).parent().removeClass("has-success");
+            $(this).parent().addClass("has-warning");
+            $(this).siblings("span").remove();
+            $(this).parent().append("<span class='glyphicon glyphicon-warning-sign form-control-feedback' aria-hidden='true'></span>");
+        }
+    });
 </script>
 
 

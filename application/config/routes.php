@@ -102,8 +102,12 @@ $route['order/updateStatus'] = "orders/updateStatus";
 $route['mpdftester'] = "product_items/mpdftester";
 $route['tradeEmail'] = "mains/tradeEmail";
 
+// Catalog
 $route['digitalCopy'] = "mains/catalogDigital";
 $route['catalogSuccess'] = "mains/catalogSuccess";
+// Catalog Validation
+$route['validateFedex'] = "mains/catalogFedexValidation";
+$route['validatePDF'] = "mains/catalogPDFValidation";
 
 // $route['product_items/edit/(:num)'] = "product_items/edit/$1";
 // die('here');
