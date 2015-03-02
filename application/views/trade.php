@@ -107,7 +107,7 @@
                 <form class="form-inline" action="/tradeEmail" id="tradeEmailForm" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control content" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;">
+                        <input type="text" class="form-control content" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;" required>
                     </div>
                     <!-- <div class="form-group">
                         <label for="company">Company</label>
@@ -115,7 +115,7 @@
                     </div> -->
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control content_email" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;">
+                        <input type="email" class="form-control content_email" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;" required>
                     </div>
                     
                     <button type="submit" class="inlineBtn btn btn-sm">Submit Email</button>

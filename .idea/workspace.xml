@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00f386e-bfbe-40e6-9dc4-9b8606c8c532" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/order.php" afterPath="$PROJECT_DIR$/application/models/order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/trade.php" afterPath="$PROJECT_DIR$/application/views/trade.php" />
     </list>
     <ignored path="LVL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +99,8 @@
       <file leaf-file-name="trade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/trade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2545969" vertical-offset="1335" max-vertical-offset="3510">
-              <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.48797736" vertical-offset="1335" max-vertical-offset="3510">
+              <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -221,8 +221,8 @@
         <option value="$PROJECT_DIR$/application/controllers/catalogs.php" />
         <option value="$PROJECT_DIR$/application/models/catalog.php" />
         <option value="$PROJECT_DIR$/application/views/adminDashboard.php" />
-        <option value="$PROJECT_DIR$/application/views/trade.php" />
         <option value="$PROJECT_DIR$/application/models/order.php" />
+        <option value="$PROJECT_DIR$/application/views/trade.php" />
       </list>
     </option>
   </component>
@@ -968,8 +968,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/trade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2545969" vertical-offset="1335" max-vertical-offset="3510">
-          <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.48797736" vertical-offset="1335" max-vertical-offset="3510">
+          <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
           <folding />
         </state>
       </provider>
