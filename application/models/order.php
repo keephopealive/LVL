@@ -102,7 +102,7 @@ class Order extends CI_Model {
 
 	public function tradeEmail($values)
 	{
-		$query = "INSERT INTO tradeEmails (name, company, email, created_at, updated_at) VALUES (?, ?, ?, NOW(), NOW())";
+		$query = "INSERT INTO tradeEmails (name, email, created_at, updated_at) VALUES (?, ?, NOW(), NOW())";
 		return $this->db->query($query, $values);
 	}
 	public function requestCatalog($values)
