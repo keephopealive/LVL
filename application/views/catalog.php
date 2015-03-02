@@ -78,11 +78,7 @@
 
             </div>
 
-            <div class='form-group'>
-                <div class='col-sm-offset-4 col-sm-10'>
-                    <button type='submit' class='btn btnSmall'>Request Catalog</button>
-                </div>
-            </div>
+
         </form>
     </div>
     <!-- CONTENT END -->
@@ -143,7 +139,11 @@
                 "</select>"+
             "</div>"+
         "</div>"+
-        "<br>");
+        "<div class='form-group'>"+
+            "<div class='col-sm-offset-4 col-sm-10'>"+
+                "<button type='submit' class='btn btnSmall'>Request Catalog</button>"+
+            "</div>"+
+        "</div>");
     });
 
     $(document).on('click', 'input.mailed', function(){
@@ -227,23 +227,27 @@
                 "<span id='helpBlock' class='help-block'>*Required for hard copy of catalog sent via FedEx</span>"+
             "</div>"+
         "</div>"+
-        "<br>");
+        "<div class='form-group'>"+
+            "<div class='col-sm-offset-4 col-sm-10'>"+
+                "<button type='submit' class='btn btnSmall'>Request Catalog</button>"+
+            "</div>"+
+        "</div>");
     });
 
     $(document).on('change', 'input.content', function(){
         if($(this).val().length > 0)
         {
             $(this).attr("aria-describedby", "inputSuccess2Status");
-            $(this).parent().removeClass("has-warning");
+            $(this).parent().removeClass("has-error");
             $(this).parent().addClass("has-success");
             $(this).siblings("span").remove();
             $(this).parent().append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
 
         }else{
             $(this).parent().removeClass("has-success");
-            $(this).parent().addClass("has-warning");
+            $(this).parent().addClass("has-error");
             $(this).siblings("span").remove();
-            $(this).parent().append("<span class='glyphicon glyphicon-warning-sign form-control-feedback' aria-hidden='true'></span>");
+            $(this).parent().append("<span class='glyphicon glyphicon-remove form-control-feedback' aria-hidden='true'></span>");
         }
     });
 

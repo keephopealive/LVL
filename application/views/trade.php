@@ -25,6 +25,32 @@
             return false;
         })
 
+        $(document).on('change', 'input.content', function(){
+            if($(this).val().length > 0)
+            {
+                $(this).attr("aria-describedby", "inputSuccess2Status");
+                $(this).parent().removeClass("has-error");
+                $(this).parent().addClass("has-success");
+
+            }else{
+                $(this).parent().removeClass("has-success");
+                $(this).parent().addClass("has-error");
+            }
+        });
+//        $(document).on('change', 'input.content_email', function(){
+//            var email = $("#email").val();
+//            var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+//            if (!filter.test(email.value)) {
+//                $(this).parent().removeClass("has-success");
+//                $(this).parent().addClass("has-error");
+//            } else {
+//                $(this).attr("aria-describedby", "inputSuccess2Status");
+//                $(this).parent().removeClass("has-error");
+//                $(this).parent().addClass("has-success");
+//            }
+//
+//        });
+
     </script>
 </head>
 <body>
@@ -81,7 +107,7 @@
                 <form class="form-inline" action="/tradeEmail" id="tradeEmailForm" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;">
+                        <input type="text" class="form-control content" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;">
                     </div>
                     <!-- <div class="form-group">
                         <label for="company">Company</label>
@@ -89,7 +115,7 @@
                     </div> -->
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;">
+                        <input type="email" class="form-control content_email" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;">
                     </div>
                     
                     <button type="submit" class="inlineBtn btn btn-sm">Submit Email</button>

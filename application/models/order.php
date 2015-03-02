@@ -109,7 +109,7 @@ class Order extends CI_Model {
 	{
 		if(isset($values['address'])) // FEDEX  + || isset($values['city']) || isset($values['state']) || isset($values['postal_code'])
 		{
-			$query = "INSERT INTO catalogs (delivery_method, first_name, last_name, company_name, email, profession, address, city, state, postal_code, country, contact_nubmer, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?, NOW(), NOW())";
+			$query = "INSERT INTO catalogs (delivery_method, first_name, last_name, company_name, email, profession, address, city, state, postal_code, country, contact_number, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?, NOW(), NOW())";
 			$this->db->query($query, $values);
 			return "fedex";
 		}

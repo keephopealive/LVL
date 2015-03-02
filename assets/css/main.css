@@ -265,7 +265,7 @@ h3{
 	/*border-left: 2px solid #ABA7A7;
 	border-right: 2px solid #ABA7A7;*/
 }
-.glyphicon-ok{
-	padding-right: 25px;
+.glyphicon-ok, .glyphicon-remove{
+	padding-right: 30px;
 }
 
