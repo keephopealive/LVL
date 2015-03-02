@@ -15,6 +15,6 @@ class Catalog extends CI_Model {
 	public function adminRetrieveAllCatalogs()
 	{
 		$query = "SELECT * FROM catalogs";
-		return $this->db->query($query);
+		return $this->db->query($query)->result_array();
 	}
 }
