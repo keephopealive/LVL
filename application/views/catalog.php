@@ -246,6 +246,45 @@
             $(this).parent().append("<span class='glyphicon glyphicon-warning-sign form-control-feedback' aria-hidden='true'></span>");
         }
     });
+
+//    $(document).on('submit', 'form', function(){
+//        if($("#address").length > 0)
+//        {
+//            $.post(
+//                "/validateFedex",
+//                $(this).serialize(),
+//                function(return_data){
+//                    if(return_data.st == 0)
+//                    {
+//                        return_data.msg.replace(/"/g, "");
+////                        return_data.msg.replace(/"/g, "");
+//
+//                        $('div.errors').html(return_data.msg);
+//
+//                    }
+//                    console.log(return_data);
+//                    console.log('ERRORS FEDEX');
+//
+//                },"json"
+//            );
+//            return false;
+//            alert("FEDEX");
+//        }
+//        else
+//        {
+//            $.post(
+//                "/validatePDF",
+//                $(this).serialize(),
+//                function(return_data){
+//
+//                    console.log("ERRORS PDF");
+//
+//                },"json"
+//            );
+//            return false;
+//            alert("PDF");
+//        }
+//    });
 </script>
 
 
