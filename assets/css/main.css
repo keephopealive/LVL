@@ -268,4 +268,7 @@ h3{
 .glyphicon-ok, .glyphicon-remove{
 	padding-right: 30px;
 }
+.success	{
+	color:rgba(238, 34, 43, 1);
+}
 

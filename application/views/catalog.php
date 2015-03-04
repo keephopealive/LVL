@@ -19,7 +19,7 @@
     <!-- HEADER ===================	 -->
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-            <a href="http://test.lvl-usa.com"><img src="assets/img/lvl_logo_6.png" class="img-responsive center-block"></a>
+            <a href="http://lvl-usa.com"><img src="assets/img/lvl_logo_6.png" class="img-responsive center-block"></a>
         </div>
         <div class="col-sm-8 col-sm-offset-2" style="margin-top:25px;">
             <p class="headTag">Exclusive Distributor of <span style="color:rgb(238,34,43);">Meljac</span> in North America</p>
@@ -58,7 +58,7 @@
 
     <div class='row catalog top50'>
         <h3 class='center-block'>Request a Catalog</h3>
-        <h2><?= $this->session->flashdata('update_msg');?></h2>
+        <h3 class='center-block success'><?= $this->session->flashdata('update_msg');?></h2>
         <form class='form-horizontal' action="/requestCatalog" method="post">
             <div class='col-sm-7 col-sm-offset-4 catalogRadio'>
                 <div class='radio'>

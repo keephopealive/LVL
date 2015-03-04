@@ -23,7 +23,7 @@
 <div class="container-fluid viewport">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
-			<a href="http://test.lvl-usa.com"><img src="assets/img/lvl_logo_6.png" class="img-responsive center-block"></a>
+			<a href="http://lvl-usa.com"><img src="assets/img/lvl_logo_6.png" class="img-responsive center-block"></a>
 		</div>
 		<div class="col-sm-8 col-sm-offset-2" style="margin-top:25px;">
 			<p class="headTag">Exclusive Distributor of <span style="color:rgb(238,34,43);">Meljac</span> in North America</p>

@@ -39,6 +39,11 @@ class Mains extends CI_Controller {
 		$this->load->view('trade');
 	}
 
+	public function finish()
+	{
+		$this->load->view('finish');
+	}
+
 	public function login()
 	{
 	

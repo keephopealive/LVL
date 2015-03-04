@@ -53,7 +53,7 @@ class Catalogs extends CI_Controller {
 		}
 		else
 		{
-			$this->session->set_flashdata('update_msg', "Catalog request was successful.");
+			$this->session->set_flashdata('update_msg', "Your catalog request has been submitted.<br><br> Please allow 3-5 business days for delivery.");
 			redirect('/catalog');
 		}
 //			$this->catalog->requestCatalog($this->input->post());

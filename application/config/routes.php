@@ -66,7 +66,7 @@ $route['trade'] = "mains/trade";
 $route['faq'] = "mains/faq";
 $route['contact'] = "mains/contact";
 $route['requestCatalog'] = "catalogs/requestCatalog";
-
+$route['finish'] = "mains/finish";
 
 // Product_Items (Custom Products)
 $route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad

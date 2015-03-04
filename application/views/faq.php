@@ -19,7 +19,7 @@
     <!-- HEADER ===================	 -->
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-            <a href="http://test.lvl-usa.com"><img src="assets/img/lvl_logo_6.png" class="img-responsive center-block"></a>
+            <a href="http://lvl-usa.com"><img src="assets/img/lvl_logo_6.png" class="img-responsive center-block"></a>
         </div>
         <div class="col-sm-8 col-sm-offset-2" style="margin-top:25px;">
             <p class="headTag">Exclusive Distributor of <span style="color:rgb(238,34,43);">Meljac</span> in North America</p>
@@ -62,10 +62,20 @@
             <p class='question'>Are Meljac’s keypads compatible with low-voltage home automation systems?</p>
             <p class='answer'>Yes. Meljac push buttons and toggles are all dry contact closures and therefore are designed to work with any lighting control or home automation system via a contact closure control interface.  With these systems our momentary controls can be programmed to dim, cycle through lighting scenes, provide shading control, etc.</p>
 
+            <p class='question'>Which types of switch mechanisms does Meljac offer for their keypads?</p>
+            <p class='answer'>Meljac offers the following mechanism types:</p>
+             <ul class='answerUl'>
+                <li><strong>BP</strong> – Momentary Push Button with multiple functions.  Non-latching.</li>
+                <li><strong>BPE</strong> – Latching Push Button.  Clicks when pressed.</li>
+                <li><strong>INV</strong> – Momentary Toggle with multiple functions.  Rests in a center position.</li>
+                <li><strong>V&#38;V</strong> – Toggles that perform on/off function and remain in either an up or down position.</li>
+            </ul>
+
+
             <p class='question'>What customization options does Meljac offer?</p>
             <p class='answer'>When placing an order clients can decide on the following:</p>
              <ul class='answerUl'>
-                <li><strong>Finish</strong> – Meljac offers 25 standard finishes in chrome, nickel and bronze for all brass plates.  Please see our <a href="">finish catalog</a>.<br>For back-painted glass or powder-coated plates there is the option of any color in the Pantone or RAL color charts.<br>Meljac can also match any finish when provided a flat sample.  (Note:  additional lead time required.)</li>
+                <li><strong>Finish</strong> – Meljac offers 25 standard finishes in chrome, nickel and bronze for all brass plates.  Please see our <a href="/finish" target="_blank">finish catalog</a>.<br>For back-painted glass or powder-coated plates there is the option of any color in the Pantone or RAL color charts.<br>Meljac can also match any finish when provided a flat sample.  (Note:  additional lead time required.)</li>
                 <li><strong>Edge Style</strong> – Beveled or Straight</li>
                 <li><strong>Engraving</strong> – Add up to 8 characters in standard 2.5 point Helvetica font or select from a variety of other fonts and symbols.</li>
             </ul>
