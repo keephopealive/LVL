@@ -75,6 +75,12 @@ class Productitem extends CI_Model {
 
 		// same process for  backBoxImg , dwgFront , dwgSide
 
+
+		$data['frontView'] = $reference_no;
+
+
+
+
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")
 		{
@@ -167,6 +173,7 @@ class Productitem extends CI_Model {
 				$pdf->WriteHTML($html); // write the HTML into the PDF
 				$pdf->Output($pdfFilePath, 'F'); // save to file because we can
 			}
+
 // END PDF Generation ===================================================================
 
 		$this->session->set_userdata('reference_no', $reference_no);

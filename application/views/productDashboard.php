@@ -119,7 +119,7 @@
 			foreach($products as $product)
 			{
 	?>				<div class="col-sm-4 tester123">
-						<div class='productBlock' product_id="<?= $product['id'] ?>">
+						<div class='productBlock' product_id="<?= $product['id'] ?>" product_title="<?= $product['name']; ?>" product_type="<?= $product['type']; ?>" product_size="<?= $product['size'];?>" product_collection="<?= $product['collection']; ?>" product_finish="<?= $product['finish']; ?>" product_description="<?= $product['description'];?>" >
 							<p class="productTitle"><?= $product['name']; ?></p>
 							<img src="<?= $product['file_path'];?>" class="img-responsive">
 							<p class='productInfo'>Type | <?= $product['type']; ?></p>
@@ -575,7 +575,17 @@
 	/* Content for Modal pop-up */
 	$(document).on("click", "div.productBlock img", function(){
 		console.log($(this).attr('src'));
+		console.log($(this).parent('.productBlock').attr('product_title'));
+		console.log($(this).parent('.productBlock').attr('product_type'));
+		console.log($(this).parent('.productBlock').attr('product_size'));
+		console.log($(this).parent('.productBlock').attr('product_collection'));
+		console.log($(this).parent('.productBlock').attr('product_finish'));
+		console.log($(this).parent('.productBlock').attr('product_description'));
+
+
+		console.log($(this).attr('src'));
 		var img_src = $(this).attr('src');
+
 		$("div.modal div.modal-body").html(
 			"<img src='"+img_src+"'>");
 		$("#modal-gallery").modal("show");

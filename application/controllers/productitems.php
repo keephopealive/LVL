@@ -25,10 +25,8 @@ class Productitems extends CI_Controller {
 		$this->load->view('productitemNewKeypad', array('order_id' => $this->session->userdata['order_id']));
 	}
 
-	public function mpdftester()
+	public function mpdftester() // SAMPLE USE - UNSED FUNCTION
 	{
-		
-
 		$filename = "Win9002";
 		$pdfFilePath = FCPATH."/pdf/$filename.pdf";
 		$data['the_content'] = '|||||INSERTED CONTENT|||||'; // pass data to the view
@@ -48,6 +46,7 @@ class Productitems extends CI_Controller {
 		// $mpdf->
 		// var_dump($mpdf);
 	}
+
 
 	public function destroyProductitem()
 	{
