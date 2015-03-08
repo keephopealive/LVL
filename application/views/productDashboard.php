@@ -119,7 +119,7 @@
 			foreach($products as $product)
 			{
 	?>				<div class="col-sm-4 tester123">
-						<div class='productBlock' product_id="<?= $product['id'] ?>" product_title="<?= $product['name']; ?>" product_type="<?= $product['type']; ?>" product_size="<?= $product['size'];?>" product_collection="<?= $product['collection']; ?>" product_finish="<?= $product['finish']; ?>" product_description="<?= $product['description'];?>" >
+						<div class='productBlock' product_id="<?= $product['id'] ?>" product_title="<?= $product['name']; ?>" product_type="<?= $product['type']; ?>" product_size='<?= $product["size"];?>' product_collection="<?= $product['collection']; ?>" product_finish="<?= $product['finish']; ?>" product_description="<?= $product['description'];?>" >
 							<p class="productTitle"><?= $product['name']; ?></p>
 							<img src="<?= $product['file_path'];?>" class="img-responsive">
 							<p class='productInfo'>Type | <?= $product['type']; ?></p>
