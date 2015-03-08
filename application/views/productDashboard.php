@@ -8,17 +8,17 @@
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<style type="text/css">
-	.tester123{
-		height: 600px;
-		/*outline: 1px solid black;*/
-	}
-	.hidden{
-		display: hidden;
-	}
+		.tester123{
+			height: 600px;
+			/*outline: 1px solid black;*/
+		}
+		.hidden{
+			display: hidden;
+		}
 	</style>
 <div class="container-fluid viewport">
 	<div class="row">
@@ -117,9 +117,9 @@
 				<div class="products_list">
 <?php
 			foreach($products as $product)
-			{	
+			{
 	?>				<div class="col-sm-4 tester123">
-						<div class='productBlock'>
+						<div class='productBlock' product_id="<?= $product['id'] ?>">
 							<p class="productTitle"><?= $product['name']; ?></p>
 							<img src="<?= $product['file_path'];?>" class="img-responsive">
 							<p class='productInfo'>Type | <?= $product['type']; ?></p>
@@ -570,6 +570,46 @@
 		$('.collection_group').hide();
 	});
 
+	/// Modal
+
+	/* Content for Modal pop-up */
+	$(document).on("click", "div.productBlock img", function(){
+		console.log($(this).attr('src'));
+		var img_src = $(this).attr('src');
+		$("div.modal div.modal-body").html(
+			"<img src='"+img_src+"'>");
+		$("#modal-gallery").modal("show");
+	});
+
 </script>
+
+<!--	// Modal-->
+	<div class="modal" id="modal-gallery" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>TEST</h1>
+					<button class="close" type="button" data-dismiss="modal">×</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div id="modal-carousel" class="carousel">
+
+						<div class="carousel-inner">
+						</div>
+
+						<a class="carousel-control left" href="#modal-carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						<a class="carousel-control right" href="#modal-carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	// End Modal-->
+
 </body>
 </html>
