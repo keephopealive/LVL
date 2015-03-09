@@ -75,9 +75,17 @@ class Productitem extends CI_Model {
 
 		// same process for  backBoxImg , dwgFront , dwgSide
 
+//		$data['frontView'] = "./../../assets/img/cutsheetImg/front/". "F" .
 
-		$data['frontView'] = $reference_no;
+		$data['frontView'] = "../../assets/img/cutsheetImg/front/". "F" .
+			$productitem['collection'] .
+			$productitem['size'] .
+			$productitem['edge_screw'] .
+			"-" .
+			$productitem['mechanism']. ".jpg";
 
+//		var_dump($data['frontView']);
+//		die("Here");
 
 
 
@@ -160,7 +168,6 @@ class Productitem extends CI_Model {
 			$data['edge'] = 'STRAIGHT';
 		}
 	// Cutsheet "Type of Mechanism" and "power of supply" NEED TO BE DONE... QUERY TO JOIN WITH MECHANISMS TABLE AND FIND MECHANISM TYPES FROM THERE
-
 
 			// If file does not excit (avoid duplicate names & avoid overriding files
 			if (file_exists($pdfFilePath) == FALSE)
