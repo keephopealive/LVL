@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Products</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
@@ -147,6 +147,34 @@
 	    </div>
 	</div>
 		
+<!--	// Modal-->
+	<div class="modal" id="modal-gallery" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<!-- <h1>TEST</h1> -->
+					<button class="close" type="button" data-dismiss="modal">×</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div id="modal-carousel" class="carousel">
+
+						<div class="carousel-inner">
+						</div>
+
+						<a class="carousel-control left" href="#modal-carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						<a class="carousel-control right" href="#modal-carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	// End Modal-->
+
 
 </div>
 <script type="text/javascript">
@@ -585,41 +613,23 @@
 
 		console.log($(this).attr('src'));
 		var img_src = $(this).attr('src');
-
+		$("div.modal div.modal-header").html(""+
+			"<button class='close' type='button' data-dismiss='modal'>×</button>"+
+			"<h3 class='modal-title'>"+$(this).parent('.productBlock').attr('product_title')+"</h3>");
 		$("div.modal div.modal-body").html(
 			"<img src='"+img_src+"'>");
+		$("div.modal div.modal-footer").html(""+
+			"<p class='productInfo'><strong>Type |</strong>  "+$(this).parent('.productBlock').attr('product_type')+"</p>"+
+			"<p class='productInfo'><strong>Size |</strong>  "+$(this).parent('.productBlock').attr('product_size')+"</p>"+
+			"<p class='productInfo'><strong>Collection |</strong>  "+$(this).parent('.productBlock').attr('product_collection')+"</p>"+
+			"<p class='productInfo'><strong>Finish |</strong>  "+$(this).parent('.productBlock').attr('product_finish')+"</p>"+
+			"<p class='productInfo'>"+$(this).parent('.productBlock').attr('product_description')+"</p>"+
+			"<button class='btn btn-default pull-right' data-dismiss='modal'>Close</button>");
 		$("#modal-gallery").modal("show");
 	});
 
 </script>
 
-<!--	// Modal-->
-	<div class="modal" id="modal-gallery" role="dialog" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1>TEST</h1>
-					<button class="close" type="button" data-dismiss="modal">×</button>
-					<h3 class="modal-title"></h3>
-				</div>
-				<div class="modal-body">
-					<div id="modal-carousel" class="carousel">
-
-						<div class="carousel-inner">
-						</div>
-
-						<a class="carousel-control left" href="#modal-carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-						<a class="carousel-control right" href="#modal-carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<!--	// End Modal-->
 
 </body>
 </html>

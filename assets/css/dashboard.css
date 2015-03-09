@@ -238,3 +238,16 @@ a:hover{
 .customList	ul{
 	list-style-type: circle;
 }
+.modal	{
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+}
+.modal-header,
+.modal-body	{
+	text-align: center;
+}
+.modal-footer	{
+	text-align: left;
+	
+}
+
