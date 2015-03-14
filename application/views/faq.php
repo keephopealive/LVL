@@ -60,22 +60,22 @@
             <h3 class='center-block'>Frequently Asked Questions</h3>
 
             <p class='question'>Are Meljac’s keypads compatible with low-voltage home automation systems?</p>
-            <p class='answer'>Yes. Meljac push buttons and toggles are all dry contact closures and therefore are designed to work with any lighting control or home automation system via a contact closure control interface.  With these systems our momentary controls can be programmed to dim, cycle through lighting scenes, provide shading control, etc.</p>
+            <p class='answer'>Yes. Meljac push buttons and toggles are all dry contact closures and therefore are designed to work with any lighting control or home automation system via a contact closure control interface.  With these systems our momentary controls can be programmed to dim, cycle through lighting scenes, provide shading control, etc.  Meljac keypads are equally suited for new projects with a low-voltage home automation system or as replacements for previously installed keypads.</p>
 
             <p class='question'>Which types of switch mechanisms does Meljac offer for their keypads?</p>
             <p class='answer'>Meljac offers the following mechanism types:</p>
              <ul class='answerUl'>
-                <li><strong>BP</strong> – Momentary Push Button with multiple functions.  Non-latching.</li>
-                <li><strong>BPE</strong> – Latching Push Button.  Clicks when pressed.</li>
-                <li><strong>INV</strong> – Momentary Toggle with multiple functions.  Rests in a center position.</li>
-                <li><strong>V&#38;V</strong> – Toggles that perform on/off function and remain in either an up or down position.</li>
+                <li><strong>INV (15A 250 VAC)</strong> – Momentary toggle switch with multiple functions that rests in a center position.</li>
+                <li><strong>V&#38;V (15A 250 VAC)</strong> – Single pull switch that performs on/off function and remains in either an up or down position. It can be used in a typical three-way switch configuration.</li>
+                <li><strong>BP (Low Voltage Switch)</strong> – Momentary push button with multiple functions.</li>
+                <li><strong>BPE (Low Voltage Switch)</strong> – Latching push button for on/off function that clicks when pressed.</li>
             </ul>
 
 
             <p class='question'>What customization options does Meljac offer?</p>
             <p class='answer'>When placing an order clients can decide on the following:</p>
              <ul class='answerUl'>
-                <li><strong>Finish</strong> – Meljac offers 25 standard finishes in chrome, nickel and bronze for all brass plates.  Please see our <a href="/finish" target="_blank">finish catalog</a>.<br>For back-painted glass or powder-coated plates there is the option of any color in the Pantone or RAL color charts.<br>Meljac can also match any finish when provided a flat sample.  (Note:  additional lead time required.)</li>
+                <li><strong>Finish</strong> – Meljac offers 25 standard finishes in chrome, nickel and bronze for all brass plates.  Please see our <a href="/finish" target="_blank">finish catalog</a>.<br>For back-painted glass or powder-coated plates there is the option of any color in the Pantone or RAL color charts.<br>Meljac can also match any finish when provided a flat sample.  (Note:  additional lead time required.)<br>For select finishes Meljac can also match the finish of the switch mechanism to that of the plate.</li>
                 <li><strong>Edge Style</strong> – Beveled or Straight</li>
                 <li><strong>Engraving</strong> – Add up to 8 characters in standard 2.5 point Helvetica font or select from a variety of other fonts and symbols.</li>
             </ul>
@@ -83,8 +83,8 @@
             <p class='question'>Does Meljac offer keypads for line voltage applications?</p>
             <p class='answer'>Yes. There are three options for using Meljac with line voltage:</p>
             <ul class='answerUl'>
-                <li><strong>Non-Dimming Toggle Switch</strong> – Both Meljac toggle switches are rated for 15A 120VAC and can be used for on/off lighting control.</li>
-                <li><strong>Rotary Dimmer</strong> – Meljac also offers a rotary dimmer plate rated for 15A 120 V.</li>
+                <li><strong>Non-Dimming Toggle Switch</strong> – Both Meljac toggle switches are rated for 15A 250 VAC and can be used for on/off controlling of lighting, fans and various other types of electrical equipment.</li>
+                <li><strong>Rotary Dimmer</strong> – Meljac offers a rotary dimmer plate rated for 15A 120 VAC up to 600 W.</li>
                 <li><strong>Dimming Toggle with Insteon® Micro Dimmer Module</strong> – Meljac toggle switches can also be used in conjunction with the <a href="http://cache.insteon.com/documentation/2442-x22-en.pdf" target="_blank">Insteon® Micro Dimmer Module</a>which can handle loads of 5W - 100W at 140VAC.  Please note that the size of the Micro Dimmer Module limits the amount of controls that can fit in a plate.</li>
             </ul>
 
@@ -95,7 +95,7 @@
             <p class='answer'>Since Meljac products are made-to-order, please allow 8-10 weeks for delivery from when LVL-USA receives a 50% deposit on standard orders.  More production time is required for custom orders.</p>
 
             <p class='question'>Do Meljac keypads and outlets use standard American size back boxes?</p>
-            <p class='answer'>The single gang (3.2” x 4.6” or 82 x 117mm) Meljac plate with visible screws is compatible with a standard American back box.<br><br>All other plate sizes as well as the screwless single gang plate come with Meljac’s own proprietary metal back box.</p>
+            <p class='answer'>Single gang (3.2” x 4.6” or 82 x 117mm) Meljac plates with visible screws are compatible with a standard American back box.<br><br>All other plate sizes as well as the screwless single gang plate are designed to be used with a UL-approved, proprietary metal back box.<br><br>Please <a href="../assets/MeljacBackBoxDrawings.pdf" download>click here</a> to download the drawings and measurement specifications for all Meljac back boxes.</p>
 
             <p class='question'>Can I replace the light switches and plates currently in my home with Meljac?</p>
             <p class='answer'>Meljac offers a plate that is sized to replace an American switch plate from 1-6 gangs.  See above for line-voltage options.</p>

@@ -177,6 +177,9 @@
 
 
 </div>
+
+
+
 <script type="text/javascript">
 
 	$(document).on('click', '#order_by_collection', function(){
@@ -188,7 +191,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title="+row.name+"product_type="+row.type+"product_size="+row.size+"product_collection="+row.collection+"product_finish="+row.finish+"product_description="+row.description+">"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -213,7 +216,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title="+row.name+"product_type="+row.type+"product_size="+row.size+"product_collection="+row.collection+"product_finish="+row.finish+"product_description="+row.description+">"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -238,7 +241,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title="+row.name+"product_type="+row.type+"product_size="+row.size+"product_collection="+row.collection+"product_finish="+row.finish+"product_description="+row.description+">"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -267,7 +270,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 					"<p class='productTitle'>"+row.name+"</p>"+
 					"<img src="+row.file_path+" class='img-responsive'>"+
 					"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -293,7 +296,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 					"<p class='productTitle'>"+row.name+"</p>"+
 					"<img src="+row.file_path+" class='img-responsive'>"+
 					"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -319,7 +322,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 					"<p class='productTitle'>"+row.name+"</p>"+
 					"<img src="+row.file_path+" class='img-responsive'>"+
 					"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -345,7 +348,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 					"<p class='productTitle'>"+row.name+"</p>"+
 					"<img src="+row.file_path+" class='img-responsive'>"+
 					"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -371,7 +374,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 					"<p class='productTitle'>"+row.name+"</p>"+
 					"<img src="+row.file_path+" class='img-responsive'>"+
 					"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -400,7 +403,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -425,7 +428,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -450,7 +453,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -475,7 +478,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
@@ -551,7 +554,7 @@
 					console.log(row);
 					$('.products_list').append(""+
 					"<div class='col-sm-4 tester123'>"+
-					"<div class='productBlock'>"+
+					"<div class='productBlock' product_title='"+row.name+"' product_type='"+row.type+"' product_size='"+row.size+"' product_collection='"+row.collection+"' product_finish='"+row.finish+"' product_description='"+row.description+"'>"+
 						"<p class='productTitle'>"+row.name+"</p>"+
 						"<img src="+row.file_path+" class='img-responsive'>"+
 						"<p class='productInfo'>Type | "+row.type+"</p>"+
