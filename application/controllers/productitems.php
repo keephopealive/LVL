@@ -24,6 +24,10 @@ class Productitems extends CI_Controller {
 
 		$this->load->view('productitemNewKeypad', array('order_id' => $this->session->userdata['order_id']));
 	}
+	public function newProductitemOutlet()
+	{
+		$this->load->view('productitemNewOutlet', array('order_id' => $this->session->userdata['order_id']));
+	}
 
 	public function mpdftester() // SAMPLE USE - UNSED FUNCTION
 	{

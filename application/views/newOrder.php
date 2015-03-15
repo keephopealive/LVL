@@ -19,52 +19,59 @@
 			</div>
 		</div>
 
-		<div class="row navbar">
+		<!-- <div class="row navbar">
 			<div class="col-sm-4 col-sm-offset-2">
 				<h4> Create a New Order</h4>
 			</div>
 			<div class="col-sm-3 col-sm-offset-1">
 				<a href="/dashboard"><button class='btn btn-md btn-block'>Back to Dashboard</button></a>
 			</div>
+		</div> -->
+		<div class="row navbar">
+			<h3 class="center-block"> Create a New Order</h3>
 		</div>
-
 		<div class="row orderInfo top50">
-		<div class="col-sm-10 col-sm-offset-2">
-			<form method='post' action='/order/updateOrderInfo' class="form-horizontal">
-				<input type='hidden' name='order_id' value="<?= $order['id'] ?>">
+			<div class="col-sm-6 col-sm-offset-1">
+				<form method='post' action='/order/updateOrderInfo' class="form-horizontal">
+					<input type='hidden' name='order_id' value="<?= $order['id'] ?>">
 
-				<div class="form-group">
-					<label for="projectName" class="col-sm-2 control-label">Project Name</label>
-					<div class="col-sm-6">
-						<input type="text" class="form-control" id="projectName" name='project_name'value="<?= $order['project_name'] ?>">
+					<div class="form-group">
+						<label for="projectName" class="col-sm-2 control-label">Project Name</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="projectName" name='project_name'value="<?= $order['project_name'] ?>">
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label for="projectAddress" class="col-sm-2 control-label">Project Address</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="projectAddress" name='project_address' value="<?= $order['project_address'] ?>">
+					<div class="form-group">
+						<label for="projectAddress" class="col-sm-2 control-label">Project Address</label>
+						<div class="col-sm-6">
+						<input type="text" class="form-control" id="projectAddress" name='project_address' value="<?= $order['project_address'] ?>">
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group">
-					<label for="clientNote" class="col-sm-2 control-label">Client Note:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="clientNote" name='client_note' value="<?= $order['client_note'] ?>">
+					<div class="form-group">
+						<label for="clientNote" class="col-sm-2 control-label">Client Note:</label>
+						<div class="col-sm-6">
+						<input type="text" class="form-control" id="clientNote" name='client_note' value="<?= $order['client_note'] ?>">
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-6">
-						<button type="submit" class="btn btn-default">Update Order Info</button>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-6">
+							<button type="submit" class="btn btn-default">Update Order Info</button>
+						</div>
 					</div>
-				</div>
-			</form>
+				</form>
+			</div>
+
+			<div class="col-sm-3 orderAction1">
+				<a href="/productitem/newProductitem/keypad"><button class='btn btn-lg btn-block orderAction1btn lvl-nav' style='margin-bottom:10%;'>Add Keypad</button></a>
+				<a href="/productitem/newProductitem/outlet"><button class='btn btn-lg btn-block orderAction1btn lvl-nav'>Add Outlet</button></a>
+			</div>
+
+
 		</div>
 
-
-		</div>
-
-		<div class="row orderAction1">
+		<!-- <div class="row orderAction1">
 			<div class="col-sm-3 col-sm-offset-5">
 				<a href="/productitem/newProductitem/keypad"><button class='btn btn-block orderAction1btn'>Add Keypad</button></a>
 			</div>
@@ -72,16 +79,17 @@
 				<a href="/productitem/newProductitem/outlet"><button class='btn btn-block orderAction1btn'>Add Outlet</button></a>
 			</div>
 		</div>
-
+ -->
 		<div class="row orderTable">
 			<div class="col-sm-10 col-sm-offset-1">
 				<table class='table table-bordered table-hover'>
 					<thead>
 						<th class="col-sm-2">Reference No</th>
-						<th class="col-sm-4">Note</th>
+						<th class="col-sm-4">Room/Product Name</th>
 						<th class="col-sm-2">Quantity</th>
-						<th class="col-sm-2">Download Cutsheet</th>
-						<th class="col-sm-2">Actions</th>
+						<th class="col-sm-2">Engraving</th>
+						<th class="col-sm-2">Cutsheet</th>
+						<th class="col-sm-2">Delete</th>
 					</thead>
 <?php	foreach($productitems as $productitem)
 		{
@@ -89,11 +97,13 @@
 						<td><?= $productitem['reference_no']?></td> 
 						<td><?= $productitem['note']?></td>
 						<td><?= $productitem['quantity']?></td>
-						<td><a href="././../../../pdf/<?= $productitem['pdf'];?>.pdf"><?= $productitem['pdf'];?></a></td> 
+						<td><?= $productitem['engraving']?></td> 
+						<td><a class="btn delItem" href="././../../../pdf/<?= $productitem['pdf'];?>.pdf">PDF Download</a>
+						</td>
 						<td>
 							<form method='post' action='/productitem/destroyProductitem'>
 								<input type='hidden' name='productitem_id' value="<?= $productitem['id']; ?>">
-								<input type='submit' value='Delete'>
+								<input type='submit' class='btn delItem'value='Delete'>
 							</form>
 						</td>
 					</tr>
@@ -103,10 +113,10 @@
 		</div>
 
 		<div class="row orderAction2">
-			<div class="col-sm-4 col-sm-offset-1">
+			<div class="col-sm-3 col-sm-offset-2">
 				<a href="/order/deleteOrder/<?= $order_id; ?>"><button class='btn btn-block lvl-nav'>Delete/Cancel Order</button></a>
 			</div>
-			<div class="col-sm-4 col-sm-offset-2">
+			<div class="col-sm-3 col-sm-offset-2">
 				<a href="/order/updateOrder/<?= $order_id; ?>"><button class='btn btn-block lvl-nav'>Save Order</button></a>
 			</div>
 		</div>

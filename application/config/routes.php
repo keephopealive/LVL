@@ -70,6 +70,7 @@ $route['finish'] = "mains/finish";
 
 // Product_Items (Custom Products)
 $route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad
+$route['productitem/newProductitem/outlet'] = "productitems/newProductitemOutlet"; // New Keypad
 $route['productitem/newProductitem'] = "productitems/newProductitem"; // New
 $route['productitem/createProductitem'] = 'productitems/createProductitem'; // Create
 $route['productitem/destroyProductitem'] = '/productitems/destroyProductitem'; // Create

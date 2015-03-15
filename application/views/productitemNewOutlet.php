@@ -28,7 +28,7 @@
 		</div>
 	</div> -->
 	<div class="row top50">
-		<h3 class="center-block" style="text-align:center;font-family: 'Cinzel', serif; font-weight:400;">Create a Custom Keypad</h3>
+		<h3 class="center-block" style="text-align:center;font-family: 'Cinzel', serif; font-weight:400;">Create a Custom Outlet</h3>
 		
 		<div class='errors center-block top50'>
 		</div>
@@ -51,54 +51,41 @@
 				<div class="collection"> <!-- FINISH OPTIONS DIV -->
 					<select name="collection" class="form-control selectwidthauto collection">
 						<option class="collection" value="C">CLASSIQUE</option>
-						<option class="collection" value="E">ELLIPSE</option>
-						<option class="collection" value="P">PIERROT</option>
-						<option class="collection" value="L">LIMOGES</option>
-						<option class="collection" value="K">DAMIER</option>
+						<option class="collection" value="S">SOL</option>
+						<option class="collection" value="SPE">CUISINE</option>
 					</select>
 				</div>
 			</div>
 	<!-- END COLLECTION -->
 
-	<!-- ORIENTATION -->
-			<div class="col-xs-4 col-sm-2 col-sm-offset-1 cataBox">
-				<h4>Orientation</h4>
-				<div class="orientation"> <!-- ORIENTATION OPTIONS DIV -->
-					<div class="radio padRad1">
-						<label>
-							<input type='radio' name='orientation' class='horizontal' value="horizontal">  Horizontal
-						</label>
-					</div>
-					<br>
-					<div class="radio padRad1">
-						<label>
-							<input type='radio' name='orientation' class='vertical' value="vertical">  Vertical
-						</label>
-					</div>
-				</div>
-			</div>
-	<!-- END ORIENTATION -->
-
 	<!-- SIZE -->
 			<div class="col-xs-4 col-sm-2 col-sm-offset-1 cataBox">
 				<h4>Plate Size</h4>
 				<div class="size">	<!-- APPENDING SIZE OPTIONS -->
-					<p style="text-align:center;">Select orientation first.</p>
+					<div class='radio padRad1'>
+						<label>
+							<input type='radio' name='size' orientation='horizontal' class='size' value='3008'>82 x 82
+						</label>
+					</div>
+						<br>
+					<div class='radio padRad1'>
+						<label>
+							<input type='radio' name='size' orientation='horizontal' class='size' value='3000'>117 x 82
+						</label>
+					</div>
+						<br>
+					<div class='radio padRad1'>
+						<label>
+							<input type='radio' name='size' orientation='horizontal' class='size' value='3002'>144 x 82
+						</label>
+					</div>
+						<br>
 				</div>
 			</div>
 	<!-- END SIZE -->
 
-		</div>
-	<!-- END 1ST ROW -->
-
-		<div class="clearfix visible-sm-block">
-		</div>
-
-	<!-- BEGIN 2ND ROW -->
-		<div class="row field">
-
 	<!-- FINISH -->
-			<div class="col-sm-2 col-sm-offset-2 cataBox">
+			<div class="col-sm-2 col-sm-offset-1 cataBox">
 				<h4>Finish</h4>
 				<div class="orientation"> <!-- FINISH OPTIONS DIV -->
 					<select name="finish" class="form-control selectwidthauto">
@@ -136,23 +123,17 @@
 			</div>
 	<!-- END FINISH -->
 
-	<!-- MECHANISM -->
-			<div class="col-sm-2 col-sm-offset-1 cataBox mech">
-				<h4>Mechanisms</h4>
-				<!-- <div class="radio">
-					<label>
-						<input type="checkbox" class="matchFinish" name="matchFinish" value="YES"> Match with Finish?</input>
-					</label>
-				</div> -->
-				<br>
-				<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
-					<option>PLEASE CHOOSE SIZE FIRST</option>
-				</select>
-			</div>
-	<!-- END MECHANISM  -->
+		</div>
+	<!-- END 1ST ROW -->
+
+		<div class="clearfix visible-sm-block">
+		</div>
+
+	<!-- BEGIN 2ND ROW -->
+		<div class="row field">
 
 	<!-- EDGE / SCREW -->
-			<div class="col-sm-2 col-sm-offset-1 cataBox">
+			<div class="col-sm-2 col-sm-offset-2 cataBox">
 				<div class="ES">
 					<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
 						<h4>Screw</h4>
@@ -171,41 +152,44 @@
 				</div>
 			</div>
 	<!-- END EDGE / SCREW -->
+
+	<!-- MECHANISM -->
+			<div class="col-sm-2 col-sm-offset-1 cataBox mech">
+				<h4>Mechanisms</h4>
+				<!-- <div class="radio">
+					<label>
+						<input type="checkbox" class="matchFinish" name="matchFinish" value="YES"> Match with Finish?</input>
+					</label>
+				</div> -->
+				<br>
+				<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
+					<option>PLEASE CHOOSE SIZE FIRST</option>
+				</select>
+			</div>
+	<!-- END MECHANISM  -->
+
+	<!-- EDGE / SCREW -->
+			<div class="col-sm-2 col-sm-offset-1 cataBox">
+				<h4>Color</h4>
+				<div class="color">	<!-- APPENDING SIZE OPTIONS -->
+					<div class='radio padRad1'>
+						<label>
+							<input type='radio' name='color' class='color' value='B'>Black
+						</label>
+					</div>
+						<br>
+					<div class='radio padRad1'>
+						<label>
+							<input type='radio' name='color' class='color' value='W'>White
+						</label>
+					</div>
+						<br>
+				</div>
+			</div>
+	<!-- END EDGE / SCREW -->
 		</div>
 	<!-- END 2ND ROW -->
 			
-		<div class="clearfix visible-sm-block">
-		</div>
-
-	<!-- BEGIN 3RD ROW -->
-		<div class="row field">
-	
-	<!-- BEGIN NOTES -->
-			<div class='note col-sm-2 col-sm-offset-2 cataBox top50'>
-				<h4>Room/Product Name</h4>
-				<input class="fullInput" type="text" name="note" placeholder="i.e. Kitchen switch 1">
-			</div>
-	<!-- END NOTES -->
-
-	<!-- BEGIN QUANTITY -->
-			<div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
-				<h4>Quantity</h4>
-				<input class="fullInput" type="number" name='quantity' value="1">
-			</div>
-	<!-- END QUANTITY -->
-
-	<!-- BEGIN ENGRAVING -->
-			<div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
-				<h4>Engraving</h4>
-				<input class="fullInput" type="text" name='engraving'>
-			</div>
-	<!-- END ENGRAVING-->
-			<div class='hiddenfield'>
-			</div>
-
-		</div>
-
-	<!-- END 3RD ROW -->
 		<div class="clearfix visible-sm-block">
 		</div>
 
@@ -252,9 +236,8 @@
 
 // POPULATING FINISH AND EDGE/SCREW FROM COLLECTION
 	$(document).on('change', 'select.collection', function (e) {
-		sessionStorage.runnerA == null;
-// Piero
-		if ( $(this).val() == 'P' )
+// Classique
+		if ( $(this).val() == 'C' )
 		{
 			$('div.edge').html("");
 			$('div.screw').html("");
@@ -264,22 +247,22 @@
 			console.log("P");
 			$('div.hiddenfield').html("<input type='hidden' name='collection' value='P' />"); // ADDED LINE
 		}
-// Limoges OR Damier
-		else if ( $(this).val() == 'L' )
+// Sol
+		else if ( $(this).val() == 'S' )
 		{
 			$('div.edge').html("");
 			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
 			console.log("L OR K");
 			$('div.hiddenfield').html("<input type='hidden' name='collection' value='L' />"); // ADDED LINE
 		}
-		else if ( $(this).val() == 'K' )
+		else if ( $(this).val() == 'SPE' )
 		{
 			$('div.edge').html("");
 			$('div.screw').html("<input type='hidden' name='edge_screw' value='D'>");
 			console.log("L OR K");
 			$('div.hiddenfield').html("<input type='hidden' name='collection' value='K' />"); // ADDED LINE
 		}
-// Classique
+// Cuisine
 		else if ( $(this).val() == 'C'  )
 		{
 			sessionStorage.runnerA = 'C';

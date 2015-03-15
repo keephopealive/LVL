@@ -93,6 +93,9 @@ a:hover{
 	/*border-left: 2px solid #ABA7A7;
 	border-right: 2px solid #ABA7A7;*/
 }
+.lvl-nav:hover{
+	border: 1px solid rgba(0, 0, 0, 0.45);
+}
 .myOrders	{
 	margin-top: 100px;
 }
@@ -102,6 +105,22 @@ a:hover{
 .top25	{
 	margin-top: 25px;
 }
+.delItem {
+	display: inline-block;
+	letter-spacing: 0.15em;
+	font-family: 'Cinzel', serif;
+	/*font-family: 'Playfair Display SC', serif;*/
+	/*font-weight: bold;*/
+	/*font-family: 'Josefin Slab', serif;*/
+	font-size: 16px;
+	margin: 0;
+	/*padding-left: 4%;
+	padding-right: 4%;*/
+	border: 1px solid rgba(238, 34, 43, 0.45);
+	/*border: 1px solid rgba(239, 35, 35, 0.25);*/
+	/*border-left: 2px solid #ABA7A7;
+	border-right: 2px solid #ABA7A7;*/
+}
 .viewOrder{
 	/*letter-spacing: 0.15em;*/
 	font-family: 'Cinzel', serif;
@@ -110,7 +129,9 @@ a:hover{
 	border: 1px solid rgba(238, 34, 43, 0.45);
 }
 .orderAction1	{
-	margin-top: 50px;
+	/*margin-top: 50px;*/
+	display: block;
+	vertical-align: top;
 }
 .orderTable	{
 	margin-top: 50px;
@@ -229,9 +250,7 @@ a:hover{
 .contactFaq a{
 	color: black;
 }
-.lvl-nav:hover{
-	border: 1px solid rgba(0, 0, 0, 0.45);
-}
+
 .contactFaq a:hover{
 	text-decoration: none;
 }
