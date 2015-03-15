@@ -85,9 +85,8 @@ class Order extends CI_Model {
 		// I Column
 		$objPHPExcel->getActiveSheet()->SetCellValue('I2', '');
 		$objPHPExcel->getActiveSheet()->SetCellValue('I3', '');
-		$objPHPExcel->getActiveSheet()->SetCellValue('I4', '');
-		$objPHPExcel->getActiveSheet()->SetCellValue('I5', $order['project_name']);
-		$objPHPExcel->getActiveSheet()->SetCellValue('I6', $order['project_address']);
+		$objPHPExcel->getActiveSheet()->SetCellValue('I4', $order['project_name']);
+		$objPHPExcel->getActiveSheet()->SetCellValue('I5', $order['project_address']);
 
 		// L Column
 		$objPHPExcel->getActiveSheet()->getStyle('L2')->getFont()->setBold(true);
