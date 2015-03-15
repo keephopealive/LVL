@@ -32,11 +32,9 @@ class Order extends CI_Model {
 	}
 
 	// updateOrder on Save Order Click - Generate Excel Doc
-	public function updateOrder($order_id, $order_items)
+	public function updateOrder($order_id, $order_items, $user)
 	{
-		$order = $this->retrieveOrder($order_id);
-
-
+		$order = $this->retrieveOrderClient($order_id);
 
 
 
@@ -62,14 +60,17 @@ class Order extends CI_Model {
 		$objPHPExcel->getActiveSheet()->SetCellValue('A3', 'Firm:');
 		$objPHPExcel->getActiveSheet()->getStyle('A4')->getFont()->setBold(true);
 		$objPHPExcel->getActiveSheet()->SetCellValue('A4', 'Address:');
+		$objPHPExcel->getActiveSheet()->getStyle('A5')->getFont()->setBold(true);
+		$objPHPExcel->getActiveSheet()->SetCellValue('A5', 'Email');
 		$objPHPExcel->getActiveSheet()->getStyle('A6')->getFont()->setBold(true);
-		$objPHPExcel->getActiveSheet()->SetCellValue('A6', 'Phone');
+		$objPHPExcel->getActiveSheet()->SetCellValue('A6', 'Phone Number');
 
 		// B Column
-		$objPHPExcel->getActiveSheet()->SetCellValue('B2', '[Sample:] James Johson'); //INSERT FIRST/LAST NAME HERE
-		$objPHPExcel->getActiveSheet()->SetCellValue('B3', '[Sample:] FIRM NAME INC'); //INSERT FIRM  HERE
-		$objPHPExcel->getActiveSheet()->SetCellValue('B4', '[Sample:] 12345 N 100 Avenue '); //INSERT ADDRESS  HERE
-		$objPHPExcel->getActiveSheet()->SetCellValue('B6', '[Sample:] 123-456-7890'); //INSERT PHONE NUMBER  HERE
+		$objPHPExcel->getActiveSheet()->SetCellValue('B2', $user['first_name'] . " " . $user['last_name']); //INSERT FIRST/LAST NAME HERE
+		$objPHPExcel->getActiveSheet()->SetCellValue('B3', ""); //INSERT FIRM  HERE
+		$objPHPExcel->getActiveSheet()->SetCellValue('B4', ""); //INSERT ADDRESS  HERE
+		$objPHPExcel->getActiveSheet()->SetCellValue('B4', $user['email']); //INSERT ADDRESS  HERE
+		$objPHPExcel->getActiveSheet()->SetCellValue('B6', ""); //INSERT PHONE NUMBER  HERE
 
 		// G Column
 		$objPHPExcel->getActiveSheet()->getStyle('G2')->getFont()->setBold(true);
@@ -82,11 +83,11 @@ class Order extends CI_Model {
 		$objPHPExcel->getActiveSheet()->SetCellValue('G5', 'Project Address:');
 
 		// I Column
-		$objPHPExcel->getActiveSheet()->SetCellValue('I2', '[Sample:] 12.08.2014');
-		$objPHPExcel->getActiveSheet()->SetCellValue('I3', '[Sample:] P-0065');
-		$objPHPExcel->getActiveSheet()->SetCellValue('I4', '[Sample:] TBD');
-		$objPHPExcel->getActiveSheet()->SetCellValue('I5', '[Sample:] TBD');
-		$objPHPExcel->getActiveSheet()->SetCellValue('I6', '[Sample:] TBD');
+		$objPHPExcel->getActiveSheet()->SetCellValue('I2', '');
+		$objPHPExcel->getActiveSheet()->SetCellValue('I3', '');
+		$objPHPExcel->getActiveSheet()->SetCellValue('I4', '');
+		$objPHPExcel->getActiveSheet()->SetCellValue('I5', $order['project_name']);
+		$objPHPExcel->getActiveSheet()->SetCellValue('I6', $order['project_address']);
 
 		// L Column
 		$objPHPExcel->getActiveSheet()->getStyle('L2')->getFont()->setBold(true);
@@ -97,9 +98,9 @@ class Order extends CI_Model {
 		$objPHPExcel->getActiveSheet()->SetCellValue('L5', 'Lead Time:');
 
 		// M Column
-		$objPHPExcel->getActiveSheet()->SetCellValue('M2', '[Sample:] Company Repersentative');
-		$objPHPExcel->getActiveSheet()->SetCellValue('M3', '[Sample:] EAST COAST');
-		$objPHPExcel->getActiveSheet()->SetCellValue('M5', '[Sample:] 8-10 WEEKS UPON ORDER APPROVAL AND RECEIPT OF DEPOSIT');
+		$objPHPExcel->getActiveSheet()->SetCellValue('M2', '');
+		$objPHPExcel->getActiveSheet()->SetCellValue('M3', '');
+		$objPHPExcel->getActiveSheet()->SetCellValue('M5', '8-10 WEEKS UPON ORDER APPROVAL AND RECEIPT OF DEPOSIT');
 
 
 		// Row Headers
@@ -112,7 +113,6 @@ class Order extends CI_Model {
 
 		$objPHPExcel->getActiveSheet()->getStyle('C8')->getFont()->setBold(true);
 		$objPHPExcel->getActiveSheet()->SetCellValue('C8', 'QTY');
-
 
 		$objPHPExcel->getActiveSheet()->getStyle('D8')->getFont()->setBold(true);
 		$objPHPExcel->getActiveSheet()->SetCellValue('D8', 'FINISH');
@@ -153,17 +153,9 @@ class Order extends CI_Model {
 
 
 
-
-//		echo "<pre>";
-//		var_dump($order);
-//		var_dump($order_items);
-//		die('here');
 		$rowCounter = 9; // Starting Row #
 		foreach($order_items as $order_item)
 		{
-//			echo $rowCounter;
-//			var_dump($order_item);
-
 			// Productitem.note = ROOM
 			$objPHPExcel->getActiveSheet()->SetCellValue("A".$rowCounter, $order_item['note']); // Room Name / Note - Order Item from productitems, this is a productitem (1)
 			// Productitem.reference_no = REF #
@@ -275,12 +267,6 @@ class Order extends CI_Model {
 			$rowCounter++; // Increment row # at the end of the row.
 		}
 
-//		die("here in update order");
-
-
-
-
-
 
 
 // Save Excel 2007 file
@@ -321,6 +307,12 @@ class Order extends CI_Model {
 	public function retrieveOrder($order_id)
 	{
 		$query ="SELECT * FROM orders WHERE id = ?";
+		return $this->db->query($query, $order_id)->row_array();
+	}
+
+	public function retrieveOrderClient($order_id)
+	{
+		$query ="SELECT orders.*, users.first_name, users.last_name, users.email FROM orders LEFT JOIN users ON orders.user_id = users.id WHERE orders.id = ?;";
 		return $this->db->query($query, $order_id)->row_array();
 	}
 

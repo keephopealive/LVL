@@ -36,7 +36,8 @@ class Orders extends CI_Controller {
 	public function updateOrder($id)
 	{
 		$order_items = $this->productitem->retrieveAllOrderProductsMechanisms($id);
-		$this->order->updateOrder($id, $order_items);
+		$user = $this->user->retrieveUser($this->session->userdata('user')['id']);
+		$this->order->updateOrder($id, $order_items, $user);
 		redirect('/dashboard');
 	}
 	public function showOrder($order_id)
