@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00f386e-bfbe-40e6-9dc4-9b8606c8c532" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/productitem.php" afterPath="$PROJECT_DIR$/application/models/productitem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/order.php" afterPath="$PROJECT_DIR$/application/models/order.php" />
     </list>
     <ignored path="LVL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,29 +64,29 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
+            <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/application/models/order.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-13.15625" vertical-offset="430" max-vertical-offset="8004">
-                    <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.5862403" vertical-offset="1028" max-vertical-offset="8004">
+                    <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
                     <folding>
-                      <marker date="1426403616000" expanded="true" signature="156:194" placeholder="SELECT * FRO..orders..." />
-                      <marker date="1426403616000" expanded="true" signature="320:494" placeholder="SELECT *, or..." />
-                      <marker date="1426403616000" expanded="true" signature="606:694" placeholder="INSERT INTO ..." />
-                      <marker date="1426403616000" expanded="true" signature="894:950" placeholder="DELETE FROM ..." />
-                      <marker date="1426403616000" expanded="true" signature="1022:1060" placeholder="DELETE FROM ..." />
-                      <marker date="1426403616000" expanded="true" signature="12365:12409" placeholder="UPDATE order..." />
-                      <marker date="1426403616000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
-                      <marker date="1426403616000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
-                      <marker date="1426403616000" expanded="true" signature="12551:12596" placeholder="SELECT * FRO..productitems..." />
-                      <marker date="1426403616000" expanded="true" signature="12720:12805" placeholder="UPDATE order..." />
-                      <marker date="1426403616000" expanded="true" signature="13026:13071" placeholder="UPDATE order..." />
-                      <marker date="1426403616000" expanded="true" signature="13237:13292" placeholder="UPDATE order..." />
-                      <marker date="1426403616000" expanded="true" signature="13478:13511" placeholder="SELECT * FRO..orders..." />
-                      <marker date="1426403616000" expanded="true" signature="13639:13779" placeholder="SELECT order..orders..." />
-                      <marker date="1426403616000" expanded="true" signature="13926:14015" placeholder="INSERT INTO ..." />
-                      <marker date="1426403616000" expanded="true" signature="14256:14481" placeholder="INSERT INTO ..." />
-                      <marker date="1426403616000" expanded="true" signature="14580:14733" placeholder="INSERT INTO ..." />
+                      <marker date="1426404494000" expanded="true" signature="156:194" placeholder="SELECT * FRO..orders..." />
+                      <marker date="1426404494000" expanded="true" signature="320:494" placeholder="SELECT *, or..." />
+                      <marker date="1426404494000" expanded="true" signature="606:694" placeholder="INSERT INTO ..." />
+                      <marker date="1426404494000" expanded="true" signature="894:950" placeholder="DELETE FROM ..." />
+                      <marker date="1426404494000" expanded="true" signature="1022:1060" placeholder="DELETE FROM ..." />
+                      <marker date="1426404494000" expanded="true" signature="12365:12409" placeholder="UPDATE order..." />
+                      <marker date="1426404494000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
+                      <marker date="1426404494000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
+                      <marker date="1426404494000" expanded="true" signature="12551:12596" placeholder="SELECT * FRO..productitems..." />
+                      <marker date="1426404494000" expanded="true" signature="12720:12805" placeholder="UPDATE order..." />
+                      <marker date="1426404494000" expanded="true" signature="13026:13071" placeholder="UPDATE order..." />
+                      <marker date="1426404494000" expanded="true" signature="13237:13292" placeholder="UPDATE order..." />
+                      <marker date="1426404494000" expanded="true" signature="13478:13511" placeholder="SELECT * FRO..orders..." />
+                      <marker date="1426404494000" expanded="true" signature="13639:13779" placeholder="SELECT order..orders..." />
+                      <marker date="1426404494000" expanded="true" signature="13926:14015" placeholder="INSERT INTO ..." />
+                      <marker date="1426404494000" expanded="true" signature="14256:14481" placeholder="INSERT INTO ..." />
+                      <marker date="1426404494000" expanded="true" signature="14580:14733" placeholder="INSERT INTO ..." />
                     </folding>
                   </state>
                 </provider>
@@ -102,11 +102,11 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="productitem.php" pinned="false" current-in-tab="true">
+            <file leaf-file-name="productitem.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/application/models/productitem.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.3632774" vertical-offset="652" max-vertical-offset="5280">
-                    <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+                  <state vertical-scroll-proportion="16.019608" vertical-offset="1822" max-vertical-offset="5280">
+                    <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
                     <folding>
                       <marker date="1426404100000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
                       <marker date="1426404100000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
@@ -244,8 +244,8 @@
         <option value="$PROJECT_DIR$/application/views/pdf_output.php" />
         <option value="$PROJECT_DIR$/application/views/userDashboard.php" />
         <option value="$PROJECT_DIR$/application/views/adminDashboard.php" />
-        <option value="$PROJECT_DIR$/application/models/order.php" />
         <option value="$PROJECT_DIR$/application/models/productitem.php" />
+        <option value="$PROJECT_DIR$/application/models/order.php" />
       </list>
     </option>
   </component>
@@ -976,32 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.15625" vertical-offset="430" max-vertical-offset="8004">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <marker date="1426403616000" expanded="true" signature="156:194" placeholder="SELECT * FRO..orders..." />
-            <marker date="1426403616000" expanded="true" signature="320:494" placeholder="SELECT *, or..." />
-            <marker date="1426403616000" expanded="true" signature="606:694" placeholder="INSERT INTO ..." />
-            <marker date="1426403616000" expanded="true" signature="894:950" placeholder="DELETE FROM ..." />
-            <marker date="1426403616000" expanded="true" signature="1022:1060" placeholder="DELETE FROM ..." />
-            <marker date="1426403616000" expanded="true" signature="12365:12409" placeholder="UPDATE order..." />
-            <marker date="1426403616000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
-            <marker date="1426403616000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
-            <marker date="1426403616000" expanded="true" signature="12551:12596" placeholder="SELECT * FRO..productitems..." />
-            <marker date="1426403616000" expanded="true" signature="12720:12805" placeholder="UPDATE order..." />
-            <marker date="1426403616000" expanded="true" signature="13026:13071" placeholder="UPDATE order..." />
-            <marker date="1426403616000" expanded="true" signature="13237:13292" placeholder="UPDATE order..." />
-            <marker date="1426403616000" expanded="true" signature="13478:13511" placeholder="SELECT * FRO..orders..." />
-            <marker date="1426403616000" expanded="true" signature="13639:13779" placeholder="SELECT order..orders..." />
-            <marker date="1426403616000" expanded="true" signature="13926:14015" placeholder="INSERT INTO ..." />
-            <marker date="1426403616000" expanded="true" signature="14256:14481" placeholder="INSERT INTO ..." />
-            <marker date="1426403616000" expanded="true" signature="14580:14733" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/orders.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.125" vertical-offset="15" max-vertical-offset="1065">
@@ -1039,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/productitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3632774" vertical-offset="652" max-vertical-offset="5280">
-          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+        <state vertical-scroll-proportion="16.019608" vertical-offset="1822" max-vertical-offset="5280">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding>
             <marker date="1426404100000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
             <marker date="1426404100000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
@@ -1062,6 +1036,32 @@
             <marker date="1426404100000" expanded="true" signature="5605:5650" placeholder="SELECT * FRO..mechanisms..." />
             <marker date="1426404100000" expanded="true" signature="10570:10794" placeholder="INSERT INTO ..." />
             <marker date="1426404100000" expanded="true" signature="11246:11288" placeholder="SELECT * FRO..mechanisms..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5862403" vertical-offset="1028" max-vertical-offset="8004">
+          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+          <folding>
+            <marker date="1426404494000" expanded="true" signature="156:194" placeholder="SELECT * FRO..orders..." />
+            <marker date="1426404494000" expanded="true" signature="320:494" placeholder="SELECT *, or..." />
+            <marker date="1426404494000" expanded="true" signature="606:694" placeholder="INSERT INTO ..." />
+            <marker date="1426404494000" expanded="true" signature="894:950" placeholder="DELETE FROM ..." />
+            <marker date="1426404494000" expanded="true" signature="1022:1060" placeholder="DELETE FROM ..." />
+            <marker date="1426404494000" expanded="true" signature="12365:12409" placeholder="UPDATE order..." />
+            <marker date="1426404494000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
+            <marker date="1426404494000" expanded="true" signature="12365:12434" placeholder="UPDATE order..." />
+            <marker date="1426404494000" expanded="true" signature="12551:12596" placeholder="SELECT * FRO..productitems..." />
+            <marker date="1426404494000" expanded="true" signature="12720:12805" placeholder="UPDATE order..." />
+            <marker date="1426404494000" expanded="true" signature="13026:13071" placeholder="UPDATE order..." />
+            <marker date="1426404494000" expanded="true" signature="13237:13292" placeholder="UPDATE order..." />
+            <marker date="1426404494000" expanded="true" signature="13478:13511" placeholder="SELECT * FRO..orders..." />
+            <marker date="1426404494000" expanded="true" signature="13639:13779" placeholder="SELECT order..orders..." />
+            <marker date="1426404494000" expanded="true" signature="13926:14015" placeholder="INSERT INTO ..." />
+            <marker date="1426404494000" expanded="true" signature="14256:14481" placeholder="INSERT INTO ..." />
+            <marker date="1426404494000" expanded="true" signature="14580:14733" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

@@ -69,7 +69,7 @@ class Order extends CI_Model {
 		$objPHPExcel->getActiveSheet()->SetCellValue('B2', $user['first_name'] . " " . $user['last_name']); //INSERT FIRST/LAST NAME HERE
 		$objPHPExcel->getActiveSheet()->SetCellValue('B3', ""); //INSERT FIRM  HERE
 		$objPHPExcel->getActiveSheet()->SetCellValue('B4', ""); //INSERT ADDRESS  HERE
-		$objPHPExcel->getActiveSheet()->SetCellValue('B4', $user['email']); //INSERT ADDRESS  HERE
+		$objPHPExcel->getActiveSheet()->SetCellValue('B5', $user['email']); //INSERT ADDRESS  HERE
 		$objPHPExcel->getActiveSheet()->SetCellValue('B6', ""); //INSERT PHONE NUMBER  HERE
 
 		// G Column
