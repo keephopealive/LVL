@@ -121,7 +121,37 @@ class Productitem extends CI_Model {
 		// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
 		// }
 		// clearstatcache();
-		
+
+
+		// Cuthseet [TYPE OF MECHANISM]
+		// Cuthseet [POWER OF SUPPLY]
+		$query = "SELECT * FROM mechanisms WHERE reference_code = '{$productitem['mechanism']}'";
+		$result = $this->db->query($query)->row_array();
+
+		$data['mechanismString'] = "";
+		$data['powerSupplyString'] = "";
+
+		if($result['vv'] != null)
+		{
+			$data['mechanismString'] .= "ON/OFF TOGGLE SWITCH; REMAINS IN UP/DOWN POSITION<br>";
+			$data['powerSupplyString'] .= "125-250 V - 15 A<br>";
+		}
+		if($result['bp'] != null)
+		{
+			$data['mechanismString'] .= "MOMENTARY PUSH BUTTON; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
+			$data['powerSupplyString'] .= "CLASS TWO LOW-VOLTAGE SWITCH<br>";
+		}
+		if($result['bpe'] != null)
+		{
+			$data['mechanismString'] .= "ON/OFF PUSH BUTTON; CLICK WHEN PRESSED.<br>";
+			$data['powerSupplyString'] .= "CLASS TWO LOW-VOLTAGE SWITCH<br>";
+		}
+		if($result['inv'] != null)
+		{
+			$data['mechanismString'] .= "MOMENTARY TOGGLE SWITCH; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
+			$data['powerSupplyString'] .= "125-250 V - 15 A<br>";
+		}
+
 
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")
