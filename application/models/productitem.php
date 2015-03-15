@@ -96,27 +96,32 @@ class Productitem extends CI_Model {
 //		$data['frontView'] = "./../../assets/img/cutsheetImg/front/". "F" .
 
 
-		
+		// $data['sideView'] = "../../assets/img/cutsheetImg/s_35.jpg";
 
+		// $data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/". 
+		// 	"F" .
+		// 	$productitem['collection'] .
+		// 	$productitem['size'] .
+		// 	$productitem['edge_screw'] .
+		// 	"-" .
+		// 	$productitem['mechanism']. ".jpg";
 
-		$data['frontView'] = "../../assets/img/cutsheetImg/front/". "F" .
-			$productitem['collection'] .
-			$productitem['size'] .
-			$productitem['edge_screw'] .
-			"-" .
-			$productitem['mechanism']. ".jpg";
+		$data['frontView'] = "../../assets/img/cutsheetImg/size/b_82x82.jpg";
+
 
 //		var_dump($data['frontView']);
 //		die("Here");
 
-		if (file_exists($data['frontView'])) 
-		{
-			return $data['frontView'];
-		} 
-		else 
-		{
-			$data['frontView'] = "../../assets/img/cutsheetImg/front/noImg.jpg";
-		}
+		// if (file_exists($data['frontView'])) 
+		// {
+		// 	return $data['frontView'];
+		// } 
+		// else 
+		// {
+		// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
+		// }
+		// clearstatcache();
+		
 
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")
@@ -142,6 +147,33 @@ class Productitem extends CI_Model {
 			$data['b_dimensions'] = '2.6" x 2.8" x 2.4" (67 x 71 x 60 mm)';
 			$data['b_axis'] = '2.36" (60 mm)';
 			$data['b_reference'] = 'USUL 8060';
+
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x82.jpg";
+
+			
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_82x82.jpg";
+			
+			
+			// $tempFrontView = "../../assets/img/cutsheetImg/plate/82x82/". 
+			// 	"F" .
+			// 	$productitem['collection'] .
+			// 	$productitem['size'] .
+			// 	$productitem['edge_screw'] .
+			// 	"-" .
+			// 	$productitem['mechanism']. ".jpg";
+
+			// if (file_exists($tempFrontView)) 
+			// {	
+			// 	// die('BLERGH');
+			// 	// var_dump($tempFrontView);
+			// 	$data['frontView'] = $tempFrontView;
+			// } 
+			// else 
+			// {
+			// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
+			// }
+			// clearstatcache();	
 		}
 		if ( $productitem['size'] == "3001") 
 		{
@@ -153,6 +185,10 @@ class Productitem extends CI_Model {
 			$data['b_dimensions'] = '2.6" x 3.8" x 2.4" (67 x 97 x 60 mm)';
 			$data['b_axis'] = '3.27" (83 mm)';
 			$data['b_reference'] = 'USUL 11560';
+
+			$data['b_img'] = 	"../../assets/img/cutsheetImg/noImg.jpg";
+			
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/noImg.jpg";
 		}
 		if ( $productitem['size'] == "3000") 
 		{

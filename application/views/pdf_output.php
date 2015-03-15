@@ -84,21 +84,21 @@ th, td {
 
   <table class="header">
     <tr>
-      <td class="logo"> 
-        <img src="" alt="LVL LOGO" width="100%" height="144px">
+      <td style="vertical-align:top;" class="logo"> 
+        <img src="../../assets/img/logo1000.jpg" alt="LVL LOGO" width="100%" height="143px">
       </td>
       <td class="infoBox">
-        <h3 class="ref_no"><?php echo $reference_no; ?></h3>
-        <h3 class="size"><?php echo $size; ?></h3>
-        <h3 class="mech"> BP </h3>
+        <h4 class="ref_no"><?php echo $reference_no; ?></h4>
+        <h4 class="size"><?php echo $size; ?></h4>
+        <h4 class="mech"> BP </h4>
       </td> 
     </tr>
   </table>
 
   <table class="plate">
     <tr>
-      <td class="frontView" rowspan="2">
-        <img src="<?= $frontView ?>" alt="Plate - Front view">
+      <td class="frontView">
+        <img src="<?= $frontView ?>" alt="Plate - Front view" width="350px" height="350px">
       </td>
       <td>
         <table class="coveringPlate">
@@ -135,6 +135,11 @@ th, td {
           </tr>
 
         </table>
+      </td>
+    </tr>
+    <tr>
+      <td>INTER-AXIS DRAWING <img style="text-align:center;" src="<?php echo $saxis; ?>"width="250px" height="250px"></td>
+      <td>
         <table class="switchType">
           <tr class="title">
             <td colspan="2">SWITCH TYPE</td>
@@ -154,14 +159,8 @@ th, td {
         </table>
       </td>
     </tr>
-
-  </table>
-
-  <table class="backBox">
     <tr>
-      <td class="backBoxImg">
-        <img src="" alt="Backbox - side and back view">
-      </td>
+      <td></td>
       <td>
         <table class="backBoxSpecs">
           <tr class="title">
@@ -182,18 +181,29 @@ th, td {
         </table>
       </td>
     </tr>
+
   </table>
 
-  <table class="drawings">
+  <table class="backBox">
+    <tr>
+      <td class="backBoxImg">
+        <img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="50%" height="50%">
+      </td>
+      <td class="dwgSide">
+        <img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="50%" height="50%">
+      </td>
+      
+    </tr>
+  </table>
+
+ <!--  <table class="drawings">
     <tr>
       <td class="dwgFront">
         <img src="" alt="Front Drawing" width="100%" height="300px">
       </td>
-      <td class="dwgSide">
-        <img src="" alt="Side Drawing" width="100%" height="300px">
-      </td>
+      
     </tr>
-  </table>
+  </table> -->
 </body>
 
 </html>
