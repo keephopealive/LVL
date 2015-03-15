@@ -34,6 +34,24 @@ class Productitem extends CI_Model {
 		return $this->db->query($query)->result_array();
 	}
 
+	public function retrieveAllOrderProductsMechanisms($id)
+	{
+
+		$query = "SELECT productitems.id,
+		productitems.user_id, productitems.order_id, productitems.note,
+		productitems.reference_no, mechanisms.reference_code,
+		productitems.engraving,
+		productitems.note, productitems.quantity,
+		productitems.finish, productitems.size,
+		mechanisms.vv, mechanisms.bp,
+		mechanisms.bpe, mechanisms.inv
+		FROM productitems
+		LEFT JOIN mechanisms ON productitems.reference_no LIKE CONCAT('%', mechanisms.reference_code, '%')
+		WHERE order_id ={$id}";
+
+		return $this->db->query($query)->result_array();
+	}
+
 	public function destroyProductitem($productitem_id)
 	{
 		$query = "DELETE FROM productitems WHERE id = {$productitem_id}";
