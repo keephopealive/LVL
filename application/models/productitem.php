@@ -96,7 +96,7 @@ class Productitem extends CI_Model {
 //		$data['frontView'] = "./../../assets/img/cutsheetImg/front/". "F" .
 
 
-		// $data['sideView'] = "../../assets/img/cutsheetImg/s_35.jpg";
+		$data['sideView'] = "../../assets/img/cutsheetImg/s_35.jpg";
 
 		// $data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/". 
 		// 	"F" .
@@ -106,7 +106,7 @@ class Productitem extends CI_Model {
 		// 	"-" .
 		// 	$productitem['mechanism']. ".jpg";
 
-		$data['frontView'] = "../../assets/img/cutsheetImg/size/b_82x82.jpg";
+		// $data['frontView'] = "../../assets/img/cutsheetImg/size/b_82x82.jpg";
 
 
 //		var_dump($data['frontView']);
@@ -155,14 +155,16 @@ class Productitem extends CI_Model {
 			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_82x82.jpg";
 			
 			
-			// $tempFrontView = "../../assets/img/cutsheetImg/plate/82x82/". 
-			// 	"F" .
-			// 	$productitem['collection'] .
-			// 	$productitem['size'] .
-			// 	$productitem['edge_screw'] .
-			// 	"-" .
-			// 	$productitem['mechanism']. ".jpg";
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
 
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/".$tempFrontView;
+
+			// $data['frontView'] = $tempFrontView;
 			// if (file_exists($tempFrontView)) 
 			// {	
 			// 	// die('BLERGH');
@@ -174,6 +176,32 @@ class Productitem extends CI_Model {
 			// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
 			// }
 			// clearstatcache();	
+
+
+			// url to your images folder (no trailing slash)
+
+			// $url = "http://www.lvl-usa.com//assets/img/cutsheetImg/plate/82x82";
+
+			// // check if image exists ($thumbnail is our image variable)
+
+			// if(file_exists("$url/$thumbnail"))
+
+			// {
+			// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/".$tempFrontView;
+			// // If yes, print out the image
+
+			// }
+
+			// // if no, give an alternative image
+
+			// else
+
+			// {
+
+			// $data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
+
+			// }
+
 		}
 		if ( $productitem['size'] == "3001") 
 		{

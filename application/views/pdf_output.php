@@ -23,26 +23,38 @@
 }
 .coveringPlate  {
   width: 100%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .coveringPlate  th{
   width: 35%;
   text-align: right;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 .coveringPlate  td{
   padding-left: 20px;
   padding-right: 20px;
+  border-bottom: 2px dotted black;
 }
 .switchType {
   width: 100%;
   margin-top: 20px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .switchType  th{
   width: 35%;
   text-align: right;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 .switchType  td{
   padding-left: 20px;
   padding-right: 20px;
+  border-bottom: 2px dotted black;
 }
 .backBox  {
   width: 100%;
@@ -52,14 +64,20 @@
 }
 .backBoxSpecs {
   width: 100%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .backBoxSpecs  th{
   width: 35%;
   text-align: right;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 .backBoxSpecs  td{
   padding-left: 20px;
   padding-right: 20px;
+  border-bottom: 2px dotted black;
 }
 .drawings {
   width: 100%;
@@ -68,11 +86,12 @@
   margin-top: 20%;
   margin-bottom: 20%;
   text-align: center;
+  border-bottom: 2px solid black;
 }
-table, th, td {
+/*table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-}
+}*/
 th, td {
     padding: 5px;
     text-align: left;    
@@ -98,9 +117,9 @@ th, td {
   <table class="plate">
     <tr>
       <td class="frontView">
-        <img src="<?= $frontView ?>" alt="Plate - Front view" width="350px" height="350px">
+        <img src="<?= $frontView ?>" alt="Plate - Front view" width="300px" height="300px">
       </td>
-      <td>
+      <td colspan="2">
         <table class="coveringPlate">
           <tr class="title">
             <td colspan="2">COVERING PLATE</td>
@@ -138,8 +157,9 @@ th, td {
       </td>
     </tr>
     <tr>
-      <td>INTER-AXIS DRAWING <img style="text-align:center;" src="<?php echo $saxis; ?>"width="250px" height="250px"></td>
-      <td>
+      <td><img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="100px" height="250px"></td>
+      <td><img src="<?php echo $saxis; ?>"width="250px" height="250px"></td>
+      <td width="400px" height="250px">
         <table class="switchType">
           <tr class="title">
             <td colspan="2">SWITCH TYPE</td>
@@ -159,8 +179,15 @@ th, td {
         </table>
       </td>
     </tr>
-    <tr>
-      <td></td>
+   
+
+  </table>
+
+  <table class="backBox">
+
+     <tr>
+      <td><img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="300px" height="300px"></td>
+     <!--  <td><img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="105px" height="270px"></td> -->
       <td>
         <table class="backBoxSpecs">
           <tr class="title">
@@ -182,18 +209,15 @@ th, td {
       </td>
     </tr>
 
-  </table>
-
-  <table class="backBox">
-    <tr>
+  <!--   <tr>
       <td class="backBoxImg">
-        <img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="50%" height="50%">
+        <img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="75%" height="75%">
       </td>
       <td class="dwgSide">
-        <img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="50%" height="50%">
+        <img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="105px" height="270px">
       </td>
       
-    </tr>
+    </tr> -->
   </table>
 
  <!--  <table class="drawings">
