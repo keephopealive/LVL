@@ -68,37 +68,16 @@
 				<th>Client Name</th>
 				<th>Status</th>
 				<th>Admin</th>
-				<th>Client</th>
+				<th>Project Name</th>
 				<th>Excel File</th>
 				<th>Actions</th>
 			</thead>
 
-<!--?php-->
-<!--include("config.inc.php");-->
-<!--$item_per_page = 5;-->
-<!--$get_total_rows = mysqli_fetch_array($orders); //total records-->
-<!--//break total records into pages-->
-<!--$pages = ceil($get_total_rows[0]/$item_per_page);-->
-<!---->
-<!--//create pagination-->
-<!--$pagination = '';-->
-<!--if($pages > 1)-->
-<!--{-->
-<!--	$pagination .= '<ul class="paginate">';-->
-<!--	for($i = 1; $i<$pages; $i++)-->
-<!--	{-->
-<!--		$pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';-->
-<!--	}-->
-<!--	$pagination .= '</ul>';-->
-<!--}-->
-<!---->
-<!--?-->
-
-
-
-
 <?php 			foreach($orders as $order)
 				{
+//					echo "<pre>";
+//					var_dump($order);
+//					die('here');
 ?>					<tr>
 						<td><?= $order['order_no']; ?></td>
 						<td><?= date( 'F d, Y', strtotime( $order['orders_created_at']) ); ?></td>
@@ -106,8 +85,8 @@
 						<td><?= $order['first_name']; ?> <?= $order['last_name']; ?></td>
 						<td><?= $order['status']; ?></td>
 						<td><?= $order['admin_note']; ?></td>
-						<td><?= $order['client_note']; ?></td>
-						<td><a href="../../excel/<?= $order['excelsheet']; ?>.xlsx">
+						<td><?= $order['project_name']; ?></td>
+						<td><a href="../excel/<?= $order['excelsheet']; ?>.xlsx">
 <?php						if(strlen($order['project_name'])>0){
 ?>								<?= $order['project_name']; ?>
 <?php						}else{

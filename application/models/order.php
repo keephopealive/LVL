@@ -151,8 +151,9 @@ class Order extends CI_Model {
 		$objPHPExcel->getActiveSheet()->SetCellValue('O8', 'EDGES: STRAIGHT / BEVELED');
 
 
-
-
+//		echo "<pre>";
+//		var_dump($order_items);
+//		die('here');
 		$rowCounter = 9; // Starting Row #
 		foreach($order_items as $order_item)
 		{
@@ -274,7 +275,7 @@ class Order extends CI_Model {
 		$objWriter->save("excel/excelOrder".$order_id.".xlsx");
 
 // Save Excel Path to DB
-		$query ="UPDATE orders SET excelsheet = './excelOrder".$order_id."' WHERE id = ?";
+		$query ="UPDATE orders SET excelsheet = './excelOrder{$order_id}' WHERE id = ?";
 		return $this->db->query($query, $order_id);
 	}
 
