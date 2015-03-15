@@ -65,7 +65,10 @@ class Productitem extends CI_Model {
 	public function productitemCreate($productitem)
 	{
 // REFERENCE_NO parse ===============================================================
-		$reference_no = 
+		if(!isset($productitem['mechanism']))
+			$productitem['mechanism'] = 'xxxxxxxx';
+
+		$reference_no =
 			"F" .
 			$productitem['collection'] .
 			$productitem['size'] .

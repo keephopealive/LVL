@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00f386e-bfbe-40e6-9dc4-9b8606c8c532" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/adminDashboard.php" afterPath="$PROJECT_DIR$/application/views/adminDashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/order.php" afterPath="$PROJECT_DIR$/application/models/order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/productitem.php" afterPath="$PROJECT_DIR$/application/models/productitem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LVL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,29 +105,29 @@
             <file leaf-file-name="productitem.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/application/models/productitem.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.90325767" vertical-offset="795" max-vertical-offset="5235">
-                    <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.3632774" vertical-offset="652" max-vertical-offset="5280">
+                    <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
                     <folding>
-                      <marker date="1426403616000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
-                      <marker date="1426403616000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
-                      <marker date="1426403616000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
-                      <marker date="1426403616000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
-                      <marker date="1426403616000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
-                      <marker date="1426403616000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
-                      <marker date="1426403616000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
-                      <marker date="1426403616000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
-                      <marker date="1426403616000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
-                      <marker date="1426403616000" expanded="true" signature="4522:4599" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5531" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5531" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5549" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5549" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5550" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5550" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5550" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="5522:5567" placeholder="SELECT * FRO..mechanisms..." />
-                      <marker date="1426403616000" expanded="true" signature="10487:10711" placeholder="INSERT INTO ..." />
-                      <marker date="1426403616000" expanded="true" signature="11163:11205" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
+                      <marker date="1426404100000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
+                      <marker date="1426404100000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
+                      <marker date="1426404100000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
+                      <marker date="1426404100000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
+                      <marker date="1426404100000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
+                      <marker date="1426404100000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
+                      <marker date="1426404100000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
+                      <marker date="1426404100000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
+                      <marker date="1426404100000" expanded="true" signature="4605:4682" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5614" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5614" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5632" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5632" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5633" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5633" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5633" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="5605:5650" placeholder="SELECT * FRO..mechanisms..." />
+                      <marker date="1426404100000" expanded="true" signature="10570:10794" placeholder="INSERT INTO ..." />
+                      <marker date="1426404100000" expanded="true" signature="11246:11288" placeholder="SELECT * FRO..mechanisms..." />
                     </folding>
                   </state>
                 </provider>
@@ -161,10 +158,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productitemNewOutlet.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="productitemNewOutlet.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/productitemNewOutlet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="1800" max-vertical-offset="6615">
+            <state vertical-scroll-proportion="-5.2659574" vertical-offset="5385" max-vertical-offset="6615">
               <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -196,11 +193,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminDashboard.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminDashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/adminDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5212766" vertical-offset="827" max-vertical-offset="4620">
-              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+            <state vertical-scroll-proportion="-13.666667" vertical-offset="827" max-vertical-offset="4620">
+              <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -945,17 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/productitemNewOutlet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="1800" max-vertical-offset="6615">
-          <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/productitems.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-54.5" vertical-offset="1242" max-vertical-offset="2865">
@@ -986,14 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.75" vertical-offset="45" max-vertical-offset="1470">
           <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/adminDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5212766" vertical-offset="827" max-vertical-offset="4620">
-          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1040,31 +1018,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/adminDashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.666667" vertical-offset="827" max-vertical-offset="4620">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/productitemNewOutlet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2659574" vertical-offset="5385" max-vertical-offset="6615">
+          <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/productitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90325767" vertical-offset="795" max-vertical-offset="5235">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3632774" vertical-offset="652" max-vertical-offset="5280">
+          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
           <folding>
-            <marker date="1426403616000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
-            <marker date="1426403616000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
-            <marker date="1426403616000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
-            <marker date="1426403616000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
-            <marker date="1426403616000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
-            <marker date="1426403616000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
-            <marker date="1426403616000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
-            <marker date="1426403616000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
-            <marker date="1426403616000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
-            <marker date="1426403616000" expanded="true" signature="4522:4599" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5531" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5531" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5549" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5549" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5550" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5550" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5550" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="5522:5567" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1426403616000" expanded="true" signature="10487:10711" placeholder="INSERT INTO ..." />
-            <marker date="1426403616000" expanded="true" signature="11163:11205" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
+            <marker date="1426404100000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
+            <marker date="1426404100000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
+            <marker date="1426404100000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
+            <marker date="1426404100000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
+            <marker date="1426404100000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
+            <marker date="1426404100000" expanded="true" signature="1423:1726" placeholder="SELECT produ..productitems..." />
+            <marker date="1426404100000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
+            <marker date="1426404100000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
+            <marker date="1426404100000" expanded="true" signature="4605:4682" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5614" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5614" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5632" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5632" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5633" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5633" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5633" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="5605:5650" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1426404100000" expanded="true" signature="10570:10794" placeholder="INSERT INTO ..." />
+            <marker date="1426404100000" expanded="true" signature="11246:11288" placeholder="SELECT * FRO..mechanisms..." />
           </folding>
         </state>
       </provider>
