@@ -30,8 +30,7 @@
 	<div class="row top50">
 		<h3 class="center-block" style="text-align:center;font-family: 'Cinzel', serif; font-weight:400;">Create a Custom Keypad</h3>
 		
-		<div class='errors center-block top50'>
-		</div>
+		
 
 	</div>
 	<div class="row">
@@ -211,6 +210,9 @@
 
 	<!-- BEGIN SUBMIT ROW -->
 		<div class="row top50">
+
+			<div class='errors center-block top50'>
+			</div>
 			<div class="col-sm-4 col-sm-offset-4" style="vertical-align:bottom;">
 				<button type="submit" class="btn saveBig btn-block">Save to Order</button>
 			</div>
