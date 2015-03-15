@@ -58,6 +58,7 @@ class Productitems extends CI_Controller {
 		redirect('/order/newOrder');
 	}
 
+	// Keypads
 	public function createProductitem()
 	{	
 		$config = array(
@@ -94,6 +95,8 @@ class Productitems extends CI_Controller {
 		);
 		$this->form_validation->set_rules($config);
 
+
+
 		if ($this->form_validation->run() == FALSE )
 		{
 			$arr = array(
@@ -122,5 +125,61 @@ class Productitems extends CI_Controller {
 		// TDD on Form Submission - generating accurate reference_no
 
 		
+	}
+
+
+	// Outlets
+	public function createProductitemOutlet()
+	{
+
+		$config = array(
+			array(
+				'field' => 'collection',
+				'label' => 'collection',
+				'rules' => 'trim|required'
+			),
+			array(
+				'field' => 'size',
+				'label' => 'size',
+				'rules' => 'trim|required'
+			),
+			array(
+				'field' => 'finish',
+				'label' => 'finish',
+				'rules' => 'trim|required'
+			),
+			array(
+				'field' => 'edge_screw',
+				'label' => 'edge / screw',
+				'rules' => 'required'
+			),
+			array(
+				'field' => 'color',
+				'label' => 'color',
+				'rules' => 'required'
+			)
+		);
+		$this->form_validation->set_rules($config);
+
+		if ($this->form_validation->run() == FALSE )
+		{
+			$arr = array(
+				'type' => 'createproductitem',
+				'status' => 'failed',
+				'errors' => validation_errors()
+			);
+			echo json_encode($arr);
+		}
+		else
+		{
+			$this->productitem->productitemCreate($this->input->post());
+
+			$arr = array(
+				'type' => 'createproductitem',
+				'status' => 'success'
+			);
+			echo json_encode($arr);
+		}
+
 	}
 }

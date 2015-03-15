@@ -35,7 +35,7 @@
 
 	</div>
 	<div class="row">
-	<form method='post' action='/productitems/createProductitem' role="form" class="form-inline" id="createOrderForm">
+	<form method='post' action='/productitems/createProductitemOutlet' role="form" class="form-inline" id="createOrderForm">
 		
 	<!-- BEGIN 1ST ROW -->
 
@@ -127,10 +127,10 @@
 						<h4>Edge</h4>
 						<div class='radio padRad1'>
 							<label>
-								<input type='radio' class='screw' name='edge_screw' value='yes'> Chamfer
+								<input type='radio' class='screw' name='edge_screw' value='A'> Chamfer
 							</label>
 							<label>
-								<input type='radio' class='screw' name='edge_screw' value='SPE'> Straight
+								<input type='radio' class='screw' name='edge_screw' value='B'> Straight
 							</label>
 						</div>
 					</div>
@@ -176,6 +176,41 @@
 	<!-- END EDGE / SCREW -->
 		</div>
 	<!-- END 2ND ROW -->
+
+		<div class="clearfix visible-sm-block">
+		</div>
+
+		<!-- BEGIN 3RD ROW -->
+		<div class="row field">
+
+			<!-- BEGIN NOTES -->
+			<div class='note col-sm-2 col-sm-offset-2 cataBox top50'>
+				<h4>Room/Product Name</h4>
+				<input class="fullInput" type="text" name="note" placeholder="i.e. Kitchen switch 1">
+			</div>
+			<!-- END NOTES -->
+
+			<!-- BEGIN QUANTITY -->
+			<div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
+				<h4>Quantity</h4>
+				<input class="fullInput" type="number" name='quantity' value="1">
+			</div>
+			<!-- END QUANTITY -->
+
+			<!-- BEGIN ENGRAVING -->
+			<div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
+				<h4>Engraving</h4>
+				<input class="fullInput" type="text" name='engraving'>
+			</div>
+			<!-- END ENGRAVING-->
+			<div class='hiddenfield'>
+			</div>
+
+		</div>
+
+		<!-- END 3RD ROW -->
+		<div class="clearfix visible-sm-block">
+		</div>
 			
 		<div class="clearfix visible-sm-block">
 		</div>
@@ -233,10 +268,10 @@
 						"<h4>Edge</h4>"+
 						"<div class='radio padRad1'>"+
 							"<label>"+
-							"<input type='radio' class='screw' name='edge_screw' value='yes'> Chamfer"+ // classiq > chamfer => edge_screw = A
+							"<input type='radio' class='screw' name='edge_screw' value='A'> Chamfer"+ // classiq > chamfer => edge_screw = A
 							"</label>"+
 							"<label>"+
-							"<input type='radio' class='screw' name='edge_screw' value='SPE'> Straight"+  // classiq > chamfer => edge_screw = B
+							"<input type='radio' class='screw' name='edge_screw' value='B'> Straight"+  // classiq > chamfer => edge_screw = B
 							"</label>"+
 						"</div>"+
 					"</div>"+
@@ -334,7 +369,7 @@
 			{
 				$('div.mech').html(""+
 				"<h4>Mechanisms</h4>"+
-				"<select name='finish' class='form-control selectwidthauto'>"+
+				"<select name='mechanism' class='form-control selectwidthauto'>"+
 					"<option value='B0000010'>1 US Outlet no cover</option>"+
 					"<option value='F0000010'>1 US Outlet with covers</option>"+
 					"<option value='B0001210'>1 USB</option>"+
@@ -345,7 +380,7 @@
 			{
 				$('div.mech').html(""+
 				"<h4>Mechanisms</h4>"+
-				"<select name='finish' class='form-control selectwidthauto'>"+
+				"<select name='mechanism' class='form-control selectwidthauto'>"+
 					"<option value='B0000020'>2 US Outlet without cover</option>"+
 					"<option value='F0000020'>2 US Outlet with cover</option>"+
 					"<option value='F0000260'>SPE</option>"+

@@ -72,7 +72,8 @@ $route['finish'] = "mains/finish";
 $route['productitem/newProductitem/keypad'] = "productitems/newProductitemKeypad"; // New Keypad
 $route['productitem/newProductitem/outlet'] = "productitems/newProductitemOutlet"; // New Keypad
 $route['productitem/newProductitem'] = "productitems/newProductitem"; // New
-$route['productitem/createProductitem'] = 'productitems/createProductitem'; // Create
+$route['productitem/createProductitem'] = 'productitems/createProductitem'; // Create Keypad
+$route['productitem/createProductitemOutlet'] = 'productitems/createProductitemOutlet'; // Create Outlet
 $route['productitem/destroyProductitem'] = '/productitems/destroyProductitem'; // Create
 
 // $route['productitem/update'] = "admins/update"; // Update
