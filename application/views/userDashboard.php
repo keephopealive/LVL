@@ -50,7 +50,7 @@
 						<th class="col-sm-2">LVL Order #</th>
 						<th class="col-sm-2">Date Created</th>
 						<th class="col-sm-2">Status</th>
-						<th class="col-sm-4">Note</th>
+						<th class="col-sm-4">Project Name</th>
 						<th class="col-sm-2">Action</th>
 					</thead>
 <?php 			foreach($orders as $order)
@@ -59,7 +59,7 @@
 						<td><?= $order['order_no']; ?></td>
 						<td><?= date( 'F d, Y', strtotime( $order['created_at']) ) ?></td>
 						<td><?= $order['status']; ?></td>
-						<td><?= $order['client_note']; ?></td>
+						<td><?= $order['project_name']; ?></td>
 						<td>
 							<a href="/order/showOrder/<?= $order['id']; ?>"><button class='btn viewOrder'>View Order</button></a>
 						</td>

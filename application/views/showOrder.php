@@ -25,21 +25,15 @@
 			</div>
 		</div>
 
-		<div class="row navbar">
-			<div class="col-sm-4 col-sm-offset-4">
-				<a href="/dashboard"><button class='btn btn-md btn-block'>Back to My Orders</button></a>
-			</div>
-		</div>
-
-
 		<div class="row myOrders">
 			<div class='col-sm-10 col-sm-offset-1'>
-				<h2 style="text-align:center;">Project Name</h2>
+				<h2 style="text-align:center;"><?= $order['project_name']?></h2>
 				<table class='table table-bordered table-hover top50'>
 					<thead>
 						<th>Reference No</th>
-						<th>Note</th>
+						<th>Room/Product Name</th>
 						<th>Quantity</th>
+						<th>Engraving</th>
 						<th>Cutsheet</th>
 					</thead>
 			<?php	foreach($productitems as $productitem)
@@ -48,10 +42,17 @@
 							<td><?= $productitem['reference_no']?></td> 
 							<td><?= $productitem['note']?></td>
 							<td><?= $productitem['quantity']?></td>
+							<td><?= $productitem['engraving']?></td>
 							<td><a href="././../../../pdf/<?= $productitem['pdf'];?>.pdf">PDF Download</a></td>
 						</tr>
 			<?php	}
 			?>	</table>
+			</div>
+		</div>
+
+		<div class="row navbar">
+			<div class="col-sm-4 col-sm-offset-4">
+				<a href="/dashboard"><button class='btn btn-md btn-block'>Back to My Orders</button></a>
 			</div>
 		</div>
 	</div>

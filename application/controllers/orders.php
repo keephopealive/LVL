@@ -43,7 +43,8 @@ class Orders extends CI_Controller {
 	public function showOrder($order_id)
 	{
 		$productitems = $this->productitem->retrieveAllOrderProducts($order_id);
-		$this->load->view('showOrder', array('productitems' => $productitems));
+		$order_info = $this->order->retrieveOrder($order_id);
+		$this->load->view('showOrder', array('productitems' => $productitems, 'order'=> $order_info));
 	}
 
 	public function updateOrderInfo()
