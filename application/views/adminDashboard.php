@@ -201,24 +201,36 @@
 			</div>
 
 			<div class="form-group">
-				<label for="collection" class="col-sm-2 control-label">Collection change to dropdown</label>
+				<label for="collection" class="col-sm-2 control-label">Collection</label>
 				
 				<div class="col-sm-6">
-					<input class="form-control" type='text' name='collection'  id="collection" placeholder="Collection">
+					<select name="collection" class="form-control selectwidthauto collection">
+						<option class="collection" value="C">CLASSIQUE</option>
+						<option class="collection" value="E">ELLIPSE</option>
+						<option class="collection" value="P">PIERROT</option>
+						<option class="collection" value="L">LIMOGES</option>
+						<option class="collection" value="K">DAMIER</option>
+					</select>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="type" class="col-sm-2 control-label">Type change to drop down</label>
+				<label for="type" class="col-sm-2 control-label">Type</label>
 				
 				<div class="col-sm-6">
-					<input class="form-control" type='text' name='type'  id="type" placeholder="Type">
+					<select name="type" class="form-control selectwidthauto">
+						<option class="type" value="Keypad">Keypad</option>
+						<option class="type" value="Outlet">Outlet</option>
+						<option class="type" value="Doorbell">Doorbell</option>
+						<option class="type" value="Custom">Custom</option>
+						<option class="type" value="Reading Lamp">Reading Lamp</option>
+					</select>	
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="size" class="col-sm-2 control-label">size change to drop down</label>
+				<label for="size" class="col-sm-2 control-label">Size</label>
 				
-				<div class="col-sm-6">
+				<div class="col-sm-6">	
 					<input class="form-control" size='text' name='size'  id="size" placeholder="size">
 				</div>
 			</div>
@@ -232,10 +244,40 @@
 			</div>
 
 			<div class="form-group">
-				<label for="finish" class="col-sm-2 control-label">Finish change to dorpdown</label>
+				<label for="finish" class="col-sm-2 control-label">Finish</label>
 				
 				<div class="col-sm-6">
-					<input class="form-control" type='text' name='finish'  id="finish" placeholder="Finish">
+					<select name="finish" class="form-control selectwidthauto">
+						<option value="FA">Nickel Brossé</option>
+						<option value="FB">Nickel Brillant</option>
+						<option value="FC">Nickel Microbillé</option>
+						<option value="FD">Chrome Mat</option>
+						<option value="FE">Chrome Vif</option>
+						<option value="FF">Canon de Fusil Anthracite</option>
+						<option value="FG">Canon de Fusil Bleu Nuit</option>
+						<option value="CA">Bronze Medaille Clair</option>
+						<option value="CB">Bronze Medaille Clair Verni Mat</option>
+						<option value="CC">Bronze Medaille Allemand</option>
+						<option value="CD">Bronze Medaille Fonce</option>
+						<option value="CE">Champagne</option>
+						<option value="CF">Doré Patiné</option>
+						<option value="CG">Laiton Poli Verni</option>
+						<option value="CH">Laiton Poli Satiné</option>
+						<option value="SA">NICKEL NOIR BRILLANT</option>
+						<option value="SB">Nickel Noir Mat</option>
+						<option value="SC">CHROME MARTELE</option>
+						<option value="SD">Chrome Vibré</option>
+						<option value="SE">Argent Patiné</option>
+						<option value="SF">Chrome Microbillé</option>
+						<option value="SG">Cuivre Patiné</option>
+						<option value="SH">Cuivre Vielli Bouchonné</option>
+						<option value="SI">Cuivre Satiné</option>
+						<option value="SJ">Bronze Médaille Foncé Barège Brillant</option>
+						<option value="SK">Dorure 24 Carats</option>
+						<option value="SL">Microbillé Dorure 24 carats</option>
+						<option value="SM">Microbillé Canon de Fusil Anthracite</option>
+						<option value="SN">POLI VERNI OR MAT</option>
+					</select>
 				</div>
 			</div>
 

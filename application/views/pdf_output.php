@@ -166,11 +166,11 @@ th, td {
           </tr>
           <tr>
             <th>TYPE OF MECHANISM</th>
-            <td><h5 class=""> MOMENTARY PUSH BUTTON; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.</h5></td>
+            <td><h5 class=""> <?php echo $mechanismString; ?></h5></td>
           </tr>
           <tr>
             <th>POWER OF SUPPLY</th>
-            <td><h5 class="">CLASS TWO LOW-VOLTAGE SWITCH</h5></td>
+            <td><h5 class=""><?php echo $powerSupplyString; ?></h5></td>
           </tr>
           <tr>
             <th>COLORS</th>
