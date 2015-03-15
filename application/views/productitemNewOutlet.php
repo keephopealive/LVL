@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Custom Keypad</title>
+	<title>Custom Outlet</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
@@ -136,7 +136,7 @@
 			<div class="col-sm-2 col-sm-offset-2 cataBox">
 				<div class="ES">
 					<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
-						<h4>Screw</h4>
+						<h4>Edge</h4>
 						<div class='radio padRad1'>
 							<label>
 								<input type='radio' class='screw' name='screw' value='yes'> Visible Screws
@@ -155,16 +155,16 @@
 
 	<!-- MECHANISM -->
 			<div class="col-sm-2 col-sm-offset-1 cataBox mech">
-				<h4>Mechanisms</h4>
+				<!-- <h4>Mechanisms</h4> -->
 				<!-- <div class="radio">
 					<label>
 						<input type="checkbox" class="matchFinish" name="matchFinish" value="YES"> Match with Finish?</input>
 					</label>
 				</div> -->
-				<br>
-				<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
-					<option>PLEASE CHOOSE SIZE FIRST</option>
-				</select>
+				<!-- <br>
+				<select name="mechanism" class="mechanism form-control selectwidthauto">  --><!-- MECHANISM OPTIONS DIV -->
+					<!-- <option>PLEASE CHOOSE SIZE FIRST</option>
+				</select> -->
 			</div>
 	<!-- END MECHANISM  -->
 

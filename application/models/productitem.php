@@ -95,6 +95,10 @@ class Productitem extends CI_Model {
 
 //		$data['frontView'] = "./../../assets/img/cutsheetImg/front/". "F" .
 
+
+		
+
+
 		$data['frontView'] = "../../assets/img/cutsheetImg/front/". "F" .
 			$productitem['collection'] .
 			$productitem['size'] .
@@ -105,7 +109,14 @@ class Productitem extends CI_Model {
 //		var_dump($data['frontView']);
 //		die("Here");
 
-
+		if (file_exists($data['frontView'])) 
+		{
+			return $data['frontView'];
+		} 
+		else 
+		{
+			$data['frontView'] = "../../assets/img/cutsheetImg/front/noImg.jpg";
+		}
 
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")
