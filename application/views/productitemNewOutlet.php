@@ -81,29 +81,35 @@
 				<h4>Finish</h4>
 				<div class="orientation"> <!-- FINISH OPTIONS DIV -->
 					<select name="finish" class="form-control selectwidthauto">
-						<option value="FD"> Chrome Mat 	</option>
-						<option value="FE"> Chrome Vif	</option>
-						<option value="FF"> Canon de Fusil Anthracite 	</option>
-						<option value="FG"> Canon de Fusil Bleu Nuit 	</option>
-						<option value="CA"> Bronze Medaille Clair 	</option>
-						<option value="CB"> Bronze Medaille Clair Verni Mat 	</option>
-						<option value="CC"> Bronze Medaille Allemand	</option>
-						<option value="CD"> Bronze Medaille Fonce 	</option>
-						<option value="CE"> Champagne	</option>
-						<option value="CF"> Doré Patiné	</option>
-						<option value="CG"> Laiton Poli Verni	</option>
-						<option value="CH"> Laiton Poli Satiné	</option>
-						<option value="SB"> Nickel Noir Mat	</option>
-						<option value="SD"> Chrome Vibré	</option>
-						<option value="SE"> Argent Patiné	</option>
-						<option value="SF"> Chrome Microbillé	</option>
-						<option value="SG"> Cuivre Patiné	</option>
-						<option value="SH"> Cuivre Vielli Bouchonné	</option>
-						<option value="SI"> Cuivre Satiné	</option>
-						<option value="SJ"> Bronze Médaille Foncé Barège Brillant 	</option>
-						<option value="SK"> Dorure 24 Carats	</option>
-						<option value="SL"> Microbillé Dorure 24 carats	</option>
-						<option value="SM"> Microbillé Canon de Fusil Anthracite	</option>
+						<option value="FA">Nickel Brossé</option>
+						<option value="FB">Nickel Brillant</option>
+						<option value="FC">Nickel Microbillé</option>
+						<option value="FD">Chrome Mat</option>
+						<option value="FE">Chrome Vif</option>
+						<option value="FF">Canon de Fusil Anthracite</option>
+						<option value="FG">Canon de Fusil Bleu Nuit</option>
+						<option value="CA">Bronze Medaille Clair</option>
+						<option value="CB">Bronze Medaille Clair Verni Mat</option>
+						<option value="CC">Bronze Medaille Allemand</option>
+						<option value="CD">Bronze Medaille Fonce</option>
+						<option value="CE">Champagne</option>
+						<option value="CF">Doré Patiné</option>
+						<option value="CG">Laiton Poli Verni</option>
+						<option value="CH">Laiton Poli Satiné</option>
+						<option value="SA">Nickel Noir Brillant</option>
+						<option value="SB">Nickel Noir Mat</option>
+						<option value="SC">Chromé Martelé</option>
+						<option value="SD">Chrome Vibré</option>
+						<option value="SE">Argent Patiné</option>
+						<option value="SF">Chrome Microbillé</option>
+						<option value="SG">Cuivre Patiné</option>
+						<option value="SH">Cuivre Vielli Bouchonné</option>
+						<option value="SI">Cuivre Satiné</option>
+						<option value="SJ">Bronze Médaille Foncé Barège Brillant</option>
+						<option value="SK">Dorure 24 Carats</option>
+						<option value="SL">Microbillé Dorure 24 carats</option>
+						<option value="SM">Microbillé Canon de Fusil Anthracite</option>
+						<option value="SN">Laiton Poli Verni</option>
 					</select>
 				</div>
 			</div>
@@ -293,6 +299,7 @@
 					"</label>"+
 				"</div>"+
 				"<br>");
+				$('div.mech').html("");
 			}
 			// Sol
 			else if ( $(this).val() == 'S' )
@@ -314,22 +321,23 @@
 				$('div.size').html(""+
 				"<div class='radio padRad1'>"+
 					"<label>"+
-						"<input type='radio' name='size' orientation='horizontal' class='size' value='1400'>100 x 100 (3.9\"X3.9\") Square"+
+						"<input type='radio' name='size' orientation='horizontal' class='size' value='1400'>100 x 100 (3.9\"X3.9\") <br>Square"+
 					"</label>"+
 				"</div>"+
 				"<br>"+
 				"<div class='radio padRad1'>"+
 					"<label>"+
-						"<input type='radio' name='size' orientation='horizontal' class='size' value='1403'>100 mm (3.9\") Single Round"+
+						"<input type='radio' name='size' orientation='horizontal' class='size' value='1403'>100 mm (3.9\") <br> Single Round"+
 					"</label>"+
 				"</div>"+
 				"<br>"+
 				"<div class='radio padRad1'>"+
 					"<label>"+
-						"<input type='radio' name='size' orientation='horizontal' class='size' value='1401D'>180X100 (7\"X3.9\") Double Outlet"+
+						"<input type='radio' name='size' orientation='horizontal' class='size' value='1401D'>180X100 (7\"X3.9\") <br> Double Outlet"+
 					"</label>"+
 				"</div>"+
 				"<br>");
+				$('div.mech').html("");
 			}
 			// Cuisine
 			else if ( $(this).val() == 'SPE'  )
@@ -342,22 +350,23 @@
 				$('div.size').html(""+
 				"<div class='radio padRad1'>"+
 					"<label>"+
-						"<input type='radio' name='size' orientation='horizontal' class='size' value='SPE1'>90mm (3.5\") Round Base / Round Top"+
+						"<input type='radio' name='size' orientation='horizontal' class='size' value='SPE1'>90mm (3.5\") <br> Round Base / Round Top"+
 					"</label>"+
 				"</div>"+
 				"<br>"+
 				"<div class='radio padRad1'>"+
 					"<label>"+
-						"<input type='radio' name='size' orientation='horizontal' class='size' value='SPE2'>90mm (3.5\") Square Base / Round Top"+
+						"<input type='radio' name='size' orientation='horizontal' class='size' value='SPE2'>90mm (3.5\") <br> Square Base / Round Top"+
 					"</label>"+
 				"</div>"+
 				"<br>"+
 				"<div class='radio padRad1'>"+
 					"<label>"+
-						"<input type='radio' name='size' orientation='horizontal' class='size' value='SPE3'>80mm (3.15\") Square Base / Square Top"+
+						"<input type='radio' name='size' orientation='horizontal' class='size' value='SPE3'>80mm (3.15\") <br> Square Base / Square Top"+
 					"</label>"+
 				"</div>"+
 				"<br>");
+				$('div.mech').html("");
 			}
 		});
 
@@ -390,6 +399,24 @@
 					"<option value='B0000980'>2 RJ11</option>"+
 					"<option value='B0000730'>1 RJ45/6 s/s PE</option>"+
 				"</select>");
+			}
+			// 100x100 square
+			else if ( $(this).val() == '1400' )
+			{
+				$('div.mech').html(""+
+				"<input type='hidden' name='mechanism' value='F0000010'>");
+			}
+			// 100x100 round
+			else if ( $(this).val() == '1403' )
+			{
+				$('div.mech').html(""+
+				"<input type='hidden' name='mechanism' value='F0000010'>");
+			}
+			// 180x100 double
+			else if ( $(this).val() == '1401D' )
+			{
+				$('div.mech').html(""+
+				"<input type='hidden' name='mechanism' value='F0000020'>");
 			}
 			else
 			{

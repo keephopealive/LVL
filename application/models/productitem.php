@@ -194,7 +194,6 @@ class Productitem extends CI_Model {
 
 			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x82.jpg";
 
-			
 			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_82x82.jpg";
 			
 			
@@ -257,9 +256,18 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = '3.27" (83 mm)';
 			$data['b_reference'] = 'USUL 11560';
 
-			$data['b_img'] = 	"../../assets/img/cutsheetImg/noImg.jpg";
-			
-			$data['saxis'] = 	"../../assets/img/cutsheetImg/noImg.jpg";
+				$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x117/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x117.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_82x117.jpg";
 		}
 		if ( $productitem['size'] == "3000") 
 		{
@@ -271,6 +279,19 @@ class Productitem extends CI_Model {
 			$data['b_dimensions'] = '3.8" x 2.6" x 2.4" (67 x 97 x 60 mm)';
 			$data['b_axis'] = '3.27" (83 mm)';
 			$data['b_reference'] = 'USUL 11560';
+
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/117x82/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x117.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_117x82.jpg";
 		}
 		if ( $productitem['size'] == "3003") 
 		{
@@ -282,6 +303,19 @@ class Productitem extends CI_Model {
 			$data['b_dimensions'] = '2.6" x 5" x 2.4" (67 x 127 x 60 mm)';
 			$data['b_axis'] = '4.6" (117 mm)';
 			$data['b_reference'] = 'USUL 14260';
+
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x144/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x144.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_82x144.jpg";
 		}
 		if ( $productitem['size'] == "3002") 
 		{
@@ -293,6 +327,19 @@ class Productitem extends CI_Model {
 			$data['b_dimensions'] = '5" x 2.6" x 2.4" (67 x 127 x 60 mm)';
 			$data['b_axis'] = '4.6" (117 mm)';
 			$data['b_reference'] = 'USUL 14260';
+
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/144x82/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x144.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_144x82.jpg";
 		}
 	// Cutsheet "Edge"
 		if ( $productitem['edge_screw'] == 'A' || $productitem['edge_screw'] == 'C' )

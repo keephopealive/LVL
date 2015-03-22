@@ -116,9 +116,9 @@
 						<option value="CF">Doré Patiné</option>
 						<option value="CG">Laiton Poli Verni</option>
 						<option value="CH">Laiton Poli Satiné</option>
-						<option value="SA">NICKEL NOIR BRILLANT</option>
+						<option value="SA">Nickel Noir Brillant</option>
 						<option value="SB">Nickel Noir Mat</option>
-						<option value="SC">CHROME MARTELE</option>
+						<option value="SC">Chromé Martelé</option>
 						<option value="SD">Chrome Vibré</option>
 						<option value="SE">Argent Patiné</option>
 						<option value="SF">Chrome Microbillé</option>
@@ -129,7 +129,7 @@
 						<option value="SK">Dorure 24 Carats</option>
 						<option value="SL">Microbillé Dorure 24 carats</option>
 						<option value="SM">Microbillé Canon de Fusil Anthracite</option>
-						<option value="SN">POLI VERNI OR MAT</option>
+						<option value="SN">Laiton Poli Verni</option>
 					</select>
 				</div>
 			</div>
