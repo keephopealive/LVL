@@ -88,54 +88,141 @@ class Productitem extends CI_Model {
 
 // Generate Variables for PDF Cutsheet from Reference No 
 
+
 	// Reference No
 		$data['reference_no'] = $reference_no;
 
-	// Retrieve Cutsheet Main image 
-		// Find the image with the name $reference_no.png
-		// From: (Filepath) /assets/img/cutsheetMain/$reference_no.png
-		// see if file_exists() if yes, then filepath = /assets/img/cutsheetMain/$reference_no.png
-							// if no, then filepath = /assets/img/cutsheetMain/default.png
-		// $data['frontView'] = filepath 
-
-		// same process for  backBoxImg , dwgFront , dwgSide
-
-//		$data['frontView'] = "./../../assets/img/cutsheetImg/front/". "F" .
-
-
 		$data['sideView'] = "../../assets/img/cutsheetImg/s_35.jpg";
 
-		// $data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/". 
-		// 	"F" .
-		// 	$productitem['collection'] .
-		// 	$productitem['size'] .
-		// 	$productitem['edge_screw'] .
-		// 	"-" .
-		// 	$productitem['mechanism']. ".jpg";
+		// Cutsheet [FINISH]
+		if ($productitem['finish'] == "FA")
+		{
+			$data['finish'] = "Nickel Brossé";
+		}
+		if ($productitem['finish'] == "FB")
+		{
+			$data['finish'] = "Nickel Brillant";
+		}
+		if ($productitem['finish'] == "FC")
+		{
+			$data['finish'] = "Nickel Microbillé";
+		}
+		if ($productitem['finish'] == "FD")
+		{
+			$data['finish'] = "Chrome Mat";
+		}
+		if ($productitem['finish'] == "FE")
+		{
+			$data['finish'] = "Chrome Vif";
+		}
 
-		// $data['frontView'] = "../../assets/img/cutsheetImg/size/b_82x82.jpg";
+		if ($productitem['finish'] == "FF")
+		{
+			$data['finish'] = "Canon de Fusil Anthracite";
+		}
+		if ($productitem['finish'] == "FG")
+		{
+			$data['finish'] = "Canon de Fusil Bleu Nuit";
+		}
+		if ($productitem['finish'] == "CA")
+		{
+			$data['finish'] = "Bronze Medaille Clair";
+		}
+		if ($productitem['finish'] == "CB")
+		{
+			$data['finish'] = "Bronze Medaille Clair Verni Mat";
+		}
+		if ($productitem['finish'] == "CC")
+		{
+			$data['finish'] = "Bronze Medaille Allemand";
+		}
+		if ($productitem['finish'] == "CD")
+		{
+			$data['finish'] = "Bronze Medaille Fonce";
+		}
+		if ($productitem['finish'] == "CE")
+		{
+			$data['finish'] = "Champagne";
+		}
+		if ($productitem['finish'] == "CF")
+		{
+			$data['finish'] = "Doré Patiné";
+		}
+		if ($productitem['finish'] == "CG")
+		{
+			$data['finish'] = "Laiton Poli Verni";
+		}
+		if ($productitem['finish'] == "CH")
+		{
+			$data['finish'] = "Laiton Poli Satiné";
+		}
+		if ($productitem['finish'] == "SA")
+		{
+			$data['finish'] = "Nickel Noir Brillant";
+		}
+		if ($productitem['finish'] == "SB")
+		{
+			$data['finish'] = "Nickel Noir Mat";
+		}
+		if ($productitem['finish'] == "SC")
+		{
+			$data['finish'] = "Chromé Martelé";
+		}
+		if ($productitem['finish'] == "SD")
+		{
+			$data['finish'] = "Chrome Vibré";
+		}
+		if ($productitem['finish'] == "SE")
+		{
+			$data['finish'] = "Argent Patiné";
+		}
+		if ($productitem['finish'] == "SF")
+		{
+			$data['finish'] = "Chrome Microbillé";
+		}
+		if ($productitem['finish'] == "SG")
+		{
+			$data['finish'] = "Cuivre Patiné";
+		}
+		if ($productitem['finish'] == "SH")
+		{
+			$data['finish'] = "Cuivre Vielli Bouchonné";
+		}
+		if ($productitem['finish'] == "SI")
+		{
+			$data['finish'] = "Cuivre Satiné";
+		}
+		if ($productitem['finish'] == "SJ")
+		{
+			$data['finish'] = "Bronze Médaille Foncé Barège Brillant";
+		}
+		if ($productitem['finish'] == "SK")
+		{
+			$data['finish'] = "Dorure 24 Carats";
+		}
+		if ($productitem['finish'] == "SL")
+		{
+			$data['finish'] = "Microbillé Dorure 24 carats";
+		}
+		if ($productitem['finish'] == "SM")
+		{
+			$data['finish'] = "Microbillé Canon de Fusil Anthracite";
+		}
+		if ($productitem['finish'] == "SN")
+		{
+			$data['finish'] = "Laiton Poli Verni";
+		}
+		// Cutsheet [ COLOR ]
 
-
-//		var_dump($data['frontView']);
-//		die("Here");
-
-		// if (file_exists($data['frontView'])) 
-		// {
-		// 	return $data['frontView'];
-		// } 
-		// else 
-		// {
-		// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
-		// }
-		// clearstatcache();
-
+		$data['color'] = "BRASS FOR WARM PLATE FINISHES; CHROME FOR COLD PLATE FINISHES";
 
 		// Cuthseet [TYPE OF MECHANISM]
 		// Cuthseet [POWER OF SUPPLY]
 		if(isset($productitem['color']))
 		{
-			$data['mechanismString'] = "";
-			$data['powerSupplyString'] = "";
+			$data['mechanismString'] = "Tamper Proof Outlet (No Cover)";
+			$data['powerSupplyString'] = "15A 120 VAC";
+			$data['color'] = $productitem['color'];
 		}
 		else
 		{
@@ -144,22 +231,22 @@ class Productitem extends CI_Model {
 			$data['mechanismString'] = "";
 			$data['powerSupplyString'] = "";
 
-			if($result['vv'] != null)
+			if($result['vv'] != 0)
 			{
 				$data['mechanismString'] .= "ON/OFF TOGGLE SWITCH; REMAINS IN UP/DOWN POSITION<br>";
 				$data['powerSupplyString'] .= "125-250 V - 15 A<br>";
 			}
-			if($result['bp'] != null)
+			if($result['bp'] != 0)
 			{
 				$data['mechanismString'] .= "MOMENTARY PUSH BUTTON; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
 				$data['powerSupplyString'] .= "CLASS TWO LOW-VOLTAGE SWITCH<br>";
 			}
-			if($result['bpe'] != null)
+			if($result['bpe'] != 0)
 			{
 				$data['mechanismString'] .= "ON/OFF PUSH BUTTON; CLICK WHEN PRESSED.<br>";
 				$data['powerSupplyString'] .= "CLASS TWO LOW-VOLTAGE SWITCH<br>";
 			}
-			if($result['inv'] != null) {
+			if($result['inv'] != 0) {
 				$data['mechanismString'] .= "MOMENTARY TOGGLE SWITCH; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
 				$data['powerSupplyString'] .= "125-250 V - 15 A<br>";
 			}
@@ -341,6 +428,78 @@ class Productitem extends CI_Model {
 
 			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_144x82.jpg";
 		}
+		if ( $productitem['size'] == "1400") 
+		{
+			$data['size'] = '100X100 (3.9"X3.9")';
+
+			$data['p_dimensions'] = '3.9" x 3.9" x .5" (100 x 100 x 14 mm)';
+			$data['p_axis'] = '2.36" (60 mm)';
+
+			$data['b_dimensions'] = 'n/a';
+			$data['b_axis'] = 'n/a';
+			$data['b_reference'] = 'n/a';
+
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/100/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_100x100.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_100x100.jpg";
+		}
+		if ( $productitem['size'] == "1403") 
+		{
+			$data['size'] = '100 mm  (3.9") Single Round';
+
+			$data['p_dimensions'] = '3.9" diameter x .5" thick (100 mm / 14 mm)';
+			$data['p_axis'] = '2.36" (60 mm)';
+
+			$data['b_dimensions'] = 'n/a';
+			$data['b_axis'] = 'n/a';
+			$data['b_reference'] = 'n/a';
+
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/100/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_100x100.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_100x100.jpg";
+		}
+		if ( $productitem['size'] == "1401D") 
+		{
+			$data['size'] = '180X100 (7"X3.9") Double Outlet';
+
+			$data['p_dimensions'] = '7.1" x 3.9" x .5" (180 x 100 x 14 mm)';
+			$data['p_axis'] = '5.5" (140 mm)';
+
+			$data['b_dimensions'] = 'n/a';
+			$data['b_axis'] = 'n/a';
+			$data['b_reference'] = 'n/a';
+
+			$tempFrontView = "F" .
+				$productitem['collection'] .
+				$productitem['size'] .
+				$productitem['edge_screw'] .
+				"-" .
+				$productitem['mechanism']. ".jpg";
+
+			$data['frontView'] = "../../assets/img/cutsheetImg/plate/100/".$tempFrontView;
+
+			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_160x180.jpg";
+
+			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_160x180.jpg";
+		}
 	// Cutsheet "Edge"
 		if ( $productitem['edge_screw'] == 'A' || $productitem['edge_screw'] == 'C' )
 		{
@@ -379,7 +538,7 @@ class Productitem extends CI_Model {
 
 	public function retrieveMechanisms($id)
 	{
-		$query = "SELECT * FROM mechanisms WHERE size_id = ?";
+		$query = "SELECT * FROM mechanisms WHERE size_id = ? AND `img`= 1";
 		$values = $id;
 		return $this->db->query($query, $values)->result_array();
 	}

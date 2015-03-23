@@ -165,13 +165,13 @@
 				<div class="color">	<!-- APPENDING SIZE OPTIONS -->
 					<div class='radio padRad1'>
 						<label>
-							<input type='radio' name='color' class='color' value='B'>Black
+							<input type='radio' name='color' class='color' value='BLACK'>Black
 						</label>
 					</div>
 						<br>
 					<div class='radio padRad1'>
 						<label>
-							<input type='radio' name='color' class='color' value='W'>White
+							<input type='radio' name='color' class='color' value='WHITE'>White
 						</label>
 					</div>
 						<br>

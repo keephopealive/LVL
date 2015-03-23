@@ -151,7 +151,7 @@
 	<!-- END MECHANISM  -->
 
 	<!-- EDGE / SCREW -->
-			<div class="col-sm-2 col-sm-offset-1 cataBox">
+			<div class="col-sm-2 col-sm-offset-1 cataBoxScrew">
 				<div class="ES">
 					<div class="screw"> <!-- EDGE & SCREW OPTIONS DIV -->
 						<h4>Screw</h4>
@@ -163,6 +163,7 @@
 								<input type='radio' class='screw' name='screw' value='no'> Hidden Screws
 							</label>
 						</div>
+						<p>Due to their patented dual-plate construction, plates with hidden screws come with a roughly 30% premium.</p>
 					</div>
 					<div class="edge"> <!-- EDGE & SCREW OPTIONS DIV -->
 
@@ -295,7 +296,8 @@
 			"<label>"+
 			"<input type='radio' class='screw' name='screw' value='no'> Hidden Screws"+
 			"</label>"+
-			"</div>");
+			"</div>"+
+			"<p>Due to their patented dual-plate construction, plates with hidden screws come with a roughly 30% premium.</p>");
 			$('div.hiddenfield').html("<input type='hidden' name='collection' value='C' />"); // ADDED LINE
 		}
 // Ellipse
@@ -312,7 +314,8 @@
 			"<label>"+
 			"<input type='radio' class='screw' name='edge_screw' value='D'> Hidden Screws"+
 			"</label>"+
-			"</div>");
+			"</div>"+
+			"<p>Due to their patented dual-plate construction, plates with hidden screws come with a roughly 30% premium.</p>");
 			$('div.hiddenfield').html("<input type='hidden' name='collection' value='E' />"); // ADDED LINE
 		}
 	});
@@ -379,8 +382,8 @@
 		// 82x117
 		else if ( $(this).val() == '3000' )
 		{
-			var sid = 1;
-			console.log('3000 - 117x82 - 1'); //change
+			var sid = 2;
+			console.log('3000 - 117x82 - 2'); //change
 		}
 		// 82x144
 		else if ( $(this).val() == '3003' )
@@ -391,8 +394,8 @@
 		// 117x82
 		else if ( $(this).val() == '3001' )
 		{
-			var sid = 2;
-			console.log('3001 - 82x117 - 2'); //change
+			var sid = 1;
+			console.log('3001 - 82x117 - 1'); //change
 		}
 		// 144x82
 		else if ( $(this).val() == '3002' )

@@ -134,7 +134,7 @@ th, td {
           </tr>
           <tr>
             <th>FINISH</th>
-            <td><h5 class=""> BRUSHED NICKEL (NICKEL BROSSE)</h5></td>
+            <td><h5 class=""> <?php echo $finish; ?></h5></td>
           </tr>
           <tr>
             <th>EDGE</th>
@@ -174,7 +174,7 @@ th, td {
           </tr>
           <tr>
             <th>COLORS</th>
-            <td><h5 class="">BRASS FOR WARM PLATE FINISHES; CHROME FOR COLD PLATE FINISHES</h5></td>
+            <td><h5 class=""><?php echo $color; ?></h5></td>
           </tr>
         </table>
       </td>

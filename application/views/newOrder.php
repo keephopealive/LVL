@@ -27,8 +27,10 @@
 				<a href="/dashboard"><button class='btn btn-md btn-block'>Back to Dashboard</button></a>
 			</div>
 		</div> -->
-		<div class="row navbar">
-			<h3 class="center-block"> Create a New Order</h3>
+		<div class="row top50">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h3 style="text-align:center;"> Create a New Order</h3>
+			</div>
 		</div>
 		<div class="row orderInfo top50">
 			<div class="col-sm-6 col-sm-offset-1">

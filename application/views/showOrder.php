@@ -24,7 +24,11 @@
 				<p class="headTag">Exclusive Distributor of <span style="color:rgb(238,34,43);">Meljac</span> in North America</p>
 			</div>
 		</div>
-
+		<div class="row navbar">
+			<div class="col-sm-4 col-sm-offset-4">
+				<a href="/dashboard"><button class='btn btn-md btn-block'>Back to My Orders</button></a>
+			</div>
+		</div>
 		<div class="row myOrders">
 			<div class='col-sm-10 col-sm-offset-1'>
 				<h2 style="text-align:center;"><?= $order['project_name']?></h2>
@@ -47,12 +51,6 @@
 						</tr>
 			<?php	}
 			?>	</table>
-			</div>
-		</div>
-
-		<div class="row navbar">
-			<div class="col-sm-4 col-sm-offset-4">
-				<a href="/dashboard"><button class='btn btn-md btn-block'>Back to My Orders</button></a>
 			</div>
 		</div>
 	</div>
