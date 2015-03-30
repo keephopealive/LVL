@@ -10,9 +10,8 @@ class User extends CI_Model {
 		$salt = bin2hex(openssl_random_pseudo_bytes(22));
 
 		$encrypted_password = crypt($this->db->escape($user['password']), $salt);
-
-		$query = "INSERT INTO users (first_name, last_name, email, encrypted_password, birthdate, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)";
-		$values = array($user['first_name'], $user['last_name'], $user['email'], $encrypted_password, $user['birthdate'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
+		$query = "INSERT INTO users (first_name, last_name, email, encrypted_password, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)";
+		$values = array($user['first_name'], $user['last_name'], $user['email'], $encrypted_password, date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
 	}
 

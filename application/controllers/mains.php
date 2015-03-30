@@ -99,11 +99,6 @@ class Mains extends CI_Controller {
 				'rules' => 'required|valid_email|is_unique[users.email]'
 			),
 			array(
-				'field' => 'birthdate',
-				'label' => 'Birthdate',
-				'rules' => 'required'
-			),
-			array(
 				'field' => 'password',
 				'label' => 'Password',
 				'rules' => 'required|min_length[8]|matches[confirm_password]'
