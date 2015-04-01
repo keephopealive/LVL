@@ -109,10 +109,10 @@
                         <label for="name">Name</label>
                         <input type="text" class="form-control content" name="name" id="name" placeholder="Jane Doe" style="margin-left:10px;" required>
                     </div>
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="company">Company</label>
                         <input type="text" class="form-control" name="company" id="company" placeholder="ABC Development" style="margin-left:10px;">
-                    </div> -->
+                    </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control content_email" name="email" id="email" placeholder="jane.doe@example.com" style="margin-left:10px;" required>
@@ -133,19 +133,19 @@
 
 
     <!-- LOGIN REGISTRATOIN CONTENT START -->
-
-    <!-- <div class='row regLogin'>
+<!-- 
+    <div class='row regLogin'>
         <div class='col-sm-8 col-sm-offset-2'>
             <div class='regInfo'>
                 <p><strong>With our integrator order entry system and cut sheet generator, trade professionals can:</strong></p><br>
                 <ul>
-                    <li>Select and customize standard Meljac keypads and outlets up to 5.7” (144 mm) in length</li>'
+                    <li>Select and customize standard Meljac keypads and outlets up to 5.7” (144 mm) in length</li>
                     <li>Add selections to a project order</li>
                     <li>Download accompanying product cut sheets</li>
                     <li>Request a price quote for the order</li>
                 </ul><br>
-                <p>For any plates larger than 5.7” (144 mm) or customization options/products not currently available through the order entry system, please contact <a href=/contact>LVL-USA</a>.</p>'
-                <p>All Meljac electrical hardware is made-to-order with lead times of eight to ten weeks.  The proprietary back boxes included with any order ship when LVL-USA receives a deposit amount equal to half of the total order.</p>'
+                <p>For any plates larger than 5.7” (144 mm) or customization options/products not currently available through the order entry system, please contact <a href=/contact>LVL-USA</a>.</p>
+                <p>All Meljac electrical hardware is made-to-order with lead times of eight to ten weeks.  The proprietary back boxes included with any order ship when LVL-USA receives a deposit amount equal to half of the total order.</p>
             </div>
         </div>
         <div class='col-sm-4 col-sm-offset-2 top50'>
@@ -208,8 +208,8 @@
                 </div>
             </form>
         </div>
-    </div> -->
-
+    </div>
+ -->
     <!-- CONTENT END -->
 
 

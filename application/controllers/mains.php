@@ -68,7 +68,7 @@ class Mains extends CI_Controller {
 		else
 		{
 			$this->session->set_flashdata('login_msg', "Invalid Credentials.");
-			redirect('/');
+			redirect('/trade');
 		}
 
 	}
