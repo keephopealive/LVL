@@ -5,8 +5,8 @@
 	<title>Client Dashboard</title>
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-	<script src="/assets/js/bootstrap.min.js"></script>
 	<script src="/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>

@@ -16,7 +16,7 @@ h5 	{
 	text-align: right;
 }
 strong{
-	color: green;
+	/*color: green;*/
 }
 .nav {
 	text-align: center;
@@ -258,4 +258,15 @@ a{
   font-size: 12px;
   color: rgba(238, 34, 43, 1);
   text-align: justify;
+}
+.mechTypeContent{
+  font-size: 12px;
+  /*color: rgba(238, 34, 43, 1);*/
+}
+.mechTypeContent li{
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.mech ul{
+  padding-left: 25px;
 }

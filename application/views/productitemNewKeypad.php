@@ -5,12 +5,12 @@
 	<title>Custom Keypad</title>
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-	<script src="/assets/js/bootstrap.min.js"></script>
 	<script src="/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	
+
 </head>
 <body>
 <div class="container-fluid">
@@ -141,16 +141,16 @@
 						<input type="checkbox" class="matchFinish" name="matchFinish" value="YES"> Match with Finish?</input>
 					</label>
 				</div> -->
-				<br>
+				<!-- <br> -->
 				<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
 					<option>PLEASE CHOOSE SIZE FIRST</option>
 				</select>
-				<p>Mechansisms come in the following 4 types</p>
-				<ul>
-					<li>INV – Momentary toggle switch with multiple functions that rests in a center position.</li>
-					<li>V&#38;V – Single Toggle switch that performs on/off function and remains in either an up or down position</li>
-					<li>BP – Momentary push button with multiple functions; non-latching.</li>
-					<li>BPE – Latching push button.  Clicks when pressed.</li>
+				<p class="mechType">Click here for info on Mechanisms.</p>
+				<ul class="mechTypeContent">
+					<li><strong>INV</strong> – Momentary toggle switch with multiple functions that rests in a center position.</li>
+					<li><strong>V&#38;V</strong> – Single Toggle switch that performs on/off function and remains in either an up or down position</li>
+					<li><strong>BP</strong> – Momentary push button with multiple functions; non-latching.</li>
+					<li><strong>BPE </strong>– Latching push button.  Clicks when pressed.</li>
 				</ul>
 			</div>
 	<!-- END MECHANISM  -->
@@ -233,6 +233,7 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 		sessionStorage.runnerA = 'C';
+		$('.mechTypeContent').hide();
 	});
 
 	$(document).on('submit', 'form#createOrderForm', function(){
@@ -428,6 +429,11 @@
 		);
 	});
 
+	// MECHANISM INFO SHOW/HIDE
+
+	$(document).on('click', 'p.mechType', function(){
+		$('.mechTypeContent').toggle();		
+	});
 
 	$(document).on('click', 'input.matchFinish', function(){ //change add
 

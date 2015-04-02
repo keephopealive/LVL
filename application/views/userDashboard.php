@@ -5,8 +5,8 @@
 	<title>Client Dashboard</title>
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-	<script src="/assets/js/bootstrap.min.js"></script>
 	<script src="/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
