@@ -3,14 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+	<script src="/assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery-1.11.2.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(document).on('submit', '#createProduct', function(){
 		$.post(
@@ -268,35 +267,6 @@
 		</form>
 	</div>
 </div>
-
-
-
-<!-- BEGINS - CREATE NEW ORDER -->
-	<div class="row top50">
-		<div class='col-sm-3 col-sm-offset-5'>
-		</div>
-		<div class='col-sm-3'>
-			<!-- <a href="/orders/new" class='btn btn-primary btn-block'>Create New Order</a> -->
-		</div>
-	</div>
-<!-- ENDS - CREATE NEW ORDER -->
-
-<!-- BEGINS - USER INFO -->
-	<div class="row top50">
-		<div class="col-md-3 col-md-offset-1 center">
-			<h4><strong>Currently Logged In</strong></h3>
-		</div>
-		<div class="col-md-3 col-md-offset-1">
-			<h4>User ID: <?= $user['id'] ?></h4>
-			<h4>First Name: <?= $user['first_name'] ?></h4>
-			<h4>Last Name: <?= $user['last_name'] ?></h4>
-		</div>
-		<div class="col-md-3">
-			<h4>Email: <?= $user['email'] ?></h4>
-			<h4>Birthdate: <?= $user['birthdate'] ?></h4>		
-		</div>
-	</div>
-<!-- ENDS - USER INFO -->
 
 </div>
 </body>

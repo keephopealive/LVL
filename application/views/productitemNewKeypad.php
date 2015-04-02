@@ -3,16 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Custom Keypad</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+	<script src="/assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery-1.11.2.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
-	<style>
-
-	</style>
+	
 </head>
 <body>
 <div class="container-fluid">
@@ -147,6 +145,13 @@
 				<select name="mechanism" class="mechanism form-control selectwidthauto"> <!-- MECHANISM OPTIONS DIV -->
 					<option>PLEASE CHOOSE SIZE FIRST</option>
 				</select>
+				<p>Mechansisms come in the following 4 types</p>
+				<ul>
+					<li>INV – Momentary toggle switch with multiple functions that rests in a center position.</li>
+					<li>V&#38;V – Single Toggle switch that performs on/off function and remains in either an up or down position</li>
+					<li>BP – Momentary push button with multiple functions; non-latching.</li>
+					<li>BPE – Latching push button.  Clicks when pressed.</li>
+				</ul>
 			</div>
 	<!-- END MECHANISM  -->
 
