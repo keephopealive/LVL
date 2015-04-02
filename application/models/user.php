@@ -7,9 +7,10 @@ class User extends CI_Model {
 	public function registration($user)
 	{
 		$this->load->helper('security');
-		$salt = bin2hex(openssl_random_pseudo_bytes(22));
-
-		$encrypted_password = crypt($this->db->escape($user['password']), $salt);
+//		$salt = bin2hex(openssl_random_pseudo_bytes(22));
+//		$encrypted_password = crypt('mypassword', $salt);
+//		$encrypted_password = crypt($this->db->escape($user['password']), $salt);
+		$encrypted_password = md5($user['password']);
 		$query = "INSERT INTO users (first_name, last_name, email, encrypted_password, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)";
 		$values = array($user['first_name'], $user['last_name'], $user['email'], $encrypted_password, date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"));
 		return $this->db->query($query, $values);
@@ -30,21 +31,12 @@ class User extends CI_Model {
 	private function validate_user($user)
 	{
 		$this->load->helper('security');
-		$query = "SELECT * FROM users WHERE email = ?";
-		$value = array($user['email']);
-		$results = $this->db->query($query, $value)->row_array();
-		if($results)
+		$query = "SELECT * FROM users WHERE email = ? AND encrypted_password = ?";
+		$values = array($user['email'], md5($user['password']));
+		$result = $this->db->query($query, $values)->row_array();
+		if($result)
 		{
-			$crypted_pass = crypt($user['password'], $results['encrypted_password']);
-			if(substr($crypted_pass,0,2) == substr($results['encrypted_password'],0,2))
-			{
-				unset($results['encrypted_password']);;
-				return $results;
-			}	
-			else
-			{
-				return false;
-			} 
+			return $result;
 		}
 		else
 		{

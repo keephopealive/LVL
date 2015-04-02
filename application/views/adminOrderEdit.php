@@ -86,6 +86,8 @@
 							</form>
 					<tr>
 						<td>Download Order Excel Sheet</td>
+<!--						$order['excelsheet'] = $order['excelsheet']-->
+<!--	EXCEL SHEET UPDATED IN THE DB -->
 						<td><a href="../../excel/<?= $order['excelsheet']; ?>.xlsx"></td>
 					</tr>
 					<tr>
