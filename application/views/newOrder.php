@@ -119,7 +119,7 @@
 
 		<div class="row orderAction2">
 			<div class="col-sm-3 col-sm-offset-2">
-				<a href="/order/deleteOrder/<?= $order_id; ?>"><button class='btn btn-block lvl-nav'>Delete/Cancel Order</button></a>
+				<a href="/order/deleteOrder/<?= $order_id; ?>"><button class='btn btn-block lvl-nav'>Cancel Order</button></a>
 			</div>
 			<div class="col-sm-3 col-sm-offset-2">
 				<a href="/order/updateOrder/<?= $order_id; ?>"><button class='btn btn-block lvl-nav'>Save Order</button></a>
