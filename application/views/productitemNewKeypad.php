@@ -201,8 +201,17 @@
 
 	<!-- BEGIN ENGRAVING -->
 			<div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
-				<h4>Engraving</h4>
-				<input class="fullInput" type="text" name='engraving'>
+				<h4 style="margin-bottom:20px !important;">Engraving</h4>
+				<p style="font-size:12px; color:rgba(238, 34, 43, 1);">Standard engravings are done in Helvetica 2.5 font and are limited to 8 characters per mechanism.  For more engraving options please contact LVL-USA.</p>
+				<input class="fullInput" type="text" name='engraving1' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving2' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving3' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving4' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving5' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving6' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving7' style="margin-bottom:10px;">
+				<input class="fullInput" type="text" name='engraving8'>
+
 			</div>
 	<!-- END ENGRAVING-->
 			<div class='hiddenfield'>

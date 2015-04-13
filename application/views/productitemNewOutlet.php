@@ -204,10 +204,10 @@
 			<!-- END QUANTITY -->
 
 			<!-- BEGIN ENGRAVING -->
-			<div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
+			<!-- <div class='note col-sm-2 col-sm-offset-1 cataBox top50'>
 				<h4>Engraving</h4>
 				<input class="fullInput" type="text" name='engraving'>
-			</div>
+			</div> -->
 			<!-- END ENGRAVING-->
 			<div class='hiddenfield'>
 			</div>
