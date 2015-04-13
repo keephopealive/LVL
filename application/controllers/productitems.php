@@ -91,6 +91,46 @@ class Productitems extends CI_Controller {
 				'field' => 'edge_screw',
 				'label' => 'edge / screw',
 				'rules' => 'required'
+			),
+			array(
+				'field' => 'engraving1',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving2',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving3',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving4',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving5',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving6',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving7',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
+			),
+			array(
+				'field' => 'engraving8',
+				'label' => 'first engraving',
+				'rules' => 'max_length[8]'
 			)
 		);
 		$this->form_validation->set_rules($config);

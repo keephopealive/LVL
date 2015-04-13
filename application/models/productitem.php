@@ -528,7 +528,7 @@ class Productitem extends CI_Model {
 // QUERY TO PULL "CONFIGURATION" FROM MECHANISMS TABLE
 		$query2 = "SELECT configuration FROM mechanisms WHERE reference_code = '{$productitem['mechanism']}' LIMIT 1";
 		$result2 = $this->db->query($query2)->row_array();
-		$data['mech_config'] = $result2;
+		$data['mech_config'] = $result2['configuration'];
 
 
 		$this->session->set_userdata('reference_no', $reference_no);
@@ -541,8 +541,8 @@ class Productitem extends CI_Model {
 //		$mechanism_value = substr($reference_no, 8,8); // Mechanism => A1100010
 // 		$finish_value = substr($reference_no, 16,2); // Finish => FA
 		$finish_value = $data['finish'];
-		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, engraving, created_at, updated_at, collection, size, edge_screw, mechanism, finish, engraving1, engraving2, engraving3, engraving4, engraving5, engraving6, engraving7, engraving8  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, ("./../../pdf/".$reference_no), "Pending", $productitem['quantity'], $productitem['note'], $productitem['engraving'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"), $collection_value, $size_value, $edgescrew_value, $mechanism_value, $finish_value, $productitem['engraving1'], $productitem['engraving2'], $productitem['engraving3'], $productitem['engraving4'], $productitem['engraving5'], $productitem['engraving6'], $productitem['engraving7'], $productitem['engraving8']);
+		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, created_at, updated_at, collection, size, edge_screw, mechanism, finish, engraving1, engraving2, engraving3, engraving4, engraving5, engraving6, engraving7, engraving8  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, ("./../../pdf/".$reference_no), "Pending", $productitem['quantity'], $productitem['note'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"), $collection_value, $size_value, $edgescrew_value, $mechanism_value, $finish_value, $productitem['engraving1'], $productitem['engraving2'], $productitem['engraving3'], $productitem['engraving4'], $productitem['engraving5'], $productitem['engraving6'], $productitem['engraving7'], $productitem['engraving8']);
 		return $this->db->query($query, $values);
 	}
 
