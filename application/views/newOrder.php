@@ -90,25 +90,31 @@
 				<table class='table table-bordered table-hover'>
 					<thead>
 						<th class="col-sm-2">Reference No</th>
-						<th class="col-sm-4">Room/Product Name</th>
-						<th class="col-sm-2">Quantity</th>
+						<th class="col-sm-2">Room/Product Name</th>
+						<th class="col-sm-1">Size</th>
+						<th class="col-sm-1">Mechanisms</th>
+						<th class="col-sm-1">Finish</th>
+						<th class="col-sm-1">Quantity</th>
 						<th class="col-sm-2">Engraving</th>
-						<th class="col-sm-2">Cutsheet</th>
-						<th class="col-sm-2">Delete</th>
+						<th class="col-sm-1">Cutsheet</th>
+						<th class="col-sm-1">Delete</th>
 					</thead>
 <?php	foreach($productitems as $productitem)
 		{
 	?>				<tr>
 						<td><?= $productitem['reference_no']?></td> 
 						<td><?= $productitem['note']?></td>
+						<td><?= $productitem['size']?></td>
+						<td><?= $productitem['mechanism']?></td>
+						<td><?= $productitem['finish']?></td>
 						<td><?= $productitem['quantity']?></td>
 						<td><?= $productitem['engraving']?></td> 
-						<td><a class="btn delItem" href="././../../../pdf/<?= $productitem['pdf'];?>.pdf">PDF Download</a>
+						<td><a class="btn delItem pull-right" href="././../../../pdf/<?= $productitem['pdf'];?>.pdf">PDF Download</a>
 						</td>
 						<td>
 							<form method='post' action='/productitem/destroyProductitem'>
 								<input type='hidden' name='productitem_id' value="<?= $productitem['id']; ?>">
-								<input type='submit' class='btn delItem'value='Delete'>
+								<input type='submit' class='btn delItem pull-right'value='Delete'>
 							</form>
 						</td>
 					</tr>

@@ -122,7 +122,7 @@ th, td {
       <td colspan="2">
         <table class="coveringPlate">
           <tr class="title">
-            <td colspan="2">COVERING PLATE</td>
+            <td colspan="2">COVER PLATE</td>
           </tr>
           <tr>
             <th>MATERIAL</th>
@@ -141,7 +141,7 @@ th, td {
             <td><h5 class=""><?php echo $edge; ?></h5></td>
           </tr>
           <tr>
-            <th>SCREW AXIS</th>
+            <th>SCREW INTERAXIS</th>
             <td><h5 class=""><?php echo $p_axis; ?></h5></td>
           </tr>
           <tr>
@@ -169,7 +169,7 @@ th, td {
             <td><h5 class=""> <?php echo $mechanismString; ?></h5></td>
           </tr>
           <tr>
-            <th>POWER OF SUPPLY</th>
+            <th>RATING</th>
             <td><h5 class=""><?php echo $powerSupplyString; ?></h5></td>
           </tr>
           <tr>

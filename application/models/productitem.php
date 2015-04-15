@@ -234,7 +234,7 @@ class Productitem extends CI_Model {
 			if($result['vv'] != 0)
 			{
 				$data['mechanismString'] .= "ON/OFF TOGGLE SWITCH; REMAINS IN UP/DOWN POSITION<br>";
-				$data['powerSupplyString'] .= "125-250 V - 15 A<br>";
+				$data['powerSupplyString'] .= "125-250 VAC – 15A<br>";
 			}
 			if($result['bp'] != 0)
 			{
@@ -248,7 +248,7 @@ class Productitem extends CI_Model {
 			}
 			if($result['inv'] != 0) {
 				$data['mechanismString'] .= "MOMENTARY TOGGLE SWITCH; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
-				$data['powerSupplyString'] .= "125-250 V - 15 A<br>";
+				$data['powerSupplyString'] .= "125-250 VAC – 15A<br>";
 			}
 		}
 
@@ -503,7 +503,7 @@ class Productitem extends CI_Model {
 	// Cutsheet "Edge"
 		if ( $productitem['edge_screw'] == 'A' || $productitem['edge_screw'] == 'C' )
 		{
-			$data['edge'] = 'CHAMFER';
+			$data['edge'] = 'BEVELED';
 		}
 		else
 		{

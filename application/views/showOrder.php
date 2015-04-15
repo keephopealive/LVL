@@ -36,6 +36,9 @@
 					<thead>
 						<th>Reference No</th>
 						<th>Room/Product Name</th>
+						<th>Size</th>
+						<th>Mechanisms</th>
+						<th>Finish</th>
 						<th>Quantity</th>
 						<th>Engraving</th>
 						<th>Cutsheet</th>
@@ -45,6 +48,9 @@
 			?>			<tr>
 							<td><?= $productitem['reference_no']?></td> 
 							<td><?= $productitem['note']?></td>
+							<td><?= $productitem['size']?></td>
+							<td><?= $productitem['mechanism']?></td>
+							<td><?= $productitem['finish']?></td>
 							<td><?= $productitem['quantity']?></td>
 							<td><?= $productitem['engraving']?></td>
 							<td><a href="././../../../pdf/<?= $productitem['pdf'];?>.pdf">PDF Download</a></td>
