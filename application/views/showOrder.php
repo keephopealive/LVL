@@ -40,7 +40,6 @@
 						<th>Mechanisms</th>
 						<th>Finish</th>
 						<th>Quantity</th>
-						<th>Engraving</th>
 						<th>Cutsheet</th>
 					</thead>
 			<?php	foreach($productitems as $productitem)
@@ -52,7 +51,6 @@
 							<td><?= $productitem['mechanism']?></td>
 							<td><?= $productitem['finish']?></td>
 							<td><?= $productitem['quantity']?></td>
-							<td><?= $productitem['engraving']?></td>
 							<td><a href="././../../../pdf/<?= $productitem['pdf'];?>.pdf">PDF Download</a></td>
 						</tr>
 			<?php	}

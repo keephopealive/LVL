@@ -66,8 +66,9 @@ class Productitem extends CI_Model {
 	{
 // REFERENCE_NO parse ===============================================================
 		if(!isset($productitem['mechanism']))
+		{
 			$productitem['mechanism'] = 'xxxxxxxx';
-
+		}
 		$reference_no =
 			"F" .
 			$productitem['collection'] .
@@ -76,7 +77,6 @@ class Productitem extends CI_Model {
 			"-" .
 			$productitem['mechanism'] .
 			$productitem['finish'];
-
 
 
 // PDF Generation ===================================================================
@@ -212,6 +212,8 @@ class Productitem extends CI_Model {
 		{
 			$data['finish'] = "Laiton Poli Verni";
 		}
+
+		
 		// Cutsheet [ COLOR ]
 
 		$data['color'] = "BRASS FOR WARM PLATE FINISHES; CHROME FOR COLD PLATE FINISHES";
@@ -252,7 +254,7 @@ class Productitem extends CI_Model {
 			}
 		}
 
-
+		
 	// Cutsheet "Material"
 		if ( $productitem['collection'] == "P")
 		{
@@ -284,52 +286,13 @@ class Productitem extends CI_Model {
 			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_82x82.jpg";
 			
 			
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/".$tempFrontView;
-
-			// $data['frontView'] = $tempFrontView;
-			// if (file_exists($tempFrontView)) 
-			// {	
-			// 	// die('BLERGH');
-			// 	// var_dump($tempFrontView);
-			// 	$data['frontView'] = $tempFrontView;
-			// } 
-			// else 
-			// {
-			// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
-			// }
-			// clearstatcache();	
-
-
-			// url to your images folder (no trailing slash)
-
-			// $url = "http://www.lvl-usa.com//assets/img/cutsheetImg/plate/82x82";
-
-			// // check if image exists ($thumbnail is our image variable)
-
-			// if(file_exists("$url/$thumbnail"))
-
-			// {
-			// 	$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x82/".$tempFrontView;
-			// // If yes, print out the image
-
-			// }
-
-			// // if no, give an alternative image
-
-			// else
-
-			// {
-
-			// $data['frontView'] = "../../assets/img/cutsheetImg/plate/noImg.jpg";
-
-			// }
 
 		}
 		if ( $productitem['size'] == "3001") 
@@ -343,12 +306,11 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = '3.27" (83 mm)';
 			$data['b_reference'] = 'USUL 11560';
 
-				$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x117/".$tempFrontView;
 
@@ -358,6 +320,7 @@ class Productitem extends CI_Model {
 		}
 		if ( $productitem['size'] == "3000") 
 		{
+
 			$data['size'] = '117 x 82';
 
 			$data['p_dimensions'] = '4.6" x 3.2" x .1" (117 x 82 x 3 mm)';
@@ -367,18 +330,18 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = '3.27" (83 mm)';
 			$data['b_reference'] = 'USUL 11560';
 
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/117x82/".$tempFrontView;
 
 			$data['b_img'] = "../../assets/img/cutsheetImg/size/b_82x117.jpg";
 
 			$data['saxis'] = 	"../../assets/img/cutsheetImg/size/sax_117x82.jpg";
+
 		}
 		if ( $productitem['size'] == "3003") 
 		{
@@ -391,12 +354,11 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = '4.6" (117 mm)';
 			$data['b_reference'] = 'USUL 14260';
 
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/82x144/".$tempFrontView;
 
@@ -415,12 +377,11 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = '4.6" (117 mm)';
 			$data['b_reference'] = 'USUL 14260';
 
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/144x82/".$tempFrontView;
 
@@ -439,12 +400,11 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = 'n/a';
 			$data['b_reference'] = 'n/a';
 
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/100/".$tempFrontView;
 
@@ -463,12 +423,11 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = 'n/a';
 			$data['b_reference'] = 'n/a';
 
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/100/".$tempFrontView;
 
@@ -487,12 +446,11 @@ class Productitem extends CI_Model {
 			$data['b_axis'] = 'n/a';
 			$data['b_reference'] = 'n/a';
 
-			$tempFrontView = "F" .
-				$productitem['collection'] .
-				$productitem['size'] .
-				$productitem['edge_screw'] .
-				"-" .
-				$productitem['mechanism']. ".jpg";
+			$tempFrontView = 	$productitem['size'] .
+
+								$productitem['edge_screw'] .
+								"-" .
+								$productitem['mechanism']. ".jpg";
 
 			$data['frontView'] = "../../assets/img/cutsheetImg/plate/100/".$tempFrontView;
 
@@ -509,6 +467,7 @@ class Productitem extends CI_Model {
 		{
 			$data['edge'] = 'STRAIGHT';
 		}
+
 	// Cutsheet "Type of Mechanism" and "power of supply" NEED TO BE DONE... QUERY TO JOIN WITH MECHANISMS TABLE AND FIND MECHANISM TYPES FROM THERE
 
 			// If file does not excit (avoid duplicate names & avoid overriding files
@@ -525,13 +484,19 @@ class Productitem extends CI_Model {
 
 // END PDF Generation ===================================================================
 
+		var_dump($productitem);
+		var_dump($data);
+		die('in productitem model 4');
+
 // QUERY TO PULL "CONFIGURATION" FROM MECHANISMS TABLE
 		$query2 = "SELECT configuration FROM mechanisms WHERE reference_code = '{$productitem['mechanism']}' LIMIT 1";
 		$result2 = $this->db->query($query2)->row_array();
 		$data['mech_config'] = $result2['configuration'];
 
+		
 
-		$this->session->set_userdata('reference_no', $reference_no);
+
+		// $this->session->set_userdata('reference_no', $reference_no);
 		$collection_value = substr($reference_no, 1,1); // Collection => C, E
 		// $size_value = substr($reference_no, 2,4); // Size => 3008
 		$size_value = $data['size'];
@@ -541,8 +506,9 @@ class Productitem extends CI_Model {
 //		$mechanism_value = substr($reference_no, 8,8); // Mechanism => A1100010
 // 		$finish_value = substr($reference_no, 16,2); // Finish => FA
 		$finish_value = $data['finish'];
-		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, created_at, updated_at, collection, size, edge_screw, mechanism, finish, engraving1, engraving2, engraving3, engraving4, engraving5, engraving6, engraving7, engraving8  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO productitems (user_id, order_id,reference_no, pdf, status, quantity, note, created_at, updated_at, collection, size, edge_screw, mechanism, finish, engraving1, engraving2, engraving3, engraving4, engraving5, engraving6, engraving7, engraving8) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		$values = array($this->session->userdata['user']['id'], $productitem['order_id'], $reference_no, ("./../../pdf/".$reference_no), "Pending", $productitem['quantity'], $productitem['note'], date("Y-m-d, H:i:s"), date("Y-m-d, H:i:s"), $collection_value, $size_value, $edgescrew_value, $mechanism_value, $finish_value, $productitem['engraving1'], $productitem['engraving2'], $productitem['engraving3'], $productitem['engraving4'], $productitem['engraving5'], $productitem['engraving6'], $productitem['engraving7'], $productitem['engraving8']);
+		
 		return $this->db->query($query, $values);
 	}
 

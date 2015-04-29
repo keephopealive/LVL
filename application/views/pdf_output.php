@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-<style>
+  <style>
 .header {
   width: 100%;
 }
@@ -9,7 +9,7 @@
   margin: 20px 0;
   text-align: right;
 }
-.logo{
+/*.logo{
   width: 75%;
 }
 .infoBox  {
@@ -20,7 +20,7 @@
 }
 .frontView  {
   width: 45%;
-}
+}*/
 .coveringPlate  {
   width: 100%;
   border-top: 1px solid black;
@@ -97,6 +97,7 @@ th, td {
     text-align: left;    
 }
 </style>
+
 </head>
 
 <body>
@@ -104,7 +105,7 @@ th, td {
   <table class="header">
     <tr>
       <td style="vertical-align:top;" class="logo"> 
-        <img src="../../assets/img/logo1000.jpg" alt="LVL LOGO" width="100%" height="143px">
+        <img src="../../assets/img/logo1000.jpg" alt="LVL LOGO" width="140mm" height="21mm">
       </td>
       <td class="infoBox">
         <h4 class="ref_no"><?php echo $reference_no; ?></h4>
@@ -117,7 +118,7 @@ th, td {
   <table class="plate">
     <tr>
       <td class="frontView">
-        <img src="<?= $frontView ?>" alt="Plate - Front view" width="300px" height="300px">
+        <img src="<?= $frontView ?>" alt="Plate - Front view" width="70mm" height="70mm">
       </td>
       <td colspan="2">
         <table class="coveringPlate">
@@ -157,9 +158,13 @@ th, td {
       </td>
     </tr>
     <tr>
-      <td><img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="100px" height="250px"></td>
-      <td><img src="<?php echo $saxis; ?>"width="250px" height="250px"></td>
-      <td width="400px" height="250px">
+      <td width="25mm">
+        <img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="21mm" height="54mm">
+      </td>
+      <td width="50mm">
+        <img src="<?php echo $saxis; ?>"width="50mm" height="50mm">
+      </td>
+      <td width="100mm">
         <table class="switchType">
           <tr class="title">
             <td colspan="2">SWITCH TYPE</td>
@@ -183,10 +188,10 @@ th, td {
 
   </table>
 
-  <table class="backBox">
+  <table class="backBox" style="margin-top:10mm">
 
      <tr>
-      <td><img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="300px" height="300px"></td>
+      <td><img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="75mm"></td>
      <!--  <td><img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="105px" height="270px"></td> -->
       <td>
         <table class="backBoxSpecs">
