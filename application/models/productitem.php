@@ -484,9 +484,9 @@ class Productitem extends CI_Model {
 
 // END PDF Generation ===================================================================
 
-		var_dump($productitem);
-		var_dump($data);
-		die('in productitem model 4');
+//		var_dump($productitem);
+//		var_dump($data);
+//		die('in productitem model 4');
 
 // QUERY TO PULL "CONFIGURATION" FROM MECHANISMS TABLE
 		$query2 = "SELECT configuration FROM mechanisms WHERE reference_code = '{$productitem['mechanism']}' LIMIT 1";

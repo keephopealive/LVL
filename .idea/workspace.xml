@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e00f386e-bfbe-40e6-9dc4-9b8606c8c532" name="Default" comment="" />
+    <list default="true" id="e00f386e-bfbe-40e6-9dc4-9b8606c8c532" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/productitem.php" afterPath="$PROJECT_DIR$/application/models/productitem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/productitemNewKeypad.php" afterPath="$PROJECT_DIR$/application/views/productitemNewKeypad.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/productitemNewOutlet.php" afterPath="$PROJECT_DIR$/application/views/productitemNewOutlet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/productitems.php" afterPath="$PROJECT_DIR$/application/controllers/productitems.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="LVL.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -28,30 +34,60 @@
       <file leaf-file-name="productitemNewKeypad.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/productitemNewKeypad.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25" vertical-offset="2700" max-vertical-offset="10665">
-              <caret line="206" column="66" selection-start-line="206" selection-start-column="66" selection-end-line="206" selection-end-column="66" />
+            <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="10515">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productitem.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productitemNewOutlet.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/productitemNewOutlet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20937188" vertical-offset="0" max-vertical-offset="7080">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newOrder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/newOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-48.75" vertical-offset="0" max-vertical-offset="2100">
+              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.5" vertical-offset="945" max-vertical-offset="2550">
+              <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productitem.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/productitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6515151" vertical-offset="7530" max-vertical-offset="8520">
-              <caret line="545" column="15" selection-start-line="545" selection-start-column="15" selection-end-line="545" selection-end-column="15" />
+            <state vertical-scroll-proportion="-10.083333" vertical-offset="7018" max-vertical-offset="8010">
+              <caret line="484" column="38" selection-start-line="484" selection-start-column="38" selection-end-line="484" selection-end-column="38" />
               <folding>
-                <marker date="1428890642000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
-                <marker date="1428890642000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
-                <marker date="1428890642000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
-                <marker date="1428890642000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
-                <marker date="1428890642000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
-                <marker date="1428890642000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
-                <marker date="1428890642000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
-                <marker date="1428890642000" expanded="true" signature="6359:6436" placeholder="SELECT * FRO..mechanisms..." />
-                <marker date="1428890642000" expanded="true" signature="15528:15625" placeholder="SELECT confi..mechanisms..." />
-                <marker date="1428890642000" expanded="true" signature="16311:16642" placeholder="INSERT INTO ..." />
-                <marker date="1428890642000" expanded="true" signature="17291:17346" placeholder="SELECT * FRO..mechanisms..." />
+                <marker date="1430283655000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
+                <marker date="1430283655000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
+                <marker date="1430283655000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
+                <marker date="1430283655000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
+                <marker date="1430283655000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
+                <marker date="1430283655000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
+                <marker date="1430283655000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
+                <marker date="1430283655000" expanded="true" signature="6369:6446" placeholder="SELECT * FRO..mechanisms..." />
+                <marker date="1430283655000" expanded="true" signature="14530:14627" placeholder="SELECT confi..mechanisms..." />
+                <marker date="1430283655000" expanded="true" signature="15320:15649" placeholder="INSERT INTO ..." />
+                <marker date="1430283655000" expanded="true" signature="16301:16356" placeholder="SELECT * FRO..mechanisms..." />
               </folding>
             </state>
           </provider>
@@ -60,8 +96,18 @@
       <file leaf-file-name="productitems.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/productitems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75" vertical-offset="1230" max-vertical-offset="3465">
-              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+            <state vertical-scroll-proportion="-10.625" vertical-offset="330" max-vertical-offset="3450">
+              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orders.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/orders.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="1065">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -94,13 +140,10 @@
         <option value="$PROJECT_DIR$/application/models/catalog.php" />
         <option value="$PROJECT_DIR$/application/views/trade.php" />
         <option value="$PROJECT_DIR$/application/controllers/admins.php" />
-        <option value="$PROJECT_DIR$/application/views/newOrder.php" />
-        <option value="$PROJECT_DIR$/application/views/productitemNewKeypad.php" />
         <option value="$PROJECT_DIR$/application/views/productDashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/products.php" />
         <option value="$PROJECT_DIR$/application/controllers/orders.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/views/productitemNewOutlet.php" />
         <option value="$PROJECT_DIR$/application/views/pdf_output.php" />
         <option value="$PROJECT_DIR$/application/views/userDashboard.php" />
         <option value="$PROJECT_DIR$/application/views/adminDashboard.php" />
@@ -108,8 +151,11 @@
         <option value="$PROJECT_DIR$/application/views/adminOrderEdit.php" />
         <option value="$PROJECT_DIR$/application/controllers/mains.php" />
         <option value="$PROJECT_DIR$/application/models/user.php" />
+        <option value="$PROJECT_DIR$/application/views/newOrder.php" />
         <option value="$PROJECT_DIR$/application/controllers/productitems.php" />
         <option value="$PROJECT_DIR$/application/models/productitem.php" />
+        <option value="$PROJECT_DIR$/application/views/productitemNewOutlet.php" />
+        <option value="$PROJECT_DIR$/application/views/productitemNewKeypad.php" />
       </list>
     </option>
   </component>
@@ -118,8 +164,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3840" />
-    <option name="y" value="-277" />
+    <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1173" />
   </component>
@@ -162,6 +207,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,7 +404,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +411,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="productitem&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;neworder&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/newOrder.php&#10;login&#9;null&#9;null&#10;users&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/users.php&#10;validate_user&#9;null&#9;null&#10;adminor&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminOrderEdit.php&#10;routes&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;user&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/user.php&#10;retrieveAllOrderProductsMechanisms&#9;null&#9;null&#10;updateorder&#9;null&#9;null&#10;order&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/order.php&#10;admin&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;createorder&#9;null&#9;null&#10;adm&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;dashb&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/userDashboard.php&#10;producti&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;pdf&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/pdf_output.php&#10;productitemc&#9;null&#9;null&#10;outlet&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewOutlet.php&#10;keypad&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;autol&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/autoload.php&#10;produc&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;route&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;orders&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/orders.php&#10;productite&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;produ&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productDashboard.php&#10;prod&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productDashboard.php&#10;product&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/products.php&#10;newprod&#9;null&#9;null&#10;mains&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/mains.php&#10;admins&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;pdf_out&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/pdf_output.php&#10;productkey&#9;null&#9;null&#10;tradeemail&#9;null&#9;null&#10;tradee&#9;null&#9;null&#10;trade&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/trade.php&#10;adminRetrieveAllCatalogs&#9;null&#9;null&#10;ad&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;dashboard&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;cata&#9;null&#9;null&#10;catalog&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/catalog.php&#10;main&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/assets/css/main.css&#10; catal&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/catalog.php&#10;digital&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/digitalCatalog.php&#10;admindas&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;mysq&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/database/drivers/mysql/mysql_driver.php&#10;auto&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/autoload.php&#10;config&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php&#10;database&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/database.php&#10;confi&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php" />
+    <property name="SearchEverywhereHistoryKey" value="outlet&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewOutlet.php&#10;keypad&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;neworder&#9;null&#9;null&#10;product&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;orders&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/orders.php&#10;productitems&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/productitems.php&#10;route&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;productitem&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;login&#9;null&#9;null&#10;users&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/users.php&#10;validate_user&#9;null&#9;null&#10;adminor&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminOrderEdit.php&#10;routes&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/routes.php&#10;user&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/user.php&#10;retrieveAllOrderProductsMechanisms&#9;null&#9;null&#10;updateorder&#9;null&#9;null&#10;order&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/order.php&#10;admin&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;createorder&#9;null&#9;null&#10;adm&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;dashb&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/userDashboard.php&#10;producti&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;pdf&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/pdf_output.php&#10;productitemc&#9;null&#9;null&#10;autol&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/autoload.php&#10;produc&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/productitem.php&#10;productite&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productitemNewKeypad.php&#10;produ&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productDashboard.php&#10;prod&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/productDashboard.php&#10;newprod&#9;null&#9;null&#10;mains&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/mains.php&#10;admins&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;pdf_out&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/pdf_output.php&#10;productkey&#9;null&#9;null&#10;tradeemail&#9;null&#9;null&#10;tradee&#9;null&#9;null&#10;trade&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/trade.php&#10;adminRetrieveAllCatalogs&#9;null&#9;null&#10;ad&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/controllers/admins.php&#10;dashboard&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;cata&#9;null&#9;null&#10;catalog&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/models/catalog.php&#10;main&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/assets/css/main.css&#10; catal&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/catalog.php&#10;digital&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/digitalCatalog.php&#10;admindas&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/views/adminDashboard.php&#10;mysq&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/system/database/drivers/mysql/mysql_driver.php&#10;auto&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/autoload.php&#10;config&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/config.php&#10;database&#9;FILE&#9;file:///Users/kratos/GitHub/LVL/application/config/database.php" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -403,15 +448,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="3">
@@ -441,7 +486,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3840" y="-277" width="1920" height="1173" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -450,19 +495,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.157082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2454739" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39943343" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5295903" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5295903" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -744,24 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1346154" vertical-offset="15" max-vertical-offset="1065">
-          <caret line="38" column="77" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3165" max-vertical-offset="5205">
           <caret line="211" column="33" selection-start-line="211" selection-start-column="33" selection-end-line="211" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/productitemNewOutlet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2010" max-vertical-offset="7065">
-          <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -793,18 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7627119" vertical-offset="345" max-vertical-offset="2550">
-          <caret line="74" column="92" selection-start-line="74" selection-start-column="92" selection-end-line="74" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/adminOrderEdit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="671" max-vertical-offset="3090">
           <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1020">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="2475">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,57 +849,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.5" vertical-offset="45" max-vertical-offset="1170">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <marker date="1428887676000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1428887676000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1428887676000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1428887676000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1428887676000" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/newOrder.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.5" vertical-offset="1035" max-vertical-offset="2040">
-          <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/productitemNewKeypad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="2700" max-vertical-offset="10665">
-          <caret line="206" column="66" selection-start-line="206" selection-start-column="66" selection-end-line="206" selection-end-column="66" />
+        <state vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="1065">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/productitems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="1230" max-vertical-offset="3465">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        <state vertical-scroll-proportion="-10.625" vertical-offset="330" max-vertical-offset="3450">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/productitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6515151" vertical-offset="7530" max-vertical-offset="8520">
-          <caret line="545" column="15" selection-start-line="545" selection-start-column="15" selection-end-line="545" selection-end-column="15" />
+        <state vertical-scroll-proportion="-10.083333" vertical-offset="7018" max-vertical-offset="8010">
+          <caret line="484" column="38" selection-start-line="484" selection-start-column="38" selection-end-line="484" selection-end-column="38" />
           <folding>
-            <marker date="1428890642000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
-            <marker date="1428890642000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
-            <marker date="1428890642000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
-            <marker date="1428890642000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
-            <marker date="1428890642000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
-            <marker date="1428890642000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
-            <marker date="1428890642000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
-            <marker date="1428890642000" expanded="true" signature="6359:6436" placeholder="SELECT * FRO..mechanisms..." />
-            <marker date="1428890642000" expanded="true" signature="15528:15625" placeholder="SELECT confi..mechanisms..." />
-            <marker date="1428890642000" expanded="true" signature="16311:16642" placeholder="INSERT INTO ..." />
-            <marker date="1428890642000" expanded="true" signature="17291:17346" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1430283655000" expanded="true" signature="165:290" placeholder="SELECT *, pr..." />
+            <marker date="1430283655000" expanded="true" signature="411:561" placeholder="SELECT *, pr..." />
+            <marker date="1430283655000" expanded="true" signature="718:827" placeholder="UPDATE produ..." />
+            <marker date="1430283655000" expanded="true" signature="1075:1118" placeholder="SELECT * FRO..productitems..." />
+            <marker date="1430283655000" expanded="true" signature="1243:1287" placeholder="SELECT * FRO..productitems..." />
+            <marker date="1430283655000" expanded="true" signature="1423:1953" placeholder="SELECT produ..productitems..." />
+            <marker date="1430283655000" expanded="true" signature="2192:2228" placeholder="DELETE FROM ..." />
+            <marker date="1430283655000" expanded="true" signature="6369:6446" placeholder="SELECT * FRO..mechanisms..." />
+            <marker date="1430283655000" expanded="true" signature="14530:14627" placeholder="SELECT confi..mechanisms..." />
+            <marker date="1430283655000" expanded="true" signature="15320:15649" placeholder="INSERT INTO ..." />
+            <marker date="1430283655000" expanded="true" signature="16301:16356" placeholder="SELECT * FRO..mechanisms..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="945" max-vertical-offset="2550">
+          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/newOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-48.75" vertical-offset="0" max-vertical-offset="2100">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/productitemNewKeypad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="10515">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/productitemNewOutlet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20937188" vertical-offset="0" max-vertical-offset="7080">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

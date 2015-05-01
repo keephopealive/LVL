@@ -21,7 +21,6 @@ class Productitems extends CI_Controller {
 
 	public function newProductitemKeypad()
 	{
-
 		$this->load->view('productitemNewKeypad', array('order_id' => $this->session->userdata['order_id']));
 	}
 	public function newProductitemOutlet()
