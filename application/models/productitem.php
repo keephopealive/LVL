@@ -235,20 +235,26 @@ class Productitem extends CI_Model {
 
 			if($result['vv'] != 0)
 			{
+
+				$data['mech'] = $result['vv']." V&V";
 				$data['mechanismString'] .= "ON/OFF TOGGLE SWITCH; REMAINS IN UP/DOWN POSITION<br>";
 				$data['powerSupplyString'] .= "125-250 VAC – 15A<br>";
 			}
 			if($result['bp'] != 0)
-			{
+			{	
+				$data['mech'] = $result['bp']." BP";
 				$data['mechanismString'] .= "MOMENTARY PUSH BUTTON; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
 				$data['powerSupplyString'] .= "CLASS TWO LOW-VOLTAGE SWITCH<br>";
 			}
 			if($result['bpe'] != 0)
 			{
+				$data['mech'] = $result['bpe']." BPE";
 				$data['mechanismString'] .= "ON/OFF PUSH BUTTON; CLICK WHEN PRESSED.<br>";
 				$data['powerSupplyString'] .= "CLASS TWO LOW-VOLTAGE SWITCH<br>";
 			}
-			if($result['inv'] != 0) {
+			if($result['inv'] != 0) 
+			{
+				$data['mech'] = $result['inv']." INV";
 				$data['mechanismString'] .= "MOMENTARY TOGGLE SWITCH; MULTIPLE FUNCTION AND DIMMING CAPABILITIES.<br>";
 				$data['powerSupplyString'] .= "125-250 VAC – 15A<br>";
 			}
@@ -470,6 +476,8 @@ class Productitem extends CI_Model {
 
 	// Cutsheet "Type of Mechanism" and "power of supply" NEED TO BE DONE... QUERY TO JOIN WITH MECHANISMS TABLE AND FIND MECHANISM TYPES FROM THERE
 
+		
+
 			// If file does not excit (avoid duplicate names & avoid overriding files
 			if (file_exists($pdfFilePath) == FALSE)
 			{
@@ -487,6 +495,7 @@ class Productitem extends CI_Model {
 //		var_dump($productitem);
 //		var_dump($data);
 //		die('in productitem model 4');
+
 
 // QUERY TO PULL "CONFIGURATION" FROM MECHANISMS TABLE
 		$query2 = "SELECT configuration FROM mechanisms WHERE reference_code = '{$productitem['mechanism']}' LIMIT 1";

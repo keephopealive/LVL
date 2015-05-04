@@ -2,6 +2,7 @@
 
 <head>
   <style>
+
 .header {
   width: 100%;
 }
@@ -21,6 +22,10 @@
 .frontView  {
   width: 45%;
 }*/
+.infoBox {
+  text-align: center;
+   font-family: sans-serif;
+}
 .coveringPlate  {
   width: 100%;
   border-top: 1px solid black;
@@ -57,11 +62,12 @@
   border-bottom: 2px dotted black;
 }
 .backBox  {
-  width: 100%;
+  margin-top: 50px;
+  /*width: 100%;*/
 }
-.backBoxImg {
+/*.backBoxImg {
   width: 45%;
-}
+}*/
 .backBoxSpecs {
   width: 100%;
   border-top: 1px solid black;
@@ -69,7 +75,7 @@
   border-right: 1px solid black;
 }
 .backBoxSpecs  th{
-  width: 35%;
+  /*width: 35%;*/
   text-align: right;
   border-bottom: 2px solid black;
   border-right: 2px solid black;
@@ -102,25 +108,28 @@ th, td {
 
 <body>
 
+  <div class="container">
+
   <table class="header">
     <tr>
       <td style="vertical-align:top;" class="logo"> 
         <img src="../../assets/img/logo1000.jpg" alt="LVL LOGO" width="140mm" height="21mm">
       </td>
       <td class="infoBox">
-        <h4 class="ref_no"><?php echo $reference_no; ?></h4>
-        <h4 class="size"><?php echo $size; ?></h4>
-        <h4 class="mech"> BP </h4>
+        <h6 class="ref_no"><?php echo $reference_no; ?></h6>
+        <h2 class="size" style="margin-top:25px; margin-bottom:25px;"><?php echo $size; ?></h2>
+        <h4 class="mech"> <?php echo $mech; ?> </h4>
+        
       </td> 
     </tr>
   </table>
 
   <table class="plate">
     <tr>
-      <td class="frontView">
+      <td class="frontView" width="75mm">
         <img src="<?= $frontView ?>" alt="Plate - Front view" width="70mm" height="70mm">
       </td>
-      <td colspan="2">
+      <td colspan="2" width="100mm">
         <table class="coveringPlate">
           <tr class="title">
             <td colspan="2">COVER PLATE</td>
@@ -157,6 +166,8 @@ th, td {
         </table>
       </td>
     </tr>
+  </table>
+  <table class="sideSwitch" style="margin-top:50px;">
     <tr>
       <td width="25mm">
         <img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="21mm" height="54mm">
@@ -184,16 +195,12 @@ th, td {
         </table>
       </td>
     </tr>
-   
-
   </table>
 
-  <table class="backBox" style="margin-top:10mm">
-
+  <table class="backBox">
      <tr>
-      <td><img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="75mm"></td>
-     <!--  <td><img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="105px" height="270px"></td> -->
-      <td>
+      <td width="90mm"><img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="90mm"></td>
+      <td width="85mm">
         <table class="backBoxSpecs">
           <tr class="title">
             <td colspan="2">BACKBOX SPECIFICATIONS</td>
@@ -213,16 +220,6 @@ th, td {
         </table>
       </td>
     </tr>
-
-  <!--   <tr>
-      <td class="backBoxImg">
-        <img src="<?php echo $b_img; ?>" alt="<?php echo $b_img; ?>" width="75%" height="75%">
-      </td>
-      <td class="dwgSide">
-        <img src="<?php echo $sideView; ?>" alt="<?php echo $sideView; ?>" width="105px" height="270px">
-      </td>
-      
-    </tr> -->
   </table>
 
  <!--  <table class="drawings">
@@ -233,6 +230,8 @@ th, td {
       
     </tr>
   </table> -->
+
+</div>
 </body>
 
 </html>
