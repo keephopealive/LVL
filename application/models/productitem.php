@@ -222,7 +222,10 @@ class Productitem extends CI_Model {
 		// Cuthseet [POWER OF SUPPLY]
 		if(isset($productitem['color']))
 		{
-			$data['mechanismString'] = "Tamper Proof Outlet (No Cover)";
+			$query = "SELECT * FROM mechanisms WHERE reference_code = '{$productitem['mechanism']}'";
+			$result = $this->db->query($query)->row_array();
+			$data['mech'] = $result['configuration'];
+			$data['mechanismString'] = $result['configuration'];
 			$data['powerSupplyString'] = "15A 120 VAC";
 			$data['color'] = $productitem['color'];
 		}
@@ -481,11 +484,12 @@ class Productitem extends CI_Model {
 			// If file does not excit (avoid duplicate names & avoid overriding files
 			if (file_exists($pdfFilePath) == FALSE)
 			{
+				date_default_timezone_set("America/New_York");
 				ini_set('memory_limit','32M'); // PDF Size Limit
 				$html = $this->load->view('pdf_output', $data, true); // render the view into HTML
 				$this->load->library('m_pdf');
 				$pdf = $this->m_pdf->load();
-				$pdf->SetFooter('www.lvl-usa.com'.'|'.date(DATE_RFC822).'|'.'info@lvl-usa.com'); // Add a footer for good measure <img src="https://davidsimpson.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" scale="0">
+				$pdf->SetFooter('www.lvl-usa.com'.'|'.date("M d, Y  g:i a  T").'|'.'info@lvl-usa.com'); // Add a footer for good measure <img src="https://davidsimpson.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" scale="0">
 				$pdf->WriteHTML($html); // write the HTML into the PDF
 				$pdf->Output($pdfFilePath, 'F'); // save to file because we can
 			}

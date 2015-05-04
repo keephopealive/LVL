@@ -386,7 +386,7 @@
 				"<h4>Mechanisms</h4>"+
 				"<select name='mechanism' class='form-control selectwidthauto'>"+
 					"<option value='B0000010'>1 US Outlet no cover</option>"+
-					"<option value='F0000010'>1 US Outlet with covers</option>"+
+					"<option value='F0000010'>1 US Outlet with cover</option>"+
 					"<option value='B0001210'>1 USB</option>"+
 				"</select>");
 			}
@@ -396,7 +396,7 @@
 				$('div.mech').html(""+
 				"<h4>Mechanisms</h4>"+
 				"<select name='mechanism' class='form-control selectwidthauto'>"+
-					"<option value='B0000020'>2 US Outlet without cover</option>"+
+					"<option value='B0000020'>2 US Outlet no cover</option>"+
 					"<option value='F0000020'>2 US Outlet with cover</option>"+
 					"<option value='F0000260'>SPE</option>"+
 					"<option value='B0001220'>2 USB</option>"+
