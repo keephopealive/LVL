@@ -57,10 +57,10 @@
 
     <div class='row contact top50'>
         <div class='col-sm-3 col-sm-offset-2'>
-            <p class='office'>LVL-USA<br>445 Park Ave, Suite 901<br>New York, NY 10022<br>T: 212.836.4828<br>info@lvl-usa.com<br></p>
+            <p class='office'>LVL-USA<br>969 Third Ave, Suite 3-1<br>New York, NY 10022<br>T: 646.893.2600<br>info@lvl-usa.com<br></p>
         </div>
         <div class='col-sm-5'>
-            <p>For general information or to schedule a showroom visit, please contact us at 212.836.4828 or info@lvl-usa.com. Showroom visits are by appointment only.</p>
+            <p>For general information or to schedule a showroom visit, please contact us at 646.893.2600 or info@lvl-usa.com. Showroom visits are by appointment only.</p>
             <p>For more information on placing orders, please see the ordering <a href='/faq'>FAQs</a>.  Trade professionals can also use the <a href='/trade'>trade tool</a> to build an order and request a quote.</p>
         </div>
     </div>
